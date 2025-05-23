@@ -59,25 +59,14 @@
 	--color-black: #000;
 	--color-white: #fff;
 
-	--color-primary: #ff0;
-	--color-secondary: #f0f;
+	--color-primary-1: #FEFC52;
+	--color-primary-2: #FDE047;
+	--color-primary-3: #EAB308;
+	--color-primary-4: #D97706;
 
-	--font-primary: 'Power Grotesk', sans-serif;
-	--font-secondary: 'Magnetik', sans-serif;
-}
-
-@font-face {
-	font-display: swap;
-	font-family: 'Power Grotesk';
-	font-style: normal;
-	font-weight: normal;
-	src: url('/assets/fonts/power-grotesk/regular.ttf') format('truetype');
-}
-
-@font-face {
-	font-display: swap;
-	font-family: 'Magnetik';
-	font-style: normal;
-	font-weight: normal;
-	src: url('/assets/fonts/magnetik/regular.ttf') format('truetype');
+	--color-blue: #3B82F6;
+	--color-cyan: #06B6D4;
+	--color-green: #22C55E;
+	--color-red: #EF4444;
+	--color-purple: #A855F7;
 }
