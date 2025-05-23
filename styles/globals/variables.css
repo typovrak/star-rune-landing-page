@@ -1,0 +1,83 @@
+:root {
+	/*--s-xs: 375px;
+	--s: 480px;
+	--s-xl: 576px;
+	--t-xs: 768px;
+	--t-s: 800px;
+	--t: 992px;
+	--t-xl: 1024px;
+	--d-xs: 1200px;
+	--d: 1440px;
+	--d-l: 1600px;
+	--d-xl: 1920px;*/
+
+	--screen-height: 100lvh;
+	--screen-min-height: 667px;
+
+	--wrapper-padding-x: 24px;
+	/*--wrapper-padding-x-d-xs: 72px;*/
+
+	--wrapper-padding-y: 32px;
+	/*--wrapper-padding-y-s-xl: 48px;*/
+	/*--wrapper-padding-y-t-xs: 64px;*/
+	/*--wrapper-padding-y-d-xs: 96px;*/
+
+	--header-size: 114px;
+
+	--clip-path-top: polygon(0 0, 100% 0, 100% 0, 0 0);
+	--clip-path-right: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+	--clip-path-bottom: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+	--clip-path-left: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	--clip-path-open: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+	--clip-path-square-close: polygon(
+		0% 0%,
+		0% 100%,
+		0 100%,
+		0 0,
+		100% 0,
+		100% 100%,
+		0 100%,
+		0 100%,
+		100% 100%,
+		100% 0%
+	);
+	--clip-path-square-open: polygon(
+		0% 0%,
+		0% 100%,
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		50% 50%,
+		0 100%,
+		100% 100%,
+		100% 0%
+	);
+
+	--color-transparent: #0000;
+	--color-black: #000;
+	--color-white: #fff;
+
+	--color-primary: #ff0;
+	--color-secondary: #f0f;
+
+	--font-primary: 'Power Grotesk', sans-serif;
+	--font-secondary: 'Magnetik', sans-serif;
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Power Grotesk';
+	font-style: normal;
+	font-weight: normal;
+	src: url('/assets/fonts/power-grotesk/regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Magnetik';
+	font-style: normal;
+	font-weight: normal;
+	src: url('/assets/fonts/magnetik/regular.ttf') format('truetype');
+}
