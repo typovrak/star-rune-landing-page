@@ -1,31 +1,20 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import "@/styles/globals/reset.css";
-import "@/styles/globals/variables.css";
-import "@/styles/globals/config.css";
-
-const fontPrimary = Geist({
-  variable: "--font-primary",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Star Rune landing page",
-  description: "Star Rune landing page",
-};
+  title: 'v0 App',
+  description: 'Created with v0',
+  generator: 'v0.dev',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${fontPrimary.variable}`}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
