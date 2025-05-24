@@ -30,30 +30,26 @@
 	--clip-path-left: polygon(0 0, 0 0, 0 100%, 0% 100%);
 	--clip-path-open: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
-	--clip-path-square-close: polygon(
-		0% 0%,
-		0% 100%,
-		0 100%,
-		0 0,
-		100% 0,
-		100% 100%,
-		0 100%,
-		0 100%,
-		100% 100%,
-		100% 0%
-	);
-	--clip-path-square-open: polygon(
-		0% 0%,
-		0% 100%,
-		50% 50%,
-		50% 50%,
-		50% 50%,
-		50% 50%,
-		50% 50%,
-		0 100%,
-		100% 100%,
-		100% 0%
-	);
+	--clip-path-square-close: polygon(0% 0%,
+			0% 100%,
+			0 100%,
+			0 0,
+			100% 0,
+			100% 100%,
+			0 100%,
+			0 100%,
+			100% 100%,
+			100% 0%);
+	--clip-path-square-open: polygon(0% 0%,
+			0% 100%,
+			50% 50%,
+			50% 50%,
+			50% 50%,
+			50% 50%,
+			50% 50%,
+			0 100%,
+			100% 100%,
+			100% 0%);
 
 	--color-transparent: #0000;
 	--color-black: #000;
@@ -63,6 +59,9 @@
 	--color-primary-2: #FDE047;
 	--color-primary-3: #EAB308;
 	--color-primary-4: #D97706;
+
+	--color-text-dark: #000;
+	--color-text-light: #fff;
 
 	--color-blue: #3B82F6;
 	--color-cyan: #06B6D4;
