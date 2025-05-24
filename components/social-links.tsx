@@ -4,7 +4,8 @@ import { useRef } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { DiscIcon as Discord, Youtube } from "lucide-react"
+import Discord from "@/icons/discord";
+import YouTube from "@/icons/you-tube";
 import { useInView } from "framer-motion"
 import data from "@/utils/data";
 
@@ -81,7 +82,7 @@ export default function SocialLinks() {
       <Card className="flex flex-col items-center text-center p-6 border-2 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-lg group">
         <CardContent className="flex flex-col items-center space-y-4 pt-6">
           <div className="relative">
-            <Youtube className="h-12 w-12 text-red-500 group-hover:scale-110 transition-transform duration-300" />
+            <YouTube className="h-12 w-12 text-red-500 group-hover:scale-110 transition-transform duration-300" />
             <div className="absolute inset-0 bg-red-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div className="space-y-2">

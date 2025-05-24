@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Mail, Gamepad2, Star, Keyboard, Sword, Users, Gift } from "lucide-react"
-import Discord from "@/icons/Discord";
-import YouTube from "@/icons/YouTube";
-import Kickstarter from "@/icons/Kickstarter";
+import Discord from "@/icons/discord";
+import YouTube from "@/icons/you-tube";
+import Kickstarter from "@/icons/kickstarter";
 import NewsletterForm from "@/components/newsletter-form"
 import SocialLinks from "@/components/social-links"
 import GameFeatures from "@/components/game-features"

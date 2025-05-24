@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Keyboard, Star, Zap, Heart, Sword, Award } from "lucide-react"
-import Kickstarter from "@/icons/Kickstarter";
-import Discord from "@/icons/Discord";
+import Kickstarter from "@/icons/kickstarter";
+import Discord from "@/icons/discord";
 import { motion } from "framer-motion"
 import data from "@/utils/data";
 

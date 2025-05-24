@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
-import { DiscIcon as Discord, Youtube } from "lucide-react"
+import Discord from "@/icons/discord";
+import YouTube from "@/icons/you-tube";
 import data from "@/utils/data";
 
 export default function MobileMenu() {
@@ -69,7 +70,7 @@ export default function MobileMenu() {
                   className="text-muted-foreground hover:text-red-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
-                    <Youtube className="h-6 w-6" />
+                    <YouTube className="h-6 w-6" />
                     <span className="text-xs mt-1">YouTube</span>
                   </div>
                 </Link>
