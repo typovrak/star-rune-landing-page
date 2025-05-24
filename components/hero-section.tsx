@@ -5,7 +5,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { DiscIcon as Discord, Keyboard, Star, Zap, Heart, Sword, Award } from "lucide-react"
+import { Keyboard, Star, Zap, Heart, Sword, Award } from "lucide-react"
+import Kickstarter from "@/icons/Kickstarter";
+import Discord from "@/icons/Discord";
 import { motion } from "framer-motion"
 import data from "@/utils/data";
 
@@ -98,6 +100,7 @@ export default function HeroSection() {
                 className="gap-1 bg-kickstarter-500 hover:bg-kickstarter-600 text-black shadow-lg shadow-kickstarter-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-kickstarter-500/30"
               >
                 <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
+                  <Kickstarter className="h-5 w-5 mr-1" />
                   Support on Kickstarter
                 </Link>
               </Button>
