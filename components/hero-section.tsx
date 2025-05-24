@@ -30,7 +30,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black/60 z-10" style={{ opacity: Math.min(0.6 + scrollY * 0.001, 0.8) }} />
         <div className="absolute inset-0 z-0" style={{ transform: `translateY(${scrollY * 0.2}px)` }}>
           <img
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/star-rune-hero.jpg"
             alt={`${data.brand} game background`}
             className="w-full h-full object-cover"
           />
@@ -45,39 +45,6 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-block"
-            >
-              <Badge
-                variant="outline"
-                className="border-yellow-500/50 bg-yellow-500/10 text-yellow-300 px-4 py-1.5 text-sm"
-              >
-                <Star className="h-4 w-4 mr-1.5" />
-                The Ultimate Typing Game
-              </Badge>
-            </motion.div>
-            <motion.h1
-              className="text-4xl font-bold tracking-tighter sm:text-6xl xl:text-7xl/none"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-            >
-              <span className="inline-block bg-clip-text uppercase text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
-                {data.brand}
-              </span>
-            </motion.h1>
-            <motion.p
-              className="max-w-[600px] text-white/90 md:text-xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              Evil Letters corner an innocent Baby Heart. Just before the final blow, a Star swoops in to save the day.
-              Now, The Last Star in Cyberspace embarks on an epic quest to Save The World.
-            </motion.p>
             <motion.div
               className="flex flex-col gap-3 min-[400px]:flex-row pt-4"
               initial={{ opacity: 0, y: 20 }}

@@ -181,7 +181,7 @@ export default function Home() {
                     alt={`${data.brand} story illustration`}
                     className="aspect-video object-cover w-full"
                     height="310"
-                    src="/placeholder.svg?height=310&width=550"
+                    src="/star-rune-world.jpg"
                     width="550"
                   />
                 </CardContent>
