@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { DiscIcon as Discord, Youtube } from "lucide-react"
+import data from "@/utils/data";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false)
@@ -51,7 +52,7 @@ export default function MobileMenu() {
 
               <div className="flex justify-center space-x-6 mb-2">
                 <Link
-                  href="https://www.discord.gg/B6pFEwsejE"
+                  href={data.url.discord}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-indigo-500 transition-colors"
@@ -62,7 +63,7 @@ export default function MobileMenu() {
                   </div>
                 </Link>
                 <Link
-                  href="https://www.youtube.com/@starrune"
+                  href={data.url.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-red-500 transition-colors"
@@ -73,7 +74,7 @@ export default function MobileMenu() {
                   </div>
                 </Link>
                 <Link
-                  href="https://kickstarter.com"
+                  href={data.url.kickstarter}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors"
@@ -111,7 +112,7 @@ export default function MobileMenu() {
             <div className="mt-auto pt-6 border-t">
               <div className="space-y-4">
                 <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black" asChild>
-                  <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+                  <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
                     Support on Kickstarter
                   </Link>
                 </Button>
@@ -120,8 +121,8 @@ export default function MobileMenu() {
                   className="w-full border-yellow-500/30 text-yellow-600 hover:bg-yellow-500/10"
                   asChild
                 >
-                  <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
-                    Download Demo
+                  <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
+                    Play Demo
                   </Link>
                 </Button>
               </div>

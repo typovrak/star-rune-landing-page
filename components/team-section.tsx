@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function TeamSection() {
   const teamRef = useRef(null)
@@ -103,7 +104,7 @@ export default function TeamSection() {
               variant="default"
               className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
             >
-              <Link href="mailto:contact@starrune.net">Get In Touch</Link>
+              <Link href={`mailto:${data.email}`}>Get In Touch</Link>
             </Button>
           </div>
         </CardContent>

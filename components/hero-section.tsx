@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { DiscIcon as Discord, Keyboard, Star, Zap, Heart, Sword, Award } from "lucide-react"
 import { motion } from "framer-motion"
+import data from "@/utils/data";
 
 export default function HeroSection() {
   const [scrollY, setScrollY] = useState(0)
@@ -86,7 +87,7 @@ export default function HeroSection() {
                 size="lg"
                 className="gap-1 bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href="https://www.starrune.net" target="_blank" rel="noopener noreferrer">
+                <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
                   <Keyboard className="h-5 w-5 mr-1" />
                   Play Demo
                 </Link>
@@ -96,7 +97,7 @@ export default function HeroSection() {
                 size="lg"
                 className="gap-1 bg-kickstarter-500 hover:bg-kickstarter-600 text-black shadow-lg shadow-kickstarter-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-kickstarter-500/30"
               >
-                <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+                <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
                   Support on Kickstarter
                 </Link>
               </Button>
@@ -105,7 +106,7 @@ export default function HeroSection() {
                 size="lg"
                 className="gap-1 bg-discord-500 hover:bg-discord-600 text-black shadow-lg shadow-discord-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-discord-500/30"
               >
-                <Link href="https://www.discord.gg/B6pFEwsejE" target="_blank" rel="noopener noreferrer">
+                <Link href={data.url.discord} target="_blank" rel="noopener noreferrer">
                   <Discord className="h-5 w-5 mr-1" />
                   Join Discord
                 </Link>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { X, Bell } from "lucide-react"
+import data from "@/utils/data";
 
 export default function NotificationPopup() {
   const [isVisible, setIsVisible] = useState(false)
@@ -65,7 +66,7 @@ export default function NotificationPopup() {
                 Remind me later
               </Button>
               <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-black" asChild>
-                <a href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+                <a href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
                   Back Now
                 </a>
               </Button>

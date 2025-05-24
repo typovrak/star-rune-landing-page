@@ -20,6 +20,7 @@ import NewsSection from "@/components/news-section"
 import FeaturesComparison from "@/components/features-comparison"
 import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
+import data from "@/utils/data"
 
 export default function Home() {
   return (
@@ -57,7 +58,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <div className="hidden md:flex items-center gap-3 mr-2">
                 <Link
-                  href="https://www.discord.gg/B6pFEwsejE"
+                  href={data.url.discord}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-indigo-500 transition-colors duration-200 group"
@@ -69,7 +70,7 @@ export default function Home() {
                   </div>
                 </Link>
                 <Link
-                  href="https://www.youtube.com/@starrune"
+                  href={data.url.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-red-500 transition-colors duration-200 group"
@@ -81,7 +82,7 @@ export default function Home() {
                   </div>
                 </Link>
                 <Link
-                  href="https://kickstarter.com"
+                  href={data.url.kickstarter}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
@@ -112,7 +113,7 @@ export default function Home() {
                 variant="default"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
+                <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
                   <Keyboard className="mr-2 h-4 w-4" />
                   Play Demo
                 </Link>
@@ -173,7 +174,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Button asChild variant="ghost" className="text-muted-foreground hover:text-foreground">
-                    <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
+                    <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
                       <Keyboard className="mr-2 h-4 w-4" />
                       Play Demo
                     </Link>
@@ -366,7 +367,7 @@ export default function Home() {
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
+                <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
                   <Keyboard className="mr-2 h-5 w-5" />
                   Play Demo
                 </Link>
@@ -377,7 +378,7 @@ export default function Home() {
                 variant="outline"
                 className="border-yellow-500/50 text-yellow-600 hover:text-yellow-700 hover:border-yellow-500 hover:bg-yellow-500/10"
               >
-                <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+                <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
                   Support on Kickstarter
                 </Link>
               </Button>
@@ -399,7 +400,7 @@ export default function Home() {
               </p>
               <div className="flex space-x-4">
                 <Link
-                  href="https://www.discord.gg/B6pFEwsejE"
+                  href={data.url.discord}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
@@ -408,7 +409,7 @@ export default function Home() {
                   <span className="sr-only">Discord</span>
                 </Link>
                 <Link
-                  href="https://www.youtube.com/@starrune"
+                  href={data.url.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
@@ -417,7 +418,7 @@ export default function Home() {
                   <span className="sr-only">YouTube</span>
                 </Link>
                 <Link
-                  href="https://kickstarter.com"
+                  href={data.url.kickstarter}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
@@ -437,7 +438,7 @@ export default function Home() {
                   <span className="sr-only">Kickstarter</span>
                 </Link>
                 <Link
-                  href="mailto:contact@starrune.net"
+                  href={`mailto:${data.email}`}
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
                   <Mail className="h-5 w-5" />

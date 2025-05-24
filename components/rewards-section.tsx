@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Gift, Check, Star, Crown, Sparkles, Award } from "lucide-react"
 import Link from "next/link"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function RewardsSection() {
   const [selectedTier, setSelectedTier] = useState(1)
@@ -186,7 +187,7 @@ export default function RewardsSection() {
                   }
                   asChild
                 >
-                  <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+                  <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
                     Back this tier
                   </Link>
                 </Button>
@@ -205,7 +206,7 @@ export default function RewardsSection() {
             className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
             asChild
           >
-            <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+            <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
               View All Reward Tiers on Kickstarter
             </Link>
           </Button>

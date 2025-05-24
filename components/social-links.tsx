@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { DiscIcon as Discord, Youtube } from "lucide-react"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function SocialLinks() {
   const socialRef = useRef(null)
@@ -35,7 +36,7 @@ export default function SocialLinks() {
             variant="outline"
             className="w-full border-indigo-500/30 text-indigo-600 hover:bg-indigo-500/10 hover:text-indigo-700 hover:border-indigo-500/50"
           >
-            <Link href="https://www.discord.gg/B6pFEwsejE" target="_blank" rel="noopener noreferrer">
+            <Link href={data.url.discord} target="_blank" rel="noopener noreferrer">
               Join Discord
             </Link>
           </Button>
@@ -70,7 +71,7 @@ export default function SocialLinks() {
             variant="outline"
             className="w-full border-green-500/30 text-green-600 hover:bg-green-500/10 hover:text-green-700 hover:border-green-500/50"
           >
-            <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+            <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
               Support the project
             </Link>
           </Button>
@@ -94,7 +95,7 @@ export default function SocialLinks() {
             variant="outline"
             className="w-full border-red-500/30 text-red-600 hover:bg-red-500/10 hover:text-red-700 hover:border-red-500/50"
           >
-            <Link href="https://www.youtube.com/@starrune" target="_blank" rel="noopener noreferrer">
+            <Link href={data.url.youtube} target="_blank" rel="noopener noreferrer">
               Watch channel
             </Link>
           </Button>

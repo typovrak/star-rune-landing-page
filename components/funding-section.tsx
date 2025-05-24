@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { Palette, Code, BookOpen, BarChart } from "lucide-react"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function FundingSection() {
   const fundingRef = useRef(null)
@@ -234,7 +235,7 @@ export default function FundingSection() {
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
+                <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
                   Support on Kickstarter
                 </Link>
               </Button>
