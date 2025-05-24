@@ -19,7 +19,6 @@ import GallerySection from "@/components/gallery-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import FaqSection from "@/components/faq-section"
 import CountdownTimer from "@/components/countdown-timer"
-import RewardsSection from "@/components/rewards-section"
 import NewsSection from "@/components/news-section"
 import FeaturesComparison from "@/components/features-comparison"
 import NotificationPopup from "@/components/notification-popup"
@@ -321,10 +320,6 @@ export default function Home() {
           <TeamSection />
         </div>
       </section>
-
-      {/*<section id="rewards">
-        <RewardsSection />
-      </section>*/}
 
       <section id="news">
         <NewsSection />
