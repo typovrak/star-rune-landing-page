@@ -371,6 +371,7 @@ export default function Home() {
                 className="border-yellow-500/50 text-yellow-600 hover:text-yellow-700 hover:border-yellow-500 hover:bg-yellow-500/10"
               >
                 <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
+                  <Kickstarter className="mr-2 h-5 w-5" />
                   Support on Kickstarter
                 </Link>
               </Button>
@@ -415,18 +416,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5"
-                  >
-                    <path d="M4.5 5.5L9 12l-4.5 6.5M9 12h6M15 5.5L19.5 12 15 18.5" />
-                  </svg>
+                  <Kickstarter className="h-5 w-5" />
                   <span className="sr-only">Kickstarter</span>
                 </Link>
                 <Link
