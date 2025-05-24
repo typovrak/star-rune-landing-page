@@ -29,7 +29,7 @@ export default function FundingSection() {
               Support The Project
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Help us bring Star Rune to life
+              Help us bring {data.brand} to life
             </p>
           </div>
         </div>
@@ -191,7 +191,7 @@ export default function FundingSection() {
             <Card className="overflow-hidden border-2 border-yellow-500/20 mb-6 hover:border-yellow-500/40 transition-all duration-300 hover:shadow-lg">
               <CardContent className="p-6">
                 <p className="text-muted-foreground mb-4">
-                  Star Rune will utilize a Freemium model. The entire game will be free to play but members will get
+                  {data.brand} will utilize a Freemium model. The entire game will be free to play but members will get
                   extra perks, including:
                 </p>
                 <ul className="space-y-3 mb-4">

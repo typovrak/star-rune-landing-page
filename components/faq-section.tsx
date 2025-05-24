@@ -3,40 +3,41 @@
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { HelpCircle, ChevronDown, ChevronUp } from "lucide-react"
+import data from "@/utils/data";
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const faqs = [
     {
-      question: "What makes Star Rune different from other typing games?",
+      question: `What makes ${data.brand} different from other typing games?`,
       answer:
-        "Star Rune is unique because every single keystroke creates an action in the game - you don't have to complete words before seeing results. It's also designed to be beginner-friendly with no threat of death in early levels, while still offering depth for experienced typists. The game incorporates educational elements about chemistry and languages, and uses all keyboard keys including space, shift, and enter in natural ways.",
+        `${data.brand} is unique because every single keystroke creates an action in the game - you don't have to complete words before seeing results. It's also designed to be beginner-friendly with no threat of death in early levels, while still offering depth for experienced typists. The game incorporates educational elements about chemistry and languages, and uses all keyboard keys including space, shift, and enter in natural ways.`,
     },
     {
-      question: "Is Star Rune suitable for children?",
+      question: `Is ${data.brand} suitable for children?`,
       answer:
-        "Star Rune was created specifically to help children learn typing in a fun, stress-free environment. The game is impossible to fail in the first half, allowing new typists to learn at their own pace. The educational content is presented through engaging gameplay and story elements, making learning feel like play.",
+        `${data.brand} was created specifically to help children learn typing in a fun, stress-free environment. The game is impossible to fail in the first half, allowing new typists to learn at their own pace. The educational content is presented through engaging gameplay and story elements, making learning feel like play.`,
     },
     {
       question: "When will the full game be released?",
       answer:
-        "We're planning to release the beta version in early 2026, with the full release scheduled for mid-2026. Kickstarter backers will get early access and special perks. In the meantime, you can download and play our demo to get a taste of the Star Rune experience!",
+        `We're planning to release the beta version in early 2026, with the full release scheduled for mid-2026. Kickstarter backers will get early access and special perks. In the meantime, you can download and play our demo to get a taste of the ${data.brand} experience!`,
     },
     {
-      question: "What platforms will Star Rune be available on?",
+      question: `What platforms will ${data.brand} be available on?`,
       answer:
-        "Star Rune will be available as a digital download and via cloud streaming. We're focusing on PC/Mac initially, with potential for expansion to other platforms based on demand and funding.",
+        `${data.brand} will be available as a digital download and via cloud streaming. We're focusing on PC/Mac initially, with potential for expansion to other platforms based on demand and funding.`,
     },
     {
       question: "How does the membership model work?",
       answer:
-        "Star Rune uses a freemium model - the entire game will be free to play, but members get extra perks like a custom level editor, Type + Read Mode, advanced stats and analytics, and the ability to equip cosmetics/skins. Memberships will be $4.99/month or $30/year, with special deals and lifetime memberships available for Kickstarter backers.",
+        `${data.brand} uses a freemium model - the entire game will be free to play, but members get extra perks like a custom level editor, Type + Read Mode, advanced stats and analytics, and the ability to equip cosmetics/skins. Memberships will be $4.99/month or $30/year, with special deals and lifetime memberships available for Kickstarter backers.`,
     },
     {
-      question: "Can I contribute to the development of Star Rune?",
+      question: `Can I contribute to the development of ${data.brand}?`,
       answer:
-        "Yes! We're looking for talented individuals to join our team, particularly game asset artists, lead programmers, and narrative designers. You can also support us by backing our Kickstarter campaign, joining our Discord community to provide feedback, and spreading the word about Star Rune.",
+        `Yes! We're looking for talented individuals to join our team, particularly game asset artists, lead programmers, and narrative designers. You can also support us by backing our Kickstarter campaign, joining our Discord community to provide feedback, and spreading the word about ${data.brand}.`,
     },
   ]
 
@@ -58,7 +59,7 @@ export default function FaqSection() {
               Frequently Asked Questions
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Everything you need to know about Star Rune
+              Everything you need to know about {data.brand}
             </p>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Keyboard, Sparkles, Gamepad2, BookOpen } from "lucide-react"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function GameFeatures() {
   const ref1 = useRef(null)
@@ -32,7 +33,7 @@ export default function GameFeatures() {
               </div>
               <h3 className="text-xl font-bold">Every Stroke = Action</h3>
               <p className="text-muted-foreground">
-                Most typing games require you to type full words before anything interesting happens. In Star Rune,
+                Most typing games require you to type full words before anything interesting happens. In {data.brand},
                 every single keystroke is rewarded. Explosions, sliced letters, falling enemies, treasure, dashing
                 across the screen, etc... these are all performed by single strokes.
               </p>
@@ -59,7 +60,7 @@ export default function GameFeatures() {
               </div>
               <h3 className="text-xl font-bold">Beginner Friendly, Fun For All</h3>
               <p className="text-muted-foreground">
-                There's no threat of death in Star Rune until mid/late game. It's literally impossible to die in the
+                There's no threat of death in {data.brand} until mid/late game. It's literally impossible to die in the
                 first half of the game. Enemies will attack you, but minor attacks are automatically deflected. Major
                 attacks merely slow you down.
               </p>
@@ -86,7 +87,7 @@ export default function GameFeatures() {
               </div>
               <h3 className="text-xl font-bold">Smooth, Natural Typing</h3>
               <p className="text-muted-foreground">
-                The movement in Star Rune is completely akin to real-world typing. You are not holding WASD to move; you
+                The movement in {data.brand} is completely akin to real-world typing. You are not holding WASD to move; you
                 dash attack to move through the level; and dash attacks change depending on which enemies are in front
                 of you.
               </p>

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Newspaper, ArrowRight, Calendar } from "lucide-react"
 import Link from "next/link"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function NewsSection() {
   const newsRef = useRef(null)
@@ -14,9 +15,9 @@ export default function NewsSection() {
 
   const newsItems = [
     {
-      title: "Star Rune Kickstarter Campaign Launches!",
+      title: `${data.brand} Kickstarter Campaign Launches!`,
       excerpt:
-        "We're excited to announce that our Kickstarter campaign is now live! Join us on this journey to bring Star Rune to life.",
+        `We're excited to announce that our Kickstarter campaign is now live! Join us on this journey to bring ${data.brand} to life.`,
       date: "May 10, 2025",
       image: "/placeholder.svg?height=200&width=400",
       category: "Announcement",
@@ -24,13 +25,13 @@ export default function NewsSection() {
     {
       title: "New Character Designs Revealed",
       excerpt:
-        "Check out the latest character designs for Star Rune, including the main protagonist Nova and some of the evil letters.",
+        `Check out the latest character designs for ${data.brand}, including the main protagonist Nova and some of the evil letters.`,
       date: "April 28, 2025",
       image: "/placeholder.svg?height=200&width=400",
       category: "Development",
     },
     {
-      title: "Behind the Scenes: Creating the Star Rune Soundtrack",
+      title: `Behind the Scenes: Creating the ${data.brand} Soundtrack`,
       excerpt:
         "Get an exclusive look at how we're creating the dynamic soundtrack that will accompany your typing adventures.",
       date: "April 15, 2025",
@@ -53,7 +54,7 @@ export default function NewsSection() {
               Development Updates
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Stay informed about the latest Star Rune news and development progress
+              Stay informed about the latest {data.brand} news and development progress
             </p>
           </div>
         </div>

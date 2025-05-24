@@ -29,7 +29,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 z-0" style={{ transform: `translateY(${scrollY * 0.2}px)` }}>
           <img
             src="/placeholder.svg?height=1080&width=1920"
-            alt="Star Rune game background"
+            alt={`${data.brand} game background`}
             className="w-full h-full object-cover"
           />
         </div>
@@ -63,8 +63,8 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <span className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
-                STAR RUNE
+              <span className="inline-block bg-clip-text uppercase text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
+                {data.brand}
               </span>
             </motion.h1>
             <motion.p

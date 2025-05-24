@@ -32,7 +32,7 @@ export default function Home() {
               <Star className="h-6 w-6 text-yellow-400 transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <span className="font-bold text-lg tracking-tight">Star Rune</span>
+            <span className="font-bold text-lg tracking-tight">{data.brand}</span>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="#about" className="text-sm font-medium hover:text-yellow-500 transition-colors">
@@ -139,7 +139,7 @@ export default function Home() {
                 The Ultimate Typing Adventure
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-xl/relaxed max-w-[85%] mx-auto">
-                STAR RUNE is The Ultimate Typing Game and the funnest experience typing you've ever had! Slash and dash
+                {data.brand} is The Ultimate Typing Game and the funnest experience typing you've ever had! Slash and dash
                 through hordes of Cookies and Evil Letters. 力. 速. 志. Unleash the true power of a Super Star!
               </p>
             </div>
@@ -152,7 +152,7 @@ export default function Home() {
                   <Star className="mr-1 h-3 w-3" />
                   Epic Story
                 </Badge>
-                <h3 className="text-2xl font-bold">The World of Star Rune</h3>
+                <h3 className="text-2xl font-bold">The World of {data.brand}</h3>
                 <p className="text-muted-foreground">
                   Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil
                   Wizards came and corrupted everything. Using Magic Runes, they created 12 Swords of Fable, and opened
@@ -186,7 +186,7 @@ export default function Home() {
               <Card className="overflow-hidden border-2 border-yellow-500/20 shadow-xl shadow-yellow-500/5 transition-all duration-300 hover:shadow-yellow-500/10 rounded-xl">
                 <CardContent className="p-0">
                   <img
-                    alt="Star Rune story illustration"
+                    alt={`${data.brand} story illustration`}
                     className="aspect-video object-cover w-full"
                     height="310"
                     src="/placeholder.svg?height=310&width=550"
@@ -244,7 +244,7 @@ export default function Home() {
             </Badge>
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-                What Makes Star Rune Special
+                What Makes {data.brand} Special
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Unlike any typing game you've played before
@@ -269,7 +269,7 @@ export default function Home() {
                 Special Abilities
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Star Rune is intuitive + quick/easy to play, but the game mechanics are also very nuanced
+                {data.brand} is intuitive + quick/easy to play, but the game mechanics are also very nuanced
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default function Home() {
                 Meet The Creators
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                The talented people behind Star Rune
+                The talented people behind {data.brand}
               </p>
             </div>
           </div>
@@ -359,7 +359,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
               <h3 className="text-2xl font-bold">Ready to join the adventure?</h3>
-              <p className="text-muted-foreground">Play the demo today and experience the magic of Star Rune</p>
+              <p className="text-muted-foreground">Play the demo today and experience the magic of {data.brand}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -393,7 +393,7 @@ export default function Home() {
             <div className="space-y-4">
               <Link href="/" className="flex items-center space-x-2">
                 <Star className="h-6 w-6 text-yellow-400" />
-                <span className="font-bold text-lg">Star Rune</span>
+                <span className="font-bold text-lg">{data.brand}</span>
               </Link>
               <p className="text-sm text-muted-foreground">
                 The Ultimate Typing Game and the funnest experience typing you've ever had!
@@ -508,7 +508,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="font-medium text-sm mb-4">Newsletter</h3>
-              <p className="text-sm text-muted-foreground mb-4">Subscribe to receive updates about Star Rune</p>
+              <p className="text-sm text-muted-foreground mb-4">Subscribe to receive updates about {data.brand}</p>
               <form className="space-y-2">
                 <Input
                   type="email"
@@ -522,7 +522,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-            <p>© 2025 Star Rune. All rights reserved.</p>
+            <p>© 2025 {data.brand}. All rights reserved.</p>
           </div>
         </div>
       </footer>

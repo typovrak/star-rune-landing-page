@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Star, Quote, ChevronLeft, ChevronRight, Check } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -17,7 +18,7 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "Star Rune is the most engaging typing game I've ever played. My kids are learning to type without even realizing it! After just 3 weeks, my 9-year-old's typing speed improved from 15 to 35 WPM.",
+        `${data.brand} is the most engaging typing game I've ever played. My kids are learning to type without even realizing it! After just 3 weeks, my 9-year-old's typing speed improved from 15 to 35 WPM.`,
       author: "Sarah Johnson",
       role: "Parent & Elementary Teacher",
       avatar: "/placeholder.svg?height=80&width=80",
@@ -57,7 +58,7 @@ export default function TestimonialsSection() {
     },
     {
       quote:
-        "I've tried many typing games to help improve my speed for work, but Star Rune is the first one I've actually stuck with. The progression feels rewarding, and I love how the difficulty scales with your ability. My typing accuracy has improved from 92% to 98%.",
+        `I've tried many typing games to help improve my speed for work, but ${data.brand} is the first one I've actually stuck with. The progression feels rewarding, and I love how the difficulty scales with your ability. My typing accuracy has improved from 92% to 98%.`,
       author: "James Wilson",
       role: "Software Developer",
       avatar: "/placeholder.svg?height=80&width=80",
@@ -67,7 +68,7 @@ export default function TestimonialsSection() {
     },
     {
       quote:
-        "My daughter has dyslexia and has always struggled with typing. Star Rune's visual approach and the immediate feedback from each keystroke has made a tremendous difference. For the first time, she's enjoying learning to type and making real progress.",
+        `My daughter has dyslexia and has always struggled with typing. ${data.brand}'s visual approach and the immediate feedback from each keystroke has made a tremendous difference. For the first time, she's enjoying learning to type and making real progress.`,
       author: "Lisa Chen",
       role: "Parent of Special Needs Child",
       avatar: "/placeholder.svg?height=80&width=80",

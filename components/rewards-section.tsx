@@ -20,7 +20,7 @@ export default function RewardsSection() {
       name: "Early Bird",
       price: "$15",
       description: "Get the game at a special early bird price",
-      features: ["Digital copy of Star Rune", "Name in credits", "Exclusive wallpaper pack", "Beta access"],
+      features: [`Digital copy of ${data.brand}`, "Name in credits", "Exclusive wallpaper pack", "Beta access"],
       highlight: false,
       color: "blue",
       icon: <Star className="h-5 w-5" />,
@@ -31,9 +31,9 @@ export default function RewardsSection() {
       id: 1,
       name: "Stellar",
       price: "$25",
-      description: "The complete Star Rune experience",
+      description: `The complete ${data.brand} experience`,
       features: [
-        "Digital copy of Star Rune",
+        `Digital copy of ${data.brand}`,
         "Name in credits",
         "Exclusive wallpaper pack",
         "Beta access",
@@ -50,9 +50,9 @@ export default function RewardsSection() {
       id: 2,
       name: "Cosmic",
       price: "$50",
-      description: "For the dedicated Star Rune enthusiast",
+      description: `For the dedicated ${data.brand} enthusiast`,
       features: [
-        "Digital copy of Star Rune",
+        `Digital copy of ${data.brand}`,
         "Name in credits",
         "Exclusive wallpaper pack",
         "Beta access",
@@ -70,9 +70,9 @@ export default function RewardsSection() {
       id: 3,
       name: "Legendary",
       price: "$100",
-      description: "The ultimate Star Rune supporter package",
+      description: `The ultimate ${data.brand} supporter package`,
       features: [
-        "Digital copy of Star Rune",
+        `Digital copy of ${data.brand}`,
         "Name in credits",
         "Exclusive wallpaper pack",
         "Beta access",
@@ -105,7 +105,7 @@ export default function RewardsSection() {
               Back Our Project
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Choose your reward tier and help bring Star Rune to life
+              Choose your reward tier and help bring {data.brand} to life
             </p>
           </div>
         </div>

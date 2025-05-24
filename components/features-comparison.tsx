@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check, X, BarChart2 } from "lucide-react"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function FeaturesComparison() {
   const comparisonRef = useRef(null)
@@ -73,10 +74,10 @@ export default function FeaturesComparison() {
           </Badge>
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-              Why Choose Star Rune?
+              Why Choose {data.brand}?
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              See how Star Rune compares to other typing games
+              See how {data.brand} compares to other typing games
             </p>
           </div>
         </div>
@@ -96,7 +97,7 @@ export default function FeaturesComparison() {
                       <th className="text-left p-4 font-medium">Feature</th>
                       <th className="p-4 text-center font-medium">
                         <div className="flex flex-col items-center">
-                          <span className="text-yellow-600">Star Rune</span>
+                          <span className="text-yellow-600">{data.brand}</span>
                           <span className="text-xs text-muted-foreground">Our Game</span>
                         </div>
                       </th>
@@ -162,7 +163,7 @@ export default function FeaturesComparison() {
 
         <div className="mt-8 text-center">
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Star Rune combines the best elements of typing games with innovative gameplay mechanics and educational
+            {data.brand} combines the best elements of typing games with innovative gameplay mechanics and educational
             content, creating a unique experience that's both fun and beneficial for players of all ages and skill
             levels.
           </p>

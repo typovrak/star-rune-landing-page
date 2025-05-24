@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Zap, Shield, ArrowRight, ArrowDown, Rocket, Sparkles } from "lucide-react"
 import { useInView } from "framer-motion"
+import data from "@/utils/data";
 
 export default function GameplaySection() {
   const videoRef = useRef(null)
@@ -97,7 +98,7 @@ export default function GameplaySection() {
                 </div>
               </div>
               <img
-                alt="Star Rune gameplay video thumbnail"
+                alt={`${data.brand} gameplay video thumbnail`}
                 className="w-full h-full object-cover"
                 src="/placeholder.svg?height=480&width=854"
               />
@@ -105,7 +106,7 @@ export default function GameplaySection() {
             <div className="p-6 bg-yellow-50 dark:bg-yellow-950/20">
               <h3 className="text-xl font-bold">Watch Gameplay Demo</h3>
               <p className="text-muted-foreground mt-2">
-                See all the special abilities in action and discover how Star Rune creates a unique typing experience
+                See all the special abilities in action and discover how {data.brand} creates a unique typing experience
                 unlike any other game.
               </p>
             </div>

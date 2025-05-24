@@ -15,7 +15,7 @@ export default function TeamSection() {
     {
       name: "Quinlan Stuwe",
       role: "Director / System Designer / Level Designer / Music+SFX",
-      bio: 'I\'m the Star Rune founder. I\'m a father and music producer. I currently do work under the alias "oo oxygen" or "Oxygen Beats". My portfolio includes Dan Bull, The Stupendium, Pewdiepie, CORPSE, Boyinaband, TheOdd1sOut, SomethingElseYT, Daniel Thrasher, Martyn Littlewood, Zack Scott, and others.',
+      bio: `I'm the ${data.brand} founder. I'm a father and music producer. I currently do work under the alias "oo oxygen" or "Oxygen Beats". My portfolio includes Dan Bull, The Stupendium, Pewdiepie, CORPSE, Boyinaband, TheOdd1sOut, SomethingElseYT, Daniel Thrasher, Martyn Littlewood, Zack Scott, and others.`,
       image: "/placeholder.svg?height=300&width=300",
     },
     {
@@ -32,13 +32,13 @@ export default function TeamSection() {
     {
       name: "Haroldo Baute",
       role: "Promo / Concept Artist",
-      bio: "Concept artist contributing to the visual style of Star Rune.",
+      bio: `Concept artist contributing to the visual style of ${data.brand}.`,
       image: "/placeholder.svg?height=300&width=300",
     },
     {
       name: "Neira Mantis",
       role: "Promo / Concept Artist",
-      bio: "Concept artist helping to bring the world of Star Rune to life.",
+      bio: `Concept artist helping to bring the world of ${data.brand} to life.`,
       image: "/placeholder.svg?height=300&width=300",
     },
   ]

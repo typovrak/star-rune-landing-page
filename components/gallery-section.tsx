@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, ImageIcon, Maximize2, X } from "lucide-react"
+import data from "@/utils/data";
 
 export default function GallerySection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -12,33 +13,33 @@ export default function GallerySection() {
   const images = [
     {
       src: "/placeholder.svg?height=720&width=1280",
-      alt: "Star Rune gameplay screenshot 1",
+      alt: `${data.brand} gameplay screenshot 1`,
       caption: "Battle against evil letters in the Cyber Forest",
     },
     {
       src: "/placeholder.svg?height=720&width=1280",
-      alt: "Star Rune gameplay screenshot 2",
+      alt: `${data.brand} gameplay screenshot 2`,
       caption: "Unleash powerful abilities with your legendary sword",
     },
     {
       src: "/placeholder.svg?height=720&width=1280",
-      alt: "Star Rune gameplay screenshot 3",
+      alt: `${data.brand} gameplay screenshot 3`,
       caption: "Face challenging boss battles that test your typing skills",
     },
     {
       src: "/placeholder.svg?height=720&width=1280",
-      alt: "Star Rune gameplay screenshot 4",
+      alt: `${data.brand} gameplay screenshot 4`,
       caption: "Explore beautiful, hand-crafted worlds with unique challenges",
     },
     {
       src: "/placeholder.svg?height=720&width=1280",
-      alt: "Star Rune gameplay screenshot 5",
+      alt: `${data.brand} gameplay screenshot 5`,
       caption: "Collect elements and forge powerful runes for your swords",
     },
     {
       src: "/placeholder.svg?height=720&width=1280",
-      alt: "Star Rune gameplay screenshot 6",
-      caption: "Interact with characters and discover the rich lore of Star Rune",
+      alt: `${data.brand} gameplay screenshot 6`,
+      caption: `Interact with characters and discover the rich lore of ${data.brand}`,
     },
   ]
 
@@ -67,7 +68,7 @@ export default function GallerySection() {
               Game Screenshots
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Take a visual tour of the Star Rune universe
+              Take a visual tour of the {data.brand} universe
             </p>
           </div>
         </div>

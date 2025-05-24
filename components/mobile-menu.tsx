@@ -40,7 +40,7 @@ export default function MobileMenu() {
                   <div className="h-6 w-6 rounded-full bg-yellow-500/20 flex items-center justify-center">
                     <div className="h-4 w-4 rounded-full bg-yellow-500" />
                   </div>
-                  <span className="font-bold">Star Rune</span>
+                  <span className="font-bold">{data.brand}</span>
                 </div>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" className="mr-2">
