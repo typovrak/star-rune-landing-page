@@ -3,7 +3,10 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { DiscIcon as Discord, Youtube, Mail, Gamepad2, Star, Keyboard, Sword, Users, Gift } from "lucide-react"
+import { Mail, Gamepad2, Star, Keyboard, Sword, Users, Gift } from "lucide-react"
+import Discord from "@/icons/Discord";
+import YouTube from "@/icons/YouTube";
+import Kickstarter from "@/icons/Kickstarter";
 import NewsletterForm from "@/components/newsletter-form"
 import SocialLinks from "@/components/social-links"
 import GameFeatures from "@/components/game-features"
@@ -77,7 +80,7 @@ export default function Home() {
                   aria-label="YouTube"
                 >
                   <div className="relative">
-                    <Youtube className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                    <YouTube className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                     <div className="absolute inset-0 bg-red-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
                 </Link>
@@ -89,18 +92,7 @@ export default function Home() {
                   aria-label="Kickstarter"
                 >
                   <div className="relative">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"
-                    >
-                      <path d="M4.5 5.5L9 12l-4.5 6.5M9 12h6M15 5.5L19.5 12 15 18.5" />
-                    </svg>
+                    <Kickstarter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
                 </Link>
@@ -414,7 +406,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
-                  <Youtube className="h-5 w-5" />
+                  <YouTube className="h-5 w-5" />
                   <span className="sr-only">YouTube</span>
                 </Link>
                 <Link
