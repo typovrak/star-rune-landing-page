@@ -14,7 +14,6 @@ import SocialLinks from "@/components/social-links"
 import GameFeatures from "@/components/game-features"
 import GameplaySection from "@/components/gameplay-section"
 import TeamSection from "@/components/team-section"
-import FundingSection from "@/components/funding-section"
 import HeroSection from "@/components/hero-section"
 import GallerySection from "@/components/gallery-section"
 import TestimonialsSection from "@/components/testimonials-section"
@@ -323,11 +322,9 @@ export default function Home() {
         </div>
       </section>
 
-      <FundingSection />
-
-      <section id="rewards">
+      {/*<section id="rewards">
         <RewardsSection />
-      </section>
+      </section>*/}
 
       <section id="news">
         <NewsSection />
