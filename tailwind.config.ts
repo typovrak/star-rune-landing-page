@@ -60,7 +60,11 @@ const config: Config = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+            'kickstarter-500': 'hsl(var(--kickstarter-500))',
+            'kickstarter-600': 'hsl(var(--kickstarter-600))',
+            'discord-500': 'hsl(var(--discord-500))',
+            'discord-600': 'hsl(var(--discord-600))',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

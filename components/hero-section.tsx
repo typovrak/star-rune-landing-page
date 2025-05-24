@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { DiscIcon as Discord, Download, Star, Zap, Heart, Sword, Award } from "lucide-react"
+import { DiscIcon as Discord, Keyboard, Star, Zap, Heart, Sword, Award } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function HeroSection() {
@@ -86,16 +86,15 @@ export default function HeroSection() {
                 size="lg"
                 className="gap-1 bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
-                  <Download className="h-5 w-5 mr-1" />
+                <Link href="https://www.starrune.net" target="_blank" rel="noopener noreferrer">
+                  <Keyboard className="h-5 w-5 mr-1" />
                   Play Demo
                 </Link>
               </Button>
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/20 transition-all duration-300"
+                className="gap-1 bg-kickstarter-500 hover:bg-kickstarter-600 text-black shadow-lg shadow-kickstarter-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-kickstarter-500/30"
               >
                 <Link href="https://kickstarter.com" target="_blank" rel="noopener noreferrer">
                   Support on Kickstarter
@@ -104,8 +103,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="border-white/50 text-white hover:bg-white/10 transition-all duration-300"
+                className="gap-1 bg-discord-500 hover:bg-discord-600 text-black shadow-lg shadow-discord-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-discord-500/30"
               >
                 <Link href="https://www.discord.gg/B6pFEwsejE" target="_blank" rel="noopener noreferrer">
                   <Discord className="h-5 w-5 mr-1" />

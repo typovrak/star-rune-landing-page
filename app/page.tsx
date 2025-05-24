@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { DiscIcon as Discord, Youtube, Mail, Gamepad2, Star, Download, Sword, Users, Gift } from "lucide-react"
+import { DiscIcon as Discord, Youtube, Mail, Gamepad2, Star, Keyboard, Sword, Users, Gift } from "lucide-react"
 import NewsletterForm from "@/components/newsletter-form"
 import SocialLinks from "@/components/social-links"
 import GameFeatures from "@/components/game-features"
@@ -113,7 +113,7 @@ export default function Home() {
                 className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
                 <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" />
+                  <Keyboard className="mr-2 h-4 w-4" />
                   Play Demo
                 </Link>
               </Button>
@@ -174,8 +174,8 @@ export default function Home() {
                   </Button>
                   <Button asChild variant="ghost" className="text-muted-foreground hover:text-foreground">
                     <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
-                      <Download className="mr-2 h-4 w-4" />
-                      Download Demo
+                      <Keyboard className="mr-2 h-4 w-4" />
+                      Play Demo
                     </Link>
                   </Button>
                 </div>
@@ -358,7 +358,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-2">
               <h3 className="text-2xl font-bold">Ready to join the adventure?</h3>
-              <p className="text-muted-foreground">Download the demo today and experience the magic of Star Rune</p>
+              <p className="text-muted-foreground">Play the demo today and experience the magic of Star Rune</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -367,8 +367,8 @@ export default function Home() {
                 className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
                 <Link href="https://www.StarRune.net" target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Demo
+                  <Keyboard className="mr-2 h-5 w-5" />
+                  Play Demo
                 </Link>
               </Button>
               <Button
