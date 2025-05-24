@@ -17,7 +17,6 @@ import TeamSection from "@/components/team-section"
 import HeroSection from "@/components/hero-section"
 import GallerySection from "@/components/gallery-section"
 import TestimonialsSection from "@/components/testimonials-section"
-import FaqSection from "@/components/faq-section"
 import CountdownTimer from "@/components/countdown-timer"
 import FeaturesComparison from "@/components/features-comparison"
 import NotificationPopup from "@/components/notification-popup"
@@ -319,8 +318,6 @@ export default function Home() {
           <TeamSection />
         </div>
       </section>
-
-      <FaqSection />
 
       <section
         id="community"
