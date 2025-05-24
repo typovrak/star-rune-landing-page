@@ -18,7 +18,6 @@ import HeroSection from "@/components/hero-section"
 import GallerySection from "@/components/gallery-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import CountdownTimer from "@/components/countdown-timer"
-import FeaturesComparison from "@/components/features-comparison"
 import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
 import data from "@/utils/data"
@@ -292,8 +291,6 @@ export default function Home() {
       </section>
 
       <GallerySection />
-
-      <FeaturesComparison />
 
       <TestimonialsSection />
 
