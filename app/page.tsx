@@ -1,9 +1,11 @@
+"use client"
+
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Gamepad2, Star, Keyboard, Sword, Users, Gift } from "lucide-react"
+import { Mail, Gamepad2, Star, Keyboard, Users, Gift, Zap, Heart, Sword, Award } from "lucide-react"
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
@@ -24,6 +26,7 @@ import FeaturesComparison from "@/components/features-comparison"
 import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
 import data from "@/utils/data"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
@@ -189,36 +192,58 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="flex flex-col items-center text-center space-y-2 p-4 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
-              <div className="h-12 w-12 rounded-full bg-yellow-500/10 flex items-center justify-center">
-                <Star className="h-6 w-6 text-yellow-500" />
-              </div>
-              <h3 className="font-bold">118</h3>
-              <p className="text-sm text-muted-foreground">Unique Levels</p>
-            </div>
-            <div className="flex flex-col items-center text-center space-y-2 p-4 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
-              <div className="h-12 w-12 rounded-full bg-yellow-500/10 flex items-center justify-center">
-                <Sword className="h-6 w-6 text-yellow-500" />
-              </div>
-              <h3 className="font-bold">12</h3>
-              <p className="text-sm text-muted-foreground">Legendary Swords</p>
-            </div>
-            <div className="flex flex-col items-center text-center space-y-2 p-4 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
-              <div className="h-12 w-12 rounded-full bg-yellow-500/10 flex items-center justify-center">
-                <Users className="h-6 w-6 text-yellow-500" />
-              </div>
-              <h3 className="font-bold">All Ages</h3>
-              <p className="text-sm text-muted-foreground">Family Friendly</p>
-            </div>
-            <div className="flex flex-col items-center text-center space-y-2 p-4 rounded-lg bg-yellow-500/5 border border-yellow-500/10">
-              <div className="h-12 w-12 rounded-full bg-yellow-500/10 flex items-center justify-center">
-                <Gift className="h-6 w-6 text-yellow-500" />
-              </div>
-              <h3 className="font-bold">Free</h3>
-              <p className="text-sm text-muted-foreground">Base Game</p>
-            </div>
-          </div>
+          <motion.div
+            className="grid grid-cols-5 gap-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+          >
+            <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
+              <CardContent className="p-4 flex items-center">
+                <Zap className="h-8 w-8 text-yellow-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                <div>
+                  <h3 className="font-bold">Every Stroke = Action</h3>
+                  <p className="text-xs text-white/70">Feel the rush with every keystroke</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
+              <CardContent className="p-4 flex items-center">
+                <Heart className="h-8 w-8 text-red-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                <div>
+                  <h3 className="font-bold">Beginner Friendly</h3>
+                  <p className="text-xs text-white/70">Impossible to fail in early levels</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
+              <CardContent className="p-4 flex items-center">
+                <Sword className="h-8 w-8 text-blue-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                <div>
+                  <h3 className="font-bold">12 Legendary Swords</h3>
+                  <p className="text-xs text-white/70">Each with unique abilities</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
+              <CardContent className="p-4 flex items-center">
+                <Award className="h-8 w-8 text-purple-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                <div>
+                  <h3 className="font-bold">Learn While Playing</h3>
+                  <p className="text-xs text-white/70">Chemistry, languages & more</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
+              <CardContent className="p-4 flex items-center">
+                <Award className="h-8 w-8 text-purple-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                <div>
+                  <h3 className="font-bold">118 Levels</h3>
+                  <p className="text-xs text-white/70">Every level is unique</p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
 

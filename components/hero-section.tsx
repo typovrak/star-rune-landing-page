@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Keyboard, Star, Zap, Heart, Sword, Award } from "lucide-react"
+import { Keyboard } from "lucide-react"
 import Kickstarter from "@/icons/kickstarter";
 import Discord from "@/icons/discord";
 import { motion } from "framer-motion"
@@ -105,50 +105,6 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
         </div>
-
-        <motion.div
-          className="grid grid-cols-4 gap-4"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
-        >
-          <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
-            <CardContent className="p-4 flex items-center">
-              <Zap className="h-8 w-8 text-yellow-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
-              <div>
-                <h3 className="font-bold">Every Stroke = Action</h3>
-                <p className="text-xs text-white/70">Feel the rush with every keystroke</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
-            <CardContent className="p-4 flex items-center">
-              <Heart className="h-8 w-8 text-red-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
-              <div>
-                <h3 className="font-bold">Beginner Friendly</h3>
-                <p className="text-xs text-white/70">Impossible to fail in early levels</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
-            <CardContent className="p-4 flex items-center">
-              <Sword className="h-8 w-8 text-blue-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
-              <div>
-                <h3 className="font-bold">12 Legendary Swords</h3>
-                <p className="text-xs text-white/70">Each with unique abilities</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
-            <CardContent className="p-4 flex items-center">
-              <Award className="h-8 w-8 text-purple-400 mr-3 group-hover:scale-110 transition-transform duration-300" />
-              <div>
-                <h3 className="font-bold">Learn While Playing</h3>
-                <p className="text-xs text-white/70">Chemistry, languages & more</p>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
       </div>
     </section>
   )
