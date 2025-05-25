@@ -3,10 +3,13 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, X } from "lucide-react"
+import { Menu, X as Close } from "lucide-react"
 import Link from "next/link"
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
+import Kickstarter from "@/icons/kickstarter";
+import X from "@/icons/x";
+import Gmail from "@/icons/gmail";
 import data from "@/utils/data";
 
 export default function MobileMenu() {
@@ -45,7 +48,7 @@ export default function MobileMenu() {
                 </div>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" className="mr-2">
-                    <X className="h-5 w-5" />
+                    <Close className="h-5 w-5" />
                     <span className="sr-only">Close menu</span>
                   </Button>
                 </SheetTrigger>
@@ -81,19 +84,30 @@ export default function MobileMenu() {
                   className="text-muted-foreground hover:text-green-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-6 w-6"
-                    >
-                      <path d="M4.5 5.5L9 12l-4.5 6.5M9 12h6M15 5.5L19.5 12 15 18.5" />
-                    </svg>
+                    <Kickstarter className="h-6 w-6" />
                     <span className="text-xs mt-1">Kickstarter</span>
+                  </div>
+                </Link>
+                <Link
+                  href={data.url.x}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-green-500 transition-colors"
+                >
+                  <div className="flex flex-col items-center">
+                    <X className="h-6 w-6" />
+                    <span className="text-xs mt-1">X</span>
+                  </div>
+                </Link>
+                <Link
+                  href={`mailto:${data.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-green-500 transition-colors"
+                >
+                  <div className="flex flex-col items-center">
+                    <Gmail className="h-6 w-6" />
+                    <span className="text-xs mt-1">Gmail</span>
                   </div>
                 </Link>
               </div>
