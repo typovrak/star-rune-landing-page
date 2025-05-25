@@ -25,6 +25,7 @@ import data from "@/utils/data"
 import { motion } from "framer-motion"
 import ExternalLink from "@/components/external-link";
 import Badge from "@/components/badge";
+import SectionHeader from "@/components/section-header";
 
 export default function Home() {
   return (
@@ -136,18 +137,14 @@ export default function Home() {
       <section id="about" className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-yellow-500/5 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge icon={<Star/>} title="The ultimate typing adventure" />
-            <div className="space-y-2 max-w-3xl">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-                The Ultimate Typing Adventure
-              </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-xl/relaxed max-w-[85%] mx-auto">
-                {data.brand} is The Ultimate Typing Game and the funnest experience typing you've ever had! Slash and dash
-                through hordes of Cookies and Evil Letters. 力. 速. 志. Unleash the true power of a Super Star!
-              </p>
-            </div>
-          </div>
+          <SectionHeader
+            badge={{
+              icon: <Star/>,
+              title: "Amazing journey"
+            }}
+            title="The ultimate typing adventure"
+            text={`${data.brand} is the ultimate typing game and the funnest experience typing you've ever had! Slash and dash through hordes of cookies and evil letters. 力. 速. 志. Unleash the true power of a super star!`}
+          />
 
           <div className="grid md:grid-cols-2 gap-10 items-center mt-16">
             <div className="order-2 md:order-1">
@@ -260,17 +257,14 @@ export default function Home() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge icon={<Star/>} title="Unique features" />
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-                What Makes {data.brand} Special
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Unlike any typing game you've played before
-              </p>
-            </div>
-          </div>
+          <SectionHeader
+            badge={{
+              icon: <Star/>,
+              title: "Unique features"
+            }}
+            title={`What makes ${data.brand} special`}
+            text="Unlike any typing game you've played before"
+          />
 
           <GameFeatures />
         </div>
@@ -279,17 +273,14 @@ export default function Home() {
       <section id="gameplay" className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge icon={<Gamepad2/>} title="Gameplay" />
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-                Special Abilities
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                {data.brand} is intuitive + quick/easy to play, but the game mechanics are also very nuanced
-              </p>
-            </div>
-          </div>
+          <SectionHeader
+            badge={{
+              icon: <Gamepad2/>,
+              title: "Gameplay"
+            }}
+            title="Special abilities"
+            text={`${data.brand} is intuitive + quick/easy to play, but the game mechanics are also very nuanced`}
+          />
 
           <GameplaySection />
         </div>
@@ -302,17 +293,14 @@ export default function Home() {
       <section id="team" className="w-full py-16 md:py-24 lg:py-32 bg-muted relative overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge icon={<Star/>} title="The team" />
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-                From The Creators
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                The talented people behind {data.brand}
-              </p>
-            </div>
-          </div>
+          <SectionHeader
+            badge={{
+              icon: <Star/>,
+              title: "The team"
+            }}
+            title="From the creators"
+            text={`The talented people behind ${data.brand}`}
+          />
 
           <TeamSection />
         </div>
@@ -324,17 +312,14 @@ export default function Home() {
       >
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge icon={<Star/>} title="Join us" />
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-                Join Our Community
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Follow us on social media to stay informed about the latest news and updates
-              </p>
-            </div>
-          </div>
+          <SectionHeader
+            badge={{
+              icon: <Star/>,
+              title: "Join us"
+            }}
+            title="Join our community"
+            text="Follow us on social media to stay informed about the latest news and updates"
+          />
 
           <SocialLinks />
 

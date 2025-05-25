@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useInView } from "framer-motion"
 import data from "@/utils/data";
 import Badge from "@/components/badge";
+import SectionHeader from "@/components/section-header";
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -104,17 +105,14 @@ export default function TestimonialsSection() {
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
 
       <div className="container px-4 md:px-6 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <Badge icon={<Quote/>} title="Testimonials" />
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-              What People Are Saying
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Hear from our early players, educators, and supporters
-            </p>
-          </div>
-        </div>
+        <SectionHeader
+          badge={{
+            icon: <Quote/>,
+            title: "Testimonials"
+          }}
+          title="What people are saying"
+          text="Hear from our early players, educators, and supporters"
+        />
 
         <div
           ref={testimonialsRef}
