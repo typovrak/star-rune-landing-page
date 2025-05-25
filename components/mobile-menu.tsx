@@ -11,6 +11,7 @@ import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
 import Gmail from "@/icons/gmail";
 import data from "@/utils/data";
+import ExternalLink from "@/components/external-link";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false)
@@ -55,61 +56,51 @@ export default function MobileMenu() {
               </div>
 
               <div className="flex justify-center space-x-6 mb-2">
-                <Link
+                <ExternalLink
                   href={data.url.discord}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-indigo-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
                     <Discord className="h-6 w-6" />
                     <span className="text-xs mt-1">Discord</span>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-red-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
                     <YouTube className="h-6 w-6" />
                     <span className="text-xs mt-1">YouTube</span>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.kickstarter}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
                     <Kickstarter className="h-6 w-6" />
                     <span className="text-xs mt-1">Kickstarter</span>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.x}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
                     <X className="h-6 w-6" />
                     <span className="text-xs mt-1">X</span>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={`mailto:${data.email}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
                     <Gmail className="h-6 w-6" />
                     <span className="text-xs mt-1">Gmail</span>
                   </div>
-                </Link>
+                </ExternalLink>
               </div>
             </div>
             <nav className="flex flex-col space-y-4">
@@ -127,18 +118,18 @@ export default function MobileMenu() {
             <div className="mt-auto pt-6 border-t">
               <div className="space-y-4">
                 <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black" asChild>
-                  <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink href={data.url.kickstarter}>
                     Support on Kickstarter
-                  </Link>
+                  </ExternalLink>
                 </Button>
                 <Button
                   variant="outline"
                   className="w-full border-yellow-500/30 text-yellow-600 hover:bg-yellow-500/10"
                   asChild
                 >
-                  <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink href={data.url.demo}>
                     Play Demo
-                  </Link>
+                  </ExternalLink>
                 </Button>
               </div>
             </div>

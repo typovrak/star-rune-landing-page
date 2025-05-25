@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Clock } from "lucide-react"
-import Link from "next/link";
 import data from "@/utils/data";
+import ExternalLink from "@/components/external-link";
 
 export default function CountdownTimer() {
   // Set end date to 30 days from now for demo purposes
@@ -42,7 +42,7 @@ export default function CountdownTimer() {
   }, [])
 
   return (
-    <Link href={data.url.kickstarter}>
+    <ExternalLink href={data.url.kickstarter}>
       <Badge variant="outline" className="border-yellow-500/50 bg-yellow-500/5 text-yellow-600 px-3 py-1">
         <Clock className="mr-1 h-3 w-3" />
         <span>Kickstarter: </span>
@@ -50,6 +50,6 @@ export default function CountdownTimer() {
           {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
         </span>
       </Badge>
-    </Link>
+    </ExternalLink>
   )
 }

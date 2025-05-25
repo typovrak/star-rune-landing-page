@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Gamepad2, Star, Keyboard, Users, Gift, Zap, Heart, Sword, Award } from "lucide-react"
+import { Gamepad2, Star, Keyboard, Users, Gift, Zap, Heart, Sword, Award } from "lucide-react"
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
@@ -24,6 +24,7 @@ import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
 import data from "@/utils/data"
 import { motion } from "framer-motion"
+import ExternalLink from "@/components/external-link";
 
 export default function Home() {
   return (
@@ -60,66 +61,56 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-4">
               <div className="hidden md:flex items-center gap-3 mr-2">
-                <Link
+                <ExternalLink
                   href={data.url.discord}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-indigo-500 transition-colors duration-200 group"
-                  aria-label="Discord"
+                  ariaLabel="Discord"
                 >
                   <div className="relative">
                     <Discord className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                     <div className="absolute inset-0 bg-indigo-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-red-500 transition-colors duration-200 group"
-                  aria-label="YouTube"
+                  ariaLabel="YouTube"
                 >
                   <div className="relative">
                     <YouTube className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                     <div className="absolute inset-0 bg-red-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.kickstarter}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
-                  aria-label="Kickstarter"
+                  ariaLabel="Kickstarter"
                 >
                   <div className="relative">
                     <Kickstarter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.x}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
-                  aria-label="X"
+                  ariaLabel="X"
                 >
                   <div className="relative">
                     <X className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={`mailto:${data.url.email}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
-                  aria-label="Email"
+                  ariaLabel="Email"
                 >
                   <div className="relative">
                     <Gmail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
-                </Link>
+                </ExternalLink>
               </div>
               <div className="hidden sm:block">
                 <CountdownTimer />
@@ -129,10 +120,10 @@ export default function Home() {
                 variant="default"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={data.url.demo}>
                   <Keyboard className="mr-2 h-4 w-4" />
                   Play Demo
-                </Link>
+                </ExternalLink>
               </Button>
               <MobileMenu />
             </div>
@@ -184,16 +175,16 @@ export default function Home() {
                     variant="outline"
                     className="group relative overflow-hidden border-yellow-500/50 text-yellow-600 hover:text-yellow-700 hover:border-yellow-500"
                   >
-                    <Link href="#gameplay">
+                    <ExternalLink href={data.url.kickstarter}>
                       <span className="absolute inset-0 bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors duration-300"></span>
                       <span className="relative">Learn More About The World</span>
-                    </Link>
+                    </ExternalLink>
                   </Button>
                   <Button asChild variant="ghost" className="text-muted-foreground hover:text-foreground">
-                    <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink href={data.url.demo}>
                       <Keyboard className="mr-2 h-4 w-4" />
                       Play Demo
-                    </Link>
+                    </ExternalLink>
                   </Button>
                 </div>
               </div>
@@ -391,10 +382,10 @@ export default function Home() {
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={data.url.demo}>
                   <Keyboard className="mr-2 h-5 w-5" />
                   Play Demo
-                </Link>
+                </ExternalLink>
               </Button>
               <Button
                 asChild
@@ -402,10 +393,10 @@ export default function Home() {
                 variant="outline"
                 className="border-yellow-500/50 text-yellow-600 hover:text-yellow-700 hover:border-yellow-500 hover:bg-yellow-500/10"
               >
-                <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={data.url.kickstarter}>
                   <Kickstarter className="mr-2 h-5 w-5" />
                   Support on Kickstarter
-                </Link>
+                </ExternalLink>
               </Button>
             </div>
           </div>
@@ -424,47 +415,36 @@ export default function Home() {
                 The Ultimate Typing Game and the funnest experience typing you've ever had!
               </p>
               <div className="flex space-x-4">
-                <Link
+                <ExternalLink
                   href={data.url.discord}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
                   <Discord className="h-5 w-5" />
-                  <span className="sr-only">Discord</span>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
                   <YouTube className="h-5 w-5" />
-                  <span className="sr-only">YouTube</span>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.kickstarter}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
                   <Kickstarter className="h-5 w-5" />
-                  <span className="sr-only">Kickstarter</span>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={data.url.x}
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
                   <X className="h-5 w-5" />
-                  <span className="sr-only">X</span>
-                </Link>
-                <Link
+                </ExternalLink>
+                <ExternalLink
                   href={`mailto:${data.email}`}
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
                   <Gmail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Link>
+                </ExternalLink>
               </div>
             </div>
             <div>

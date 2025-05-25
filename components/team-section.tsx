@@ -3,9 +3,9 @@
 import { useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { useInView } from "framer-motion"
 import data from "@/utils/data";
+import ExternalLink from "@/components/external-link";
 
 export default function TeamSection() {
   const teamRef = useRef(null)
@@ -79,9 +79,9 @@ export default function TeamSection() {
                         asChild
                         className="text-xs border-yellow-500/30 hover:border-yellow-500/60 hover:bg-yellow-500/5"
                       >
-                        <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink href={link.url}>
                           {link.name}
-                        </Link>
+                        </ExternalLink>
                       </Button>
                     ))}
                   </div>
@@ -104,7 +104,7 @@ export default function TeamSection() {
               variant="default"
               className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
             >
-              <Link href={`mailto:${data.email}`}>Get In Touch</Link>
+              <ExternalLink href={`mailto:${data.email}`}>Get In Touch</ExternalLink>
             </Button>
           </div>
         </CardContent>

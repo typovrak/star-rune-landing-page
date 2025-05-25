@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +9,7 @@ import Kickstarter from "@/icons/kickstarter";
 import Discord from "@/icons/discord";
 import { motion } from "framer-motion"
 import data from "@/utils/data";
+import ExternalLink from "@/components/external-link";
 
 export default function HeroSection() {
   const [scrollY, setScrollY] = useState(0)
@@ -25,7 +25,6 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full min-h-[95vh] flex items-center overflow-hidden">
-      {/* Animated background with parallax effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10" style={{ opacity: Math.min(0.6 + scrollY * 0.001, 0.8) }} />
         <div className="absolute inset-0 z-0" style={{ transform: `translateY(${scrollY * 0.2}px)` }}>
@@ -56,30 +55,30 @@ export default function HeroSection() {
                 size="lg"
                 className="gap-1 bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
               >
-                <Link href={data.url.demo} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={data.url.demo}>
                   <Keyboard className="h-5 w-5 mr-1" />
                   Play Demo
-                </Link>
+                </ExternalLink>
               </Button>
               <Button
                 asChild
                 size="lg"
                 className="gap-1 bg-kickstarter-500 hover:bg-kickstarter-600 text-black shadow-lg shadow-kickstarter-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-kickstarter-500/30"
               >
-                <Link href={data.url.kickstarter} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={data.url.kickstarter}>
                   <Kickstarter className="h-5 w-5 mr-1" />
                   Support on Kickstarter
-                </Link>
+                </ExternalLink>
               </Button>
               <Button
                 asChild
                 size="lg"
                 className="gap-1 bg-discord-500 hover:bg-discord-600 text-black shadow-lg shadow-discord-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-discord-500/30"
               >
-                <Link href={data.url.discord} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={data.url.discord}>
                   <Discord className="h-5 w-5 mr-1" />
                   Join Discord
-                </Link>
+                </ExternalLink>
               </Button>
             </motion.div>
           </div>
