@@ -452,10 +452,17 @@ export default function Home() {
                   <span className="sr-only">Kickstarter</span>
                 </Link>
                 <Link
+                  href={data.url.x}
+                  className="text-muted-foreground hover:text-yellow-500 transition-colors"
+                >
+                  <X className="h-5 w-5" />
+                  <span className="sr-only">X</span>
+                </Link>
+                <Link
                   href={`mailto:${data.email}`}
                   className="text-muted-foreground hover:text-yellow-500 transition-colors"
                 >
-                  <Mail className="h-5 w-5" />
+                  <Gmail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </Link>
               </div>

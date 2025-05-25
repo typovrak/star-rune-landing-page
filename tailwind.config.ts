@@ -65,6 +65,7 @@ const config: Config = {
             'kickstarter-600': 'hsl(var(--kickstarter-600))',
             'discord-500': 'hsl(var(--discord-500))',
             'discord-600': 'hsl(var(--discord-600))',
+            'x-500': 'hsl(var(--x-500))',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

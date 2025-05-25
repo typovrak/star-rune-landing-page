@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
+import X from "@/icons/x";
 import { useInView } from "framer-motion"
 import data from "@/utils/data";
 
@@ -17,7 +18,7 @@ export default function SocialLinks() {
   return (
     <div
       ref={socialRef}
-      className={`grid grid-cols-1 md:grid-cols-3 gap-6 py-8 transition-all duration-1000 ${
+      className={`grid grid-cols-1 md:grid-cols-4 gap-6 py-8 transition-all duration-1000 ${
         isSocialInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
@@ -88,6 +89,30 @@ export default function SocialLinks() {
           >
             <Link href={data.url.youtube} target="_blank" rel="noopener noreferrer">
               Watch channel
+            </Link>
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Card className="flex flex-col items-center text-center p-6 border-2 border-x-500/20 hover:border-x-500/40 transition-all duration-300 hover:shadow-lg group">
+        <CardContent className="flex flex-col items-center space-y-4 pt-6">
+          <div className="relative">
+            <X className="h-12 w-12 text-x-500 group-hover:scale-110 transition-transform duration-300" />
+            <div className="absolute inset-0 bg-x-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div className="space-y-2">
+            <h3 className="font-bold">Known as Twitter</h3>
+            <p className="text-sm text-muted-foreground">
+              Follow the progress of the project on a daily basis.
+            </p>
+          </div>
+          <Button
+            asChild
+            variant="outline"
+            className="w-full border-x-500/30 text-x-600 hover:bg-x-500/10 hover:text-x-700 hover:border-x-500/50"
+          >
+            <Link href={data.url.x} target="_blank" rel="noopener noreferrer">
+              Explore my thoughts
             </Link>
           </Button>
         </CardContent>
