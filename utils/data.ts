@@ -1,9 +1,8 @@
-// TODO: change contact email
 // TODO: launchDate to implement
 
 export default {
 	brand: "Star Rune",
-	email: "contact@starrune.net",
+	email: "starrunecompany@gmail.com",
 
 	launchDate: "",
 

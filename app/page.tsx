@@ -9,6 +9,8 @@ import { Mail, Gamepad2, Star, Keyboard, Users, Gift, Zap, Heart, Sword, Award }
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
+import X from "@/icons/x";
+import Gmail from "@/icons/gmail";
 import NewsletterForm from "@/components/newsletter-form"
 import SocialLinks from "@/components/social-links"
 import GameFeatures from "@/components/game-features"
@@ -91,6 +93,30 @@ export default function Home() {
                 >
                   <div className="relative">
                     <Kickstarter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
+                    <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                  </div>
+                </Link>
+                <Link
+                  href={data.url.x}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
+                  aria-label="X"
+                >
+                  <div className="relative">
+                    <X className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
+                    <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                  </div>
+                </Link>
+                <Link
+                  href={`mailto:${data.url.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
+                  aria-label="Email"
+                >
+                  <div className="relative">
+                    <Gmail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
                 </Link>
@@ -304,7 +330,7 @@ export default function Home() {
             </Badge>
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-                Meet The Creators
+                From The Creators
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 The talented people behind {data.brand}
