@@ -6,5 +6,4 @@
 
 
 -> Start Join our community component final version
-
---> replace props type ReactNode to ReactElement
+--> start <SectionWrapper> with the border bottom in it

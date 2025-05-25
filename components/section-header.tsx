@@ -2,6 +2,7 @@ import Badge from "@/components/badge";
 
 export default function SectionHeader({ badge, title, text }: { badge: { icon: ReactElement, title: string | ReactNode }, title: string, text: string }) {
 	return (
+		{/* TODO: title clipping */}
 		<div className="flex flex-col items-center justify-center space-y-4 text-center">
 			<Badge icon={badge.icon} title={badge.title} />
 
