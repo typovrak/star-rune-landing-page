@@ -4,7 +4,6 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Gamepad2, Star, Keyboard, Users, Gift, Zap, Heart, Sword, Award } from "lucide-react"
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
@@ -25,6 +24,7 @@ import MobileMenu from "@/components/mobile-menu"
 import data from "@/utils/data"
 import { motion } from "framer-motion"
 import ExternalLink from "@/components/external-link";
+import Badge from "@/components/badge";
 
 export default function Home() {
   return (
@@ -137,10 +137,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-yellow-500/5 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge variant="outline" className="border-yellow-500/50 text-yellow-500 px-4 py-1">
-              <Star className="mr-1 h-3 w-3" />
-              The Ultimate Typing Adventure
-            </Badge>
+            <Badge icon={<Star/>} title="The ultimate typing adventure" />
             <div className="space-y-2 max-w-3xl">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
                 The Ultimate Typing Adventure
@@ -155,10 +152,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-10 items-center mt-16">
             <div className="order-2 md:order-1">
               <div className="space-y-4">
-                <Badge variant="outline" className="border-yellow-500/50 text-yellow-500">
-                  <Star className="mr-1 h-3 w-3" />
-                  Epic Story
-                </Badge>
+                <Badge icon={<Star/>} title="Epic story" />
                 <h3 className="text-2xl font-bold">The World of {data.brand}</h3>
                 <p className="text-muted-foreground">
                   Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil
@@ -267,10 +261,7 @@ export default function Home() {
         <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge variant="outline" className="border-yellow-500/50 text-yellow-500 px-4 py-1">
-              <Star className="mr-1 h-3 w-3" />
-              Unique Features
-            </Badge>
+            <Badge icon={<Star/>} title="Unique features" />
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
                 What Makes {data.brand} Special
@@ -289,10 +280,7 @@ export default function Home() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge variant="outline" className="border-yellow-500/50 text-yellow-500 px-4 py-1">
-              <Gamepad2 className="mr-1 h-3 w-3" />
-              Gameplay
-            </Badge>
+            <Badge icon={<Gamepad2/>} title="Gameplay" />
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
                 Special Abilities
@@ -315,10 +303,7 @@ export default function Home() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge variant="outline" className="border-yellow-500/50 text-yellow-500 px-4 py-1">
-              <Star className="mr-1 h-3 w-3" />
-              The Team
-            </Badge>
+            <Badge icon={<Star/>} title="The team" />
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
                 From The Creators
@@ -340,10 +325,7 @@ export default function Home() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
         <div className="container px-4 md:px-6 relative">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <Badge variant="outline" className="border-yellow-500/50 text-yellow-500 px-4 py-1">
-              <Star className="mr-1 h-3 w-3" />
-              Join Us
-            </Badge>
+            <Badge icon={<Star/>} title="Join us" />
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
                 Join Our Community

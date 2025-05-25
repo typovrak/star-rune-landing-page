@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, ImageIcon, Maximize2, X } from "lucide-react"
 import data from "@/utils/data";
+import Badge from "@/components/badge";
 
 export default function GallerySection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -59,10 +59,7 @@ export default function GallerySection() {
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
       <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <Badge variant="outline" className="border-yellow-500/50 text-yellow-500 px-4 py-1">
-            <ImageIcon className="mr-1 h-3 w-3" />
-            Gallery
-          </Badge>
+          <Badge icon={<ImageIcon/>} title="Gallery" />
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
               Game Screenshots

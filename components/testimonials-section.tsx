@@ -2,12 +2,12 @@
 
 import { useState, useRef, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Star, Quote, ChevronLeft, ChevronRight, Check } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useInView } from "framer-motion"
 import data from "@/utils/data";
+import Badge from "@/components/badge";
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -105,10 +105,7 @@ export default function TestimonialsSection() {
 
       <div className="container px-4 md:px-6 relative">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <Badge variant="outline" className="border-yellow-500/50 text-yellow-500 px-4 py-1">
-            <Quote className="mr-1 h-3 w-3" />
-            Testimonials
-          </Badge>
+          <Badge icon={<Quote/>} title="Testimonials" />
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
               What People Are Saying
@@ -172,10 +169,7 @@ export default function TestimonialsSection() {
                           </div>
                         </div>
                         {testimonial.verified && (
-                          <Badge variant="outline" className="bg-green-500/10 text-green-600 border-green-500/20">
-                            <Check className="h-3 w-3 mr-1" />
-                            Verified
-                          </Badge>
+                          <Badge icon={<Check/>} title="Verified" />
                         )}
                       </div>
 
