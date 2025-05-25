@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, ImageIcon, Maximize2, X } from "lucide-react"
 import data from "@/utils/data";
-import Badge from "@/components/badge";
+import SectionHeader from "@/components/section-header";
 
 export default function GallerySection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -58,17 +58,14 @@ export default function GallerySection() {
     >
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
       <div className="container px-4 md:px-6 relative">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <Badge icon={<ImageIcon/>} title="Gallery" />
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
-              Game Screenshots
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Take a visual tour of the {data.brand} universe
-            </p>
-          </div>
-        </div>
+        <SectionHeader
+          badge={{
+            icon: <ImageIcon/>,
+            title: "Gallery"
+          }}
+          title="Game screenshots"
+          text={`Take a visual tour of the ${data.brand} universe`}
+        />
 
         <div className="mt-16 relative">
           <div className="relative overflow-hidden rounded-xl shadow-xl shadow-yellow-500/10">
