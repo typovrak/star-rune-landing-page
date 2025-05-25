@@ -7,3 +7,6 @@
 
 -> Start Join our community component final version
 --> start <SectionWrapper> with the border bottom in it
+--> - do i add the background gradient in it?
+
+--> correct <SectionHeader> clipping title
