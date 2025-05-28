@@ -2,16 +2,15 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Keyboard } from "lucide-react"
 import Kickstarter from "@/icons/kickstarter";
 import Discord from "@/icons/discord";
 import { motion } from "framer-motion"
 import data from "@/utils/data";
 import ExternalLink from "@/components/external-link";
+import type { IBlockHero } from "@/utils/types";
 
-export default function HeroSection() {
+export default function BlockHero({ }: IBlockHero) {
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {

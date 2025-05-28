@@ -37,3 +37,6 @@ export interface IBlockAbilities {
 
 export interface IBlockGallery {
 }
+
+export interface IBlockHero {
+}

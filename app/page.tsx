@@ -9,7 +9,6 @@ import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
 import Gmail from "@/icons/gmail";
-import HeroSection from "@/components/hero-section"
 import CountdownTimer from "@/components/countdown-timer"
 import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
@@ -21,7 +20,8 @@ import BlockTestimonials from "@/blocks/block-testimonials";
 import BlockFeatures from "@/blocks/block-features";
 import BlockResume from "@/blocks/block-resume";
 import BlockAbilities from "@/blocks/block-abilities";
-import BlockGallery from "@/blocks/block-gallery"
+import BlockGallery from "@/blocks/block-gallery";
+import BlockHero from "@/blocks/block-hero";
 
 export default function Home() {
   return (
@@ -128,8 +128,7 @@ export default function Home() {
         </div>
       </header>
 
-      <HeroSection />
-
+      <BlockHero />
       <BlockResume />
       <BlockFeatures />
       <BlockAbilities />
