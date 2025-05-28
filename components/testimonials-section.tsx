@@ -8,7 +8,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useInView } from "framer-motion"
 import data from "@/utils/data";
 import Badge from "@/components/badge";
-import SectionHeader from "@/components/section-header";
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -100,150 +99,133 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32 bg-yellow-500/5 relative overflow-hidden">
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
 
-      <div className="container px-4 md:px-6 relative">
-        <SectionHeader
-          badge={{
-            icon: <Quote/>,
-            title: "Testimonials"
-          }}
-          title="What people are saying"
-          text="Hear from our early players, educators, and supporters"
-        />
-
-        <div
-          ref={testimonialsRef}
-          className={`mt-16 transition-all duration-1000 ${
-            isTestimonialsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+    <>
+      <div
+        ref={testimonialsRef}
+        className={`mt-16 transition-all duration-1000 ${isTestimonialsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
-        >
-          <div className="relative">
-            <div className="hidden md:block">
-              <Button
-                variant="outline"
-                size="icon"
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-background/80 backdrop-blur-sm border-yellow-500/20 text-yellow-600 hover:text-yellow-700 hover:bg-background hover:border-yellow-500/40"
-                onClick={handlePrev}
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-background/80 backdrop-blur-sm border-yellow-500/20 text-yellow-600 hover:text-yellow-700 hover:bg-background hover:border-yellow-500/40"
-                onClick={handleNext}
-              >
-                <ChevronRight className="h-5 w-5" />
-              </Button>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[0, 1, 2].map((offset) => {
-                const index = (activeIndex + offset) % testimonials.length
-                const testimonial = testimonials[index]
-
-                return (
-                  <Card
-                    key={index}
-                    className={`border-2 ${
-                      offset === 0
-                        ? "border-yellow-500/30 shadow-lg shadow-yellow-500/10 md:scale-105 z-10"
-                        : "border-yellow-500/10 opacity-90 md:opacity-70 hover:opacity-100 transition-opacity"
-                    } overflow-hidden`}
-                  >
-                    <CardContent className="p-6 md:p-8">
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="flex items-center">
-                          <Avatar className="h-12 w-12 border-2 border-yellow-500/20">
-                            <AvatarImage src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.author} />
-                            <AvatarFallback>{testimonial.author.charAt(0)}</AvatarFallback>
-                          </Avatar>
-                          <div className="ml-3">
-                            <h4 className="font-bold">{testimonial.author}</h4>
-                            <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                          </div>
-                        </div>
-                        {testimonial.verified && (
-                          <Badge icon={<Check/>} title="Verified" />
-                        )}
-                      </div>
-
-                      <div className="flex mb-4">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`h-4 w-4 ${
-                              i < testimonial.rating ? "text-yellow-500 fill-yellow-500" : "text-muted"
-                            }`}
-                          />
-                        ))}
-                      </div>
-
-                      <div className="relative">
-                        <Quote className="absolute -top-2 -left-1 h-6 w-6 text-yellow-500/20" />
-                        <p className="text-sm md:text-base relative pl-4 italic">{testimonial.quote}</p>
-                      </div>
-
-                      <div className="mt-4 pt-4 border-t text-xs text-right text-muted-foreground">
-                        Source: {testimonial.source}
-                      </div>
-                    </CardContent>
-                  </Card>
-                )
-              })}
-            </div>
-          </div>
-
-          <div className="flex justify-center mt-8">
-            <div className="flex space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    index === activeIndex ? "bg-yellow-500 scale-125" : "bg-yellow-500/20"
-                  }`}
-                  onClick={() => {
-                    setAutoplay(false)
-                    setActiveIndex(index)
-                  }}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
+      >
+        <div className="relative">
+          <div className="hidden md:block">
             <Button
               variant="outline"
-              className="border-yellow-500/30 text-yellow-600 hover:text-yellow-700 hover:border-yellow-500/50 hover:bg-yellow-500/5"
+              size="icon"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-background/80 backdrop-blur-sm border-yellow-500/20 text-yellow-600 hover:text-yellow-700 hover:bg-background hover:border-yellow-500/40"
+              onClick={handlePrev}
             >
-              View all testimonials
+              <ChevronLeft className="h-5 w-5" />
             </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-background/80 backdrop-blur-sm border-yellow-500/20 text-yellow-600 hover:text-yellow-700 hover:bg-background hover:border-yellow-500/40"
+              onClick={handleNext}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[0, 1, 2].map((offset) => {
+              const index = (activeIndex + offset) % testimonials.length
+              const testimonial = testimonials[index]
+
+              return (
+                <Card
+                  key={index}
+                  className={`border-2 ${offset === 0
+                    ? "border-yellow-500/30 shadow-lg shadow-yellow-500/10 md:scale-105 z-10"
+                    : "border-yellow-500/10 opacity-90 md:opacity-70 hover:opacity-100 transition-opacity"
+                    } overflow-hidden`}
+                >
+                  <CardContent className="p-6 md:p-8">
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="flex items-center">
+                        <Avatar className="h-12 w-12 border-2 border-yellow-500/20">
+                          <AvatarImage src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.author} />
+                          <AvatarFallback>{testimonial.author.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                        <div className="ml-3">
+                          <h4 className="font-bold">{testimonial.author}</h4>
+                          <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                        </div>
+                      </div>
+                      {testimonial.verified && (
+                        <Badge icon={<Check />} title="Verified" />
+                      )}
+                    </div>
+
+                    <div className="flex mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`h-4 w-4 ${i < testimonial.rating ? "text-yellow-500 fill-yellow-500" : "text-muted"
+                            }`}
+                        />
+                      ))}
+                    </div>
+
+                    <div className="relative">
+                      <Quote className="absolute -top-2 -left-1 h-6 w-6 text-yellow-500/20" />
+                      <p className="text-sm md:text-base relative pl-4 italic">{testimonial.quote}</p>
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t text-xs text-right text-muted-foreground">
+                      Source: {testimonial.source}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-yellow-600">95%</div>
-            <p className="text-sm text-muted-foreground mt-2">Users report improved typing speed</p>
-          </div>
-          <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-yellow-600">4.8/5</div>
-            <p className="text-sm text-muted-foreground mt-2">Average user rating</p>
-          </div>
-          <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-yellow-600">87%</div>
-            <p className="text-sm text-muted-foreground mt-2">Increased typing practice time</p>
-          </div>
-          <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-yellow-600">10K+</div>
-            <p className="text-sm text-muted-foreground mt-2">Beta testers worldwide</p>
+        <div className="flex justify-center mt-8">
+          <div className="flex space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === activeIndex ? "bg-yellow-500 scale-125" : "bg-yellow-500/20"
+                  }`}
+                onClick={() => {
+                  setAutoplay(false)
+                  setActiveIndex(index)
+                }}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
+
+        <div className="mt-12 text-center">
+          <Button
+            variant="outline"
+            className="border-yellow-500/30 text-yellow-600 hover:text-yellow-700 hover:border-yellow-500/50 hover:bg-yellow-500/5"
+          >
+            View all testimonials
+          </Button>
+        </div>
       </div>
-    </section>
+
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-yellow-600">95%</div>
+          <p className="text-sm text-muted-foreground mt-2">Users report improved typing speed</p>
+        </div>
+        <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-yellow-600">4.8/5</div>
+          <p className="text-sm text-muted-foreground mt-2">Average user rating</p>
+        </div>
+        <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-yellow-600">87%</div>
+          <p className="text-sm text-muted-foreground mt-2">Increased typing practice time</p>
+        </div>
+        <div className="bg-yellow-500/5 border border-yellow-500/10 rounded-lg p-6 text-center">
+          <div className="text-3xl font-bold text-yellow-600">10K+</div>
+          <p className="text-sm text-muted-foreground mt-2">Beta testers worldwide</p>
+        </div>
+      </div>
+    </>
   )
 }

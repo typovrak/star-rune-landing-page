@@ -22,3 +22,6 @@ export interface IBlockCommunity {
 
 export interface IBlockTeam {
 }
+
+export interface IBlockTestimonials {
+}

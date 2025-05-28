@@ -25,6 +25,7 @@ import Badge from "@/components/badge";
 import SectionHeader from "@/components/section-header";
 import BlockCommunity from "@/blocks/block-community";
 import BlockTeam from "@/blocks/block-team";
+import BlockTestimonials from "@/blocks/block-testimonials"
 
 export default function Home() {
   return (
@@ -287,8 +288,7 @@ export default function Home() {
 
       <GallerySection />
 
-      <TestimonialsSection />
-
+      <BlockTestimonials />
       <BlockTeam />
       <BlockCommunity />
 
