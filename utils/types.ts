@@ -40,3 +40,6 @@ export interface IBlockGallery {
 
 export interface IBlockHero {
 }
+
+export interface IHeader {
+}
