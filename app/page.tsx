@@ -10,11 +10,8 @@ import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
 import Gmail from "@/icons/gmail";
-import GameFeatures from "@/components/game-features"
-import GameplaySection from "@/components/gameplay-section"
 import HeroSection from "@/components/hero-section"
 import GallerySection from "@/components/gallery-section"
-import TestimonialsSection from "@/components/testimonials-section"
 import CountdownTimer from "@/components/countdown-timer"
 import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
@@ -25,7 +22,9 @@ import Badge from "@/components/badge";
 import SectionHeader from "@/components/section-header";
 import BlockCommunity from "@/blocks/block-community";
 import BlockTeam from "@/blocks/block-team";
-import BlockTestimonials from "@/blocks/block-testimonials"
+import BlockTestimonials from "@/blocks/block-testimonials";
+import BlockFeatures from "@/blocks/block-features";
+import GameplaySection from "@/components/gameplay-section"
 
 export default function Home() {
   return (
@@ -250,25 +249,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="features"
-        className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-yellow-50 to-white dark:from-yellow-950/20 dark:to-background relative overflow-hidden"
-      >
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
-        <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
-        <div className="container px-4 md:px-6 relative">
-          <SectionHeader
-            badge={{
-              icon: <Star />,
-              title: "Unique features"
-            }}
-            title={`What makes ${data.brand} special`}
-            text="Unlike any typing game you've played before"
-          />
 
-          <GameFeatures />
-        </div>
-      </section>
+      <BlockFeatures />
 
       <section id="gameplay" className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>

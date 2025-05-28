@@ -25,3 +25,6 @@ export interface IBlockTeam {
 
 export interface IBlockTestimonials {
 }
+
+export interface IBlockFeatures {
+}
