@@ -10,7 +10,6 @@ import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
 import Gmail from "@/icons/gmail";
 import HeroSection from "@/components/hero-section"
-import GallerySection from "@/components/gallery-section"
 import CountdownTimer from "@/components/countdown-timer"
 import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
@@ -22,6 +21,7 @@ import BlockTestimonials from "@/blocks/block-testimonials";
 import BlockFeatures from "@/blocks/block-features";
 import BlockResume from "@/blocks/block-resume";
 import BlockAbilities from "@/blocks/block-abilities";
+import BlockGallery from "@/blocks/block-gallery"
 
 export default function Home() {
   return (
@@ -99,7 +99,7 @@ export default function Home() {
                   </div>
                 </ExternalLink>
                 <ExternalLink
-                  href={`mailto:${data.url.email}`}
+                  href={`mailto:${data.email}`}
                   className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
                   ariaLabel="Email"
                 >
@@ -133,9 +133,7 @@ export default function Home() {
       <BlockResume />
       <BlockFeatures />
       <BlockAbilities />
-
-      <GallerySection />
-
+      <BlockGallery />
       <BlockTestimonials />
       <BlockTeam />
       <BlockCommunity />

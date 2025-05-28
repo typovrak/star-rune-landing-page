@@ -21,9 +21,8 @@ export default function GameFeatures() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
       <div
         ref={ref1}
-        className={`transition-all duration-1000 ${
-          isInView1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`transition-all duration-1000 ${isInView1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <Card className="overflow-hidden border-2 border-yellow-500/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-yellow-500/30 h-full">
           <CardContent className="p-6">
@@ -48,9 +47,8 @@ export default function GameFeatures() {
 
       <div
         ref={ref2}
-        className={`transition-all duration-1000 delay-300 ${
-          isInView2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`transition-all duration-1000 delay-300 ${isInView2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <Card className="overflow-hidden border-2 border-yellow-500/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-yellow-500/30 h-full">
           <CardContent className="p-6">
@@ -75,9 +73,8 @@ export default function GameFeatures() {
 
       <div
         ref={ref3}
-        className={`transition-all duration-1000 delay-600 ${
-          isInView3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`transition-all duration-1000 delay-600 ${isInView3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <Card className="overflow-hidden border-2 border-yellow-500/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-yellow-500/30 h-full">
           <CardContent className="p-6">
@@ -103,9 +100,8 @@ export default function GameFeatures() {
 
       <div
         ref={ref4}
-        className={`transition-all duration-1000 delay-900 ${
-          isInView4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`transition-all duration-1000 delay-900 ${isInView4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <Card className="overflow-hidden border-2 border-yellow-500/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-yellow-500/30 h-full">
           <CardContent className="p-6">

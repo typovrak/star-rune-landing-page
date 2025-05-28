@@ -34,3 +34,6 @@ export interface IBlockResume {
 
 export interface IBlockAbilities {
 }
+
+export interface IBlockGallery {
+}
