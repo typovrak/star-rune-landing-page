@@ -43,3 +43,6 @@ export interface IBlockHero {
 
 export interface IHeader {
 }
+
+export interface IFooter {
+}
