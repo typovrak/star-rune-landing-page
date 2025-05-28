@@ -1,19 +1,24 @@
-import { cloneElement } from "react";
-import { Badge as BadgeUI} from "@/components/ui/badge";
+import { ReactElement, ReactNode, cloneElement, isValidElement } from "react";
+import { Badge as BadgeUI } from "@/components/ui/badge";
+import clsx from "clsx";
 
-export default function Badge({ icon, title }: { icon: ReactElement, title: string | ReactNode }) {
+export default function Badge({ icon, title }: { icon: ReactElement<{ className?: string }>, title: string | ReactNode }) {
 
-	const iconCloned = cloneElement(icon, {
-		className: `mr-1 h-3 w-3${` ${icon.props.className}` ?? ""}`
-	});
+	let iconCloned = icon;
+
+	if (isValidElement(icon)) {
+		iconCloned = cloneElement(icon, {
+			className: clsx("mr-1 h-3 w-3", 'className' in icon.props ? ` ${icon.props.className}` : ''),
+		});
+	}
 
 	return (
-    	<BadgeUI
+		<BadgeUI
 			variant="outline"
 			className="border-yellow-500/50 text-yellow-500 px-4 py-1"
 		>
 			{iconCloned}
 			{title}
-       	</BadgeUI>
+		</BadgeUI>
 	)
 }
