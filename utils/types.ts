@@ -31,3 +31,6 @@ export interface IBlockFeatures {
 
 export interface IBlockResume {
 }
+
+export interface IBlockAbilities {
+}

@@ -3,7 +3,7 @@
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Gamepad2, Star, Keyboard } from "lucide-react"
+import { Star, Keyboard } from "lucide-react"
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
@@ -16,13 +16,12 @@ import NotificationPopup from "@/components/notification-popup"
 import MobileMenu from "@/components/mobile-menu"
 import data from "@/utils/data"
 import ExternalLink from "@/components/external-link";
-import SectionHeader from "@/components/section-header";
 import BlockCommunity from "@/blocks/block-community";
 import BlockTeam from "@/blocks/block-team";
 import BlockTestimonials from "@/blocks/block-testimonials";
 import BlockFeatures from "@/blocks/block-features";
-import GameplaySection from "@/components/gameplay-section";
 import BlockResume from "@/blocks/block-resume";
+import BlockAbilities from "@/blocks/block-abilities";
 
 export default function Home() {
   return (
@@ -132,24 +131,8 @@ export default function Home() {
       <HeroSection />
 
       <BlockResume />
-
       <BlockFeatures />
-
-      <section id="gameplay" className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
-        <div className="container px-4 md:px-6 relative">
-          <SectionHeader
-            badge={{
-              icon: <Gamepad2 />,
-              title: "Gameplay"
-            }}
-            title="Special abilities"
-            text={`${data.brand} is intuitive + quick/easy to play, but the game mechanics are also very nuanced`}
-          />
-
-          <GameplaySection />
-        </div>
-      </section>
+      <BlockAbilities />
 
       <GallerySection />
 
