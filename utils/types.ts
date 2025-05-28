@@ -46,3 +46,6 @@ export interface IHeader {
 
 export interface IFooter {
 }
+
+export interface IBlockConversion {
+}
