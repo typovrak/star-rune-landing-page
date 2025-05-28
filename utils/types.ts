@@ -28,3 +28,6 @@ export interface IBlockTestimonials {
 
 export interface IBlockFeatures {
 }
+
+export interface IBlockResume {
+}
