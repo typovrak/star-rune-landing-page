@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '@/styles/globals.css'
+import fonts from 'next/font/google'
 
 export const metadata: Metadata = {
   title: 'Star Rune landing page',
@@ -13,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={}>{children}</body>
     </html>
   )
 }
