@@ -1,7 +1,7 @@
-import { ReactElement, ReactNode } from "react";
 import Badge from "@/components/badge";
+import type { ISectionHeader } from "@/utils/types";
 
-export default function SectionHeader({ badge, title, text }: { badge: { icon: ReactElement, title: string | ReactNode }, title: string, text: string }) {
+export default function SectionHeader({ badge, title, text }: ISectionHeader) {
 	return (
 		<div className="flex flex-col items-center justify-center space-y-4 text-center">
 			<Badge icon={badge.icon} title={badge.title} />

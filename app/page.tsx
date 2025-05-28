@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Gamepad2, Star, Keyboard, Users, Gift, Zap, Heart, Sword, Award } from "lucide-react"
+import { Gamepad2, Star, Keyboard, Zap, Heart, Sword, Award } from "lucide-react"
 import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
@@ -26,6 +26,7 @@ import { motion } from "framer-motion"
 import ExternalLink from "@/components/external-link";
 import Badge from "@/components/badge";
 import SectionHeader from "@/components/section-header";
+import SectionWrapper from "@/components/section-wrapper";
 
 export default function Home() {
   return (
@@ -88,7 +89,7 @@ export default function Home() {
                   ariaLabel="Kickstarter"
                 >
                   <div className="relative">
-                    <Kickstarter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
+                    <Kickstarter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
                 </ExternalLink>
@@ -98,7 +99,7 @@ export default function Home() {
                   ariaLabel="X"
                 >
                   <div className="relative">
-                    <X className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
+                    <X className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
                 </ExternalLink>
@@ -108,7 +109,7 @@ export default function Home() {
                   ariaLabel="Email"
                 >
                   <div className="relative">
-                    <Gmail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200"/>
+                    <Gmail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                     <div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                   </div>
                 </ExternalLink>
@@ -139,7 +140,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 relative">
           <SectionHeader
             badge={{
-              icon: <Star/>,
+              icon: <Star />,
               title: "Amazing journey"
             }}
             title="The ultimate typing adventure"
@@ -149,7 +150,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-10 items-center mt-16">
             <div className="order-2 md:order-1">
               <div className="space-y-4">
-                <Badge icon={<Star/>} title="Epic story" />
+                <Badge icon={<Star />} title="Epic story" />
                 <h3 className="text-2xl font-bold">The World of {data.brand}</h3>
                 <p className="text-muted-foreground">
                   Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil
@@ -259,7 +260,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 relative">
           <SectionHeader
             badge={{
-              icon: <Star/>,
+              icon: <Star />,
               title: "Unique features"
             }}
             title={`What makes ${data.brand} special`}
@@ -275,7 +276,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 relative">
           <SectionHeader
             badge={{
-              icon: <Gamepad2/>,
+              icon: <Gamepad2 />,
               title: "Gameplay"
             }}
             title="Special abilities"
@@ -295,7 +296,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 relative">
           <SectionHeader
             badge={{
-              icon: <Star/>,
+              icon: <Star />,
               title: "The team"
             }}
             title="From the creators"
@@ -306,21 +307,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section
+      <SectionWrapper
         id="community"
-        className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted relative overflow-hidden"
+        badge={{
+          icon: <Star />,
+          title: "Join us"
+        }}
+        title="Join our community"
+        text="Follow us on social media to stay informed about the latest news and updates"
       >
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
-        <div className="container px-4 md:px-6 relative">
-          <SectionHeader
-            badge={{
-              icon: <Star/>,
-              title: "Join us"
-            }}
-            title="Join our community"
-            text="Follow us on social media to stay informed about the latest news and updates"
-          />
-
+        <>
           <SocialLinks />
 
           <div className="mx-auto max-w-md space-y-6 py-12">
@@ -333,8 +329,8 @@ export default function Home() {
 
             <NewsletterForm />
           </div>
-        </div>
-      </section>
+        </>
+      </SectionWrapper>
 
       <section className="w-full py-12 md:py-16 bg-yellow-500/10 border-t border-yellow-500/20">
         <div className="container px-4 md:px-6">
@@ -496,6 +492,6 @@ export default function Home() {
       </footer>
 
       <NotificationPopup />
-    </div>
+    </div >
   )
 }

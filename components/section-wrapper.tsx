@@ -1,8 +1,20 @@
-export default function SectionWrapper({ id, children, className }: { id: string, children: ReactNode, className?: string }) {
+import type { ISectionWrapper } from "@/utils/types";
+import SectionHeader from "@/components/section-header";
+
+export default function SectionWrapper({ id, children, className, badge, title, text }: ISectionWrapper) {
 	return (
-		<section id={id} className={``}>
-			{children}
-			{/* TODO: insert bottom border */}
+		<section id={id} className={`w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted relative overflow-hidden${className ? ` ${className}` : ''}`}>
+			<div className="container px-4 md:px-6 relative">
+				<SectionHeader
+					badge={badge}
+					title={title}
+					text={text}
+				/>
+
+				{children}
+			</div>
+
+			<div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
 		</section>
 	)
 }

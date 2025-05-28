@@ -1,8 +1,9 @@
-import { ReactElement, ReactNode, cloneElement, isValidElement } from "react";
+import { cloneElement, isValidElement } from "react";
 import { Badge as BadgeUI } from "@/components/ui/badge";
 import clsx from "clsx";
+import type { IBadge } from "@/utils/types";
 
-export default function Badge({ icon, title }: { icon: ReactElement<{ className?: string }>, title: string | ReactNode }) {
+export default function Badge({ icon, title }: IBadge) {
 
 	let iconCloned = icon;
 
