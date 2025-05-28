@@ -19,3 +19,6 @@ export interface ISectionWrapper extends ISectionHeader {
 
 export interface IBlockCommunity {
 }
+
+export interface IBlockTeam {
+}

@@ -14,6 +14,7 @@ export default function BlockCommunity({ }: IBlockCommunity) {
 			}}
 			title="Join our community"
 			text="Follow us on social media to stay informed about the latest news and updates"
+			className="bg-gradient-to-b from-background to-muted"
 		>
 			<>
 				<SocialLinks />

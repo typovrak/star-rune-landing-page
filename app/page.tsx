@@ -10,11 +10,8 @@ import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
 import Gmail from "@/icons/gmail";
-import NewsletterForm from "@/components/newsletter-form"
-import SocialLinks from "@/components/social-links"
 import GameFeatures from "@/components/game-features"
 import GameplaySection from "@/components/gameplay-section"
-import TeamSection from "@/components/team-section"
 import HeroSection from "@/components/hero-section"
 import GallerySection from "@/components/gallery-section"
 import TestimonialsSection from "@/components/testimonials-section"
@@ -26,8 +23,8 @@ import { motion } from "framer-motion"
 import ExternalLink from "@/components/external-link";
 import Badge from "@/components/badge";
 import SectionHeader from "@/components/section-header";
-import SectionWrapper from "@/layouts/section-wrapper";
 import BlockCommunity from "@/blocks/block-community";
+import BlockTeam from "@/blocks/block-team";
 
 export default function Home() {
   return (
@@ -292,22 +289,7 @@ export default function Home() {
 
       <TestimonialsSection />
 
-      <section id="team" className="w-full py-16 md:py-24 lg:py-32 bg-muted relative overflow-hidden">
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
-        <div className="container px-4 md:px-6 relative">
-          <SectionHeader
-            badge={{
-              icon: <Star />,
-              title: "The team"
-            }}
-            title="From the creators"
-            text={`The talented people behind ${data.brand}`}
-          />
-
-          <TeamSection />
-        </div>
-      </section>
-
+      <BlockTeam />
       <BlockCommunity />
 
       <section className="w-full py-12 md:py-16 bg-yellow-500/10 border-t border-yellow-500/20">
