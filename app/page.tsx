@@ -26,7 +26,8 @@ import { motion } from "framer-motion"
 import ExternalLink from "@/components/external-link";
 import Badge from "@/components/badge";
 import SectionHeader from "@/components/section-header";
-import SectionWrapper from "@/components/section-wrapper";
+import SectionWrapper from "@/layouts/section-wrapper";
+import BlockCommunity from "@/blocks/block-community";
 
 export default function Home() {
   return (
@@ -307,30 +308,7 @@ export default function Home() {
         </div>
       </section>
 
-      <SectionWrapper
-        id="community"
-        badge={{
-          icon: <Star />,
-          title: "Join us"
-        }}
-        title="Join our community"
-        text="Follow us on social media to stay informed about the latest news and updates"
-      >
-        <>
-          <SocialLinks />
-
-          <div className="mx-auto max-w-md space-y-6 py-12">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold">Subscribe to our newsletter</h3>
-                <p className="text-muted-foreground">Receive the latest news and updates directly in your inbox</p>
-              </div>
-            </div>
-
-            <NewsletterForm />
-          </div>
-        </>
-      </SectionWrapper>
+      <BlockCommunity />
 
       <section className="w-full py-12 md:py-16 bg-yellow-500/10 border-t border-yellow-500/20">
         <div className="container px-4 md:px-6">

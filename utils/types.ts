@@ -16,3 +16,6 @@ export interface ISectionWrapper extends ISectionHeader {
 	id: string,
 	className?: string,
 }
+
+export interface IBlockCommunity {
+}
