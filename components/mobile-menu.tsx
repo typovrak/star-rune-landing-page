@@ -9,7 +9,7 @@ import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
-import Gmail from "@/icons/gmail";
+import Email from "@/icons/email";
 import data from "@/utils/data";
 import ExternalLink from "@/components/external-link";
 
@@ -97,8 +97,8 @@ export default function MobileMenu() {
                   className="text-muted-foreground hover:text-green-500 transition-colors"
                 >
                   <div className="flex flex-col items-center">
-                    <Gmail className="h-6 w-6" />
-                    <span className="text-xs mt-1">Gmail</span>
+                    <Email className="h-6 w-6" />
+                    <span className="text-xs mt-1">Email</span>
                   </div>
                 </ExternalLink>
               </div>

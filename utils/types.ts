@@ -55,3 +55,7 @@ export interface IBrandTitle {
 
 export interface ISocialIconList {
 }
+
+export interface ISVG {
+	className?: string;
+}

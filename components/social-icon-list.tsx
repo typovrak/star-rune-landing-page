@@ -5,7 +5,7 @@ import Discord from "@/icons/discord";
 import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
-import Gmail from "@/icons/gmail";
+import Email from "@/icons/email";
 
 export default function SocialIconList({ }: ISocialIconList) {
 
@@ -37,7 +37,7 @@ export default function SocialIconList({ }: ISocialIconList) {
 			color: "",
 		},
 		{
-			icon: <Gmail className={iconClassName} />,
+			icon: <Email className={iconClassName} />,
 			url: `mailto:${data.email}`,
 			title: "Email",
 			color: "",
