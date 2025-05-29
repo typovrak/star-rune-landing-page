@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-import '@/styles/globals.css'
-import { Geist, Roboto } from 'next/font/google'
+import type { Metadata } from "next";
+import "@/styles/globals.css";
+import { Geist, Tomorrow } from "next/font/google";
 
 const fontPrimary = Geist({
   subsets: ['latin'],
@@ -8,9 +8,10 @@ const fontPrimary = Geist({
   variable: '--font-primary',
 })
 
-const fontSecondary = Roboto({
+const fontSecondary = Tomorrow({
   subsets: ['latin'],
   display: 'swap',
+  weight: "400",
   variable: '--font-secondary',
 })
 
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-sans`}>{children}</body>
+      <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary`}>{children}</body>
     </html>
   )
 }

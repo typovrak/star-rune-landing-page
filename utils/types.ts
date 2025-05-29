@@ -49,3 +49,6 @@ export interface IFooter {
 
 export interface IBlockConversion {
 }
+
+export interface IBrandTitle {
+}

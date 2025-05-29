@@ -2,7 +2,7 @@ import type { IHeader } from "@/utils/types";
 import Link from "next/link";
 import ExternalLink from "@/components/external-link";
 import data from "@/utils/data";
-import { Star, Keyboard } from "lucide-react";
+import { Keyboard } from "lucide-react";
 import Discord from "@/icons/discord";
 import Gmail from "@/icons/gmail";
 import YouTube from "@/icons/you-tube";
@@ -11,18 +11,14 @@ import X from "@/icons/x";
 import CountdownTimer from "@/components/countdown-timer";
 import MobileMenu from "@/components/mobile-menu";
 import { Button } from "@/components/ui/button";
+import BrandTitle from "@/components/brand-title";
 
 export default function Header({ }: IHeader) {
 	return (
 		<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 			<div className="container flex h-16 items-center justify-between">
-				<Link href="/" className="flex items-center space-x-2 group">
-					<div className="relative">
-						<Star className="h-6 w-6 text-yellow-400 transition-transform duration-300 group-hover:scale-110" />
-						<div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					</div>
-					<span className="font-bold text-lg tracking-tight">{data.brand}</span>
-				</Link>
+				<BrandTitle />
+
 				<nav className="hidden md:flex gap-6">
 					<Link href="#about" className="text-sm font-medium hover:text-yellow-500 transition-colors">
 						About

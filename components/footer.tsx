@@ -10,6 +10,7 @@ import data from "@/utils/data";
 import Gmail from "@/icons/gmail";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import BrandTitle from "@/components/brand-title";
 
 export default function Footer({ }: IFooter) {
 	return (
@@ -17,10 +18,8 @@ export default function Footer({ }: IFooter) {
 			<div className="container px-4 md:px-6">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 					<div className="space-y-4">
-						<Link href="/" className="flex items-center space-x-2">
-							<Star className="h-6 w-6 text-yellow-400" />
-							<span className="font-bold text-lg">{data.brand}</span>
-						</Link>
+						<BrandTitle />
+
 						<p className="text-sm text-muted-foreground">
 							The Ultimate Typing Game and the funnest experience typing you've ever had!
 						</p>
