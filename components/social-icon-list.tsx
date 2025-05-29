@@ -2,11 +2,13 @@ import type { ISocialIconList } from "@/utils/types";
 import data from "@/utils/data";
 import ExternalLink from "@/components/external-link";
 import Discord from "@/icons/discord";
+import DiscordFill from "@/icons/discord-fill";
 import YouTube from "@/icons/you-tube";
+import YouTubeFill from "@/icons/you-tube-fill";
 import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
 import Email from "@/icons/email";
-import DiscordFill from "@/icons/discord-fill";
+import EmailFill from "@/icons/email-fill";
 import IconInvert from "@/components/icon-invert";
 
 export default function SocialIconList({ }: ISocialIconList) {
@@ -28,14 +30,14 @@ export default function SocialIconList({ }: ISocialIconList) {
 		},
 		{
 			icon: <Kickstarter />,
-			iconHover: <KickstarterFill />,
+			iconHover: <Kickstarter className="fill-kickstarter-500" />,
 			url: data.url.kickstarter,
 			title: "Kickstarter",
 			color: "text-kickstarter-500",
 		},
 		{
 			icon: <X />,
-			iconHover: <XFill />,
+			iconHover: <X className="fill-x-500" />,
 			url: data.url.x,
 			title: "X",
 			color: "text-x-500",
