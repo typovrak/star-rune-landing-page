@@ -23,7 +23,6 @@ export default function BlockResume({ }: IBlockResume) {
 			<div className="grid md:grid-cols-2 gap-10 items-center mt-16">
 				<div className="order-2 md:order-1">
 					<div className="space-y-4">
-						<Badge icon={<Star />} title="Epic story" />
 						<h3 className="text-2xl font-bold">The World of {data.brand}</h3>
 						<p className="text-muted-foreground">
 							Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil

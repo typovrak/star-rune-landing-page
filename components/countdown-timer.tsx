@@ -42,13 +42,13 @@ export default function CountdownTimer() {
   }, [])
 
   return (
-    <ExternalLink href={data.url.kickstarter}>
+    <ExternalLink href={data.url.kickstarter} className="group">
       <Badge
-        icon={<Clock/>}
+        icon={<Clock />}
         title={
           <>
-            <span>Kickstarter: </span>
-            <span className="font-mono ml-1">
+            <span>Launch in </span>
+            <span className="ml-1">
               {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
             </span>
           </>

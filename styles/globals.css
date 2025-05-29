@@ -70,6 +70,7 @@ body {
     --youtube-500: 0 100% 50%;
     --rotate-text: 3deg;
     --rotate-icon: 6deg;
+    --rotate-cta: 1deg;
   }
 
   .dark {

@@ -108,6 +108,7 @@ const config: Config = {
             rotate: {
                 text: 'var(--rotate-text)',
                 icon: 'var(--rotate-icon)',
+                cta: 'var(--rotate-cta)',
             },
         }
     },
