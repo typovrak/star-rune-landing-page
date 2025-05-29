@@ -52,3 +52,6 @@ export interface IBlockConversion {
 
 export interface IBrandTitle {
 }
+
+export interface ISocialIconList {
+}

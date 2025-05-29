@@ -1,16 +1,10 @@
 import type { IFooter } from "@/utils/types";
 import Link from "next/link";
-import { Star } from "lucide-react";
-import ExternalLink from "@/components/external-link";
-import YouTube from "@/icons/you-tube";
-import Kickstarter from "@/icons/kickstarter";
-import X from "@/icons/x";
-import Discord from "@/icons/discord";
 import data from "@/utils/data";
-import Gmail from "@/icons/gmail";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import BrandTitle from "@/components/brand-title";
+import SocialIconList from "@/components/social-icon-list";
 
 export default function Footer({ }: IFooter) {
 	return (
@@ -23,38 +17,8 @@ export default function Footer({ }: IFooter) {
 						<p className="text-sm text-muted-foreground">
 							The Ultimate Typing Game and the funnest experience typing you've ever had!
 						</p>
-						<div className="flex space-x-4">
-							<ExternalLink
-								href={data.url.discord}
-								className="text-muted-foreground hover:text-yellow-500 transition-colors"
-							>
-								<Discord className="h-5 w-5" />
-							</ExternalLink>
-							<ExternalLink
-								href={data.url.youtube}
-								className="text-muted-foreground hover:text-yellow-500 transition-colors"
-							>
-								<YouTube className="h-5 w-5" />
-							</ExternalLink>
-							<ExternalLink
-								href={data.url.kickstarter}
-								className="text-muted-foreground hover:text-yellow-500 transition-colors"
-							>
-								<Kickstarter className="h-5 w-5" />
-							</ExternalLink>
-							<ExternalLink
-								href={data.url.x}
-								className="text-muted-foreground hover:text-yellow-500 transition-colors"
-							>
-								<X className="h-5 w-5" />
-							</ExternalLink>
-							<ExternalLink
-								href={`mailto:${data.email}`}
-								className="text-muted-foreground hover:text-yellow-500 transition-colors"
-							>
-								<Gmail className="h-5 w-5" />
-							</ExternalLink>
-						</div>
+
+						<SocialIconList />
 					</div>
 					<div>
 						<h3 className="font-medium text-sm mb-4">Quick Links</h3>

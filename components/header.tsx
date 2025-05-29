@@ -3,15 +3,11 @@ import Link from "next/link";
 import ExternalLink from "@/components/external-link";
 import data from "@/utils/data";
 import { Keyboard } from "lucide-react";
-import Discord from "@/icons/discord";
-import Gmail from "@/icons/gmail";
-import YouTube from "@/icons/you-tube";
-import Kickstarter from "@/icons/kickstarter";
-import X from "@/icons/x";
 import CountdownTimer from "@/components/countdown-timer";
 import MobileMenu from "@/components/mobile-menu";
 import { Button } from "@/components/ui/button";
 import BrandTitle from "@/components/brand-title";
+import SocialIconList from "@/components/social-icon-list";
 
 export default function Header({ }: IHeader) {
 	return (
@@ -28,60 +24,11 @@ export default function Header({ }: IHeader) {
 					))}
 				</nav>
 
+
 				<div className="flex items-center gap-4">
+					<SocialIconList />
+
 					<div className="flex items-center gap-4">
-						<div className="hidden md:flex items-center gap-3 mr-2">
-							<ExternalLink
-								href={data.url.discord}
-								className="text-muted-foreground hover:text-indigo-500 transition-colors duration-200 group"
-								ariaLabel="Discord"
-							>
-								<div className="relative">
-									<Discord className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-									<div className="absolute inset-0 bg-indigo-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-								</div>
-							</ExternalLink>
-							<ExternalLink
-								href={data.url.youtube}
-								className="text-muted-foreground hover:text-red-500 transition-colors duration-200 group"
-								ariaLabel="YouTube"
-							>
-								<div className="relative">
-									<YouTube className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-									<div className="absolute inset-0 bg-red-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-								</div>
-							</ExternalLink>
-							<ExternalLink
-								href={data.url.kickstarter}
-								className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
-								ariaLabel="Kickstarter"
-							>
-								<div className="relative">
-									<Kickstarter className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-									<div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-								</div>
-							</ExternalLink>
-							<ExternalLink
-								href={data.url.x}
-								className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
-								ariaLabel="X"
-							>
-								<div className="relative">
-									<X className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-									<div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-								</div>
-							</ExternalLink>
-							<ExternalLink
-								href={`mailto:${data.email}`}
-								className="text-muted-foreground hover:text-green-500 transition-colors duration-200 group"
-								ariaLabel="Email"
-							>
-								<div className="relative">
-									<Gmail className="h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
-									<div className="absolute inset-0 bg-green-500/20 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-								</div>
-							</ExternalLink>
-						</div>
 						<div className="hidden sm:block">
 							<CountdownTimer />
 						</div>

@@ -6,7 +6,6 @@ import type { IBadge } from "@/utils/types";
 export default function Badge({ icon, title }: IBadge) {
 
 	let iconCloned = icon;
-
 	if (isValidElement(icon)) {
 		iconCloned = cloneElement(icon, {
 			className: clsx("mr-1 h-3 w-3", 'className' in icon.props ? ` ${icon.props.className}` : ''),
