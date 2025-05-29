@@ -6,6 +6,7 @@ import YouTube from "@/icons/you-tube";
 import Kickstarter from "@/icons/kickstarter";
 import X from "@/icons/x";
 import Email from "@/icons/email";
+import DiscordFill from "@/icons/discord-fill";
 
 export default function SocialIconList({ }: ISocialIconList) {
 
@@ -46,11 +47,18 @@ export default function SocialIconList({ }: ISocialIconList) {
 		<ul className="flex items-center gap-3">
 			{socials.map(({ icon, url, title, color }) => (
 				<li key={title} className="">
-					<ExternalLink href={url} className={`group ${color} h-6 w-6 flex`} title={title}>
-						{icon}
+					<ExternalLink href={url} className={`group relative ${color} h-6 w-6 flex`} title={title}>
+						<div className="group-hover:opacity-0 transition-all duration-300">
+							{icon}
+						</div>
+
+						<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+							<DiscordFill />
+						</div>
 					</ExternalLink>
 				</li>
 			))}
 		</ul>
 	)
 }
+
