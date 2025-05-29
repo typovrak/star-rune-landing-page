@@ -6,7 +6,6 @@ body {
   /* default fonts before loading */
   font-family: Arial, Helvetica, sans-serif;
 
-
   h1,
   h2,
   h3,
@@ -14,6 +13,11 @@ body {
   h5,
   h6 {
     font-family: var(--font-primary);
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -63,6 +67,7 @@ body {
     --discord-500: 235 86% 65%;
     --discord-600: 240 77% 59%;
     --x-500: 197 100% 47%;
+    --youtube-500: 0 100% 50%;
   }
 
   .dark {

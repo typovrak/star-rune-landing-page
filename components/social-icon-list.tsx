@@ -9,46 +9,44 @@ import Email from "@/icons/email";
 
 export default function SocialIconList({ }: ISocialIconList) {
 
-	const iconClassName = "h-6 w-6 fill-red stroke-red";
-
 	const socials = [
 		{
-			icon: <Discord className={iconClassName} />,
+			icon: <Discord />,
 			url: data.url.discord,
 			title: "Discord",
-			color: "",
+			color: "text-discord-500",
 		},
 		{
-			icon: <YouTube className={iconClassName} />,
+			icon: <YouTube />,
 			url: data.url.youtube,
 			title: "YouTube",
-			color: "",
+			color: "text-youtube-500",
 		},
 		{
-			icon: <Kickstarter className={iconClassName} />,
+			icon: <Kickstarter />,
 			url: data.url.kickstarter,
 			title: "Kickstarter",
-			color: "",
+			color: "text-kickstarter-500",
 		},
 		{
-			icon: <X className={iconClassName} />,
+			icon: <X />,
 			url: data.url.x,
 			title: "X",
-			color: "",
+			color: "text-x-500",
 		},
 		{
-			icon: <Email className={iconClassName} />,
+			icon: <Email />,
 			url: `mailto:${data.email}`,
 			title: "Email",
-			color: "",
+			color: "text-yellow-600",
 		},
 	];
 
 	return (
 		<ul className="flex items-center gap-3">
-			{socials.map(({ icon, url, title }) => (
+			{socials.map(({ icon, url, title, color }) => (
 				<li key={title} className="">
-					<ExternalLink href={url} className="group text-muted-foreground" ariaLabel={title}>
+					<ExternalLink href={url} className={`group ${color} h-6 w-6 flex`} title={title}>
 						{icon}
 					</ExternalLink>
 				</li>

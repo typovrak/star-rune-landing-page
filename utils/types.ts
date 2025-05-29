@@ -59,3 +59,10 @@ export interface ISocialIconList {
 export interface ISVG {
 	className?: string;
 }
+
+export interface IExternalLink {
+	href: string;
+	className?: string;
+	children: ReactNode;
+	title?: string;
+}

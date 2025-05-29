@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth overscroll-none">
       <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary`}>{children}</body>
     </html>
   )
