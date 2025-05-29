@@ -12,6 +12,7 @@ import BlockHero from "@/blocks/block-hero";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import BlockConversion from "@/blocks/block-conversion";
+import data from "@/utils/data";
 
 export default function Home() {
   return (
@@ -19,13 +20,15 @@ export default function Home() {
       <Header />
 
       <BlockHero />
-      <BlockResume />
-      <BlockFeatures />
-      <BlockAbilities />
-      <BlockGallery />
-      <BlockTestimonials />
-      <BlockTeam />
-      <BlockCommunity />
+
+      <BlockResume id={data.homeLinks[0].id} />
+      <BlockFeatures id={data.homeLinks[1].id} />
+      <BlockAbilities id={data.homeLinks[2].id} />
+      <BlockGallery id={data.homeLinks[3].id} />
+      <BlockTestimonials id={data.homeLinks[4].id} />
+      <BlockTeam id={data.homeLinks[5].id} />
+      <BlockCommunity id={data.homeLinks[6].id} />
+
       <BlockConversion />
 
       <Footer />

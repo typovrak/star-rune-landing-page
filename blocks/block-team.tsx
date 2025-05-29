@@ -4,10 +4,10 @@ import { Star } from "lucide-react";
 import TeamSection from "@/components/team-section";
 import data from "@/utils/data";
 
-export default function BlockTeam({ }: IBlockTeam) {
+export default function BlockTeam({ id }: IBlockTeam) {
 	return (
 		<SectionWrapper
-			id="team"
+			id={id}
 			badge={{
 				icon: <Star />,
 				title: "The team"

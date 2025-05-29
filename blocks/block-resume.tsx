@@ -2,16 +2,15 @@ import type { IBlockResume } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import { Star, Keyboard, Zap, Heart, Sword, Award } from "lucide-react";
 import data from "@/utils/data";
-import Badge from "@/components/badge";
 import { Button } from "@/components/ui/button";
 import ExternalLink from "@/components/external-link";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
-export default function BlockResume({ }: IBlockResume) {
+export default function BlockResume({ id }: IBlockResume) {
 	return (
 		<SectionWrapper
-			id="about"
+			id={id}
 			badge={{
 				icon: <Star />,
 				title: "Amazing journey"

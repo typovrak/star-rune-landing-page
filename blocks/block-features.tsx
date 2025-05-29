@@ -4,10 +4,10 @@ import data from "@/utils/data";
 import { Star } from "lucide-react";
 import GameFeatures from "@/components/game-features";
 
-export default function BlockFeatures({ }: IBlockFeatures) {
+export default function BlockFeatures({ id }: IBlockFeatures) {
 	return (
 		<SectionWrapper
-			id="features"
+			id={id}
 			badge={{
 				icon: <Star />,
 				title: "Unique features"

@@ -4,10 +4,10 @@ import SocialLinks from "@/components/social-links";
 import NewsletterForm from "@/components/newsletter-form";
 import { Star } from "lucide-react";
 
-export default function BlockCommunity({ }: IBlockCommunity) {
+export default function BlockCommunity({ id }: IBlockCommunity) {
 	return (
 		<SectionWrapper
-			id="community"
+			id={id}
 			badge={{
 				icon: <Star />,
 				title: "Join us"

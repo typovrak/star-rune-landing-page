@@ -6,6 +6,7 @@ export default function SectionWrapper({ id, children, className, badge, title, 
 		<section id={id} className={`w-full py-16 md:py-24 lg:py-32 relative overflow-hidden${className ? ` ${className}` : ''}`}>
 			<div className="container px-4 md:px-6 relative">
 				<SectionHeader
+					id={id}
 					badge={badge}
 					title={title}
 					text={text}

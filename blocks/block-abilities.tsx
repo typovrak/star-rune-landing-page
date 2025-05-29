@@ -4,10 +4,10 @@ import { Gamepad2 } from "lucide-react";
 import data from "@/utils/data";
 import GameplaySection from "@/components/gameplay-section";
 
-export default function BlockAbilities({ }: IBlockAbilities) {
+export default function BlockAbilities({ id }: IBlockAbilities) {
 	return (
 		<SectionWrapper
-			id="gameplay"
+			id={id}
 			badge={{
 				icon: <Gamepad2 />,
 				title: "Gameplay"

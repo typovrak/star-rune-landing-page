@@ -4,11 +4,11 @@ import { ImageIcon } from "lucide-react";
 import data from "@/utils/data";
 import GallerySection from "@/components/gallery-section";
 
-export default function BlockGallery({ }: IBlockGallery) {
+export default function BlockGallery({ id }: IBlockGallery) {
 
 	return (
 		<SectionWrapper
-			id="gallery"
+			id={id}
 			badge={{
 				icon: <ImageIcon />,
 				title: "Gallery"

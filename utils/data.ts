@@ -44,5 +44,9 @@ export default {
 			id: "team",
 			title: "Team",
 		},
+		{
+			id: "community",
+			title: "Community",
+		},
 	],
 }

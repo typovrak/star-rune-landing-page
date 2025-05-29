@@ -3,10 +3,10 @@ import SectionWrapper from "@/layouts/section-wrapper";
 import { Quote } from "lucide-react";
 import TestimonialsSection from "@/components/testimonials-section";
 
-export default function BlockTestimonials({ }: IBlockTestimonials) {
+export default function BlockTestimonials({ id }: IBlockTestimonials) {
 	return (
 		<SectionWrapper
-			id="testimonials"
+			id={id}
 			badge={{
 				icon: <Quote />,
 				title: "Testimonials"
