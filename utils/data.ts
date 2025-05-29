@@ -17,5 +17,32 @@ export default {
 		tiktok: "https://www.tiktok.com/@starrunetyping",
 		instagram: "https://www.instagram.com/starrunecompany/",
 		facebook: "https://www.facebook.com/profile.php?id=61573206182317",
-	}
+	},
+
+	homeLinks: [
+		{
+			id: "about",
+			title: "About",
+		},
+		{
+			id: "features",
+			title: "Features",
+		},
+		{
+			id: "gameplay",
+			title: "Gameplay",
+		},
+		{
+			id: "gallery",
+			title: "Gallery",
+		},
+		{
+			id: "testimonials",
+			title: "Testimonials",
+		},
+		{
+			id: "team",
+			title: "Team",
+		},
+	],
 }

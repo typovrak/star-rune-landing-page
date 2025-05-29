@@ -20,25 +20,14 @@ export default function Header({ }: IHeader) {
 				<BrandTitle />
 
 				<nav className="hidden md:flex gap-6">
-					<Link href="#about" className="text-sm font-medium hover:text-yellow-500 transition-colors">
-						About
-					</Link>
-					<Link href="#features" className="text-sm font-medium hover:text-yellow-500 transition-colors">
-						Features
-					</Link>
-					<Link href="#gameplay" className="text-sm font-medium hover:text-yellow-500 transition-colors">
-						Gameplay
-					</Link>
-					<Link href="#gallery" className="text-sm font-medium hover:text-yellow-500 transition-colors">
-						Gallery
-					</Link>
-					<Link href="#team" className="text-sm font-medium hover:text-yellow-500 transition-colors">
-						Team
-					</Link>
-					<Link href="#faq" className="text-sm font-medium hover:text-yellow-500 transition-colors">
-						FAQ
-					</Link>
+					{data.homeLinks.map(({ id, title }) => (
+						<Link key={id} href={`#${id}`} className="group relative text-base hover:text-yellow-700 duration-300 hover:scale-105 transition-all">
+							{title}
+							<span className="absolute bottom-0 h-[1px] w-0 group-hover:w-full transition-all duration-300 left-0 bg-foreground group-hover:bg-yellow-700"></span>
+						</Link>
+					))}
 				</nav>
+
 				<div className="flex items-center gap-4">
 					<div className="flex items-center gap-4">
 						<div className="hidden md:flex items-center gap-3 mr-2">
@@ -110,6 +99,6 @@ export default function Header({ }: IHeader) {
 					</div>
 				</div>
 			</div>
-		</header>
+		</header >
 	)
 }
