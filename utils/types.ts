@@ -66,3 +66,8 @@ export interface IExternalLink {
 	children: ReactNode;
 	title?: string;
 }
+
+export interface IIconInvert {
+	icon: ReactElement;
+	iconHover: ReactElement;
+}
