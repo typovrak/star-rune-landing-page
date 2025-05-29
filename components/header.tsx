@@ -17,7 +17,7 @@ export default function Header({ }: IHeader) {
 
 				<nav className="hidden md:flex gap-6">
 					{data.homeLinks.map(({ id, title }) => (
-						<Link key={id} href={`#${id}`} prefetch={false} className="group relative text-base hover:text-yellow-700 duration-300 hover:scale-105 transition-all">
+						<Link key={id} href={`#${id}`} prefetch={false} className="group relative text-base hover:text-yellow-700 duration-300 transition-all hover:rotate-text">
 							{title}
 							<span className="absolute bottom-0 h-[1px] w-0 group-hover:w-full transition-all duration-300 left-0 bg-foreground group-hover:bg-yellow-700"></span>
 						</Link>

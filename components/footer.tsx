@@ -12,7 +12,9 @@ export default function Footer({ }: IFooter) {
 			<div className="container px-4 md:px-6">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 					<div className="space-y-4">
-						<BrandTitle />
+						<div className="flex">
+							<BrandTitle />
+						</div>
 
 						<p className="text-sm text-muted-foreground">
 							The Ultimate Typing Game and the funnest experience typing you've ever had!

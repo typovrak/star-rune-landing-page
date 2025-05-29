@@ -68,6 +68,8 @@ body {
     --discord-600: 240 77% 59%;
     --x-500: 197 100% 47%;
     --youtube-500: 0 100% 50%;
+    --rotate-text: 3deg;
+    --rotate-icon: 6deg;
   }
 
   .dark {
