@@ -1,6 +1,5 @@
 - replate all <img> with <Image> when needed (mine).
 
+-> réduire la taille de l'icon kickstarter, idem pour X
 
--> Start Join our community component final version
---> - do i add the background gradient in it?
-
+--> taffer le header de fond en comble
