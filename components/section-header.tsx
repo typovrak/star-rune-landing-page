@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 export default function SectionHeader({ id, badge, title, text }: ISectionHeader) {
 
-	const badgeLinkRef = useRef(null);
+	const badgeLinkRef = useRef<HTMLAnchorElement>(null);
 
 	function titleHover(_: any, mouseIn = true) {
 		if (!badgeLinkRef.current) return;
@@ -32,7 +32,7 @@ export default function SectionHeader({ id, badge, title, text }: ISectionHeader
 				<h2 className="leading-[1.1] sm:leading-[1.1] md:leading-[1.1] lg:leading-[1.1] text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
 					<Link
 						href={`#${id}`}
-						onMouseOver={titleHover}
+						onMouseEnter={titleHover}
 						onMouseLeave={(e) => titleHover(e, false)}
 						onTouchStart={titleHover}
 						onTouchEnd={(e) => titleHover(e, false)}
