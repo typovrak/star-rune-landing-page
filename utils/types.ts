@@ -83,4 +83,11 @@ export interface IButtonIcon {
 	url: string;
 	icon: ReactElement;
 	title: string;
+	className?: string;
+}
+
+export interface IButtonIconDemo {
+}
+
+export interface IButtonIconKickstarter {
 }

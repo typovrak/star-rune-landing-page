@@ -1,13 +1,12 @@
 import type { IHeader } from "@/utils/types";
 import Link from "next/link";
 import data from "@/utils/data";
-import { Keyboard } from "lucide-react";
 import CountdownTimer from "@/components/countdown-timer";
 import MobileMenu from "@/components/mobile-menu";
 import BrandTitle from "@/components/brand-title";
 import SocialIconList from "@/components/social-icon-list";
-import ButtonIcon from "@/components/button-icon";
 import { useRef } from "react";
+import ButtonIconDemo from "@/components/button-icon-demo";
 
 export default function Header({ }: IHeader) {
 
@@ -38,7 +37,7 @@ export default function Header({ }: IHeader) {
 			<div className="container flex h-16 items-center justify-between px-4">
 				<BrandTitle />
 
-				<nav ref={navRef} className="relative hidden md:flex">
+				<nav ref={navRef} className="relative hidden lg:flex">
 					<span className="absolute -inset-y-1 bg-yellow-500 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none shadow-xl shadow-yellow-500/30"></span>
 
 					{data.homeLinks.map(({ id, title }, index) => (
@@ -66,11 +65,7 @@ export default function Header({ }: IHeader) {
 							<CountdownTimer />
 						</div>
 
-						<ButtonIcon
-							url={data.url.demo}
-							icon={<Keyboard />}
-							title="Play demo"
-						/>
+						<ButtonIconDemo />
 
 						<MobileMenu />
 					</div>

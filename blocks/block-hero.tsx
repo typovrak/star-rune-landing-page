@@ -9,6 +9,8 @@ import { motion } from "framer-motion"
 import data from "@/utils/data";
 import ExternalLink from "@/components/external-link";
 import type { IBlockHero } from "@/utils/types";
+import ButtonIconDemo from "@/components/button-icon-demo";
+import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 
 export default function BlockHero({ }: IBlockHero) {
   const [scrollY, setScrollY] = useState(0)
@@ -35,7 +37,7 @@ export default function BlockHero({ }: IBlockHero) {
         </div>
       </div>
 
-      <div className="container relative z-20 px-4 md:px-6 text-white">
+      <div className="container relative z-20 px-4 md:px-6 text-base">
         <motion.div
           className="max-w-3xl"
           initial={{ opacity: 0, y: 20 }}
@@ -49,26 +51,9 @@ export default function BlockHero({ }: IBlockHero) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              <Button
-                asChild
-                size="lg"
-                className="gap-1 bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
-              >
-                <ExternalLink href={data.url.demo}>
-                  <Keyboard className="h-5 w-5 mr-1" />
-                  Play Demo
-                </ExternalLink>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                className="gap-1 bg-kickstarter-500 hover:bg-kickstarter-600 text-black shadow-lg shadow-kickstarter-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-kickstarter-500/30"
-              >
-                <ExternalLink href={data.url.kickstarter}>
-                  <Kickstarter className="h-5 w-5 mr-1" />
-                  Support on Kickstarter
-                </ExternalLink>
-              </Button>
+              <ButtonIconDemo />
+              <ButtonIconKickstarter />
+
               <Button
                 asChild
                 size="lg"
