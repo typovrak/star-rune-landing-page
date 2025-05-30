@@ -8,7 +8,6 @@ export default function SectionHeader({ id, badge, title, text }: ISectionHeader
 	const badgeLinkRef = useRef(null);
 
 	function titleHover(_: any, mouseIn = true) {
-		console.log("mouveover", mouseIn)
 		if (!badgeLinkRef.current) return;
 
 		if (mouseIn) {

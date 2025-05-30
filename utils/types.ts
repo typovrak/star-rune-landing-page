@@ -78,3 +78,9 @@ export interface IIconInvert {
 	icon: ReactElement;
 	iconHover: ReactElement;
 }
+
+export interface IButtonIcon {
+	url: string;
+	icon: ReactElement;
+	title: string;
+}

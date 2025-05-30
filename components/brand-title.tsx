@@ -16,9 +16,9 @@ export default function BrandTitle({ }: IBrandTitle) {
 	}
 
 	return (
-		<Link href="/" className="flex items-center space-x-2 group hover:rotate-text transition-all duration-300" onClick={backToTop}>
+		<Link href="/" className="flex items-center space-x-2 group hover:rotate-text transition-all duration-300 will-change-transform uppercase" onClick={backToTop}>
 			<div className="relative top-[-2px]">
-				<Star className="h-6 w-6 fill-yellow-400 text-yellow-400 transition-transform duration-300 group-hover:scale-125 group-hover:rotate-[72deg]" />
+				<Star className="h-7 w-7 fill-yellow-400 text-yellow-400 transition-transform duration-300 group-hover:scale-[115%] group-hover:rotate-[72deg]" />
 			</div>
 
 			<strong className="text-lg font-primary font-semibold">

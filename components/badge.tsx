@@ -15,7 +15,7 @@ export default function Badge({ icon, title }: IBadge) {
 	return (
 		<BadgeUI
 			variant="outline"
-			className={`border-yellow-500/50 text-yellow-500 px-4 py-1.5 group-hover:bg-yellow-500 transition-all duration-300 group-hover:text-background group-hover:rotate-cta group-[.hover]:bg-yellow-500 group-[.hover]:text-background group-[.hover]:rotate-cta`}
+			className={`border-yellow-500/50 bg-yellow-500/5 text-yellow-500 px-4 py-1.5 group-hover:bg-yellow-500 transition-all duration-300 group-hover:text-background group-hover:rotate-cta group-[.hover]:bg-yellow-500 group-[.hover]:text-background group-[.hover]:rotate-cta shadow-sm shadow-yellow-500 hover:shadow-xl hover:shadow-yellow-500/30 group-[.hover]:shadow-xl group-[.hover]:shadow-yellow-500/30`}
 		>
 			{iconCloned}
 			{title}

@@ -1,13 +1,12 @@
 import type { IHeader } from "@/utils/types";
 import Link from "next/link";
-import ExternalLink from "@/components/external-link";
 import data from "@/utils/data";
 import { Keyboard } from "lucide-react";
 import CountdownTimer from "@/components/countdown-timer";
 import MobileMenu from "@/components/mobile-menu";
-import { Button } from "@/components/ui/button";
 import BrandTitle from "@/components/brand-title";
 import SocialIconList from "@/components/social-icon-list";
+import ButtonIcon from "@/components/button-icon";
 
 export default function Header({ }: IHeader) {
 	return (
@@ -17,7 +16,7 @@ export default function Header({ }: IHeader) {
 
 				<nav className="hidden md:flex gap-6">
 					{data.homeLinks.map(({ id, title }) => (
-						<Link key={id} href={`#${id}`} prefetch={false} className="group relative text-base hover:text-yellow-700 duration-300 transition-all hover:rotate-text">
+						<Link key={id} href={`#${id}`} prefetch={false} className="group relative text-base hover:text-yellow-700 duration-300 transition-all hover:rotate-text will-change-transform">
 							{title}
 							<span className="absolute bottom-0 h-[1px] w-0 group-hover:w-full transition-all duration-300 left-0 bg-foreground group-hover:bg-yellow-700"></span>
 						</Link>
@@ -32,16 +31,13 @@ export default function Header({ }: IHeader) {
 						<div className="hidden sm:block">
 							<CountdownTimer />
 						</div>
-						<Button
-							asChild
-							variant="default"
-							className="bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg shadow-yellow-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-yellow-500/30"
-						>
-							<ExternalLink href={data.url.demo}>
-								<Keyboard className="mr-2 h-4 w-4" />
-								Play Demo
-							</ExternalLink>
-						</Button>
+
+						<ButtonIcon
+							url={data.url.demo}
+							icon={<Keyboard />}
+							title="Play demo"
+						/>
+
 						<MobileMenu />
 					</div>
 				</div>

@@ -45,14 +45,7 @@ export default function CountdownTimer() {
     <ExternalLink href={data.url.kickstarter} className="group">
       <Badge
         icon={<Clock />}
-        title={
-          <>
-            <span>Launch in </span>
-            <span className="ml-1">
-              {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
-            </span>
-          </>
-        }
+        title={`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m`}
       />
     </ExternalLink>
   )
