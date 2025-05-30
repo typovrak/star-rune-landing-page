@@ -61,6 +61,8 @@ export interface IBrandTitle {
 }
 
 export interface ISocialIconList {
+	className?: string;
+	iconClassName?: string;
 }
 
 export interface ISVG {

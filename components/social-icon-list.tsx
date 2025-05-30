@@ -11,7 +11,7 @@ import Email from "@/icons/email";
 import EmailFill from "@/icons/email-fill";
 import IconInvert from "@/components/icon-invert";
 
-export default function SocialIconList({ }: ISocialIconList) {
+export default function SocialIconList({ className, iconClassName }: ISocialIconList) {
 
 	const socials = [
 		{
@@ -52,10 +52,10 @@ export default function SocialIconList({ }: ISocialIconList) {
 	];
 
 	return (
-		<ul className="flex items-center gap-2 2xl:gap-3">
+		<ul className={`flex items-center${className ? ` ${className}` : ""}`}>
 			{socials.map(({ icon, iconHover, url, title, color }) => (
 				<li key={title}>
-					<ExternalLink href={url} className={`group relative ${color} h-6 w-6 flex`} title={title}>
+					<ExternalLink href={url} className={`group relative ${color} flex${iconClassName ? ` ${iconClassName}` : ""}`} title={title}>
 						<IconInvert
 							icon={icon}
 							iconHover={iconHover}

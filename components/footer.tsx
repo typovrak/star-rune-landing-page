@@ -20,7 +20,10 @@ export default function Footer({ }: IFooter) {
 							The Ultimate Typing Game and the funnest experience typing you've ever had!
 						</p>
 
-						<SocialIconList />
+						<SocialIconList
+							className="gap-3"
+							iconClassName="h-6 w-6"
+						/>
 					</div>
 					<div>
 						<h3 className="font-medium text-sm mb-4">Quick Links</h3>

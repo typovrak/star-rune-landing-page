@@ -58,7 +58,10 @@ export default function Header({ }: IHeader) {
 				</nav>
 
 				<div className="flex items-center gap-4">
-					<SocialIconList />
+					<SocialIconList
+						className="gap-2 2xl:gap-3"
+						iconClassName="h-6 w-6"
+					/>
 
 					<div className="flex items-center gap-4">
 						<div className="hidden sm:block">
