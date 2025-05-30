@@ -37,14 +37,14 @@ export default function Header({ }: IHeader) {
 				<BrandTitle />
 
 				<nav ref={navRef} className="relative hidden md:flex">
-					<span className="absolute -inset-y-1 bg-yellow-500 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none"></span>
+					<span className="absolute -inset-y-1 bg-yellow-500 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none shadow-xl shadow-yellow-500/30"></span>
 
 					{data.homeLinks.map(({ id, title }, index) => (
 						<Link
 							key={id}
 							href={`#${id}`}
 							prefetch={false}
-							className="group relative duration-300 px-3 transition-all text-base"
+							className="group relative duration-300 px-3 transition-all text-base hover:rotate-cta hover:scale-110"
 							// @ts-ignore
 							onMouseEnter={(e) => handleNavHover(e, true, index)}
 							onMouseOut={(e) => handleNavHover(e, false, index)}
@@ -55,7 +55,6 @@ export default function Header({ }: IHeader) {
 						</Link>
 					))}
 				</nav>
-
 
 				<div className="flex items-center gap-4">
 					<SocialIconList />
