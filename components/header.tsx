@@ -13,6 +13,8 @@ export default function Header({ }: IHeader) {
 
 	const navRef = useRef<HTMLDivElement>(null);
 
+	let hiddenLinksLg = [4, 5, 6];
+
 	function handleNavHover(_: any, mouseIn: boolean, index: number) {
 		if (!navRef.current) return;
 
@@ -33,7 +35,7 @@ export default function Header({ }: IHeader) {
 
 	return (
 		<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-			<div className="container flex h-16 items-center justify-between">
+			<div className="container flex h-16 items-center justify-between px-4">
 				<BrandTitle />
 
 				<nav ref={navRef} className="relative hidden md:flex">
@@ -44,7 +46,7 @@ export default function Header({ }: IHeader) {
 							key={id}
 							href={`#${id}`}
 							prefetch={false}
-							className="group relative duration-300 px-3 transition-all text-base hover:rotate-cta hover:scale-110"
+							className={`group relative duration-300 px-2 2xl:px-3 transition-all text-base hover:rotate-cta hover:scale-105 2xl:hover:scale-110${hiddenLinksLg.includes(index) ? " lg:hidden xl:inline" : ""}`}
 							// @ts-ignore
 							onMouseEnter={(e) => handleNavHover(e, true, index)}
 							onMouseOut={(e) => handleNavHover(e, false, index)}
