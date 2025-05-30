@@ -4,12 +4,11 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Menu, X as Close } from "lucide-react"
-import Link from "next/link"
-import data from "@/utils/data";
 import SocialIconList from "@/components/social-icon-list";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 import BrandTitle from "@/components/brand-title";
+import QuickLinks from "@/components/quick-links";
 
 export default function MobileMenu() {
 
@@ -29,8 +28,8 @@ export default function MobileMenu() {
 
         <SheetContent side="right" className="w-[80%] sm:w-[350px]">
           <div className="flex flex-col h-full">
-            <div className="flex flex-col border-b pb-4 mb-4">
-              <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col border-b pb-6 mb-6">
+              <div className="flex items-center justify-between mb-6">
                 <BrandTitle />
 
                 <SheetTrigger asChild>
@@ -47,18 +46,11 @@ export default function MobileMenu() {
               />
             </div>
 
-            <nav className="flex flex-col space-y-4">
-              {data.homeLinks.map(({ id, title }) => (
-                <Link
-                  key={id}
-                  href={`#${id}`}
-                  className="px-2 py-1.5 text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setOpen(false)}
-                >
-                  {title}
-                </Link>
-              ))}
-            </nav>
+            <QuickLinks
+              className="flex flex-col text-muted-foreground text-lg"
+              linkClassName="py-4 text-center hover:scale-125 hover:text-foreground"
+              displayColumn={true}
+            />
 
             <div className="mt-auto pt-6 border-t">
               <div className="space-y-4">

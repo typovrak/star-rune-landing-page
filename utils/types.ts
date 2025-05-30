@@ -93,3 +93,10 @@ export interface IButtonIconDemo {
 
 export interface IButtonIconKickstarter {
 }
+
+export interface IQuickLinks {
+	className?: string;
+	linkClassName?: string;
+	displayColumn?: boolean;
+	hiddenLinksDesktop?: number[];
+}
