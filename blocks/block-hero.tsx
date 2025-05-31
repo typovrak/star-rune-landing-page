@@ -1,16 +1,13 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Keyboard } from "lucide-react"
-import Kickstarter from "@/icons/kickstarter";
 import Discord from "@/icons/discord";
 import { motion } from "framer-motion"
 import data from "@/utils/data";
-import ExternalLink from "@/components/external-link";
 import type { IBlockHero } from "@/utils/types";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
+import ButtonIcon from "@/components/button-icon";
 
 export default function BlockHero({ }: IBlockHero) {
   const [scrollY, setScrollY] = useState(0)
@@ -37,39 +34,19 @@ export default function BlockHero({ }: IBlockHero) {
         </div>
       </div>
 
-      <div className="container relative z-20 px-4 md:px-6 text-base">
-        <motion.div
-          className="max-w-3xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="space-y-6">
-            <motion.div
-              className="flex flex-col gap-3 min-[400px]:flex-row pt-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-            >
-              <ButtonIconDemo />
-              <ButtonIconKickstarter />
+      <div className="relative px-4 flex flex-col gap-4 w-full max-w-[350px] mx-auto">
+        <ButtonIconDemo size="bigger" />
+        <ButtonIconKickstarter size="bigger" />
 
-              <Button
-                asChild
-                size="lg"
-                className="gap-1 bg-discord-500 hover:bg-discord-600 text-black shadow-lg shadow-discord-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-discord-500/30"
-              >
-                <ExternalLink href={data.url.discord}>
-                  <Discord className="h-5 w-5 mr-1" />
-                  Join Discord
-                </ExternalLink>
-              </Button>
-            </motion.div>
-          </div>
-        </motion.div>
+        <ButtonIcon
+          url={data.url.discord}
+          icon={<Discord />}
+          title="Join Discord"
+          className="bg-discord-500"
+          size="bigger"
+        />
       </div>
 
-      {/* Floating cards with key features */}
       <div className="absolute bottom-10 left-0 right-0 z-20 container hidden lg:block">
         <div className="flex flex-col items-center mb-6">
           <motion.div

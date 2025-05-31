@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sheet, SheetContent, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Menu, X as Close, AlignRight } from "lucide-react";
 import SocialIconList from "@/components/social-icon-list";
@@ -19,6 +19,16 @@ export default function MobileMenu() {
     setOpen(false);
   }
 
+  function autoCloseMobileMenu() {
+    if (window.innerWidth < 1024) return;
+
+    setOpen(false);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", autoCloseMobileMenu);
+  }, []);
+
   return (
     <div className="lg:hidden">
       <Sheet open={open} onOpenChange={setOpen}>
@@ -30,7 +40,7 @@ export default function MobileMenu() {
           iconHover={<AlignRight />}
         />
 
-        <SheetContent side="right" className="w-full w-mobile-menu">
+        <SheetContent side="right" className="w-full xs:w-mobile-menu">
           <SheetDescription className="sr-only">{data.brand} mobile menu</SheetDescription>
 
           <div className="flex flex-col h-full">

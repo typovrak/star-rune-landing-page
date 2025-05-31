@@ -83,7 +83,7 @@ export interface IIconInvert {
 	iconHover: ReactElement;
 }
 
-export type TButtonIconSize = "default" | "big";
+export type TButtonIconSize = "default" | "big" | "bigger";
 
 export interface IButtonIcon {
 	url: string;
