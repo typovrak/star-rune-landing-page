@@ -21,16 +21,18 @@ export default function Header({ }: IHeader) {
 
 				<div className="flex items-center gap-4">
 					<SocialIconList
-						className="gap-2 xl:gap-3"
+						className="hidden md:flex gap-2 xl:gap-3"
 						iconClassName="h-6 w-6"
 					/>
 
 					<div className="flex items-center gap-4">
-						<div className="hidden sm:block">
+						<div className="hidden xs:block">
 							<CountdownTimer />
 						</div>
 
-						<ButtonIconDemo />
+						<div className="hidden sm:block">
+							<ButtonIconDemo />
+						</div>
 
 						<MobileMenu />
 					</div>

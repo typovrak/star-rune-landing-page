@@ -30,7 +30,7 @@ export default function MobileMenu() {
           iconHover={<AlignRight />}
         />
 
-        <SheetContent side="right" className="w-[80%] sm:w-[350px]">
+        <SheetContent side="right" className="w-full w-mobile-menu">
           <SheetDescription className="sr-only">{data.brand} mobile menu</SheetDescription>
 
           <div className="flex flex-col h-full">

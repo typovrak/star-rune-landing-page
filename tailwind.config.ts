@@ -15,6 +15,13 @@ const config: Config = {
             center: true,
         },
         extend: {
+            width: {
+                'mobile-menu': '350px',
+            },
+            screens: {
+                xs: '375px',
+                s: '480px',
+            },
             fontFamily: {
                 primary: ['var(--font-primary)'],
                 secondary: ['var(--font-secondary)'],
