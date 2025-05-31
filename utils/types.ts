@@ -58,6 +58,7 @@ export interface IBlockConversion {
 }
 
 export interface IBrandTitle {
+	handleCloseMobileMenu?: () => void;
 }
 
 export interface ISocialIconList {
@@ -105,4 +106,11 @@ export interface IQuickLinks {
 	linkClassName?: string;
 	aspectColumn?: boolean;
 	hiddenLinksDesktop?: number[];
+	handleCloseMobileMenu?: () => void;
+}
+
+export interface IButtonMenu {
+	icon: ReactElement;
+	title: string;
+	iconHover?: ReactElement;
 }

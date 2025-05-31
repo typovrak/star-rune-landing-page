@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import data from "@/utils/data";
 
-export default function QuickLinks({ className, floatClassName, linkClassName, aspectColumn, hiddenLinksDesktop }: IQuickLinks) {
+export default function QuickLinks({ className, floatClassName, linkClassName, aspectColumn, hiddenLinksDesktop, handleCloseMobileMenu }: IQuickLinks) {
 
 	const navRef = useRef<HTMLDivElement>(null);
 
@@ -49,6 +49,7 @@ export default function QuickLinks({ className, floatClassName, linkClassName, a
 					onMouseOut={(e) => handleNavHover(e, false, index)}
 					onTouchStart={(e) => handleNavHover(e, true, index)}
 					onTouchEnd={(e) => handleNavHover(e, false, index)}
+					onClick={handleCloseMobileMenu}
 				>
 					{title}
 				</Link>

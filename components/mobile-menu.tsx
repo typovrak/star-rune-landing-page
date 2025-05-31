@@ -1,43 +1,47 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import { Menu, X as Close } from "lucide-react"
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import { Menu, X as Close, AlignRight } from "lucide-react";
 import SocialIconList from "@/components/social-icon-list";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 import BrandTitle from "@/components/brand-title";
 import QuickLinks from "@/components/quick-links";
+import data from "@/utils/data";
+import ButtonMenu from "@/components/button-menu";
 
 export default function MobileMenu() {
 
   const [open, setOpen] = useState(false)
+
+  function handleCloseMobileMenu() {
+    setOpen(false);
+  }
 
   return (
     <div className="lg:hidden">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTitle />
 
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="lg:hidden">
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Toggle menu</span>
-          </Button>
-        </SheetTrigger>
+        <ButtonMenu
+          icon={<Menu />}
+          title="Open mobile menu"
+          iconHover={<AlignRight />}
+        />
 
         <SheetContent side="right" className="w-[80%] sm:w-[350px]">
+          <SheetDescription className="sr-only">{data.brand} mobile menu</SheetDescription>
+
           <div className="flex flex-col h-full">
             <div className="flex flex-col mb-8">
               <div className="flex items-center justify-between mb-8">
-                <BrandTitle />
+                <BrandTitle handleCloseMobileMenu={handleCloseMobileMenu} />
 
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="mr-2">
-                    <Close className="h-5 w-5" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
-                </SheetTrigger>
+                <ButtonMenu
+                  icon={<Close />}
+                  title="Close mobile menu"
+                />
               </div>
 
               <SocialIconList
@@ -51,6 +55,7 @@ export default function MobileMenu() {
               floatClassName="shadow-xl shadow-yellow-500/50"
               linkClassName="py-4 text-center hover:scale-125 hover:text-foreground"
               aspectColumn={true}
+              handleCloseMobileMenu={handleCloseMobileMenu}
             />
 
             <div className="mt-auto pt-8">

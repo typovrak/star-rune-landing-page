@@ -4,15 +4,22 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 import { type SyntheticEvent } from "react";
 
-export default function BrandTitle({ }: IBrandTitle) {
+export default function BrandTitle({ handleCloseMobileMenu }: IBrandTitle) {
 
 	function backToTop(e: SyntheticEvent) {
 		e.preventDefault();
+
+		if (typeof handleCloseMobileMenu !== "undefined") {
+			handleCloseMobileMenu();
+		}
+
 		window.scrollTo({
 			top: 0,
 			left: 0,
 			behavior: "smooth",
 		});
+
+		history.replaceState(null, "", "/");
 	}
 
 	return (
