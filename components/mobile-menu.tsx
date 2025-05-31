@@ -28,8 +28,8 @@ export default function MobileMenu() {
 
         <SheetContent side="right" className="w-[80%] sm:w-[350px]">
           <div className="flex flex-col h-full">
-            <div className="flex flex-col border-b pb-6 mb-6">
-              <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col mb-8">
+              <div className="flex items-center justify-between mb-8">
                 <BrandTitle />
 
                 <SheetTrigger asChild>
@@ -48,14 +48,15 @@ export default function MobileMenu() {
 
             <QuickLinks
               className="flex flex-col text-muted-foreground text-lg"
+              floatClassName="shadow-xl shadow-yellow-500/50"
               linkClassName="py-4 text-center hover:scale-125 hover:text-foreground"
-              displayColumn={true}
+              aspectColumn={true}
             />
 
-            <div className="mt-auto pt-6 border-t">
-              <div className="space-y-4">
-                <ButtonIconKickstarter />
-                <ButtonIconDemo />
+            <div className="mt-auto pt-8">
+              <div className="space-y-6">
+                <ButtonIconKickstarter size="big" />
+                <ButtonIconDemo size="big" />
               </div>
             </div>
           </div>

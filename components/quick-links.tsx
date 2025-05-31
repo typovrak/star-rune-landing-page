@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import data from "@/utils/data";
 
-export default function QuickLinks({ className, linkClassName, displayColumn, hiddenLinksDesktop }: IQuickLinks) {
+export default function QuickLinks({ className, floatClassName, linkClassName, aspectColumn, hiddenLinksDesktop }: IQuickLinks) {
 
 	const navRef = useRef<HTMLDivElement>(null);
 
@@ -15,13 +15,13 @@ export default function QuickLinks({ className, linkClassName, displayColumn, hi
 		if (mouseIn) {
 			const link = navRef.current.children[index + 1] as HTMLAnchorElement;
 
-			if (displayColumn) {
+			if (aspectColumn) {
 				float.style.height = `${link.offsetHeight}px`;
 			} else {
 				float.style.width = `${link.offsetWidth}px`;
 			}
 
-			if (displayColumn) {
+			if (aspectColumn) {
 				float.style.top = `${link.offsetTop}px`;
 			} else {
 				float.style.left = `${link.offsetLeft}px`;
@@ -36,7 +36,7 @@ export default function QuickLinks({ className, linkClassName, displayColumn, hi
 
 	return (
 		<nav ref={navRef} className={`relative${className ? ` ${className}` : ""}`}>
-			<span className={`absolute ${displayColumn ? "-inset-x-1" : "-inset-y-1"} bg-yellow-500 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none shadow-xl shadow-yellow-500/30`}></span>
+			<span className={`absolute ${aspectColumn ? "-inset-x-1" : "-inset-y-1"} bg-yellow-500 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none${floatClassName ? ` ${floatClassName}` : ""}`}></span>
 
 			{data.homeLinks.map(({ id, title }, index) => (
 				<Link

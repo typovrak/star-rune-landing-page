@@ -81,22 +81,28 @@ export interface IIconInvert {
 	iconHover: ReactElement;
 }
 
+export type TButtonIconSize = "default" | "big";
+
 export interface IButtonIcon {
 	url: string;
 	icon: ReactElement;
 	title: string;
 	className?: string;
+	size?: TButtonIconSize;
 }
 
 export interface IButtonIconDemo {
+	size?: TButtonIconSize;
 }
 
 export interface IButtonIconKickstarter {
+	size?: TButtonIconSize;
 }
 
 export interface IQuickLinks {
 	className?: string;
+	floatClassName?: string;
 	linkClassName?: string;
-	displayColumn?: boolean;
+	aspectColumn?: boolean;
 	hiddenLinksDesktop?: number[];
 }

@@ -3,9 +3,14 @@
 -> réduire la taille de l'icon kickstarter, idem pour X
 
 --> taffer le header de fond en comble
----> reste que le bouton puis responsive de la version PC du header. / ajouter le fond sur le badge du header comme v0
 ----> travailler aussi le background du header qui rend facilement illisible le texte
 
+
+reprendre:
+- faire l'icon menu burger
+- idem pour la croix
+- Star Rune dans le menu burger plus gros?
+- mettre un fond jaunâtre sur le filtre du menu burger?
 
 
 
