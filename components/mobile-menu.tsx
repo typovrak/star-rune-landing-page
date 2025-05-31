@@ -36,7 +36,10 @@ export default function MobileMenu() {
           <div className="flex flex-col h-full">
             <div className="flex flex-col mb-8">
               <div className="flex items-center justify-between mb-8">
-                <BrandTitle handleCloseMobileMenu={handleCloseMobileMenu} />
+                <BrandTitle
+                  size="big"
+                  handleCloseMobileMenu={handleCloseMobileMenu}
+                />
 
                 <ButtonMenu
                   icon={<Close />}

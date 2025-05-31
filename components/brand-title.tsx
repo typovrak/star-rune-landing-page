@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 import { type SyntheticEvent } from "react";
 
-export default function BrandTitle({ handleCloseMobileMenu }: IBrandTitle) {
+export default function BrandTitle({ size = "default", handleCloseMobileMenu }: IBrandTitle) {
 
 	function backToTop(e: SyntheticEvent) {
 		e.preventDefault();
@@ -25,10 +25,10 @@ export default function BrandTitle({ handleCloseMobileMenu }: IBrandTitle) {
 	return (
 		<Link href="/" className="flex items-center space-x-2 group hover:rotate-text transition-all duration-300 will-change-transform uppercase" onClick={backToTop}>
 			<div className="relative top-[-2px]">
-				<Star className="h-7 w-7 fill-yellow-400 text-yellow-400 transition-transform duration-300 group-hover:scale-[115%] group-hover:rotate-[72deg]" />
+				<Star className={`${size === "default" ? "h-7 w-7" : "h-9 w-9"} fill-yellow-400 text-yellow-400 transition-transform duration-300 group-hover:scale-[115%] group-hover:rotate-[72deg]`} />
 			</div>
 
-			<strong className="text-lg font-primary font-semibold">
+			<strong className={`${size === "default" ? "text-lg" : "text-xl"} font-primary font-semibold`}>
 				{data.brand}
 			</strong>
 		</Link>

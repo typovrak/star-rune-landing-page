@@ -58,6 +58,7 @@ export interface IBlockConversion {
 }
 
 export interface IBrandTitle {
+	size?: "default" | "big";
 	handleCloseMobileMenu?: () => void;
 }
 
