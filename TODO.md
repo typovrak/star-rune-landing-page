@@ -7,10 +7,11 @@
 
 
 reprendre:
-- faire l'icon menu burger
-- idem pour la croix
-- Star Rune dans le menu burger plus gros?
-- mettre un fond jaunâtre sur le filtre du menu burger?
+- continuer le bloc hero
+
+
+- ajouter un ping sur des boutons
+https://v3.tailwindcss.com/docs/animation
 
 
 

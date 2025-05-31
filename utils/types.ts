@@ -115,3 +115,8 @@ export interface IButtonMenu {
 	title: string;
 	iconHover?: ReactElement;
 }
+
+export interface IScrollIndicator {
+	url: string;
+	title: string;
+}

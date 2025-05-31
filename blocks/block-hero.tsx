@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react"
 import Discord from "@/icons/discord";
-import { motion } from "framer-motion"
 import data from "@/utils/data";
 import type { IBlockHero } from "@/utils/types";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 import ButtonIcon from "@/components/button-icon";
+import ScrollIndicator from "@/components/scroll-indicator";
 
 export default function BlockHero({ }: IBlockHero) {
   const [scrollY, setScrollY] = useState(0)
@@ -47,24 +47,12 @@ export default function BlockHero({ }: IBlockHero) {
         />
       </div>
 
-      <div className="absolute bottom-10 left-0 right-0 z-20 container hidden lg:block">
-        <div className="flex flex-col items-center mb-6">
-          <motion.div
-            className="flex flex-col items-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.0, duration: 0.8 }}
-          >
-            <p className="text-white/70 text-sm mb-2">Scroll to explore</p>
-            <motion.div
-              className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-            >
-              <motion.div className="w-1.5 h-1.5 bg-white/80 rounded-full" />
-            </motion.div>
-          </motion.div>
-        </div>
+
+      <div className="absolute left-0 bottom-6 flex items-center justify-center w-full">
+        <ScrollIndicator
+          url={`#${data.homeLinks[0].id}`}
+          title="Go to the next section"
+        />
       </div>
     </section>
   )
