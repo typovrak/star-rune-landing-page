@@ -1,9 +1,10 @@
 - replate all <img> with <Image> when needed (mine).
 
--> réduire la taille de l'icon kickstarter, idem pour X
 
---> taffer le header de fond en comble
 ----> travailler aussi le background du header qui rend facilement illisible le texte
+-> scroll mobile menu
+
+-- add custom selection && focus style
 
 
 reprendre:

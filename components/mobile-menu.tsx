@@ -40,10 +40,10 @@ export default function MobileMenu() {
           iconHover={<AlignRight />}
         />
 
-        <SheetContent side="right" className="w-full xs:w-mobile-menu">
+        <SheetContent side="right" className="w-full xs:w-mobile-menu overflow-x-hidden overflow-y-auto">
           <SheetDescription className="sr-only">{data.brand} mobile menu</SheetDescription>
 
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col pt-6 pr-6 pl-6 h-full">
             <div className="flex flex-col mb-8">
               <div className="flex items-center justify-between mb-8">
                 <BrandTitle
@@ -74,7 +74,10 @@ export default function MobileMenu() {
             <div className="mt-auto pt-8">
               <div className="space-y-6">
                 <ButtonIconKickstarter size="big" />
-                <ButtonIconDemo size="big" />
+
+                <div className="pb-6">
+                  <ButtonIconDemo size="big" />
+                </div>
               </div>
             </div>
           </div>
