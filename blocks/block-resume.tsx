@@ -19,7 +19,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			text={`${data.brand} is the ultimate typing game and the funnest experience typing you've ever had! Slash and dash through hordes of cookies and evil letters. 力. 速. 志. Unleash the true power of a super star!`}
 			className=""
 		>
-			<div className="grid md:grid-cols-2 gap-10 items-center mt-16">
+			<div className="grid md:grid-cols-2 gap-10 items-center">
 				<div className="order-2 md:order-1">
 					<div className="space-y-4">
 						<h3 className="text-2xl font-bold">The World of {data.brand}</h3>

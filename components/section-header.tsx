@@ -19,7 +19,7 @@ export default function SectionHeader({ id, badge, title, text }: ISectionHeader
 	}
 
 	return (
-		<div className="flex flex-col items-center justify-center space-y-4 text-center">
+		<div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
 			<Link
 				ref={badgeLinkRef}
 				href={`#${id}`}

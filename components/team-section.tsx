@@ -46,9 +46,8 @@ export default function TeamSection() {
   return (
     <div
       ref={teamRef}
-      className={`grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 transition-all duration-1000 ${
-        isTeamInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-all duration-1000 ${isTeamInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       {team.map((member, index) => (
         <Card

@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
     <>
       <div
         ref={testimonialsRef}
-        className={`mt-16 transition-all duration-1000 ${isTestimonialsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        className={`transition-all duration-1000 ${isTestimonialsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
       >
         <div className="relative">

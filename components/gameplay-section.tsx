@@ -48,7 +48,7 @@ export default function GameplaySection() {
   ]
 
   return (
-    <div className="mt-16">
+    <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {abilities.map((ability, index) => (
           <Card
@@ -72,9 +72,8 @@ export default function GameplaySection() {
 
       <div
         ref={videoRef}
-        className={`mt-16 flex justify-center transition-all duration-1000 ${
-          isVideoInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`mt-16 flex justify-center transition-all duration-1000 ${isVideoInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <Card className="overflow-hidden border-2 border-yellow-500/20 max-w-3xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:border-yellow-500/30 rounded-xl">
           <CardContent className="p-0">
@@ -113,6 +112,6 @@ export default function GameplaySection() {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </>
   )
 }

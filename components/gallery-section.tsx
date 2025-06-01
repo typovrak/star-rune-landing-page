@@ -2,9 +2,8 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, ImageIcon, Maximize2, X } from "lucide-react"
+import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react"
 import data from "@/utils/data";
-import SectionHeader from "@/components/section-header";
 
 export default function GallerySection() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -53,60 +52,58 @@ export default function GallerySection() {
 
   return (
     <>
-      <div className="mt-16 relative">
-        <div className="relative overflow-hidden rounded-xl shadow-xl shadow-yellow-500/10">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-4 right-4 z-10 bg-black/40 text-white hover:bg-black/60 rounded-full"
-            onClick={() => setShowLightbox(true)}
-          >
-            <Maximize2 className="h-5 w-5" />
-          </Button>
-          <img
-            src={images[activeIndex].src || "/placeholder.svg"}
-            alt={images[activeIndex].alt}
-            className="w-full aspect-video object-cover"
-          />
-          <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
-            <p className="font-medium">{images[activeIndex].caption}</p>
-          </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white hover:bg-black/60 rounded-full"
-            onClick={prevImage}
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white hover:bg-black/60 rounded-full"
-            onClick={nextImage}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
+      <div className="relative overflow-hidden rounded-xl shadow-xl shadow-yellow-500/10">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute top-4 right-4 z-10 bg-black/40 text-white hover:bg-black/60 rounded-full"
+          onClick={() => setShowLightbox(true)}
+        >
+          <Maximize2 className="h-5 w-5" />
+        </Button>
+        <img
+          src={images[activeIndex].src || "/placeholder.svg"}
+          alt={images[activeIndex].alt}
+          className="w-full aspect-video object-cover"
+        />
+        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+          <p className="font-medium">{images[activeIndex].caption}</p>
         </div>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white hover:bg-black/60 rounded-full"
+          onClick={prevImage}
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white hover:bg-black/60 rounded-full"
+          onClick={nextImage}
+        >
+          <ChevronRight className="h-6 w-6" />
+        </Button>
+      </div>
 
-        <div className="mt-6 grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 ${index === activeIndex
-                ? "border-yellow-500 shadow-md shadow-yellow-500/20"
-                : "border-transparent opacity-70 hover:opacity-100"
-                }`}
-              onClick={() => setActiveIndex(index)}
-            >
-              <img
-                src={image.src || "/placeholder.svg"}
-                alt={image.alt}
-                className="w-full aspect-video object-cover"
-              />
-            </div>
-          ))}
-        </div>
+      <div className="mt-6 grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`cursor-pointer rounded-lg overflow-hidden border-2 transition-all duration-300 ${index === activeIndex
+              ? "border-yellow-500 shadow-md shadow-yellow-500/20"
+              : "border-transparent opacity-70 hover:opacity-100"
+              }`}
+            onClick={() => setActiveIndex(index)}
+          >
+            <img
+              src={image.src || "/placeholder.svg"}
+              alt={image.alt}
+              className="w-full aspect-video object-cover"
+            />
+          </div>
+        ))}
       </div>
 
       {/* Lightbox */}

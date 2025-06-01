@@ -18,7 +18,7 @@ export default function GameFeatures() {
   const isInView4 = useInView(ref4, { once: true, amount: 0.3 })
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div
         ref={ref1}
         className={`transition-all duration-1000 ${isInView1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"

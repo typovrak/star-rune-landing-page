@@ -18,9 +18,8 @@ export default function SocialLinks() {
   return (
     <div
       ref={socialRef}
-      className={`grid grid-cols-1 md:grid-cols-4 gap-6 py-8 transition-all duration-1000 ${
-        isSocialInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`grid grid-cols-1 md:grid-cols-4 gap-6 pb-8 transition-all duration-1000 ${isSocialInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       <Card className="flex flex-col items-center text-center p-6 border-2 border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:shadow-lg group">
         <CardContent className="flex flex-col items-center space-y-4 pt-6">
