@@ -17,6 +17,7 @@ export default function BlockHero({ }: IBlockHero) {
         />
       </div>
       {/* TODO: add filter after some seconds */}
+      {/* TODO: add follow cursor animation on image */}
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative px-4 flex flex-col gap-4 w-full max-w-[350px] mx-auto">

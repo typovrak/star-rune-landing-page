@@ -121,3 +121,10 @@ export interface IScrollIndicator {
 	title: string;
 	className?: string;
 }
+
+export interface ICardSellingPoint {
+	icon: ReactElement;
+	title: string;
+	text: string;
+	iconClassName?: string;
+}
