@@ -18,6 +18,9 @@ const config: Config = {
             width: {
                 'mobile-menu': '350px',
             },
+            height: {
+                header: 'var(--header-height)',
+            },
             screens: {
                 xs: '375px',
                 s: '480px',

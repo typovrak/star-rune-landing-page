@@ -1,6 +1,3 @@
-"use client"
-
-import { useState, useEffect } from "react"
 import Discord from "@/icons/discord";
 import data from "@/utils/data";
 import type { IBlockHero } from "@/utils/types";
@@ -10,29 +7,17 @@ import ButtonIcon from "@/components/button-icon";
 import ScrollIndicator from "@/components/scroll-indicator";
 
 export default function BlockHero({ }: IBlockHero) {
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
   return (
-    <section className="relative w-full min-h-[95vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10" style={{ opacity: Math.min(0.6 + scrollY * 0.001, 0.8) }} />
-        <div className="absolute inset-0 z-0" style={{ transform: `translateY(${scrollY * 0.2}px)` }}>
-          <img
-            src="/star-rune-hero.jpg"
-            alt={`${data.brand} game background`}
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
+    <section className="relative w-full min-h-[calc(100vh-var(--header-height))] mt-[var(--header-height)] flex items-center overflow-hidden">
+      <div className="absolute inset-0" >
+        <img
+          src="/star-rune-hero.jpg"
+          alt={`${data.brand} game background`}
+          className="w-full h-full object-cover object-top"
+        />
       </div>
+      {/* TODO: add filter after some seconds */}
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative px-4 flex flex-col gap-4 w-full max-w-[350px] mx-auto">
         <ButtonIconDemo size="bigger" />

@@ -71,6 +71,7 @@ body {
     --rotate-text: 3deg;
     --rotate-icon: 6deg;
     --rotate-cta: 1deg;
+    --header-height: 64px;
   }
 
   .dark {
