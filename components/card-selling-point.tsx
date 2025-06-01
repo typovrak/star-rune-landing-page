@@ -1,12 +1,16 @@
 import type { ICardSellingPoint } from "@/utils/types";
 import { Card, CardContent } from "@/components/ui/card";
+import IconInvert from "@/components/icon-invert";
 
-export default function CardSellingPoint({ icon, title, text, iconClassName }: ICardSellingPoint) {
+export default function CardSellingPoint({ icon, iconHover, iconColor, title, text, className }: ICardSellingPoint) {
 	return (
-		<Card className="bg-black/60 border-yellow-500/50 backdrop-blur-sm text-white hover:bg-black/70 transition-all duration-300 hover:border-yellow-500/80 hover:shadow-lg hover:shadow-yellow-500/10 group">
+		<Card className={`group bg-black/60 text-white hover:bg-black/70 transition-all duration-300 shadow-lg hover:shadow-2xl${className ? ` ${className}` : ""}`}>
 			<CardContent className="p-4 flex items-center">
-				<div className={`h-8 w-8 mr-3 group-hover:scale-110 transition-transform duration-300${iconClassName ? ` ${iconClassName}` : ""}`}>
-					{icon}
+				<div className={`relative h-8 w-8 mr-3 group-hover:scale-110 transition-transform duration-300 ${iconColor}`}>
+					<IconInvert
+						icon={icon}
+						iconHover={iconHover}
+					/>
 				</div>
 
 				<div>

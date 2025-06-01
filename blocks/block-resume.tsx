@@ -1,11 +1,15 @@
 import type { IBlockResume } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
-import { Star, Zap, Heart, Sword, Award } from "lucide-react";
+import { Star, Sword } from "lucide-react";
 import data from "@/utils/data";
 import { Card, CardContent } from "@/components/ui/card";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 import CardSellingPoint from "@/components/card-selling-point";
+import Bolt from "@/icons/bolt";
+import Heart from "@/icons/heart";
+import Trophy from "@/icons/trophy";
+import TrophyFill from "@/icons/trophy-fill";
 
 export default function BlockResume({ id }: IBlockResume) {
 	return (
@@ -19,6 +23,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			text={`${data.brand} is the ultimate typing game and the funnest experience typing you've ever had! Slash and dash through hordes of cookies and evil letters. 力. 速. 志. Unleash the true power of a super star!`}
 			className=""
 		>
+			{/* TODO: this block need a H1 */}
 			<div className="grid md:grid-cols-2 gap-10 items-center mb-10">
 				<div className="space-y-4 order-2 md:order-1">
 					<h3 className="text-2xl font-bold">The World of {data.brand}</h3>
@@ -55,31 +60,39 @@ export default function BlockResume({ id }: IBlockResume) {
 				className="grid grid-cols-4 gap-4"
 			>
 				<CardSellingPoint
-					icon={<Zap />}
+					icon={<Bolt />}
+					iconHover={<Bolt className="fill-yellow-400" />}
+					iconColor="text-yellow-400"
 					title="Every stroke = Action"
 					text="Feel the rush with every keystroke"
-					iconClassName="text-yellow-400"
+					className="shadow-yellow-400/30 hover:shadow-yellow-400/30"
 				/>
 
 				<CardSellingPoint
 					icon={<Heart />}
+					iconHover={<Heart className="fill-red-400" />}
+					iconColor="text-red-400"
 					title="Beginner friendly"
 					text="Impossible to fail in early levels"
-					iconClassName="text-red-400"
+					className="shadow-red-400/30 hover:shadow-red-400/30"
 				/>
 
 				<CardSellingPoint
 					icon={<Sword />}
+					iconHover={<Sword className="fill-blue-400" />}
+					iconColor="text-blue-400"
 					title="12 legendary swords"
 					text="Each with unique abilities"
-					iconClassName="text-blue-400"
+					className="shadow-blue-400/30 hover:shadow-blue-400/30"
 				/>
 
 				<CardSellingPoint
-					icon={<Award />}
+					icon={<Trophy />}
+					iconHover={<TrophyFill />}
+					iconColor="text-purple-400"
 					title="118 levels"
 					text="Every level is unique"
-					iconClassName="text-purple-400"
+					className="shadow-purple-400/30 hover:shadow-purple-400/30"
 				/>
 			</div>
 		</SectionWrapper>

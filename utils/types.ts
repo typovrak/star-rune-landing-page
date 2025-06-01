@@ -124,7 +124,9 @@ export interface IScrollIndicator {
 
 export interface ICardSellingPoint {
 	icon: ReactElement;
+	iconHover: ReactElement;
+	iconColor: string;
 	title: string;
 	text: string;
-	iconClassName?: string;
+	className?: string;
 }
