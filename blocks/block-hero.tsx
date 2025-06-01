@@ -29,7 +29,7 @@ export default function BlockHero({ }: IBlockHero) {
           <img
             src="/star-rune-hero.jpg"
             alt={`${data.brand} game background`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
       </div>
@@ -48,10 +48,11 @@ export default function BlockHero({ }: IBlockHero) {
       </div>
 
 
-      <div className="absolute left-0 bottom-6 flex items-center justify-center w-full">
+      <div className="absolute left-0 bottom-0 flex items-center justify-center w-full">
         <ScrollIndicator
           url={`#${data.homeLinks[0].id}`}
           title="Go to the next section"
+          className="pb-3 lg:pb-6 pt-6 pr-6 pl-6"
         />
       </div>
     </section>

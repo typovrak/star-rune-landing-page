@@ -1,8 +1,6 @@
 - replate all <img> with <Image> when needed (mine).
 
 
-----> travailler aussi le background du header qui rend facilement illisible le texte
--> scroll mobile menu
 
 -- add custom selection && focus style
 
@@ -29,7 +27,8 @@ https://v3.tailwindcss.com/docs/animation
 
 
 
-
+BESOIN:
+- version mobile de l'image de block-hero pour afficher le titre du jeu sans croppage
 
 ---
 how to access to value behind h-1, w-1 ...

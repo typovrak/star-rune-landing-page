@@ -119,4 +119,5 @@ export interface IButtonMenu {
 export interface IScrollIndicator {
 	url: string;
 	title: string;
+	className?: string;
 }
