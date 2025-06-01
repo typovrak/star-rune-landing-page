@@ -4,7 +4,7 @@ import IconInvert from "@/components/icon-invert";
 
 export default function CardSellingPoint({ icon, iconHover, iconColor, title, text, className }: ICardSellingPoint) {
 	return (
-		<Card className={`group bg-black/60 text-white hover:bg-black/70 transition-all duration-300 shadow-lg hover:shadow-2xl${className ? ` ${className}` : ""}`}>
+		<Card className={`group bg-black/80 text-white hover:bg-black transition-all duration-300 shadow-lg hover:shadow-2xl${className ? ` ${className}` : ""}`}>
 			<CardContent className="p-4 flex items-center">
 				<div className={`relative h-8 w-8 mr-3 group-hover:scale-110 transition-transform duration-300 ${iconColor}`}>
 					<IconInvert
@@ -14,8 +14,8 @@ export default function CardSellingPoint({ icon, iconHover, iconColor, title, te
 				</div>
 
 				<div>
-					<h3 className="font-bold">{title}</h3>
-					<p className="text-xs text-white/70">{text}</p>
+					<h3 className="font-bold font-secondary">{title}</h3>
+					<p className="text-sm text-muted-background">{text}</p>
 				</div>
 			</CardContent>
 		</Card>

@@ -24,6 +24,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			className=""
 		>
 			{/* TODO: this block need a H1 */}
+			{/* TODO: ajouter un icon étoile dans le titre "World of Star Rune" ??? */}
 			<div className="grid md:grid-cols-2 gap-10 items-center mb-10">
 				<div className="space-y-4 order-2 md:order-1">
 					<h3 className="text-2xl font-bold">The World of {data.brand}</h3>
@@ -59,6 +60,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			<div
 				className="grid grid-cols-4 gap-4"
 			>
+				{/* TODO: mettre un icon clavier de tabler.io ici? */}
 				<CardSellingPoint
 					icon={<Bolt />}
 					iconHover={<Bolt className="fill-yellow-400" />}
