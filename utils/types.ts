@@ -149,6 +149,7 @@ export interface IPing {
 
 export interface ICardFeature {
 	icon: ReactElement;
+	iconHover: ReactElement;
 	title: string;
 	content: ReactNode;
 }

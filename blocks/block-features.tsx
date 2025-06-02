@@ -2,15 +2,17 @@ import type { IBlockFeatures } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import data from "@/utils/data";
 import { Star } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Keyboard, Sparkles, Gamepad2, BookOpen } from "lucide-react";
+import { Sparkles, Gamepad2, BookOpen } from "lucide-react";
 import CardFeature from "@/components/card-feature";
+import Keyboard from "@/icons/keyboard";
+import KeyboardFill from "@/icons/keyboard-fill";
 
 export default function BlockFeatures({ id }: IBlockFeatures) {
 
 	const cards = [
 		{
 			icon: <Keyboard />,
+			iconHover: <KeyboardFill />,
 			title: "Every Stroke = Action",
 			content:
 				<>
@@ -27,6 +29,7 @@ export default function BlockFeatures({ id }: IBlockFeatures) {
 		},
 		{
 			icon: <Sparkles />,
+			iconHover: <Sparkles />,
 			title: "Beginner Friendly, Fun For All",
 			content:
 				<>
@@ -43,6 +46,7 @@ export default function BlockFeatures({ id }: IBlockFeatures) {
 		},
 		{
 			icon: <Gamepad2 />,
+			iconHover: <Gamepad2 />,
 			title: "Smooth, Natural Typing",
 			content:
 				<>
@@ -60,6 +64,7 @@ export default function BlockFeatures({ id }: IBlockFeatures) {
 		},
 		{
 			icon: <BookOpen />,
+			iconHover: <BookOpen />,
 			title: "Learn More Through Lore",
 			content:
 				<>
@@ -87,10 +92,11 @@ export default function BlockFeatures({ id }: IBlockFeatures) {
 			className="bg-gradient-to-b from-yellow-50 to-white dark:from-yellow-950/20 dark:to-background"
 		>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-				{cards.map(({ icon, title, content }) => (
+				{cards.map(({ icon, iconHover, title, content }) => (
 					<CardFeature
 						key={title}
 						icon={icon}
+						iconHover={iconHover}
 						title={title}
 						content={content}
 					/>
