@@ -26,8 +26,8 @@ export default function BlockResume({ id }: IBlockResume) {
 		>
 			{/* TODO: this block need a H1 */}
 			{/* TODO: ajouter un icon étoile dans le titre "World of Star Rune" ??? */}
-			<div className="grid md:grid-cols-2 gap-10 items-center mb-10">
-				<div className="space-y-4 order-2 md:order-1">
+			<div className="grid lg:grid-cols-2 gap-10 items-center mb-10">
+				<div className="space-y-4 order-2 lg:order-1">
 					<h3 className="text-2xl font-bold">The World of {data.brand}</h3>
 					<p className="text-muted-foreground">
 						Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil
@@ -45,7 +45,7 @@ export default function BlockResume({ id }: IBlockResume) {
 					</div>
 				</div>
 
-				<Card className="order-1 md:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl transition-all duration-300 hover:shadow-yellow-500/30 hover:rotate-cta">
+				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl transition-all duration-300 hover:shadow-yellow-500/30 hover:rotate-cta">
 					<CardContent className="p-0">
 						<img
 							alt={`${data.brand} story illustration`}
@@ -59,7 +59,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			</div>
 
 			<div
-				className="grid grid-cols-4 gap-4"
+				className="grid sm:grid-cols-2 gap-4 xl:grid-cols-4"
 			>
 				<CardSellingPoint
 					icon={<Heart />}
