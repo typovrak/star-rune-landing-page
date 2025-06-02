@@ -14,7 +14,6 @@ export default function Header({ }: IHeader) {
 
 				<QuickLinks
 					className="hidden lg:flex text-foreground"
-					floatClassName="shadow-xl shadow-yellow-500/30"
 					linkClassName="px-2 xl:px-3 hover:scale-105 2xl:hover:scale-110"
 					hiddenLinksDesktop={[4, 5, 6]}
 				/>

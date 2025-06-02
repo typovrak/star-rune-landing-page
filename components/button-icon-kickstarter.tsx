@@ -9,7 +9,7 @@ export default function ButtonIconKickstarter({ size = "default" }: IButtonIconK
 			url={data.url.kickstarter}
 			icon={<Kickstarter />}
 			title="Support on Kickstarter"
-			className="bg-kickstarter-500 hover:shadow-kickstarter-500/30"
+			className="bg-kickstarter-500 shadow-kickstarter-500/30 hover:shadow-kickstarter-500/30"
 			size={size}
 		/>
 	)

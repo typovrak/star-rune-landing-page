@@ -9,7 +9,7 @@ export default function ButtonIconDemo({ size = "default" }: IButtonIconDemo) {
 			url={data.url.demo}
 			icon={<Keyboard />}
 			title="Play demo"
-			className="bg-yellow-400 hover:shadow-yellow-500/30"
+			className="bg-yellow-400 shadow-yellow-400/30 hover:shadow-yellow-400/30"
 			size={size}
 		/>
 	)

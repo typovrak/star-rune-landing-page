@@ -65,7 +65,6 @@ export default function MobileMenu() {
 
             <QuickLinks
               className="flex flex-col text-muted-foreground text-lg"
-              floatClassName="shadow-xl shadow-yellow-500/50"
               linkClassName="py-4 text-center hover:scale-125 hover:text-foreground"
               aspectColumn={true}
               handleCloseMobileMenu={handleCloseMobileMenu}

@@ -36,7 +36,7 @@ export default function QuickLinks({ className, floatClassName, linkClassName, a
 
 	return (
 		<nav ref={navRef} className={`relative${className ? ` ${className}` : ""}`}>
-			<span className={`absolute ${aspectColumn ? "-inset-x-1" : "-inset-y-1"} bg-yellow-400 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none${floatClassName ? ` ${floatClassName}` : ""}`}></span>
+			<span className={`absolute ${aspectColumn ? "-inset-x-1" : "-inset-y-1"} shadow-yellow-400/30 shadow-xl bg-yellow-400 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none${floatClassName ? ` ${floatClassName}` : ""}`}></span>
 
 			{data.homeLinks.map(({ id, title }, index) => (
 				<Link
