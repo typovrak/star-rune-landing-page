@@ -28,7 +28,7 @@ export default function BrandTitle({ size = "default", handleCloseMobileMenu }: 
 				<Star className={`${size === "default" ? "h-7 w-7" : "h-9 w-9"} fill-yellow-400 text-yellow-400 transition-transform duration-300 group-hover:scale-[115%] group-hover:rotate-[72deg]`} />
 			</div>
 
-			<strong className={`${size === "default" ? "text-lg" : "text-xl"} font-primary font-semibold`}>
+			<strong className={`${size === "default" ? "text-lg" : "text-xl"} text-slate-900 font-primary font-semibold`}>
 				{data.brand}
 			</strong>
 		</Link>

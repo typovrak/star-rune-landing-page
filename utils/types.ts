@@ -5,6 +5,7 @@ export interface ISectionHeader {
 	badge: IBadge;
 	title: string;
 	text: string;
+	h1?: boolean;
 }
 
 export interface IBadge {

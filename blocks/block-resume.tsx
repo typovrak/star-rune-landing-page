@@ -22,25 +22,25 @@ export default function BlockResume({ id }: IBlockResume) {
 			}}
 			title="The ultimate typing adventure"
 			text={`${data.brand} is the ultimate typing game and the funnest experience typing you've ever had! Slash and dash through hordes of cookies and evil letters. 力. 速. 志. Unleash the true power of a super star!`}
-			className=""
+			h1={true}
 		>
-			{/* TODO: this block need a H1 */}
-			{/* TODO: ajouter un icon étoile dans le titre "World of Star Rune" ??? */}
 			<div className="grid lg:grid-cols-2 gap-10 items-center mb-10">
 				<div className="space-y-4 order-2 lg:order-1">
-					<h3 className="text-2xl font-bold">The World of {data.brand}</h3>
-					<p className="text-muted-foreground">
+					<h3 className="text-2xl font-bold text-slate-700">The World of {data.brand}</h3>
+
+					<p className="text-slate-500">
 						Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil
 						Wizards came and corrupted everything. Using Magic Runes, they created 12 Swords of Fable, and opened
 						up a portal to the Dark Web, and hordes of Evil Letters and Cookies poured out.
 					</p>
-					<p className="text-muted-foreground">
+
+					<p className="text-slate-500">
 						The Stars disappeared and were never seen again. But 5 Great Kings fought back. They won a great
 						battle, breaking the Dragon Wizard's sword, Kry XeRnOg. Now, only the Hearts remain free.
 					</p>
+
 					<div className="pt-4 flex flex-wrap gap-4">
 						<ButtonIconKickstarter />
-
 						<ButtonIconDemo />
 					</div>
 				</div>

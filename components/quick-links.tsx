@@ -36,14 +36,14 @@ export default function QuickLinks({ className, floatClassName, linkClassName, a
 
 	return (
 		<nav ref={navRef} className={`relative${className ? ` ${className}` : ""}`}>
-			<span className={`absolute ${aspectColumn ? "-inset-x-1" : "-inset-y-1"} bg-yellow-500 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none${floatClassName ? ` ${floatClassName}` : ""}`}></span>
+			<span className={`absolute ${aspectColumn ? "-inset-x-1" : "-inset-y-1"} bg-yellow-400 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none${floatClassName ? ` ${floatClassName}` : ""}`}></span>
 
 			{data.homeLinks.map(({ id, title }, index) => (
 				<Link
 					key={id}
 					href={`#${id}`}
 					prefetch={false}
-					className={`relative duration-300 transition-all hover:rotate-cta ${hiddenLinksDesktop?.includes(index) ? " hidden 2xl:inline" : ""}${linkClassName ? ` ${linkClassName}` : ""}`}
+					className={`relative text-slate-900 duration-300 transition-all hover:rotate-cta ${hiddenLinksDesktop?.includes(index) ? " hidden 2xl:inline" : ""}${linkClassName ? ` ${linkClassName}` : ""}`}
 					// @ts-ignore
 					onMouseEnter={(e) => handleNavHover(e, true, index)}
 					onMouseOut={(e) => handleNavHover(e, false, index)}
