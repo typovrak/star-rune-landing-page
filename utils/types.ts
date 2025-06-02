@@ -93,18 +93,22 @@ export interface IButtonIcon {
 	className?: string;
 	size?: TButtonIconSize;
 	titleClassName?: string;
+	ping?: IPing;
 }
 
 export interface IButtonIconDemo {
 	size?: TButtonIconSize;
+	ping?: IPing;
 }
 
 export interface IButtonIconKickstarter {
 	size?: TButtonIconSize;
+	ping?: IPing;
 }
 
 export interface IButtonIconDiscord {
 	size?: TButtonIconSize;
+	ping?: IPing;
 }
 
 export interface IQuickLinks {
@@ -135,4 +139,10 @@ export interface ICardSellingPoint {
 	title: string;
 	text: string;
 	className?: string;
+}
+
+export interface IPing {
+	pingClassName: string;
+	ballClassName: string;
+	size?: TButtonIconSize;
 }

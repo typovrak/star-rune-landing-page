@@ -1,7 +1,8 @@
 import type { IButtonIcon } from "@/utils/types";
 import ExternalLink from "@/components/external-link";
+import Ping from "@/components/ping";
 
-export default function ButtonIcon({ url, icon, title, className, size = "default", titleClassName }: IButtonIcon) {
+export default function ButtonIcon({ url, icon, title, className, size = "default", titleClassName, ping }: IButtonIcon) {
 	return (
 		<ExternalLink
 			href={url}
@@ -14,6 +15,14 @@ export default function ButtonIcon({ url, icon, title, className, size = "defaul
 			<div className={titleClassName}>
 				{title}
 			</div>
+
+			{ping &&
+				<Ping
+					pingClassName={ping.pingClassName}
+					ballClassName={ping.ballClassName}
+					size={ping.size}
+				/>
+			}
 		</ExternalLink>
 	)
 }
