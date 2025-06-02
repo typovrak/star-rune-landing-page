@@ -6,10 +6,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 import CardSellingPoint from "@/components/card-selling-point";
-import Bolt from "@/icons/bolt";
 import Heart from "@/icons/heart";
 import Trophy from "@/icons/trophy";
 import TrophyFill from "@/icons/trophy-fill";
+import Keyboard from "@/icons/keyboard";
+import KeyboardFill from "@/icons/keyboard-fill";
 
 export default function BlockResume({ id }: IBlockResume) {
 	return (
@@ -60,32 +61,13 @@ export default function BlockResume({ id }: IBlockResume) {
 			<div
 				className="grid grid-cols-4 gap-4"
 			>
-				{/* TODO: mettre un icon clavier de tabler.io ici? */}
-				<CardSellingPoint
-					icon={<Bolt />}
-					iconHover={<Bolt className="fill-yellow-400" />}
-					iconColor="text-yellow-400"
-					title="Every stroke = Action"
-					text="Feel the rush with every keystroke"
-					className="shadow-yellow-400/30 hover:shadow-yellow-400/30"
-				/>
-
 				<CardSellingPoint
 					icon={<Heart />}
 					iconHover={<Heart className="fill-red-400" />}
 					iconColor="text-red-400"
 					title="Beginner friendly"
 					text="Impossible to fail in early levels"
-					className="shadow-red-400/30 hover:shadow-red-400/30"
-				/>
-
-				<CardSellingPoint
-					icon={<Sword />}
-					iconHover={<Sword className="fill-blue-400" />}
-					iconColor="text-blue-400"
-					title="12 legendary swords"
-					text="Each with unique abilities"
-					className="shadow-blue-400/30 hover:shadow-blue-400/30"
+					className="shadow-red-400/30 hover:shadow-red-400/30 border-red-400"
 				/>
 
 				<CardSellingPoint
@@ -94,8 +76,28 @@ export default function BlockResume({ id }: IBlockResume) {
 					iconColor="text-purple-400"
 					title="118 levels"
 					text="Every level is unique"
-					className="shadow-purple-400/30 hover:shadow-purple-400/30"
+					className="shadow-purple-400/30 hover:shadow-purple-400/30 border-purple-400"
 				/>
+
+				<CardSellingPoint
+					icon={<Keyboard />}
+					iconHover={<KeyboardFill className="fill-emerald-400" />}
+					iconColor="text-emerald-400"
+					title="Every stroke = Action"
+					text="Feel the rush with every keystroke"
+					className="shadow-emerald-400/30 hover:shadow-emerald-400/30 border-emerald-400"
+				/>
+
+
+				<CardSellingPoint
+					icon={<Sword />}
+					iconHover={<Sword className="fill-sky-400" />}
+					iconColor="text-sky-400"
+					title="12 legendary swords"
+					text="Each with unique abilities"
+					className="shadow-sky-400/30 hover:shadow-sky-400/30 border-sky-400"
+				/>
+
 			</div>
 		</SectionWrapper>
 	)

@@ -6,7 +6,6 @@
 
 
 reprendre:
-- continuer le bloc hero
 
 
 - ajouter un ping sur des boutons
