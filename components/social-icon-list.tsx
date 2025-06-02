@@ -47,7 +47,7 @@ export default function SocialIconList({ className, iconClassName }: ISocialIcon
 			iconHover: <EmailFill />,
 			url: `mailto:${data.email}`,
 			title: "Email",
-			color: "text-yellow-500",
+			color: "text-yellow-400",
 		},
 	];
 

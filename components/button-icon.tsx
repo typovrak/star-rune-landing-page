@@ -1,7 +1,7 @@
 import type { IButtonIcon } from "@/utils/types";
 import ExternalLink from "@/components/external-link";
 
-export default function ButtonIcon({ url, icon, title, className, size = "default" }: IButtonIcon) {
+export default function ButtonIcon({ url, icon, title, className, size = "default", titleClassName }: IButtonIcon) {
 	return (
 		<ExternalLink
 			href={url}
@@ -11,7 +11,9 @@ export default function ButtonIcon({ url, icon, title, className, size = "defaul
 				{icon}
 			</div>
 
-			{title}
+			<div className={titleClassName}>
+				{title}
+			</div>
 		</ExternalLink>
 	)
 }

@@ -22,6 +22,7 @@ export default function BlockHero({ }: IBlockHero) {
 
       <div className="relative px-4 flex flex-col gap-4 w-full max-w-[350px] mx-auto">
         <ButtonIconDemo size="bigger" />
+
         <ButtonIconKickstarter size="bigger" />
 
         <ButtonIcon
@@ -31,6 +32,7 @@ export default function BlockHero({ }: IBlockHero) {
           className="bg-discord-500"
           size="bigger"
         />
+
       </div>
 
 

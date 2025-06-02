@@ -92,6 +92,7 @@ export interface IButtonIcon {
 	title: string;
 	className?: string;
 	size?: TButtonIconSize;
+	titleClassName?: string;
 }
 
 export interface IButtonIconDemo {
