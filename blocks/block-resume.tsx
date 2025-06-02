@@ -99,6 +99,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			>
 				{cards.map(({ icon, iconHover, iconColor, title, text, className }) => (
 					<CardSellingPoint
+						key={title}
 						icon={icon}
 						iconHover={iconHover}
 						iconColor={iconColor}

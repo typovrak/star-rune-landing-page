@@ -146,3 +146,9 @@ export interface IPing {
 	ballClassName: string;
 	size?: TButtonIconSize;
 }
+
+export interface ICardFeature {
+	icon: ReactElement;
+	title: string;
+	content: ReactNode;
+}
