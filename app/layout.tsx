@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth overscroll-none">
-      <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary antialiased`}>{children}</body>
+      <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary antialiased selection:bg-yellow-500 selection:text-background`}>{children}</body>
     </html>
   )
 }

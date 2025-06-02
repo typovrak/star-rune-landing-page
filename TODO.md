@@ -1,10 +1,6 @@
 - replate all <img> with <Image> when needed (mine).
 
 
-
--- add custom selection && focus style
-
-
 reprendre:
 
 

@@ -1,9 +1,8 @@
-import Discord from "@/icons/discord";
 import data from "@/utils/data";
 import type { IBlockHero } from "@/utils/types";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
-import ButtonIcon from "@/components/button-icon";
+import ButtonIconDiscord from "@/components/button-icon-discord";
 import ScrollIndicator from "@/components/scroll-indicator";
 
 export default function BlockHero({ }: IBlockHero) {
@@ -22,17 +21,8 @@ export default function BlockHero({ }: IBlockHero) {
 
       <div className="relative px-4 flex flex-col gap-4 w-full max-w-[350px] mx-auto">
         <ButtonIconDemo size="bigger" />
-
         <ButtonIconKickstarter size="bigger" />
-
-        <ButtonIcon
-          url={data.url.discord}
-          icon={<Discord />}
-          title="Join Discord"
-          className="bg-discord-500"
-          size="bigger"
-        />
-
+        <ButtonIconDiscord size="bigger" />
       </div>
 
 

@@ -103,6 +103,10 @@ export interface IButtonIconKickstarter {
 	size?: TButtonIconSize;
 }
 
+export interface IButtonIconDiscord {
+	size?: TButtonIconSize;
+}
+
 export interface IQuickLinks {
 	className?: string;
 	floatClassName?: string;
