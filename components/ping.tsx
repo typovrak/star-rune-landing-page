@@ -6,7 +6,7 @@ export default function Ping({ pingClassName, ballClassName, size = "default" }:
 	return (
 		<>
 			<div className={`${commonClasses} absolute flex rounded-full animate-ping opacity-75${pingClassName ? ` ${pingClassName}` : ""}`}></div>
-			<div className={`${commonClasses} absolute flex rounded-full${ballClassName ? ` ${ballClassName}` : ""}`}></div>
+			<div className={`${commonClasses} absolute flex rounded-full scale-[90%] ${ballClassName ? ` ${ballClassName}` : ""}`}></div>
 		</>
 	)
 }

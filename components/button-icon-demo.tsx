@@ -12,8 +12,8 @@ export default function ButtonIconDemo({ size = "default" }: IButtonIconDemo) {
 			className="bg-yellow-400 shadow-yellow-400/30 hover:shadow-yellow-400/30"
 			size={size}
 			ping={{
-				pingClassName: "bg-rose-400",
-				ballClassName: "bg-rose-500",
+				pingClassName: "bg-orange-400",
+				ballClassName: "bg-orange-600",
 				size: size,
 			}}
 		/>

@@ -2,10 +2,12 @@ import type { IBlockFeatures } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import data from "@/utils/data";
 import { Star } from "lucide-react";
-import { Sparkles, Gamepad2, BookOpen } from "lucide-react";
+import { Sparkles, Gamepad2 } from "lucide-react";
 import CardFeature from "@/components/card-feature";
 import Keyboard from "@/icons/keyboard";
 import KeyboardFill from "@/icons/keyboard-fill";
+import Book from "@/icons/book";
+import BookFill from "@/icons/book-fill";
 
 export default function BlockFeatures({ id }: IBlockFeatures) {
 
@@ -63,8 +65,8 @@ export default function BlockFeatures({ id }: IBlockFeatures) {
 				</>,
 		},
 		{
-			icon: <BookOpen />,
-			iconHover: <BookOpen />,
+			icon: <Book />,
+			iconHover: <BookFill />,
 			title: "Learn More Through Lore",
 			content:
 				<>
