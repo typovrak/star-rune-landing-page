@@ -1,5 +1,4 @@
 import type { IFooter } from "@/utils/types";
-import Link from "next/link";
 import data from "@/utils/data";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -8,6 +7,26 @@ import SocialIconList from "@/components/social-icon-list";
 import QuickLinks from "@/components/quick-links";
 
 export default function Footer({ }: IFooter) {
+
+	const externalLinks = [
+		{
+			url: "https://mscholz.dev/projet/10-astrofolio",
+			title: "Legal notice",
+		},
+		{
+			url: "https://mscholz.dev/projet/09-kevin-tresor",
+			title: "Privacy policy",
+		},
+		{
+			url: "https://mscholz.dev/projet/08-kt-sport-design",
+			title: "Term of Service",
+		},
+		{
+			url: `mailto:${data.email}`,
+			title: "Contact",
+		},
+	];
+
 	return (
 		<footer className="w-full border-t py-8 md:py-12 bg-background">
 			<div className="container px-4 md:px-6">
@@ -31,7 +50,7 @@ export default function Footer({ }: IFooter) {
 						<h3 className="font-medium text-center mb-2 uppercase">Quick links</h3>
 
 						<QuickLinks
-							className="flex flex-col text-sm mx-auto max-w-[120px]"
+							className="flex flex-col text-sm mx-auto max-w-[150px]"
 							linkClassName="text-slate-500 py-1.5 text-center hover:scale-[120%] hover:text-slate-900"
 							aspectColumn={true}
 						/>
@@ -40,28 +59,12 @@ export default function Footer({ }: IFooter) {
 					<div>
 						<h3 className="font-medium text-center mb-2 uppercase">Resources</h3>
 
-						<ul className="space-y-2 text-sm">
-							<li>
-								<Link href="#" className="text-muted-foreground hover:text-yellow-500 transition-colors">
-									Press Kit
-								</Link>
-							</li>
-							<li>
-								<Link href="#" className="text-muted-foreground hover:text-yellow-500 transition-colors">
-									Privacy Policy
-								</Link>
-							</li>
-							<li>
-								<Link href="#" className="text-muted-foreground hover:text-yellow-500 transition-colors">
-									Terms of Service
-								</Link>
-							</li>
-							<li>
-								<Link href="#" className="text-muted-foreground hover:text-yellow-500 transition-colors">
-									Contact
-								</Link>
-							</li>
-						</ul>
+						<QuickLinks
+							className="flex flex-col text-sm mx-auto max-w-[150px]"
+							linkClassName="text-slate-500 py-1.5 text-center hover:scale-[120%] hover:text-slate-900"
+							aspectColumn={true}
+							externalLinks={externalLinks}
+						/>
 					</div>
 					<div>
 						<h3 className="font-medium text-center mb-4 uppercase">Newsletter</h3>

@@ -72,11 +72,18 @@ export interface ISVG {
 	className?: string;
 }
 
+export type TExternalLinkEvent = (e: any) => void;
+
 export interface IExternalLink {
 	href: string;
 	className?: string;
 	children: ReactNode;
 	title?: string;
+	onMouseEnter?: TExternalLinkEvent;
+	onMouseOut?: TExternalLinkEvent;
+	onTouchStart?: TExternalLinkEvent;
+	onTouchEnd?: TExternalLinkEvent;
+	onClick?: TExternalLinkEvent;
 }
 
 export interface IIconInvert {
@@ -118,6 +125,10 @@ export interface IQuickLinks {
 	aspectColumn?: boolean;
 	hiddenLinksDesktop?: number[];
 	handleCloseMobileMenu?: () => void;
+	externalLinks?: {
+		url: string;
+		title: string;
+	}[];
 }
 
 export interface IButtonMenu {
