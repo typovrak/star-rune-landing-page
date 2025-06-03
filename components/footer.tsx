@@ -1,10 +1,10 @@
 import type { IFooter } from "@/utils/types";
 import data from "@/utils/data";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import BrandTitle from "@/components/brand-title";
 import SocialIconList from "@/components/social-icon-list";
 import QuickLinks from "@/components/quick-links";
+import ButtonIconSubscribe from "@/components/button-icon-subscribe";
 
 export default function Footer({ }: IFooter) {
 
@@ -28,7 +28,7 @@ export default function Footer({ }: IFooter) {
 	];
 
 	return (
-		<footer className="w-full border-t py-8 md:py-12 bg-background">
+		<footer className="w-full py-8 md:py-12">
 			<div className="container px-4 md:px-6">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 					<div className="space-y-6">
@@ -66,18 +66,20 @@ export default function Footer({ }: IFooter) {
 							externalLinks={externalLinks}
 						/>
 					</div>
+
 					<div>
 						<h3 className="font-medium text-center mb-4 uppercase">Newsletter</h3>
-						<p className="text-sm text-muted-foreground mb-4">Subscribe to receive updates about {data.brand}</p>
+
+						<p className="text-sm text-slate-500 mb-4">Receive the latest news and updates directly in your inbox.</p>
+
 						<form className="space-y-2">
 							<Input
 								type="email"
 								placeholder="Your email address"
 								className="bg-muted/50 border-yellow-500/20 focus:border-yellow-500/50"
 							/>
-							<Button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-black">
-								Subscribe
-							</Button>
+
+							<ButtonIconSubscribe />
 						</form>
 					</div>
 				</div>

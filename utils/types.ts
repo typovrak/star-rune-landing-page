@@ -110,12 +110,14 @@ export interface IButtonIconDemo {
 
 export interface IButtonIconKickstarter {
 	size?: TButtonIconSize;
-	ping?: IPing;
 }
 
 export interface IButtonIconDiscord {
 	size?: TButtonIconSize;
-	ping?: IPing;
+}
+
+export interface IButtonIconSubscribe {
+	size?: TButtonIconSize;
 }
 
 export interface IQuickLinks {
