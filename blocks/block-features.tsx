@@ -102,8 +102,8 @@ export default function BlockFeatures({ id }: IBlockFeatures) {
 			}}
 			title={`What makes ${data.brand} special`}
 			text="Unlike any typing game you've played before"
-		// TODO: work on the background
-		//className="bg-gradient-to-b from-yellow-50 to-white dark:from-yellow-950/20 dark:to-background"
+			// TODO: work on the background
+			className="bg-gradient-to-b from-slate-100 to-white"
 		>
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 				{cards.map(({ icon, iconHover, title, content, className, iconClassName }) => (
