@@ -13,8 +13,8 @@ export default function Header({ }: IHeader) {
 				<BrandTitle />
 
 				<QuickLinks
-					className="hidden lg:flex text-foreground"
-					linkClassName="px-2 xl:px-3 hover:scale-105 2xl:hover:scale-110"
+					className="hidden lg:flex"
+					linkClassName="text-slate-900 px-2 xl:px-3 hover:scale-105 2xl:hover:scale-110"
 					hiddenLinksDesktop={[4, 5, 6]}
 				/>
 

@@ -43,7 +43,7 @@ export default function QuickLinks({ className, floatClassName, linkClassName, a
 					key={id}
 					href={`#${id}`}
 					prefetch={false}
-					className={`relative text-slate-900 duration-300 transition-all hover:rotate-cta ${hiddenLinksDesktop?.includes(index) ? " hidden 2xl:inline" : ""}${linkClassName ? ` ${linkClassName}` : ""}`}
+					className={`relative duration-300 transition-all hover:rotate-cta ${hiddenLinksDesktop?.includes(index) ? " hidden 2xl:inline" : ""}${linkClassName ? ` ${linkClassName}` : ""}`}
 					// @ts-ignore
 					onMouseEnter={(e) => handleNavHover(e, true, index)}
 					onMouseOut={(e) => handleNavHover(e, false, index)}
