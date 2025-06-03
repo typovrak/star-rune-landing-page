@@ -2,25 +2,21 @@ import type { ICardFeature } from "@/utils/types";
 import { Card, CardContent } from "@/components/ui/card";
 import IconInvert from "@/components/icon-invert";
 
-export default function CardFeature({ icon, iconHover, title, content }: ICardFeature) {
+export default function CardFeature({ icon, iconHover, title, content, className, iconClassName }: ICardFeature) {
 	return (
-		<Card className="group overflow-hidden border-2 border-yellow-500/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-yellow-500/30 h-full">
-			<CardContent className="p-6">
-				<div className="flex flex-col space-y-4">
-					<div className="rounded-full bg-yellow-100 dark:bg-yellow-900/20 p-3 w-12 h-12 flex items-center justify-center">
-						<div className="relative h-6 w-6 text-yellow-600 dark:text-yellow-400">
-							<IconInvert
-								icon={icon}
-								iconHover={iconHover}
-							/>
-						</div>
-					</div>
+		<Card className={`group border-2 shadow-lg hover:shadow-xl transition-all duration-300 h-full hover:rotate-cta bg-slate-600 hover:bg-slate-700${className ? ` ${className}` : ""}`}>
+			<CardContent className="p-6 flex flex-col space-y-4">
+				<div className={`relative rounded-full text-white p-2 w-12 h-12 flex items-center justify-center transition-all duration-300 group-hover:scale-110${iconClassName ? ` ${iconClassName}` : ""}`}>
+					<IconInvert
+						icon={icon}
+						iconHover={iconHover}
+					/>
+				</div>
 
-					<h3 className="text-xl font-bold">{title}</h3>
+				<h3 className="text-xl font-bold text-white">{title}</h3>
 
-					<div className="space-y-4 text-muted-foreground">
-						{content}
-					</div>
+				<div className="space-y-4 text-slate-100">
+					{content}
 				</div>
 			</CardContent>
 		</Card >

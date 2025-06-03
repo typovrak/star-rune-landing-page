@@ -152,4 +152,6 @@ export interface ICardFeature {
 	iconHover: ReactElement;
 	title: string;
 	content: ReactNode;
+	className?: string;
+	iconClassName?: string;
 }
