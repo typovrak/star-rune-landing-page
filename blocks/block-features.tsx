@@ -1,54 +1,48 @@
 import type { IBlockFeatures } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import data from "@/utils/data";
-import { Star } from "lucide-react";
+import { Star, Sword } from "lucide-react";
 import CardFeature from "@/components/card-feature";
 import Keyboard from "@/icons/keyboard";
 import KeyboardFill from "@/icons/keyboard-fill";
+import Heart from "@/icons/heart";
 import Book from "@/icons/book";
 import BookFill from "@/icons/book-fill";
-import School from "@/icons/school";
-import Comet from "@/icons/comet";
 
 export default function BlockFeatures({ id }: IBlockFeatures) {
 
 	const cards = [
 		{
-			icon: <School />,
-			iconHover: <School className="fill-white" />,
-			title: "Knowledge through gameplay",
+			icon: <Sword />,
+			iconHover: <Sword className="fill-white" />,
+			title: "Every stroke = Action",
 			content:
 				<>
 					<p>
-						Boss fights become rhythm duels. As enemies chant runes, letters scroll across the top of the screen.
-						You must type them with perfect timing, this isn't about speed, it's about flow.
+						Most typing games require you to type full words before anything interesting happens. In {data.brand}, every single keystroke is rewarded. Explosions, sliced letters, falling enemies, treasure, dashing across the screen, etc... These are all performed by single strokes.
 					</p>
 					<p>
-						Each success builds toward a devastating ultimate.
-						Land every stroke to fill your Super Star bar and unleash screen-shaking attacks.
-						One missed beat? The combo breaks, and the boss retaliates.
+						This is especially important to kids/new typists who struggle to find one key at a time. But for those who type fast, you'll feel a rush you won't forget.
+					</p>
+				</>,
+			className: "shadow-emerald-400/30 hover:shadow-emerald-400/30 border-emerald-400",
+			iconClassName: "bg-emerald-400",
+		},
+		{
+			icon: <Heart />,
+			iconHover: <Heart className="fill-white" />,
+			title: "Beginner friendly, fun for all",
+			content:
+				<>
+					<p>
+						There's no threat of death in {data.brand} until mid/late game. It's literally impossible to die in the first half of the game. Enemies will attack you, but minor attacks are automatically deflected. Major attacks merely slow you down.
+					</p>
+					<p>
+						This creates a stress-free environment for a new typist to learn/play at their own pace. Typing faster gives higher scores and more rewards, but there is no such thing as failure.
 					</p>
 				</>,
 			className: "shadow-red-400/30 hover:shadow-red-400/30 border-red-400",
 			iconClassName: "bg-red-400",
-		},
-		{
-			icon: <Book />,
-			iconHover: <BookFill />,
-			title: "Learn more through lore",
-			content:
-				<>
-					<p>
-						Through the story/lore of the game, you will subconsciously learn about Chemistry / Periodic Table of
-						Elements, and you'll be given opportunities to practice morse code and foreign languages as well.
-					</p>
-					<p>
-						118 Levels named after 118 periodic table elements. 118 Evil Elemental Lords, for element of the
-						periodic table. Mnemonic Devices to help remember the order of the periodic table.
-					</p>
-				</>,
-			className: "shadow-purple-400/30 hover:shadow-purple-400/30 border-purple-400",
-			iconClassName: "bg-purple-400",
 		},
 		{
 			icon: <Keyboard />,
@@ -67,29 +61,25 @@ export default function BlockFeatures({ id }: IBlockFeatures) {
 						of real typing.
 					</p>
 				</>,
-			className: "shadow-emerald-400/30 hover:shadow-emerald-400/30 border-emerald-400",
-			iconClassName: "bg-emerald-400",
+			className: "shadow-sky-400/30 hover:shadow-sky-400/30 border-sky-400",
+			iconClassName: "bg-sky-400",
 		},
 		{
-			icon: <Comet />,
-			iconHover: <Comet className="fill-white" />,
-			title: "Super Star mode",
+			icon: <Book />,
+			iconHover: <BookFill />,
+			title: "Learn more through lore",
 			content:
 				<>
 					<p>
-						Every level hides a learning trigger.
-						You'll meet heroes named after chemical elements, unlock swords forged with real alchemical runes,
-						and recognize Morse code just by surviving its patterns.
+						Through the story/lore of the game, you will subconsciously learn about Chemistry / Periodic Table of Elements, and you'll be given opportunities to practice morse code and foreign languages as well.
 
 					</p>
 					<p>
-						Star Rune trains more than your fingers.
-						Without flashcards or guides, you’ll pick up elemental symbols, sound-letter associations,
-						and even linguistic roots just by staying alive.
+						118 Levels named after 118 periodic table elements. 118 Evil Elemental Lords, for element of the periodic table. Mnemonic Devices to help remember the order of the periodic table.
 					</p>
 				</>,
-			className: "shadow-blue-400/30 hover:shadow-blue-400/30 border-blue-400",
-			iconClassName: "bg-blue-400",
+			className: "shadow-purple-400/30 hover:shadow-purple-400/30 border-purple-400",
+			iconClassName: "bg-purple-400",
 		},
 	];
 

@@ -16,22 +16,6 @@ export default function BlockResume({ id }: IBlockResume) {
 
 	const cards = [
 		{
-			icon: <Heart />,
-			iconHover: <Heart className="fill-red-400" />,
-			iconColor: "text-red-400",
-			title: "Beginner friendly",
-			text: "Impossible to fail in early levels",
-			className: "shadow-red-400/30 hover:shadow-red-400/30 border-red-400",
-		},
-		{
-			icon: <Trophy />,
-			iconHover: <TrophyFill />,
-			iconColor: "text-purple-400",
-			title: "118 levels",
-			text: "Every level is unique",
-			className: "shadow-purple-400/30 hover:shadow-purple-400/30 border-purple-400",
-		},
-		{
 			icon: <Keyboard />,
 			iconHover: <KeyboardFill className="fill-emerald-400" />,
 			iconColor: "text-emerald-400",
@@ -40,12 +24,28 @@ export default function BlockResume({ id }: IBlockResume) {
 			className: "shadow-emerald-400/30 hover:shadow-emerald-400/30 border-emerald-400",
 		},
 		{
+			icon: <Heart />,
+			iconHover: <Heart className="fill-red-400" />,
+			iconColor: "text-red-400",
+			title: "Beginner friendly",
+			text: "Impossible to fail in early levels",
+			className: "shadow-red-400/30 hover:shadow-red-400/30 border-red-400",
+		},
+		{
 			icon: <Sword />,
 			iconHover: <Sword className="fill-sky-400" />,
 			iconColor: "text-sky-400",
 			title: "12 legendary swords",
 			text: "Each with unique abilities",
 			className: "shadow-sky-400/30 hover:shadow-sky-400/30 border-sky-400",
+		},
+		{
+			icon: <Trophy />,
+			iconHover: <TrophyFill />,
+			iconColor: "text-purple-400",
+			title: "118 levels",
+			text: "Every level is unique",
+			className: "shadow-purple-400/30 hover:shadow-purple-400/30 border-purple-400",
 		},
 	];
 
