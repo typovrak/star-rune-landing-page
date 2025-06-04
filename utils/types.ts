@@ -118,6 +118,7 @@ export interface IButtonIconDiscord {
 
 export interface IButtonIconSubscribe {
 	title: string;
+	className?: string;
 	size?: TButtonIconSize;
 }
 
@@ -192,4 +193,7 @@ export interface ICardSocial {
 	text: string;
 	url: string;
 	buttonTitle: string;
+	color: string;
+	className?: string;
+	buttonClassName?: string;
 }

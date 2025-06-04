@@ -1,15 +1,14 @@
 import type { ICardSocial } from "@/utils/types";
 import { Card, CardContent } from "@/components/ui/card";
 import ExternalLink from "@/components/external-link";
-import { Button } from "@/components/ui/button";
 import IconInvert from "@/components/icon-invert";
 
-export default function CardSocial({ icon, iconHover, title, text, url, buttonTitle }: ICardSocial) {
+export default function CardSocial({ icon, iconHover, title, text, url, buttonTitle, color, className, buttonClassName }: ICardSocial) {
 	return (
-		<Card className="flex flex-col items-center text-center p-6 border-2 border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:shadow-lg group">
-			<CardContent className="flex flex-col items-center space-y-4 pt-6">
+		<Card className={`flex flex-col items-center text-center p-6 border-2 transition-all duration-300 shadow-lg hover:shadow-xl group${className ? ` ${className}` : ""}`}>
+			<CardContent className="flex flex-col items-center h-full space-y-4 pt-6">
 				<div className="relative">
-					<div className="h-12 w-12 text-indigo-500 group-hover:scale-110 transition-transform duration-300">
+					<div className={`h-12 w-12 group-hover:scale-110 transition-transform duration-300 ${color}`}>
 						<IconInvert
 							icon={icon}
 							iconHover={iconHover}
@@ -20,20 +19,19 @@ export default function CardSocial({ icon, iconHover, title, text, url, buttonTi
 				</div>
 
 				<div className="space-y-2">
-					<h3 className="font-bold">{title}</h3>
+					<h3 className="text-slate-900 uppercase font-secondary">{title}</h3>
 
-					<p className="text-sm text-muted-foreground">{text}</p>
+					<p className="text-sm text-slate-500">{text}</p>
 				</div>
 
-				<Button
-					asChild
-					variant="outline"
-					className="w-full border-indigo-500/30 text-indigo-600 hover:bg-indigo-500/10 hover:text-indigo-700 hover:border-indigo-500/50"
-				>
-					<ExternalLink href={url}>
+				<div className="h-full flex items-end">
+					<ExternalLink
+						href={url}
+						className={`w-full flex items-center justify-center hover:shadow-sm whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 h-10 px-6 border ${color}${buttonClassName ? ` ${buttonClassName}` : ""}`}
+					>
 						{buttonTitle}
 					</ExternalLink>
-				</Button>
+				</div>
 			</CardContent>
 		</Card>
 	)

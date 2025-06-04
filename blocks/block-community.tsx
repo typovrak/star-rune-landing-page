@@ -20,7 +20,10 @@ export default function BlockCommunity({ id }: IBlockCommunity) {
 			title: "Discord",
 			text: "Join our Discord server to chat with the community and development team.",
 			url: data.url.discord,
-			buttonTitle: "Join server",
+			buttonTitle: "Join our server",
+			color: "text-discord-500",
+			className: "shadow-discord-500/20 hover:shadow-discord-500/20 border-discord-500/50 hover:border-discord-500",
+			buttonClassName: "border-discord-500/50 hover:bg-discord-500/5 hover:border-discord-500 hover:shadow-discord-500",
 		},
 		{
 			icon: <YouTube />,
@@ -28,7 +31,10 @@ export default function BlockCommunity({ id }: IBlockCommunity) {
 			title: "YouTube",
 			text: "Discover our tutorials, gameplay and updates on our YouTube channel.",
 			url: data.url.youtube,
-			buttonTitle: "Watch channel",
+			buttonTitle: "Watch the channel",
+			color: "text-youtube-500",
+			className: "shadow-youtube-500/20 hover:shadow-youtube-500/20 border-youtube-500/50 hover:border-youtube-500",
+			buttonClassName: "border-youtube-500/50 hover:bg-youtube-500/5 hover:border-youtube-500 hover:shadow-youtube-500",
 		},
 		{
 			icon: <Kickstarter />,
@@ -36,7 +42,10 @@ export default function BlockCommunity({ id }: IBlockCommunity) {
 			title: "Kickstarter",
 			text: "Support our project on Kickstarter and help us reach our goals.",
 			url: data.url.kickstarter,
-			buttonTitle: "Support project",
+			buttonTitle: "Support the project",
+			color: "text-kickstarter-500",
+			className: "shadow-kickstarter-500/20 hover:shadow-kickstarter-500/20 border-kickstarter-500/50 hover:border-kickstarter-500",
+			buttonClassName: "border-kickstarter-500/50 hover:bg-kickstarter-500/5 hover:border-kickstarter-500 hover:shadow-kickstarter-500",
 		},
 		{
 			icon: <X />,
@@ -45,6 +54,9 @@ export default function BlockCommunity({ id }: IBlockCommunity) {
 			text: "Follow the progress of the project on a daily basis.",
 			url: data.url.x,
 			buttonTitle: "Explore my thoughts",
+			color: "text-x-500",
+			className: "shadow-x-500/20 hover:shadow-x-500/20 border-x-500/50 hover:border-x-500",
+			buttonClassName: "border-x-500/50 hover:bg-x-500/5 hover:border-x-500 hover:shadow-x-500",
 		},
 	];
 
@@ -57,18 +69,22 @@ export default function BlockCommunity({ id }: IBlockCommunity) {
 			}}
 			title="Join our community"
 			text="Follow us on social media to stay informed about the latest news and updates"
-			className="bg-gradient-to-b from-background to-muted"
+			className="bg-gradient-to-b from-white to-slate-50"
 		>
 			<>
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-6 pb-8 transition-all duration-1000 opacity-100 translate-y-0">
-					{items.map(({ icon, iconHover, title, text, url, buttonTitle }) => (
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-16">
+					{items.map(({ icon, iconHover, title, text, url, buttonTitle, color, className, buttonClassName }) => (
 						<CardSocial
+							key={title}
 							icon={icon}
 							iconHover={iconHover}
 							title={title}
 							text={text}
 							url={url}
 							buttonTitle={buttonTitle}
+							color={color}
+							className={className}
+							buttonClassName={buttonClassName}
 						/>
 					))}
 				</div>

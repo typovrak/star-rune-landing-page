@@ -30,7 +30,7 @@ export default function Footer({ }: IFooter) {
 	];
 
 	return (
-		<footer className="w-full py-8 md:py-12">
+		<footer className="w-full bg-white py-8 md:py-12">
 			<div className="container px-4">
 				<div className="grid grid-cols-1 s:grid-cols-2 md:grid-cols-4 gap-8">
 					<div className="space-y-6 s:order-1">

@@ -9,7 +9,7 @@ export default function Newsletter({ title, buttonTitle, size = "default", }: IN
 
 			<p className={`text-sm text-slate-500 mb-4 text-center${size === "default" ? " text-balance" : ""}`}>Receive the latest news and updates directly in your inbox.</p>
 
-			<form className={`mb-4${size === "default" ? " space-y-3" : " flex gap-2"}`}>
+			<form className={`mb-4${size === "default" ? " space-y-3" : " flex gap-2 flex-wrap s:flex-nowrap"}`}>
 				<Input
 					type="email"
 					placeholder="Your address email"
@@ -17,6 +17,7 @@ export default function Newsletter({ title, buttonTitle, size = "default", }: IN
 
 				<ButtonIconSubscribe
 					title={buttonTitle}
+					className="w-full s:w-auto"
 				/>
 			</form>
 
