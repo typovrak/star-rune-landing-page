@@ -184,3 +184,12 @@ export interface INewsletter {
 	buttonTitle: string;
 	size?: "default" | "big";
 }
+
+export interface ICardSocial {
+	icon: ReactElement;
+	iconHover: ReactElement;
+	title: string;
+	text: string;
+	url: string;
+	buttonTitle: string;
+}
