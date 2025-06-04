@@ -6,7 +6,7 @@ import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 export default function BlockConversion({ }: IBlockConversion) {
 	return (
 		<section className="w-full py-12 lg:py-16 bg-yellow-400/25">
-			<div className="container px-4 lg:px-6">
+			<div className="container px-4">
 				<div className="flex flex-col lg:flex-row items-center justify-between gap-6">
 					<div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-2">
 						<h3 className="text-2xl font-bold text-slate-900">Ready to join the adventure?</h3>

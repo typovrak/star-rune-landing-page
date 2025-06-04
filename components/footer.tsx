@@ -32,9 +32,9 @@ export default function Footer({ }: IFooter) {
 
 	return (
 		<footer className="w-full py-8 md:py-12">
-			<div className="container px-4 md:px-6">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-					<div className="space-y-6">
+			<div className="container px-4">
+				<div className="grid grid-cols-1 s:grid-cols-2 md:grid-cols-4 gap-8">
+					<div className="space-y-6 s:order-1">
 						<div className="flex">
 							<BrandTitle />
 						</div>
@@ -49,7 +49,7 @@ export default function Footer({ }: IFooter) {
 						/>
 					</div>
 
-					<div>
+					<div className="s:order-3 md:order-2">
 						<h3 className="font-medium text-center mb-2 uppercase">Quick links</h3>
 
 						<QuickLinks
@@ -59,7 +59,7 @@ export default function Footer({ }: IFooter) {
 						/>
 					</div>
 
-					<div>
+					<div className="s:order-4 md:order-3">
 						<h3 className="font-medium text-center mb-2 uppercase">Resources</h3>
 
 						<QuickLinks
@@ -70,10 +70,10 @@ export default function Footer({ }: IFooter) {
 						/>
 					</div>
 
-					<div>
-						<h3 className="font-medium text-center mb-4 uppercase">Newsletter</h3>
+					<div className="s:order-2 md:order-4">
+						<h3 className="font-medium text-center mb-2 uppercase">Newsletter</h3>
 
-						<p className="text-sm text-slate-500 mb-4">Receive the latest news and updates directly in your inbox.</p>
+						<p className="text-sm text-slate-500 mb-4 text-center text-balance">Receive the latest news and updates directly in your inbox.</p>
 
 						<form className="space-y-3 mb-4">
 							<Input
@@ -84,7 +84,7 @@ export default function Footer({ }: IFooter) {
 							<ButtonIconSubscribe />
 						</form>
 
-						<p className="text-xs text-center text-slate-500">
+						<p className="text-xs text-center text-balance text-slate-500">
 							We respect your privacy. You can unsubscribe at any time.
 						</p>
 					</div>
