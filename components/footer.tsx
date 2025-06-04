@@ -1,12 +1,15 @@
 import type { IFooter } from "@/utils/types";
 import data from "@/utils/data";
-import { Input } from "@/components/ui/input";
 import BrandTitle from "@/components/brand-title";
 import SocialIconList from "@/components/social-icon-list";
 import QuickLinks from "@/components/quick-links";
 import ButtonIconSubscribe from "@/components/button-icon-subscribe";
+import Input from "@/components/input";
+import Hr from "@/components/hr";
 
 export default function Footer({ }: IFooter) {
+
+	const year = new Date().getFullYear();
 
 	const externalLinks = [
 		{
@@ -72,20 +75,26 @@ export default function Footer({ }: IFooter) {
 
 						<p className="text-sm text-slate-500 mb-4">Receive the latest news and updates directly in your inbox.</p>
 
-						<form className="space-y-2">
+						<form className="space-y-3 mb-4">
 							<Input
 								type="email"
-								placeholder="Your email address"
-								className="bg-muted/50 border-yellow-500/20 focus:border-yellow-500/50"
+								placeholder="Your address email"
 							/>
 
 							<ButtonIconSubscribe />
 						</form>
+
+						<p className="text-xs text-center text-slate-500">
+							We respect your privacy. You can unsubscribe at any time.
+						</p>
 					</div>
 				</div>
 
-				<div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-					<p>© 2025 {data.brand}. All rights reserved.</p>
+
+				<div className="relative mt-8 pt-8 text-center text-sm text-slate-500">
+					<Hr />
+
+					<p>© {year} {data.brand} - All rights reserved.</p>
 				</div>
 			</div>
 		</footer>

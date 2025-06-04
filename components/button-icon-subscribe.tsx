@@ -6,7 +6,7 @@ import data from "@/utils/data";
 export default function ButtonIconSubscribe({ size = "default" }: IButtonIconSubscribe) {
 	return (
 		<ButtonIcon
-			url={`mailto:${data.email}`}
+			url={`#`}
 			icon={<MailSpark />}
 			title="Subscribe"
 			className="bg-yellow-400 shadow-yellow-400/30 hover:shadow-yellow-400/30"

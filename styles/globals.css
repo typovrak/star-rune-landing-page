@@ -21,7 +21,7 @@ body {
 
   *:focus,
   *:focus-visible {
-    @outline outline-yellow-500;
+    @apply transition-none outline-4 outline-slate-500;
   }
 }
 

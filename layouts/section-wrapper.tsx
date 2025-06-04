@@ -1,5 +1,6 @@
 import type { ISectionWrapper } from "@/utils/types";
 import SectionHeader from "@/components/section-header";
+import Hr from "@/components/hr";
 
 export default function SectionWrapper({ id, children, className, badge, title, text, h1 }: ISectionWrapper) {
 	return (
@@ -16,7 +17,7 @@ export default function SectionWrapper({ id, children, className, badge, title, 
 				{children}
 			</div>
 
-			<div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent"></div>
+			<Hr />
 		</section>
 	)
 }

@@ -168,3 +168,12 @@ export interface ICardFeature {
 	className?: string;
 	iconClassName?: string;
 }
+
+export interface IInput {
+	type: "email";
+	placeholder: string;
+	className?: string;
+}
+
+export interface IHr {
+}
