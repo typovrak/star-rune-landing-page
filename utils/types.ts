@@ -117,6 +117,7 @@ export interface IButtonIconDiscord {
 }
 
 export interface IButtonIconSubscribe {
+	title: string;
 	size?: TButtonIconSize;
 }
 
@@ -176,4 +177,10 @@ export interface IInput {
 }
 
 export interface IHr {
+}
+
+export interface INewsletter {
+	title: string;
+	buttonTitle: string;
+	size?: "default" | "big";
 }

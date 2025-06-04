@@ -3,9 +3,8 @@ import data from "@/utils/data";
 import BrandTitle from "@/components/brand-title";
 import SocialIconList from "@/components/social-icon-list";
 import QuickLinks from "@/components/quick-links";
-import ButtonIconSubscribe from "@/components/button-icon-subscribe";
-import Input from "@/components/input";
 import Hr from "@/components/hr";
+import Newsletter from "@/components/newsletter";
 
 export default function Footer({ }: IFooter) {
 
@@ -50,7 +49,7 @@ export default function Footer({ }: IFooter) {
 					</div>
 
 					<div className="s:order-3 md:order-2">
-						<h3 className="font-medium text-center mb-2 uppercase">Quick links</h3>
+						<h3 className="font-medium text-center text-slate-900 mb-2 uppercase">Quick links</h3>
 
 						<QuickLinks
 							className="flex flex-col text-sm mx-auto max-w-[150px]"
@@ -60,7 +59,7 @@ export default function Footer({ }: IFooter) {
 					</div>
 
 					<div className="s:order-4 md:order-3">
-						<h3 className="font-medium text-center mb-2 uppercase">Resources</h3>
+						<h3 className="font-medium text-center text-slate-900 mb-2 uppercase">Resources</h3>
 
 						<QuickLinks
 							className="flex flex-col text-sm mx-auto max-w-[150px]"
@@ -71,22 +70,10 @@ export default function Footer({ }: IFooter) {
 					</div>
 
 					<div className="s:order-2 md:order-4">
-						<h3 className="font-medium text-center mb-2 uppercase">Newsletter</h3>
-
-						<p className="text-sm text-slate-500 mb-4 text-center text-balance">Receive the latest news and updates directly in your inbox.</p>
-
-						<form className="space-y-3 mb-4">
-							<Input
-								type="email"
-								placeholder="Your address email"
-							/>
-
-							<ButtonIconSubscribe />
-						</form>
-
-						<p className="text-xs text-center text-balance text-slate-500">
-							We respect your privacy. You can unsubscribe at any time.
-						</p>
+						<Newsletter
+							title="Newsletter"
+							buttonTitle="Subscribe"
+						/>
 					</div>
 				</div>
 
