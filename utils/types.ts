@@ -154,6 +154,7 @@ export interface ICardSellingPoint {
 	title: string;
 	text: string;
 	className?: string;
+	isSlide?: boolean;
 }
 
 export interface IPing {
@@ -196,4 +197,31 @@ export interface ICardSocial {
 	color: string;
 	className?: string;
 	buttonClassName?: string;
+}
+
+export interface ISlider {
+	slides: ISlide[];
+}
+
+export interface ISlide {
+	id: number;
+	activeId?: number;
+	icon: ReactElement;
+	iconHover: ReactElement;
+	iconColor: string;
+	title: string;
+	text: string;
+	shadowColor?: string;
+	borderColor: string;
+	src: string;
+	alt: string;
+	className?: string;
+}
+
+export interface IButtonCircle {
+	icon: ReactElement;
+	title: string;
+	onClick: () => void;
+	className?: string;
+	iconClassName?: string;
 }

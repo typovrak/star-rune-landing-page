@@ -3,7 +3,9 @@
 
 reprendre:
 
-
+- faire le plein écran
+- responsive
+- animation boucle
 
 
 
