@@ -52,40 +52,6 @@ export default function GallerySection() {
 
   return (
     <>
-      <div className="relative overflow-hidden rounded-xl shadow-xl shadow-yellow-500/10">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute top-4 right-4 z-10 bg-black/40 text-white hover:bg-black/60 rounded-full"
-          onClick={() => setShowLightbox(true)}
-        >
-          <Maximize2 className="h-5 w-5" />
-        </Button>
-        <img
-          src={images[activeIndex].src || "/placeholder.svg"}
-          alt={images[activeIndex].alt}
-          className="w-full aspect-video object-cover"
-        />
-        <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
-          <p className="font-medium">{images[activeIndex].caption}</p>
-        </div>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white hover:bg-black/60 rounded-full"
-          onClick={prevImage}
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white hover:bg-black/60 rounded-full"
-          onClick={nextImage}
-        >
-          <ChevronRight className="h-6 w-6" />
-        </Button>
-      </div>
 
       <div className="mt-6 grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
         {images.map((image, index) => (
