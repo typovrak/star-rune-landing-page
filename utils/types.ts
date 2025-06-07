@@ -235,3 +235,7 @@ export interface ISliderControls {
 	isFullscreen?: boolean;
 	className?: string;
 }
+
+export interface ISliderFullscreen extends ISliderControls {
+	fullscreen: boolean;
+}

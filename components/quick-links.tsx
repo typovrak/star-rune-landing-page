@@ -23,9 +23,9 @@ export default function QuickLinks({ className, floatClassName, linkClassName, a
 			}
 
 			if (aspectColumn) {
-				float.style.top = `${link.offsetTop}px`;
+				float.style.transform = `translate3d(0, ${link.offsetTop}px, 0) skew(12deg, 0)`;
 			} else {
-				float.style.left = `${link.offsetLeft}px`;
+				float.style.transform = `translate3d(${link.offsetLeft}px, 0, 0) skew(12deg, 0)`;
 			}
 
 			float.classList.add("opacity-100");
@@ -37,7 +37,7 @@ export default function QuickLinks({ className, floatClassName, linkClassName, a
 
 	return (
 		<nav ref={navRef} className={`relative${className ? ` ${className}` : ""}`}>
-			<span className={`absolute ${aspectColumn ? "-inset-x-1" : "-inset-y-1"} shadow-yellow-400/30 shadow-xl bg-yellow-400 skew-x-12 opacity-0 transition-all duration-300 -z-1 pointer-events-none${floatClassName ? ` ${floatClassName}` : ""}`}></span>
+			<span className={`absolute ${aspectColumn ? "-inset-x-1" : "-inset-y-1"} shadow-yellow-400/30 shadow-xl bg-yellow-400 opacity-0 transition-all duration-300 -z-1 pointer-events-none${floatClassName ? ` ${floatClassName}` : ""}`}></span>
 
 			{externalLinks ?
 				<>
