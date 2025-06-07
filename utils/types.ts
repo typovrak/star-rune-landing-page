@@ -225,3 +225,13 @@ export interface IButtonCircle {
 	className?: string;
 	iconClassName?: string;
 }
+
+export interface ISliderControls {
+	slides: ISlide[];
+	activeId: number;
+	handleFullscreen: (state: boolean) => void;
+	previousImage: () => void;
+	nextImage: () => void;
+	isFullscreen?: boolean;
+	className?: string;
+}
