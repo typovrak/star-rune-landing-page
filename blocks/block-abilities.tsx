@@ -28,8 +28,8 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 		},
 		{
 			id: 1,
-			icon: <Swift className="-rotate-45" />,
-			iconHover: <Swift className="-rotate-45 fill-green-400" />,
+			icon: <Swift className="-rotate-45 scale-90" />,
+			iconHover: <Swift className="-rotate-45 scale-90 fill-green-400" />,
 			iconColor: "text-green-400",
 			title: "Dash",
 			text: "When you see a highlighted Azki, type that letter, you'll dash through them and build up your Charge.",

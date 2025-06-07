@@ -26,7 +26,7 @@ export default function Slide({ id, activeId, icon, iconHover, iconColor, title,
 					iconColor={iconColor}
 					title={title}
 					text={text}
-					className={`${borderColor} rounded-none h-full`}
+					className={`${borderColor}`}
 					isSlide={true}
 				/>
 

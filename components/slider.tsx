@@ -3,6 +3,7 @@ import { useState } from "react";
 import Slide from "@/components/slide";
 import ButtonCircle from "@/components/button-circle";
 import ChevronRight from "@/icons/chevron-right";
+import Maximize from "@/icons/maximize";
 
 export default function Slider({ slides }: ISlider) {
 
@@ -17,16 +18,16 @@ export default function Slider({ slides }: ISlider) {
 	}
 
 	return (
-		<>
-			<div className="flex gap-4 items-center justify-end mb-4">
+		<div className="max-w-6xl mx-auto">
+			<div className="flex gap-4 items-center justify-end mb-2 lg:mb-4">
 				<ButtonCircle icon={<ChevronRight />}
 					title="Go to previous image"
 					onClick={previousImage}
-					className={`rotate-180 ${slides[activeId].borderColor} ${activeId === 0 ? "opacity-0 pointer-events-none" : "opacity-100"}`}
-					iconClassName="h-8 w-8 group-hover/button-circle:translate-x-1"
+					className={`${slides[activeId].borderColor} ${slides[activeId].shadowColor} ${activeId === 0 ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+					iconClassName="rotate-180 h-8 w-8 relative right-[2px] group-hover/button-circle:-translate-x-1 lg:h-10 lg:w-10 lg:group-hover/button-circle:-translate-x-2"
 				/>
 
-				<p className="text-slate-600">
+				<p className="text-slate-600 lg:text-lg">
 					{activeId + 1} / {slides.length}
 				</p>
 
@@ -34,8 +35,8 @@ export default function Slider({ slides }: ISlider) {
 					icon={<ChevronRight />}
 					title="Go to next image"
 					onClick={nextImage}
-					className={`${slides[activeId].borderColor} ${activeId === slides.length - 1 ? "opacity-0 pointer-events-none" : "opacity-100"}`}
-					iconClassName="h-8 w-8 group-hover/button-circle:translate-x-1"
+					className={`${slides[activeId].borderColor} ${slides[activeId].shadowColor} ${activeId === slides.length - 1 ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+					iconClassName="h-8 w-8 relative left-[2px] group-hover/button-circle:translate-x-1 lg:h-10 lg:w-10 lg:group-hover/button-circle:translate-x-2"
 				/>
 			</div>
 
@@ -71,6 +72,6 @@ export default function Slider({ slides }: ISlider) {
 				))}
 
 			</div>
-		</>
+		</div>
 	)
 }
