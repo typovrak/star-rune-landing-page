@@ -25,6 +25,26 @@ body {
   }
 }
 
+.clip-path-top {
+  clip-path: var(--clip-path-top);
+}
+
+.clip-path-right {
+  clip-path: var(--clip-path-right);
+}
+
+.clip-path-bottom {
+  clip-path: var(--clip-path-bottom);
+}
+
+.clip-path-left {
+  clip-path: var(--clip-path-left);
+}
+
+.clip-path-open {
+  clip-path: var(--clip-path-open);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -76,6 +96,11 @@ body {
     --rotate-icon: 6deg;
     --rotate-cta: 1deg;
     --header-height: 64px;
+    --clip-path-top: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --clip-path-right: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    --clip-path-bottom: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    --clip-path-left: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    --clip-path-open: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   .dark {
