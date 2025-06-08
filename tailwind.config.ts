@@ -17,6 +17,7 @@ const config: Config = {
         extend: {
             width: {
                 'mobile-menu': '350px',
+                'card-client': 'var(--width-card-client)',
             },
             height: {
                 header: 'var(--header-height)',

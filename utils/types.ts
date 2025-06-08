@@ -239,3 +239,26 @@ export interface ISliderControls {
 export interface ISliderFullscreen extends ISliderControls {
 	fullscreen: boolean;
 }
+
+export type TItemClientSourceType = "irl" | "discord" | "youtube" | "kickstarter" | "x";
+
+export type TItemClient = {
+	id: number;
+	src: string;
+	names: string;
+	about: string;
+	text: string;
+	source: {
+		type: TItemClientSourceType;
+		title: string;
+		url?: string;
+	}
+}
+
+export interface ICardClient extends TItemClient {
+	className?: string;
+}
+
+export interface IFeedbackWall {
+	items: TItemClient[];
+}

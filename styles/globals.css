@@ -101,6 +101,7 @@ body {
     --clip-path-bottom: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     --clip-path-left: polygon(0 0, 0 0, 0 100%, 0% 100%);
     --clip-path-open: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --width-card-client: 450px;
   }
 
   .dark {
