@@ -3,7 +3,7 @@ import SliderControls from "@/components/slider-controls";
 
 export default function SliderFullscreen({ slides, activeId, handleFullscreen, previousImage, nextImage, fullscreen }: ISliderFullscreen) {
 	return (
-		<div className={`fixed inset-0 bg-slate-700 z-50 transition-all duration-1000 flex flex-col items-center justify-center overscroll-contain ${fullscreen ? "opacity-100 pointer-events-all" : "opacity-0 pointer-events-none"}`}>
+		<div className={`fixed inset-0 bg-slate-700 z-50 transition-all duration-300 flex flex-col items-center justify-center overscroll-contain ${fullscreen ? "opacity-100 pointer-events-all" : "opacity-0 pointer-events-none"}`}>
 			<nav className="w-full h-header min-h-[var(--header-height)] border-b bg-background">
 				<SliderControls
 					slides={slides}
@@ -28,7 +28,7 @@ export default function SliderFullscreen({ slides, activeId, handleFullscreen, p
 						key={id}
 						src={`/${src}`}
 						alt={alt}
-						className={`absolute top-[50%] left-[50%] flex aspect-video h-auto w-full max-h-[calc(100vh-var(--header-height))] translate-x-[-50%] translate-y-[-50%] transition-all duration-1000 ${activeId === id ? "clip-path-open" : activeId > id ? "clip-path-left" : "clip-path-right"}`}
+						className={`absolute top-[50%] left-[50%] flex will-change-transform aspect-video h-auto w-full max-h-[calc(100vh-var(--header-height))] translate-x-[-50%] translate-y-[-50%] transition-all duration-1000 ${activeId === id ? "clip-path-open" : activeId > id ? "clip-path-left" : "clip-path-right"}`}
 					/>
 				))}
 			</div>

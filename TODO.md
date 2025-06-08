@@ -3,11 +3,9 @@
 
 reprendre:
 
-- faire le plein écran
-- responsive
-- animation boucle
 
-
+composant testimonials
+https://dribbble.com/shots/22064357-Testimonials-Animation
 
 
 

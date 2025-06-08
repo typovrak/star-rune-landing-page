@@ -1,7 +1,6 @@
 import type { IBlockTestimonials } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import { Quote } from "lucide-react";
-import TestimonialsSection from "@/components/testimonials-section";
 
 export default function BlockTestimonials({ id }: IBlockTestimonials) {
 	return (
@@ -15,8 +14,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			text="Hear from our early players, educators, and supporters"
 			className="bg-yellow-500/5"
 		>
-
-			<TestimonialsSection />
+			test
 		</SectionWrapper>
 	)
 

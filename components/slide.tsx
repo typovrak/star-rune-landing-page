@@ -4,7 +4,7 @@ import CardSellingPoint from "@/components/card-selling-point";
 export default function Slide({ id, activeId, icon, iconHover, iconColor, title, text, borderColor, src, alt, className }: ISlide) {
 	return (
 		<div
-			className={`absolute h-full w-full flex top-0 left-0 transition-all duration-1000${className ? ` ${className}` : ""}`}
+			className={`absolute h-full w-full will-change-transform flex top-0 left-0 transition-all duration-1000${className ? ` ${className}` : ""}`}
 			style={
 				activeId !== undefined ?
 					{
