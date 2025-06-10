@@ -110,6 +110,8 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 	useEffect(() => {
 		if (!floatRef.current) return;
 
+		floatXRef.current = 0;
+
 		for (let i = 0; i < childrenArray.length; i++) {
 			// can change value from another thread so need to keep the reference in a const
 			const previousObserver = childrenArray[i].observer;
@@ -137,7 +139,7 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 			((floatRef.current as HTMLDivElement).children[i] as HTMLElement).style.transform = "translate3d(0,0,0)";
 		}
 
-		floatXRef.current = 0;
+		childMoved = 0;
 	}, [childrenArray]);
 
 	return (
