@@ -36,6 +36,7 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 
 	const gapX = 24;
 	let childMoved = 0;
+	let loop = 0;
 
 	function moveChild(i: number) {
 		if (!floatRef.current) return;
@@ -47,10 +48,10 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 
 		if (childWidth === 0) return;
 
-		// DONE
-		if (direction === -1) {
-			const calc = Math.trunc(floatXRef.current / childWidth);
+		const calc = Math.trunc(floatXRef.current / childWidth);
 
+		// when speed/direction is -
+		if (direction === -1) {
 			if (calc !== childMoved) {
 				currentChild.style.transform = `translate3d(${(childWidth + gapX) * (childrenArray.length - i - 1) + (childWidth + gapX) * Math.abs(calc)}px, 0, 0)`;
 				childMoved = calc;
@@ -59,8 +60,9 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 			return;
 		}
 
-		// TODO:
-
+		// when speed/direction is +
+		currentChild.style.transform = `translate3d(${(childWidth + gapX) * -1 * childrenArray.length * (1 + loop)}px,0,0)`;
+		if (i === 0) loop++;
 	}
 
 	function generateChildNeeded() {
