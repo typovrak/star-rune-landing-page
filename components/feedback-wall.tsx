@@ -1,15 +1,16 @@
 import type { IFeedbackWall } from "@/utils/types";
 import CardClient from "@/components/card-client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function FeedbackWall({ items }: IFeedbackWall) {
 
-	const speed = -1;
+	const speed = -10;
 	const gapX = 24;
-	const childrenArray = [0, 1];
 
 	const wrapperRef = useRef(null);
 	const floatRef = useRef(null);
+
+	const [childrenArray, setChildrenArray] = useState([0, 1]);
 
 	let floatX = 0;
 	let animationFrameId: any = null;
@@ -25,8 +26,41 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 		animationFrameId = requestAnimationFrame(handleSlide)
 	};
 
+	function moveChild(i: number) {
+		if (!floatRef.current) return;
+
+		const currentChild = (floatRef.current as HTMLDivElement).children[i] as HTMLDivElement | undefined;
+		if (!currentChild) return;
+
+		const childWidth = currentChild.offsetWidth;
+
+		if (childWidth === 0) return;
+		const calc = Math.trunc(floatX / childWidth);
+
+		if (calc !== childMoved) {
+			currentChild.style.transform = `translate3d(${(childWidth + gapX) * (childrenArray.length - i - 1) + (childWidth + gapX) * Math.abs(calc)}px, 0, 0)`;
+			childMoved = calc;
+		}
+	}
+
+	function generateChildNeeded() {
+		if (!floatRef.current) return;
+
+		const currentChild = (floatRef.current as HTMLDivElement).children[0] as HTMLDivElement | undefined;
+		if (!currentChild) return;
+
+		if (currentChild.offsetWidth === 0) return;
+		let childNeeded = Math.ceil(window.innerWidth / currentChild.offsetWidth) + 1;
+
+		if (childNeeded <= childrenArray.length) return;
+
+		setChildrenArray([...childrenArray, childrenArray.length]);
+	}
+
 	useEffect(() => {
 		if (!wrapperRef.current) return;
+
+		generateChildNeeded();
 
 		new IntersectionObserver(
 			([e]) => {
@@ -46,25 +80,17 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 				threshold: 0
 			}
 		).observe(wrapperRef.current);
+	}, []);
 
+	useEffect(() => {
 		if (!floatRef.current) return;
-		const floatRefCurrent = floatRef.current as HTMLDivElement;
 
 		for (let i = 0; i < childrenArray.length; i++) {
 			new IntersectionObserver(
 				([e]) => {
 					if (!e.isIntersecting) {
-						const currentChild = floatRefCurrent.children[i] as HTMLDivElement | undefined;
-						if (!currentChild) return;
-
-						const childWidth = currentChild.offsetWidth;
-						const calc = Math.trunc(floatX / childWidth);
-
-						if (calc !== childMoved && Math.abs(calc % 2) === 1) {
-							currentChild.style.transform = `translate3d(${(childWidth + gapX) * (childrenArray.length - i - 1) + (childWidth + gapX) * Math.abs(calc)}px, 0, 0)`;
-							childMoved = calc;
-						}
-
+						console.log("invisible", i);
+						moveChild(i);
 						return;
 					}
 
@@ -74,9 +100,9 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 					rootMargin: '0px',
 					threshold: 0
 				}
-			).observe(floatRefCurrent.children[i]);
+			).observe((floatRef.current as HTMLDivElement).children[i]);
 		}
-	}, []);
+	}, [childrenArray]);
 
 	return (
 		<div
