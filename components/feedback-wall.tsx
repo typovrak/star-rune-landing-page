@@ -21,6 +21,7 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 		id: 1,
 		observer: null,
 	}]);
+	const [winW, setWinW] = useState(0);
 
 	let animationFrameId: any = null;
 
@@ -60,6 +61,7 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 			return;
 		}
 
+		console.log(childrenArray.length, childWidth)
 		// when speed/direction is +
 		currentChild.style.transform = `translate3d(${(childWidth + gapX) * -1 * childrenArray.length * (1 + loop)}px,0,0)`;
 		if (i === 0) loop++;
@@ -74,21 +76,35 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 		if (currentChild.offsetWidth === 0) return;
 		let childNeeded = Math.ceil(window.innerWidth / currentChild.offsetWidth) + 1;
 
-		if (childNeeded <= childrenArray.length) return;
+		// no update on childrenArray needed
+		if (childNeeded === childrenArray.length) return;
 
-		const childToAdd = [];
-		for (let i = 0; i < childNeeded - childrenArray.length; i++) {
-			childToAdd.push({
-				id: i + childrenArray.length,
-				observer: null,
-			});
+		// need more children
+		if (childNeeded > childrenArray.length) {
+			const childToAdd = [];
+			for (let i = 0; i < childNeeded - childrenArray.length; i++) {
+				childToAdd.push({
+					id: i + childrenArray.length,
+					observer: null,
+				});
+			}
+
+			setChildrenArray([...childrenArray, ...childToAdd]);
+			return;
 		}
 
-		setChildrenArray([...childrenArray, ...childToAdd]);
+		// need less children
+		for (let i = 0; i < childrenArray.length - childNeeded; i++) {
+			const childToRemove = childNeeded + i;
+			childrenArray[childToRemove].observer?.disconnect();
+			childrenArray[childToRemove].observer = null;
+		}
+
+		setChildrenArray([...childrenArray.slice(0, childNeeded)]);
 	}
 
 	function handleResize() {
-		generateChildNeeded();
+		setWinW(window.innerWidth);
 	}
 
 	useEffect(() => {
@@ -119,35 +135,35 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 	}, []);
 
 	useEffect(() => {
-		if (!floatRef.current) return;
+		generateChildNeeded();
+	}, [winW]);
+
+	useEffect(() => {
+		if (!wrapperRef.current || !floatRef.current) return;
 
 		floatXRef.current = 0;
 
 		for (let i = 0; i < childrenArray.length; i++) {
-			// can change value from another thread so need to keep the reference in a const
-			const previousObserver = childrenArray[i].observer;
-			if (previousObserver) previousObserver.disconnect();
+			const currentChild = (floatRef.current as HTMLDivElement).children[i] as HTMLElement | undefined;
+			if (!currentChild) continue;
+
+			childrenArray[i].observer?.disconnect();
 			childrenArray[i].observer = null;
 
 			const observer = new IntersectionObserver(
 				([e]) => {
 					if (!e.isIntersecting) {
-						console.log("intersect", i);
 						moveChild(i);
 						return;
 					}
 
 				},
 				{
-					root: null,
+					root: wrapperRef.current,
 					rootMargin: '0px',
 					threshold: 0
 				}
 			);
-
-
-			const currentChild = (floatRef.current as HTMLDivElement).children[i] as HTMLElement | undefined;
-			if (!currentChild) continue;
 
 			observer.observe(currentChild);
 			childrenArray[i].observer = observer;
@@ -162,7 +178,8 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 		}
 
 		childMoved = 0;
-	}, [childrenArray]);
+		loop = 0;
+	}, [childrenArray, winW]);
 
 	return (
 		<div
@@ -183,8 +200,8 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 				ref={floatRef}
 				className="absolute flex gap-6 top-0 left-0"
 			>
-				{childrenArray.map(({ id }) => (
-					<div key={id} className="flex gap-6">
+				{childrenArray.map((child) => (
+					<div key={child.id} className="flex gap-6">
 						{items.map(({ id, src, names, about, text, source }) => (
 							<CardClient
 								key={id}

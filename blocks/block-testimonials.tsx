@@ -80,14 +80,14 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			removeWrapper={true}
 		>
 			<div className="flex flex-col gap-6">
-				{/*<FeedbackWall
+				<FeedbackWall
 					items={items}
-					speed={-10}
-				/>*/}
+					speed={-1}
+				/>
 
 				<FeedbackWall
 					items={items}
-					speed={10}
+					speed={1}
 				/>
 			</div>
 		</SectionWrapper>
