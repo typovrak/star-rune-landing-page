@@ -4,7 +4,9 @@ import { useRef, useEffect } from "react";
 
 export default function FeedbackWall({ items }: IFeedbackWall) {
 
-	const speed = -5;
+	const speed = -1;
+	const gapX = 24;
+	const childrenArray = [0, 1];
 
 	const wrapperRef = useRef(null);
 	const floatRef = useRef(null);
@@ -19,33 +21,6 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 
 		floatRefCurrent.style.transform = `translate3d(${floatX}px, 0,0)`;
 		floatX = floatX + speed;
-
-		// si le premier élément n'est plus visibe : le mettre après son frère.
-		// sinon, faire cela pour le second
-
-		const child1 = floatRefCurrent.children[0] as HTMLDivElement | undefined;
-		if (!child1) return;
-
-		const child2 = floatRefCurrent.children[1] as HTMLDivElement | undefined;
-		if (!child2) return;
-
-
-		const childWidth = child1.offsetWidth;
-		const calc = Math.trunc(floatX / childWidth);
-		console.log(calc, childMoved, calc % 2)
-
-		if (calc !== childMoved && Math.abs(calc % 2) === 1) {
-			console.log("enter child1")
-			// TODO: ajouter le gap en séparation et faire en sorte que le changement de translation se fait au milieu du calc car sinon sur pc on le voit
-			child1.style.transform = `translate3d(${child2.offsetLeft + childWidth * Math.abs(calc)}px, 0, 0)`;
-			childMoved = calc;
-		}
-
-		if (calc !== childMoved && Math.abs(calc % 2) === 0) {
-			console.log("enter child1")
-			child2.style.transform = `translate3d(${childWidth * Math.abs(calc)}px, 0, 0)`;
-			childMoved = calc;
-		}
 
 		animationFrameId = requestAnimationFrame(handleSlide)
 	};
@@ -71,6 +46,36 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 				threshold: 0
 			}
 		).observe(wrapperRef.current);
+
+		if (!floatRef.current) return;
+		const floatRefCurrent = floatRef.current as HTMLDivElement;
+
+		for (let i = 0; i < childrenArray.length; i++) {
+			new IntersectionObserver(
+				([e]) => {
+					if (!e.isIntersecting) {
+						const currentChild = floatRefCurrent.children[i] as HTMLDivElement | undefined;
+						if (!currentChild) return;
+
+						const childWidth = currentChild.offsetWidth;
+						const calc = Math.trunc(floatX / childWidth);
+
+						if (calc !== childMoved && Math.abs(calc % 2) === 1) {
+							currentChild.style.transform = `translate3d(${(childWidth + gapX) * (childrenArray.length - i - 1) + (childWidth + gapX) * Math.abs(calc)}px, 0, 0)`;
+							childMoved = calc;
+						}
+
+						return;
+					}
+
+				},
+				{
+					root: null,
+					rootMargin: '0px',
+					threshold: 0
+				}
+			).observe(floatRefCurrent.children[i]);
+		}
 	}, []);
 
 	return (
@@ -92,34 +97,22 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 				ref={floatRef}
 				className="absolute flex gap-6 top-0 left-0"
 			>
-				<div className="flex gap-6">
-					{items.map(({ id, src, names, about, text, source }) => (
-						<CardClient
-							key={id}
-							id={id}
-							src={src}
-							names={names}
-							about={about}
-							text={text}
-							source={source}
-						/>
-					))}
-				</div>
-
-				<div className="flex gap-6">
-					{items.map(({ id, src, names, about, text, source }) => (
-						<CardClient
-							key={id}
-							id={id}
-							src={src}
-							names={names}
-							about={about}
-							text={text}
-							source={source}
-						/>
-					))}
-				</div>
+				{childrenArray.map((id) => (
+					<div key={id} className="flex gap-6">
+						{items.map(({ id, src, names, about, text, source }) => (
+							<CardClient
+								key={id}
+								id={id}
+								src={src}
+								names={names}
+								about={about}
+								text={text}
+								source={source}
+							/>
+						))}
+					</div>
+				))}
 			</div>
-		</div>
+		</div >
 	)
 }

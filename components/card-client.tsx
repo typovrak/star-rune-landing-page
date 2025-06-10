@@ -10,7 +10,7 @@ import YouTubeFill from "@/icons/you-tube-fill";
 import X from "@/icons/x";
 import ExternalLink from "@/components/external-link";
 
-export default function CardClient({ id, src, names, about, text, source, className }: ICardClient) {
+export default function CardClient({ src, names, about, text, source, className }: ICardClient) {
 
 	const types = {
 		"irl": {
@@ -67,7 +67,7 @@ export default function CardClient({ id, src, names, about, text, source, classN
 
 	return (
 		<Wrapper
-			className={`border-2 bg-white rounded-lg p-6 transition-all duration-300 hover:shadow-sm flex flex-col w-card-client gap-6 group ${types[source.type].border} ${types[source.type].shadow}${className ? ` ${className}` : ""}`}
+			className={`border-2 bg-white rounded-lg p-6 transition-all duration-300 hover:shadow-sm flex flex-col w-card-client-mobile md:w-card-client gap-6 group ${types[source.type].border} ${types[source.type].shadow}${className ? ` ${className}` : ""}`}
 		>
 			<div className="flex flex-col gap-4">
 				<div className="flex gap-4 items-center">
