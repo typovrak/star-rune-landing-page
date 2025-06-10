@@ -16,6 +16,7 @@ export interface IBadge {
 export interface ISectionWrapper extends ISectionHeader {
 	children: ReactNode;
 	className?: string;
+	removeWrapper?: boolean;
 }
 
 export interface IBlockCommunity {

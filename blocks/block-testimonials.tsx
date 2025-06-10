@@ -77,6 +77,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			title="What people are saying"
 			text="Hear from our early players, educators, and supporters"
 			className="bg-yellow-500/5"
+			removeWrapper={true}
 		>
 			<FeedbackWall
 				items={items}
