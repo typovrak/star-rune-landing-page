@@ -2,7 +2,9 @@ import type { IFeedbackWall } from "@/utils/types";
 import CardClient from "@/components/card-client";
 import { useRef, useEffect, useState } from "react";
 
-export default function FeedbackWall({ items }: IFeedbackWall) {
+export default function FeedbackWall({ items, speed }: IFeedbackWall) {
+
+	const direction = speed > 0 ? 1 : -1;
 
 	const wrapperRef = useRef(null);
 	const floatRef = useRef(null);
@@ -20,8 +22,6 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 		observer: null,
 	}]);
 
-
-	const speed = -10;
 	let animationFrameId: any = null;
 
 	function handleSlide() {
@@ -46,12 +46,21 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 		const childWidth = currentChild.offsetWidth;
 
 		if (childWidth === 0) return;
-		const calc = Math.trunc(floatXRef.current / childWidth);
 
-		if (calc !== childMoved) {
-			currentChild.style.transform = `translate3d(${(childWidth + gapX) * (childrenArray.length - i - 1) + (childWidth + gapX) * Math.abs(calc)}px, 0, 0)`;
-			childMoved = calc;
+		// DONE
+		if (direction === -1) {
+			const calc = Math.trunc(floatXRef.current / childWidth);
+
+			if (calc !== childMoved) {
+				currentChild.style.transform = `translate3d(${(childWidth + gapX) * (childrenArray.length - i - 1) + (childWidth + gapX) * Math.abs(calc)}px, 0, 0)`;
+				childMoved = calc;
+			}
+
+			return;
 		}
+
+		// TODO:
+
 	}
 
 	function generateChildNeeded() {
@@ -121,6 +130,7 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 			const observer = new IntersectionObserver(
 				([e]) => {
 					if (!e.isIntersecting) {
+						console.log("intersect", i);
 						moveChild(i);
 						return;
 					}
@@ -133,10 +143,20 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 				}
 			);
 
-			observer.observe((floatRef.current as HTMLDivElement).children[i]);
+
+			const currentChild = (floatRef.current as HTMLDivElement).children[i] as HTMLElement | undefined;
+			if (!currentChild) continue;
+
+			observer.observe(currentChild);
 			childrenArray[i].observer = observer;
 
-			((floatRef.current as HTMLDivElement).children[i] as HTMLElement).style.transform = "translate3d(0,0,0)";
+			if (direction === -1 || i !== childrenArray.length - 1) {
+				currentChild.style.transform = "translate3d(0,0,0)";
+			} else {
+				// only for the last element when speed/direction is +
+				const childWidth = currentChild.offsetWidth;
+				currentChild.style.transform = `translate3d(${(childWidth + gapX) * -1 * childrenArray.length}px,0,0)`;
+			}
 		}
 
 		childMoved = 0;

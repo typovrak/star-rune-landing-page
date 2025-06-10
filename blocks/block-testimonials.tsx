@@ -79,9 +79,17 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			className="bg-yellow-500/5"
 			removeWrapper={true}
 		>
-			<FeedbackWall
-				items={items}
-			/>
+			<div className="flex flex-col gap-6">
+				{/*<FeedbackWall
+					items={items}
+					speed={-10}
+				/>*/}
+
+				<FeedbackWall
+					items={items}
+					speed={10}
+				/>
+			</div>
 		</SectionWrapper>
 	)
 

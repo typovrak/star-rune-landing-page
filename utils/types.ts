@@ -262,4 +262,5 @@ export interface ICardClient extends TItemClient {
 
 export interface IFeedbackWall {
 	items: TItemClient[];
+	speed: number;
 }
