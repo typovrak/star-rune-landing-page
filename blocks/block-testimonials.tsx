@@ -26,7 +26,6 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			source: {
 				type: "discord",
 				title: "Beta tester",
-				url: "https://mscholz.dev",
 			},
 		},
 		{
@@ -38,7 +37,6 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			source: {
 				type: "youtube",
 				title: "Beta tester",
-				url: "https://mscholz.dev",
 			},
 		},
 		{
@@ -50,7 +48,6 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			source: {
 				type: "kickstarter",
 				title: "Beta tester",
-				url: "https://mscholz.dev",
 			},
 		},
 		{
@@ -62,7 +59,6 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			source: {
 				type: "x",
 				title: "Beta tester",
-				url: "https://mscholz.dev",
 			},
 		},
 	];
