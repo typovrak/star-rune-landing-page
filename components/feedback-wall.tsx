@@ -76,6 +76,10 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 		setChildrenArray([...childrenArray, ...childToAdd]);
 	}
 
+	function handleResize() {
+		generateChildNeeded();
+	}
+
 	useEffect(() => {
 		if (!wrapperRef.current) return;
 
@@ -99,6 +103,8 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 				threshold: 0
 			}
 		).observe(wrapperRef.current);
+
+		window.addEventListener("resize", handleResize);
 	}, []);
 
 	useEffect(() => {
@@ -127,7 +133,11 @@ export default function FeedbackWall({ items }: IFeedbackWall) {
 
 			observer.observe((floatRef.current as HTMLDivElement).children[i]);
 			childrenArray[i].observer = observer;
+
+			((floatRef.current as HTMLDivElement).children[i] as HTMLElement).style.transform = "translate3d(0,0,0)";
 		}
+
+		floatXRef.current = 0;
 	}, [childrenArray]);
 
 	return (
