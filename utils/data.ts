@@ -21,6 +21,8 @@ export default {
 		tiktok: "https://www.tiktok.com/@starrunetyping",
 		instagram: "https://www.instagram.com/starrunecompany/",
 		facebook: "https://www.facebook.com/profile.php?id=61573206182317",
+
+		newsletter: "https://assets.mailerlite.com/jsonp/1485300/forms/152975435553048439/subscribe",
 	},
 
 	homeLinks: [

@@ -95,13 +95,14 @@ export interface IIconInvert {
 export type TButtonIconSize = "default" | "big" | "bigger";
 
 export interface IButtonIcon {
-	url: string;
+	url?: string;
 	icon: ReactElement;
 	title: string;
 	className?: string;
 	size?: TButtonIconSize;
 	titleClassName?: string;
 	ping?: IPing;
+	type?: "submit";
 }
 
 export interface IButtonIconDemo {

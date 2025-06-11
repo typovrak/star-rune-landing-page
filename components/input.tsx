@@ -8,6 +8,9 @@ export default function Input({ type, placeholder, className }: IInput) {
 			type={type}
 			placeholder={placeholder}
 			className={`border-2 border-orange-400 placeholder:text-slate-900 hover:rotate-cta transition-all duration-300 focus:transition-all${className ? ` ${className}` : ""}`}
+			autoComplete={type}
+			aria-required={true}
+			aria-invalid={false}
 		/>
 	)
 }
