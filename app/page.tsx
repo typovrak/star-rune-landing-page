@@ -7,7 +7,6 @@ import BlockTestimonials from "@/blocks/block-testimonials";
 import BlockFeatures from "@/blocks/block-features";
 import BlockResume from "@/blocks/block-resume";
 import BlockAbilities from "@/blocks/block-abilities";
-import BlockGallery from "@/blocks/block-gallery";
 import BlockHero from "@/blocks/block-hero";
 import Header from "@/components/header";
 import Footer from "@/components/footer";

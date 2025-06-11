@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Geist, Tomorrow } from "next/font/google";
+import { ReactLenis } from "lenis/react";
 
 const fontPrimary = Geist({
   subsets: ['latin'],
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth overscroll-none">
-      <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary antialiased selection:bg-yellow-500 selection:text-background`}>{children}</body>
+      <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary antialiased selection:bg-yellow-500 selection:text-background`}>
+        <ReactLenis root />
+        {children}
+      </body>
     </html>
   )
 }

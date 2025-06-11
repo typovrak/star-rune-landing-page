@@ -61,7 +61,6 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 			return;
 		}
 
-		console.log(childrenArray.length, childWidth)
 		// when speed/direction is +
 		currentChild.style.transform = `translate3d(${(childWidth + gapX) * -1 * childrenArray.length * (1 + loop)}px,0,0)`;
 		if (i === 0) loop++;

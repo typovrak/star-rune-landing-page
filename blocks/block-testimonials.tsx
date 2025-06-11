@@ -2,8 +2,11 @@ import type { IBlockTestimonials, TItemClient } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import { Quote } from "lucide-react";
 import FeedbackWall from "@/components/feedback-wall";
+import { useLenis } from "lenis/react";
 
 export default function BlockTestimonials({ id }: IBlockTestimonials) {
+
+	const speed = 1;
 
 	const items: TItemClient[] = [
 		{
@@ -63,6 +66,9 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		},
 	];
 
+	useLenis((lenis) => {
+	});
+
 	return (
 		<SectionWrapper
 			id={id}
@@ -78,15 +84,14 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			<div className="flex flex-col gap-6">
 				<FeedbackWall
 					items={items}
-					speed={-1}
+					speed={speed * -1}
 				/>
 
 				<FeedbackWall
 					items={items}
-					speed={1}
+					speed={speed}
 				/>
 			</div>
 		</SectionWrapper>
 	)
-
 }

@@ -8,6 +8,7 @@ composant testimonials
 https://dribbble.com/shots/22064357-Testimonials-Animation
 
 
+-> ajouter le fade sur le composant
 
 
 
