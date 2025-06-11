@@ -22,6 +22,8 @@ export default function BrandTitle({ size = "default", handleCloseMobileMenu }: 
 		history.replaceState(null, "", "/");
 	}
 
+	// TODO: demander une petite étoile pour l'icon
+
 	return (
 		<Link href="/" className="flex items-center space-x-2 group hover:rotate-text transition-all duration-300 will-change-transform uppercase" onClick={backToTop}>
 			<div className="relative top-[-2px]">

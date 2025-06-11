@@ -39,10 +39,6 @@ export default {
 			title: "Gameplay",
 		},
 		{
-			id: "screenshots",
-			title: "Screenshots",
-		},
-		{
 			id: "testimonials",
 			title: "Testimonials",
 		},

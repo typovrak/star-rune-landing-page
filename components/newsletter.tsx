@@ -29,17 +29,15 @@ export default function Newsletter({ title, buttonTitle, size = "default" }: INe
 
 			if (jsonRes.success) {
 				toast.success("You are now subscribed !");
-
+				setEmail("");
 				return;
 			}
 
 
 			toast.error(jsonRes.errors.fields.email[0]);
-
 			return;
 		} catch (e: any) {
 			toast.error(e.errors.fields.email[0]);
-
 			return;
 		}
 	}

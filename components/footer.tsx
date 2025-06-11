@@ -86,6 +86,7 @@ export default function Footer({ }: IFooter) {
 				<div className="relative mt-8 pt-8 text-center text-sm text-slate-500">
 					<Hr />
 
+					{/* TODO: mscholz.dev credits */}
 					<p>© {year} {data.brand} - All rights reserved.</p>
 				</div>
 			</div>

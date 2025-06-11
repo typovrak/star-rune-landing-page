@@ -23,9 +23,9 @@ export default function Home() {
       <BlockResume id={data.homeLinks[0].id} />
       <BlockFeatures id={data.homeLinks[1].id} />
       <BlockAbilities id={data.homeLinks[2].id} />
-      <BlockTestimonials id={data.homeLinks[4].id} />
-      <BlockTeam id={data.homeLinks[5].id} />
-      <BlockCommunity id={data.homeLinks[6].id} />
+      <BlockTestimonials id={data.homeLinks[3].id} />
+      <BlockTeam id={data.homeLinks[4].id} />
+      <BlockCommunity id={data.homeLinks[5].id} />
 
       <BlockConversion />
 
