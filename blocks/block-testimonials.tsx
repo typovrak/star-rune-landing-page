@@ -2,7 +2,6 @@ import type { IBlockTestimonials, TItemClient } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import { Quote } from "lucide-react";
 import FeedbackWall from "@/components/feedback-wall";
-import { useLenis } from "lenis/react";
 
 export default function BlockTestimonials({ id }: IBlockTestimonials) {
 
@@ -66,9 +65,6 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		},
 	];
 
-	useLenis((lenis) => {
-	});
-
 	return (
 		<SectionWrapper
 			id={id}
@@ -78,7 +74,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			}}
 			title="What people are saying"
 			text="Hear from our early players, educators, and supporters"
-			className="bg-yellow-500/5"
+			className="bg-yellow-50"
 			removeWrapper={true}
 		>
 			<div className="flex flex-col gap-6">

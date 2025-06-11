@@ -185,6 +185,9 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 			ref={wrapperRef}
 			className="relative w-full"
 		>
+			<div className="absolute top-0 left-0 h-full w-[64px] s:w-[128px] 2xl:w-[256px] bg-gradient-to-r from-yellow-50 to-transparent z-10 transition-all duration-300"></div>
+			<div className="absolute top-0 right-0 h-full w-[64px] s:w-[128px] 2xl:w-[256px] bg-gradient-to-r from-yellow-50 to-transparent z-10 rotate-180 transition-all duration-300"></div>
+
 			<CardClient
 				id={items[0].id}
 				src={items[0].src}
