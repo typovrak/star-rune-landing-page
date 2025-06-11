@@ -7,6 +7,7 @@ import ExternalLink from "@/components/external-link";
 import Badge from "@/components/badge";
 // @ts-ignore
 import { DateTime } from "luxon";
+import { time } from "node:console";
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState(createTimeLeft());
@@ -60,15 +61,21 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <ExternalLink
-      href={data.url.kickstarter}
-      className="group"
-      title={endDateString}
-    >
-      <Badge
-        icon={<Clock />}
-        title={`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m`}
-      />
-    </ExternalLink>
+    <>
+      {timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0 ?
+        null
+        :
+        <ExternalLink
+          href={data.url.kickstarter}
+          className="group"
+          title={endDateString}
+        >
+          <Badge
+            icon={<Clock />}
+            title={`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
+          />
+        </ExternalLink>
+      }
+    </>
   )
 }

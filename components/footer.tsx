@@ -5,6 +5,7 @@ import SocialIconList from "@/components/social-icon-list";
 import QuickLinks from "@/components/quick-links";
 import Hr from "@/components/hr";
 import Newsletter from "@/components/newsletter";
+import CountdownTimer from "@/components/countdown-timer";
 
 export default function Footer({ }: IFooter) {
 
@@ -41,6 +42,10 @@ export default function Footer({ }: IFooter) {
 						<p className="text-sm text-slate-500">
 							The Ultimate Typing Game and the funnest experience typing you've ever had!
 						</p>
+
+						<div>
+							<CountdownTimer />
+						</div>
 
 						<SocialIconList
 							className="gap-3"

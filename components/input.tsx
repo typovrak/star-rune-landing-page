@@ -7,7 +7,7 @@ export default function Input({ type, placeholder, className }: IInput) {
 		<InputUI
 			type={type}
 			placeholder={placeholder}
-			className={`border-2 border-yellow-400 placeholder:text-slate-900 hover:rotate-cta transition-all duration-300 focus:transition-all${className ? ` ${className}` : ""}`}
+			className={`border-2 border-orange-400 placeholder:text-slate-900 hover:rotate-cta transition-all duration-300 focus:transition-all${className ? ` ${className}` : ""}`}
 		/>
 	)
 }

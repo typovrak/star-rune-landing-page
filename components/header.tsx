@@ -25,7 +25,7 @@ export default function Header({ }: IHeader) {
 					/>
 
 					<div className="flex items-center gap-4">
-						<div className="hidden xs:block">
+						<div className="hidden s:block">
 							<CountdownTimer />
 						</div>
 

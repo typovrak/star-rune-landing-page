@@ -9,7 +9,7 @@ export default function ButtonIconSubscribe({ title, className, size = "default"
 			url={`#`}
 			icon={<MailSpark />}
 			title={title}
-			className={`bg-yellow-400 shadow-yellow-400/30 hover:shadow-yellow-400/30${className ? ` ${className}` : ""}`}
+			className={`bg-orange-400 shadow-orange-400/30 hover:shadow-orange-400/30${className ? ` ${className}` : ""}`}
 			size={size}
 		/>
 	)
