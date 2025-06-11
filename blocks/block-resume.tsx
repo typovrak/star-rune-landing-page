@@ -11,6 +11,8 @@ import Trophy from "@/icons/trophy";
 import TrophyFill from "@/icons/trophy-fill";
 import Keyboard from "@/icons/keyboard";
 import KeyboardFill from "@/icons/keyboard-fill";
+import Image from "next/image";
+import image from "@/public/star-rune-volcano.webp";
 
 export default function BlockResume({ id }: IBlockResume) {
 
@@ -83,11 +85,11 @@ export default function BlockResume({ id }: IBlockResume) {
 
 				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl transition-all duration-300 hover:shadow-yellow-500/30 hover:rotate-cta">
 					<CardContent className="p-0">
-						<img
-							alt={`${data.brand} story illustration`}
+						<Image
+							src={image}
+							alt={`${data.brand} volcano level`}
 							className="aspect-video object-cover w-full"
 							height="310"
-							src="/star-rune-world.jpg"
 							width="550"
 						/>
 					</CardContent>
