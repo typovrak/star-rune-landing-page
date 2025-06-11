@@ -265,6 +265,6 @@ export interface IFeedbackWall {
 	speed: number;
 }
 
-export interface IBrandIcon extends ISVG {
+export interface IBrand extends ISVG {
 	bg?: boolean;
 }

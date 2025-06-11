@@ -1,6 +1,6 @@
-import type { IBrandIcon } from "@/utils/types";
+import type { IBrand } from "@/utils/types";
 
-export default function Brand({ className, bg }: IBrandIcon) {
+export default function Brand({ className, bg }: IBrand) {
 	return (
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1348 315" fill="none" className={className}>
 			<g clipPath="url(#clip0_923_129)">

@@ -1,10 +1,14 @@
-// TODO: launchDate to implement
-
 export default {
 	brand: "Star Rune",
 	email: "starrunecompany@gmail.com",
 
-	launchDate: "",
+	launchDate: {
+		year: 2025,
+		month: 9,
+		day: 15,
+		hour: 10,
+		minute: 30
+	},
 
 	url: {
 		demo: "https://gx.games/games/orttkw/star-rune-prototype-250422/tracks/3f9b0213-a08f-4d99-b611-cff1bd7bb947/",
