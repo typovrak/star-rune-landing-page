@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Geist, Tomorrow } from "next/font/google";
 import { ReactLenis } from "lenis/react";
+import data from "@/utils/data";
 
 const fontPrimary = Geist({
   subsets: ['latin'],
@@ -17,8 +18,8 @@ const fontSecondary = Tomorrow({
 })
 
 export const metadata: Metadata = {
-  title: 'Star Rune landing page',
-  description: 'Star Rune landing page',
+  title: `${data.brand} landing page`,
+  description: `${data.brand} landing page`,
 }
 
 export default function RootLayout({

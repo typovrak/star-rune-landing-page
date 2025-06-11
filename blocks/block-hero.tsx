@@ -4,20 +4,28 @@ import ButtonIconDemo from "@/components/button-icon-demo";
 import ButtonIconKickstarter from "@/components/button-icon-kickstarter";
 import ButtonIconDiscord from "@/components/button-icon-discord";
 import ScrollIndicator from "@/components/scroll-indicator";
+import Brand from "@/icons/brand";
+import image from "@/public/star-rune-hero.webp";
+import Image from "next/image";
 
 export default function BlockHero({ }: IBlockHero) {
   return (
     <section className="relative w-full min-h-[calc(100vh-var(--header-height))] mt-[var(--header-height)] flex items-center overflow-hidden">
       <div className="absolute inset-0" >
-        <img
-          src="/star-rune-hero.jpg"
+        <Image
+          src={image}
           alt={`${data.brand} game background`}
           className="w-full h-full object-cover object-top"
         />
       </div>
-      {/* TODO: add filter after some seconds */}
+
+      <div className="absolute top-0 bottom-[78%] w-full">
+        <Brand
+          className="w-auto max-w-[100%] h-[100%] mx-auto"
+        />
+      </div>
+
       {/* TODO: add follow cursor animation on image */}
-      <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative px-4 flex flex-col gap-4 w-full max-w-[350px] mx-auto">
         <ButtonIconDemo size="bigger" />
