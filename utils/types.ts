@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from "react";
+import type { ReactElement, ReactNode, SetStateAction } from "react";
 
 export interface ISectionHeader {
 	id: string;
@@ -178,6 +178,8 @@ export interface IInput {
 	type: "email";
 	placeholder: string;
 	className?: string;
+	state: string;
+	setState: (email: string) => void;
 }
 
 export interface IHr {

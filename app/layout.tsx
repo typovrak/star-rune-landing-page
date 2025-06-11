@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Geist, Tomorrow } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import data from "@/utils/data";
+import { ToastContainer } from "react-toastify";
 
 const fontPrimary = Geist({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary antialiased selection:bg-yellow-500 selection:text-background`}>
         <ReactLenis root />
         {children}
+        <ToastContainer />
       </body>
     </html>
   )
