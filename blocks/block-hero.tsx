@@ -38,7 +38,7 @@ export default function BlockHero({ }: IBlockHero) {
         <ScrollIndicator
           url={`#${data.homeLinks[0].id}`}
           title="Go to the next section"
-          className="pb-3 lg:pb-6 pt-6 pr-6 pl-6"
+          className="pb-0 s:pb-3 lg:pb-6 pt-6 pr-6 pl-6"
         />
       </div>
     </section>

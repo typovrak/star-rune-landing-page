@@ -264,3 +264,7 @@ export interface IFeedbackWall {
 	items: TItemClient[];
 	speed: number;
 }
+
+export interface IBrandIcon extends ISVG {
+	bg?: boolean;
+}

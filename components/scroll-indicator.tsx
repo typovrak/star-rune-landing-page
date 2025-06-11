@@ -11,8 +11,8 @@ export default function ScrollIndicator({ url, title, className }: IScrollIndica
 			title={title}
 			aria-label={title}
 		>
-			<Mouse className="h-14 w-14 md:h-16 md:w-16 text-background group-hover:text-yellow-500 transition-all duration-300 fill-background/15" />
-			<ChevronsDown className="h-10 w-10 text-background group-hover:text-yellow-500 transition-all duration-300" />
+			<Mouse className="h-10 w-10 xs:h-14 xs:w-14 md:h-16 md:w-16 text-background group-hover:text-yellow-500 transition-all duration-300 fill-background/15" />
+			<ChevronsDown className="h-6 w-6 xs:h-10 xs:w-10 text-background group-hover:text-yellow-500 transition-all duration-300" />
 		</Link>
 	)
 }
