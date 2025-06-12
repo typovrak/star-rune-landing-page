@@ -12,6 +12,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import BlockConversion from "@/blocks/block-conversion";
 import data from "@/utils/data";
+import Appear from "@/components/appear";
 
 export default function Home() {
   return (
@@ -32,6 +33,8 @@ export default function Home() {
       <Footer />
 
       <NotificationPopup />
+
+      <Appear />
     </div >
   )
 }

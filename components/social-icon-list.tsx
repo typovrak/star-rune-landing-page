@@ -55,7 +55,7 @@ export default function SocialIconList({ className, iconClassName }: ISocialIcon
 		<ul className={`flex items-center${className ? ` ${className}` : ""}`}>
 			{socials.map(({ icon, iconHover, url, title, color }) => (
 				<li key={title}>
-					<ExternalLink href={url} className={`group relative ${color} flex${iconClassName ? ` ${iconClassName}` : ""}`} title={title}>
+					<ExternalLink href={url} className={`group/hover relative ${color} flex${iconClassName ? ` ${iconClassName}` : ""}`} title={title}>
 						<IconInvert
 							icon={icon}
 							iconHover={iconHover}

@@ -291,3 +291,6 @@ export type TImagePublic = {
 }
 
 export type TImage = TImageStaticData | TImagePublic;
+
+export interface IAppear {
+}

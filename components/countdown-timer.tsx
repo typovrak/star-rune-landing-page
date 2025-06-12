@@ -66,7 +66,7 @@ export default function CountdownTimer() {
         :
         <ExternalLink
           href={data.url.kickstarter}
-          className="group"
+          className="group/hover"
           title={endDateString}
         >
           <Badge

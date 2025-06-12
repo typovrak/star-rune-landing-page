@@ -8,7 +8,10 @@ import QuickLinks from "@/components/quick-links";
 
 export default function Header({ }: IHeader) {
 	return (
-		<header className="fixed top-0 z-50 h-header w-full border-b bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80">
+		<header
+			className="group fixed top-0 z-50 h-header w-full border-b bg-background backdrop-blur supports-[backdrop-filter]:bg-background/80"
+			data-appear={true}
+		>
 			<div className="container h-full flex items-center justify-between px-4">
 				<BrandTitle />
 
