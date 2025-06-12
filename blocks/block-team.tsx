@@ -3,7 +3,6 @@ import SectionWrapper from "@/layouts/section-wrapper";
 import { Star } from "lucide-react";
 import data from "@/utils/data";
 import Image from "@/components/image";
-import image from "@/public/star-rune-poster.webp";
 
 export default function BlockTeam({ id }: IBlockTeam) {
 	return (
@@ -19,7 +18,7 @@ export default function BlockTeam({ id }: IBlockTeam) {
 		>
 			<div className="flex flex-col gap-6 lg:flex-row">
 				<Image
-					src={image}
+					src="/star-rune-poster.webp"
 					alt={`${data.brand} poster`}
 					className="w-full object-cover max-w-[500px] lg:max-w-[400px] xl:max-w-[500px] mx-auto border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl transition-all duration-300 hover:shadow-yellow-500/30 hover:rotate-cta"
 				/>

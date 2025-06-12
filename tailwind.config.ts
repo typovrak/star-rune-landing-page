@@ -15,6 +15,28 @@ const config: Config = {
             center: true,
         },
         extend: {
+            transitionDuration: {
+                '750': 'var(--time-750)',
+                '1250': 'var(--time-1250)',
+                '1500': 'var(--time-1500)',
+                '1750': 'var(--time-1750)',
+                '2000': 'var(--time-2000)',
+                '2250': 'var(--time-2250)',
+                '2500': 'var(--time-2500)',
+                '2750': 'var(--time-2750)',
+                '3000': 'var(--time-3000)',
+            },
+            transitionDelay: {
+                '750': 'var(--time-750)',
+                '1250': 'var(--time-1250)',
+                '1500': 'var(--time-1500)',
+                '1750': 'var(--time-1750)',
+                '2000': 'var(--time-2000)',
+                '2250': 'var(--time-2250)',
+                '2500': 'var(--time-2500)',
+                '2750': 'var(--time-2750)',
+                '3000': 'var(--time-3000)',
+            },
             width: {
                 'mobile-menu': '350px',
                 'card-client-mobile': 'var(--width-card-client-mobile)',

@@ -274,23 +274,14 @@ export interface IFeedbackWall {
 export interface IBrand extends ISVG {
 }
 
-export type TImageStaticData = {
-	src: StaticImageData;
+export type IImage = {
+	src: string;
 	alt: string;
 	className?: string;
 	height?: number;
 	width?: number;
 }
 
-export type TImagePublic = {
-	src: string;
-	alt: string;
-	className?: string;
-	height: number;
-	width: number;
-}
-
-export type TImage = TImageStaticData | TImagePublic;
 
 export interface IAppear {
 }

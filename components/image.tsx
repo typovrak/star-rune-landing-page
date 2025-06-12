@@ -1,15 +1,13 @@
-import type { TImage } from "@/utils/types";
-import NextImage from "next/image";
+import type { IImage } from "@/utils/types";
 
-export default function Image({ src, alt, className, height, width }: TImage) {
+export default function Image({ src, alt, className, height, width }: IImage) {
 	return (
-		<NextImage
+		<img
 			src={src}
 			alt={alt}
 			className={className}
 			height={height}
 			width={width}
-			placeholder="empty"
 			loading="lazy"
 		/>
 	)
