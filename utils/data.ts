@@ -25,6 +25,11 @@ export default {
 		newsletter: "https://assets.mailerlite.com/jsonp/1485300/forms/152975435553048439/subscribe",
 	},
 
+	developer: {
+		name: "typovrak",
+		url: "https://mscholz.dev",
+	},
+
 	homeLinks: [
 		{
 			id: "about",

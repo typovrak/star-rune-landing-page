@@ -7,7 +7,6 @@ import ExternalLink from "@/components/external-link";
 import Badge from "@/components/badge";
 // @ts-ignore
 import { DateTime } from "luxon";
-import { time } from "node:console";
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState(createTimeLeft());

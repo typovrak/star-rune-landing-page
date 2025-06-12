@@ -6,10 +6,9 @@ import QuickLinks from "@/components/quick-links";
 import Hr from "@/components/hr";
 import Newsletter from "@/components/newsletter";
 import CountdownTimer from "@/components/countdown-timer";
+import ExternalLink from "@/components/external-link";
 
 export default function Footer({ }: IFooter) {
-
-	const year = new Date().getFullYear();
 
 	const externalLinks = [
 		{
@@ -83,11 +82,18 @@ export default function Footer({ }: IFooter) {
 				</div>
 
 
-				<div className="relative mt-8 pt-8 text-center text-sm text-slate-500">
+				<div className="relative mt-8 pt-8 text-center text-base text-slate-500">
 					<Hr />
 
 					{/* TODO: mscholz.dev credits */}
-					<p>© {year} {data.brand} - All rights reserved.</p>
+					<p>
+						Made with 💜 by <ExternalLink
+							href={data.developer.url}
+							className="text-purple-500 capitalize"
+						>
+							{data.developer.name}
+						</ExternalLink>
+					</p>
 				</div>
 			</div>
 		</footer>
