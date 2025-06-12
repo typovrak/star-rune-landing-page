@@ -2,7 +2,7 @@ import type { IBlockTeam } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import { Star } from "lucide-react";
 import data from "@/utils/data";
-import Image from "next/image";
+import Image from "@/components/image";
 import image from "@/public/star-rune-poster.webp";
 
 export default function BlockTeam({ id }: IBlockTeam) {

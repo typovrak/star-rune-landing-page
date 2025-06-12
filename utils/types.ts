@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import type { ReactElement, ReactNode, SetStateAction } from "react";
 
 export interface ISectionHeader {
@@ -272,3 +273,21 @@ export interface IFeedbackWall {
 
 export interface IBrand extends ISVG {
 }
+
+export type TImageStaticData = {
+	src: StaticImageData;
+	alt: string;
+	className?: string;
+	height?: number;
+	width?: number;
+}
+
+export type TImagePublic = {
+	src: string;
+	alt: string;
+	className?: string;
+	height: number;
+	width: number;
+}
+
+export type TImage = TImageStaticData | TImagePublic;

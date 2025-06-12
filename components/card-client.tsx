@@ -9,6 +9,7 @@ import YouTube from "@/icons/you-tube";
 import YouTubeFill from "@/icons/you-tube-fill";
 import X from "@/icons/x";
 import ExternalLink from "@/components/external-link";
+import Image from "@/components/image";
 
 export default function CardClient({ src, names, about, text, source, className }: ICardClient) {
 
@@ -85,13 +86,15 @@ export default function CardClient({ src, names, about, text, source, className 
 			</div>
 
 			<div className="flex items-center gap-4">
-				<img
+				<Image
 					src={`/${src}`}
 					alt={`Profile picture of ${names}`}
 					className="h-12 w-12 rounded-full"
+					height={48}
+					width={48}
 				/>
 
-				<div className="">
+				<div>
 					<p className={`font-bold font-primary text-lg ${types[source.type].text}`}>{names}</p>
 
 					<p className="text-slate-500 group-hover:text-slate-600 transition-all duration-300">{about}</p>

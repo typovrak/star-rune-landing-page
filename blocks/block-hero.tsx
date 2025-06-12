@@ -6,7 +6,7 @@ import ButtonIconDiscord from "@/components/button-icon-discord";
 import ScrollIndicator from "@/components/scroll-indicator";
 import Brand from "@/icons/brand";
 import image from "@/public/star-rune-hero.webp";
-import Image from "next/image";
+import Image from "@/components/image";
 
 export default function BlockHero({ }: IBlockHero) {
   return (

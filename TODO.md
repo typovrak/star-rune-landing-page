@@ -1,5 +1,3 @@
-- replate all <img> with <Image> when needed (mine).
-
 
 reprendre:
 

@@ -1,5 +1,6 @@
 import type { ISlide } from "@/utils/types";
 import CardSellingPoint from "@/components/card-selling-point";
+import Image from "@/components/image";
 
 export default function Slide({ id, activeId, icon, iconHover, iconColor, title, text, borderColor, src, alt, className }: ISlide) {
 	return (
@@ -14,10 +15,12 @@ export default function Slide({ id, activeId, icon, iconHover, iconColor, title,
 			}
 		>
 			<div className="relative flex flex-col">
-				<img
+				<Image
 					src={`/${src}`}
 					alt={alt}
 					className="aspect-video object-cover"
+					height={1080}
+					width={1920}
 				/>
 
 				<CardSellingPoint

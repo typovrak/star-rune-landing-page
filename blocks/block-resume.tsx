@@ -11,7 +11,7 @@ import Trophy from "@/icons/trophy";
 import TrophyFill from "@/icons/trophy-fill";
 import Keyboard from "@/icons/keyboard";
 import KeyboardFill from "@/icons/keyboard-fill";
-import Image from "next/image";
+import Image from "@/components/image";
 import image from "@/public/star-rune-volcano.webp";
 
 export default function BlockResume({ id }: IBlockResume) {
