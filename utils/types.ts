@@ -269,5 +269,4 @@ export interface IFeedbackWall {
 }
 
 export interface IBrand extends ISVG {
-	bg?: boolean;
 }
