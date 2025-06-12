@@ -103,6 +103,7 @@ export interface IButtonIcon {
 	titleClassName?: string;
 	ping?: IPing;
 	type?: "submit";
+	loading?: boolean;
 }
 
 export interface IButtonIconDemo {
@@ -122,6 +123,7 @@ export interface IButtonIconSubscribe {
 	title: string;
 	className?: string;
 	size?: TButtonIconSize;
+	loading?: boolean;
 }
 
 export interface IQuickLinks {

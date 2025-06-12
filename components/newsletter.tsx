@@ -8,15 +8,16 @@ import { useState } from "react";
 export default function Newsletter({ title, buttonTitle, size = "default" }: INewsletter) {
 
 	const [email, setEmail] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	async function handleSubmit(e: any) {
 		e.preventDefault();
 
-		console.log(email);
 		const formData = new FormData();
 		formData.append("fields[email]", email);
 
 		try {
+			setLoading(true);
 			const res = await fetch(data.url.newsletter, {
 				method: "POST",
 				headers: {
@@ -30,14 +31,20 @@ export default function Newsletter({ title, buttonTitle, size = "default" }: INe
 			if (jsonRes.success) {
 				toast.success("You are now subscribed !");
 				setEmail("");
+
+				setLoading(false);
 				return;
 			}
 
 
 			toast.error(jsonRes.errors.fields.email[0]);
+
+			setLoading(false);
 			return;
 		} catch (e: any) {
 			toast.error(e.errors.fields.email[0]);
+
+			setLoading(false);
 			return;
 		}
 	}
@@ -53,7 +60,7 @@ export default function Newsletter({ title, buttonTitle, size = "default" }: INe
 				onSubmit={handleSubmit}
 			>
 				<Input
-					type="text"
+					type="email"
 					placeholder="Your address email"
 					state={email}
 					setState={setEmail}
@@ -62,6 +69,7 @@ export default function Newsletter({ title, buttonTitle, size = "default" }: INe
 				<ButtonIconSubscribe
 					title={buttonTitle}
 					className={`w-full${size === "big" ? " s:w-auto" : ""}`}
+					loading={loading}
 				/>
 			</form>
 
