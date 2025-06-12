@@ -9,6 +9,8 @@ export default function Image({ src, alt, className, height, width }: TImage) {
 			className={className}
 			height={height}
 			width={width}
+			loading="lazy"
+			{...(typeof src !== "string" ? { placeholder: 'blur' } : {})}
 		/>
 	)
 }
