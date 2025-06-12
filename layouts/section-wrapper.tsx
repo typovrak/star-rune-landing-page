@@ -4,7 +4,11 @@ import Hr from "@/components/hr";
 
 export default function SectionWrapper({ id, children, className, badge, title, text, h1, removeWrapper }: ISectionWrapper) {
 	return (
-		<section id={id} className={`w-full py-16 md:py-24 lg:py-32 relative overflow-hidden${className ? ` ${className}` : ''}`}>
+		<section
+			id={id}
+			className={`group w-full py-16 md:py-24 lg:py-32 relative overflow-hidden${className ? ` ${className}` : ''}`}
+			data-appear={true}
+		>
 			<div className="container px-4 relative">
 				<SectionHeader
 					id={id}
