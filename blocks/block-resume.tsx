@@ -98,7 +98,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			<div
 				className="grid sm:grid-cols-2 gap-4 xl:grid-cols-4"
 			>
-				{cards.map(({ icon, iconHover, iconColor, title, text, className }) => (
+				{cards.map(({ icon, iconHover, iconColor, title, text, className }, index) => (
 					<CardSellingPoint
 						key={title}
 						icon={icon}
@@ -106,7 +106,10 @@ export default function BlockResume({ id }: IBlockResume) {
 						iconColor={iconColor}
 						title={title}
 						text={text}
-						className={className}
+						className={`${className} group-[.appear]:opacity-100 opacity-0 block-resume-card-transition`}
+						style={{
+							'--delay': `${1500 + index * 250}ms`,
+						}}
 					/>
 				))}
 			</div>

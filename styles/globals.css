@@ -61,6 +61,13 @@ body {
       box-shadow 300ms ease-in-out;
 
   }
+
+  .block-resume-card-transition {
+    transition: opacity 1500ms var(--delay) ease-in-out,
+      transform 300ms ease-in-out,
+      box-shadow 300ms ease-in-out,
+      background 300ms ease-in-out;
+  }
 }
 
 @layer base {

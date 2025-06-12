@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import type { ReactElement, ReactNode, SetStateAction } from "react";
+import type { CSSProperties, ReactElement, ReactNode, SetStateAction } from "react";
 
 export interface ISectionHeader {
 	id: string;
@@ -160,6 +160,7 @@ export interface ICardSellingPoint {
 	text: string;
 	className?: string;
 	isSlide?: boolean;
+	style?: Object;
 }
 
 export interface IPing {
