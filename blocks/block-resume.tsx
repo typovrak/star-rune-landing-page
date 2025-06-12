@@ -63,26 +63,26 @@ export default function BlockResume({ id }: IBlockResume) {
 		>
 			<div className="grid lg:grid-cols-2 gap-10 items-center mb-10">
 				<div className="space-y-4 order-2 lg:order-1">
-					<h3 className="text-2xl font-bold text-slate-700">The World of {data.brand}</h3>
+					<h3 className="text-2xl font-bold text-slate-700 group-[.appear]:translate-x-0 -translate-x-24 group-[.appear]:opacity-100 opacity-0 transition-all duration-1000 delay-1000">The World of {data.brand}</h3>
 
-					<p className="text-slate-500">
+					<p className="text-slate-500 group-[.appear]:translate-x-0 -translate-x-24 group-[.appear]:opacity-100 opacity-0 transition-all duration-1000 delay-1250">
 						Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil
 						Wizards came and corrupted everything. Using Magic Runes, they created 12 Swords of Fable, and opened
 						up a portal to the Dark Web, and hordes of Evil Letters and Cookies poured out.
 					</p>
 
-					<p className="text-slate-500">
+					<p className="text-slate-500 group-[.appear]:translate-x-0 -translate-x-24 group-[.appear]:opacity-100 opacity-0 transition-all duration-1000 delay-1500">
 						The Stars disappeared and were never seen again. But 5 Great Kings fought back. They won a great
 						battle, breaking the Dragon Wizard's sword, Kry XeRnOg. Now, only the Hearts remain free.
 					</p>
 
-					<div className="pt-4 flex flex-wrap gap-4">
+					<div className="pt-4 flex flex-wrap gap-4 group-[.appear]:translate-x-0 -translate-x-24 group-[.appear]:opacity-100 opacity-0 transition-all duration-1000 delay-1750">
 						<ButtonIconKickstarter />
 						<ButtonIconDemo />
 					</div>
 				</div>
 
-				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl transition-all duration-300 hover:shadow-yellow-500/30 hover:rotate-cta">
+				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl hover:shadow-yellow-500/30 hover:rotate-cta group-[.appear]:opacity-100 opacity-0 block-resume-img-transition">
 					<CardContent className="p-0">
 						<Image
 							src="/star-rune-volcano.webp"

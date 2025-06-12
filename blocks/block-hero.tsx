@@ -18,7 +18,7 @@ export default function BlockHero({ }: IBlockHero) {
         <Image
           src="/star-rune-hero.webp"
           alt={`${data.brand} game background`}
-          className="w-full h-full object-cover object-top group-[.appear]:blur-none blur-lg transition-all duration-3000"
+          className="w-full h-full object-cover object-top group-[.appear]:blur-none blur transition-all duration-3000"
         />
       </div>
 

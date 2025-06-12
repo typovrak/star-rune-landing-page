@@ -25,29 +25,41 @@ body {
   }
 }
 
-.clip-path-top {
-  clip-path: var(--clip-path-top);
-}
-
-.clip-path-right {
-  clip-path: var(--clip-path-right);
-}
-
-.clip-path-bottom {
-  clip-path: var(--clip-path-bottom);
-}
-
-.clip-path-left {
-  clip-path: var(--clip-path-left);
-}
-
-.clip-path-open {
-  clip-path: var(--clip-path-open);
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .clip-path-top,
+  .group.appear .group-\[\.appear\]\:clip-path-top {
+    clip-path: var(--clip-path-top);
+  }
+
+  .clip-path-right,
+  .group.appear .group-\[\.appear\]\:clip-path-right {
+    clip-path: var(--clip-path-right);
+  }
+
+  .clip-path-bottom,
+  .group.appear .group-\[\.appear\]\:clip-path-bottom {
+    clip-path: var(--clip-path-bottom);
+  }
+
+  .clip-path-left,
+  .group.appear .group-\[\.appear\]\:clip-path-left {
+    clip-path: var(--clip-path-left);
+  }
+
+  .clip-path-open,
+  .group.appear .group-\[\.appear\]\:clip-path-open {
+    clip-path: var(--clip-path-open);
+  }
+
+  .block-resume-img-transition {
+    transition: opacity 1500ms 1000ms ease-in-out,
+      transform 300ms ease-in-out,
+      box-shadow 300ms ease-in-out;
+
   }
 }
 
