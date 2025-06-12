@@ -9,6 +9,7 @@ export default function Image({ src, alt, className, height, width }: TImage) {
 			className={className}
 			height={height}
 			width={width}
+			placeholder="empty"
 			loading="lazy"
 		/>
 	)
