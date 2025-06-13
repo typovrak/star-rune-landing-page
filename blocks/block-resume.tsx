@@ -13,7 +13,7 @@ import Keyboard from "@/icons/keyboard";
 import KeyboardFill from "@/icons/keyboard-fill";
 import Image from "@/components/image";
 
-export default function BlockResume({ id }: IBlockResume) {
+export default function BlockResume({ id, dataAppearThreshold }: IBlockResume) {
 
 	const cards = [
 		{
@@ -60,6 +60,7 @@ export default function BlockResume({ id }: IBlockResume) {
 			title="The ultimate typing adventure"
 			text={`${data.brand} is the ultimate typing game and the funnest experience typing you've ever had! Slash and dash through hordes of cookies and evil letters. 力. 速. 志. Unleash the true power of a super star!`}
 			h1={true}
+			dataAppearThreshold={dataAppearThreshold}
 		>
 			<div className="grid lg:grid-cols-2 gap-10 items-center mb-10">
 				<div className="space-y-4 order-2 lg:order-1">

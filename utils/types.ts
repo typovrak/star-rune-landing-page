@@ -1,5 +1,4 @@
-import { StaticImageData } from "next/image";
-import type { CSSProperties, ReactElement, ReactNode, SetStateAction } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 export interface ISectionHeader {
 	id: string;
@@ -18,6 +17,7 @@ export interface ISectionWrapper extends ISectionHeader {
 	children: ReactNode;
 	className?: string;
 	removeWrapper?: boolean;
+	dataAppearThreshold?: number;
 }
 
 export interface IBlockCommunity {
@@ -38,6 +38,7 @@ export interface IBlockFeatures {
 
 export interface IBlockResume {
 	id: string;
+	dataAppearThreshold?: number;
 }
 
 export interface IBlockAbilities {

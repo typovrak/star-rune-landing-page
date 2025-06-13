@@ -11,6 +11,7 @@ export default function Appear({ }: IAppear) {
 		// data-appear
 		// data-appear-timeout
 		// data-appear-once
+		// data-appear-threshold
 
 		function observeOnce(observer: IntersectionObserver, target: Element) {
 			if (!Boolean(target.getAttribute('data-appear-once'))) return;
@@ -50,7 +51,8 @@ export default function Appear({ }: IAppear) {
 				{
 					root: null,
 					rootMargin: '0px',
-					threshold: 0
+					// @ts-ignore
+					threshold: +items[i].getAttribute('data-appear-threshold') || 0
 				}
 			);
 

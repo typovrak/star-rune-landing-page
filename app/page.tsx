@@ -21,7 +21,7 @@ export default function Home() {
 
       <BlockHero />
 
-      <BlockResume id={data.homeLinks[0].id} />
+      <BlockResume id={data.homeLinks[0].id} dataAppearThreshold={0.20} />
       <BlockFeatures id={data.homeLinks[1].id} />
       <BlockAbilities id={data.homeLinks[2].id} />
       <BlockTestimonials id={data.homeLinks[3].id} />
