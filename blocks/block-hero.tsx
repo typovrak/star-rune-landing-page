@@ -18,30 +18,20 @@ export default function BlockHero({ }: IBlockHero) {
         <Image
           src="/star-rune-hero.webp"
           alt={`${data.brand} game background`}
-          className="w-full h-full object-cover object-top group-[.appear]:blur-none blur transition-all duration-3000"
+          className="w-full h-full object-cover object-top"
         />
       </div>
 
-      <div className="absolute top-0 bottom-[78%] w-full group-[.appear]:opacity-100 opacity-0 transition-all duration-2000">
+      <div className="absolute top-0 bottom-[78%] w-full">
         <Brand
           className="w-auto max-w-[100%] h-[100%] mx-auto"
         />
       </div>
 
-      {/* TODO: add follow cursor animation on image */}
-
       <div className="relative px-4 flex flex-col gap-4 w-full max-w-[350px] mx-auto">
-        <div className="group-[.appear]:translate-x-0 -translate-x-32 group-[.appear]:opacity-100 opacity-0 transition-all duration-1000 delay-500">
-          <ButtonIconDemo size="bigger" />
-        </div>
-
-        <div className="group-[.appear]:translate-x-0 translate-x-32 group-[.appear]:opacity-100 opacity-0 transition-all duration-1000 delay-750">
-          <ButtonIconKickstarter size="bigger" />
-        </div>
-
-        <div className="group-[.appear]:translate-x-0 -translate-x-32 group-[.appear]:opacity-100 opacity-0 transition-all duration-1000 delay-1000">
-          <ButtonIconDiscord size="bigger" />
-        </div>
+        <ButtonIconDemo size="bigger" />
+        <ButtonIconKickstarter size="bigger" />
+        <ButtonIconDiscord size="bigger" />
       </div>
 
 

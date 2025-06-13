@@ -27,7 +27,7 @@ export default function BrandTitle({ size = "default", handleCloseMobileMenu }: 
 	return (
 		<Link
 			href="/"
-			className="group-[.appear]:opacity-100 opacity-0 flex items-center space-x-2 group/hover hover:rotate-text transition-all duration-300 will-change-transform uppercase"
+			className="flex items-center space-x-2 group/hover hover:rotate-text transition-all duration-300 will-change-transform uppercase"
 			onClick={backToTop}
 		>
 			<div className="relative top-[-2px]">
