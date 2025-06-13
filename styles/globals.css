@@ -78,6 +78,18 @@ body {
     background: #eab308;
     color: var(--black);
   }
+
+  .translate-3d-hide-header {
+    transform: translate3d(0, calc(-1 * var(--header-height)), 0);
+  }
+
+  .hide-header-transition {
+    transition: transform 1000ms ease-in-out,
+      background 300ms ease-in-out,
+      border 300ms ease-in-out;
+    will-change: transform;
+  }
+
 }
 
 @layer base {

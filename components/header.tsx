@@ -5,7 +5,7 @@ import BrandTitle from "@/components/brand-title";
 import SocialIconList from "@/components/social-icon-list";
 import ButtonIconDemo from "@/components/button-icon-demo";
 import QuickLinks from "@/components/quick-links";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Header({ }: IHeader) {
 	const bgDark = "bg-black";
@@ -15,9 +15,9 @@ export default function Header({ }: IHeader) {
 	const borderDark = "border-black";
 	const borderLight = "border-white";
 
-	const headerRef = useRef(null);
+	const hideHeader = "translate-3d-hide-header";
 
-	const [scrolled, setScrolled] = useState(false);
+	const headerRef = useRef(null);
 
 	function handleScroll() {
 		if (!headerRef.current) return;
@@ -50,7 +50,18 @@ export default function Header({ }: IHeader) {
 		header.classList.remove(borderDark);
 	}
 
+	function headerAppear() {
+		if (!headerRef.current) return;
+
+		const header = headerRef.current as HTMLElement;
+
+		header.classList.remove(hideHeader);
+	}
+
 	useEffect(() => {
+		handleScroll();
+		headerAppear();
+
 		window.addEventListener("scroll", handleScroll);
 
 		return () => {
@@ -61,7 +72,7 @@ export default function Header({ }: IHeader) {
 	return (
 		<header
 			ref={headerRef}
-			className={`group dark fixed top-0 z-50 h-header w-full border-b ${borderDark} ${bgDark} backdrop-blur ${bgBackdropDark} transition-all duration-300`}
+			className={`group dark fixed hide-header-transition ${hideHeader} z-50 h-header w-full border-b ${borderDark} ${bgDark} backdrop-blur ${bgBackdropDark}`}
 			data-appear={true}
 		>
 			<div className="container h-full flex items-center justify-between px-4">
