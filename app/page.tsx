@@ -1,5 +1,6 @@
 "use client"
 
+import Page from "@/layouts/page";
 import BlockCommunity from "@/blocks/block-community";
 import BlockTeam from "@/blocks/block-team";
 import BlockTestimonials from "@/blocks/block-testimonials";
@@ -14,7 +15,7 @@ import data from "@/utils/data";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+    <Page className="bg-black">
       <Header />
 
       <BlockHero />
@@ -29,6 +30,6 @@ export default function Home() {
       <BlockConversion />
 
       <Footer />
-    </div >
+    </Page>
   )
 }

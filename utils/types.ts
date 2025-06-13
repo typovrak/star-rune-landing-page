@@ -287,3 +287,11 @@ export type IImage = {
 
 export interface IAppear {
 }
+
+export interface IPage {
+	children: ReactNode;
+	className?: string;
+}
+
+export interface ILegalNotice {
+}

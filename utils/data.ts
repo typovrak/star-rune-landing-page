@@ -1,6 +1,8 @@
 export default {
 	brand: "Star Rune",
 	email: "starrunecompany@gmail.com",
+	domain: "starrune.net",
+	owner: "Quinlan Stuwe",
 
 	launchDate: {
 		year: 2025,
