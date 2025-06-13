@@ -27,7 +27,7 @@ export default function CardSocial({ icon, iconHover, title, text, url, buttonTi
 				<div className="h-full flex items-end">
 					<ExternalLink
 						href={url}
-						className={`w-full flex items-center justify-center hover:shadow-sm whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 h-10 px-6 border ${color}${buttonClassName ? ` ${buttonClassName}` : ""}`}
+						className={`w-full flex items-center justify-center hover:rotate-cta hover:shadow-sm whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 h-10 px-6 border ${color}${buttonClassName ? ` ${buttonClassName}` : ""}`}
 					>
 						{buttonTitle}
 					</ExternalLink>
