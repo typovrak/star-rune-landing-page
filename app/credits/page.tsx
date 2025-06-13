@@ -1,18 +1,29 @@
+"use client";
+
 import type { ICredits } from "@/utils/types";
 import Page from "@/layouts/page";
 import ExternalLink from "@/components/external-link";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Credits({ }: ICredits) {
 	return (
 		<Page className="bg-white">
 			<>
-				<h1>Credits</h1>
+				<Header />
+
+				<h1 className="mt-[var(--header-height)]">Credits</h1>
 				<time>Last modification : 2025-06-13</time>
 
 				<h2>Do you want to see the code ?</h2>
-				<p>
-					<ExternalLink href="https://github.com/typovrak/star-rune-landing-page">github.com/typovrak/star-rune-landing-page</ExternalLink>
-				</p>
+				<ul>
+					<li>
+						Made with 💜 by <ExternalLink href="https://github.com/typovrak">typovrak</ExternalLink>
+					</li>
+					<li>
+						<ExternalLink href="https://github.com/typovrak/star-rune-landing-page">github.com/typovrak/star-rune-landing-page</ExternalLink>
+					</li>
+				</ul>
 
 				<h2>Technologies</h2>
 				<ul>
@@ -65,6 +76,8 @@ export default function Credits({ }: ICredits) {
 						<ExternalLink href="https://uptimerobot.com">uptimerobot.com</ExternalLink>
 					</li>
 				</ul>
+
+				<Footer />
 			</>
 		</Page>
 	)

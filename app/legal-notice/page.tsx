@@ -1,13 +1,19 @@
+"use client";
+
 import type { ILegalNotice } from "@/utils/types";
 import Page from "@/layouts/page";
 import data from "@/utils/data";
 import Link from "next/link";
 import ExternalLink from "@/components/external-link";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function LegalNotice({ }: ILegalNotice) {
 	return (
 		<Page className="bg-white">
 			<>
+				<Header />
+
 				<h1>Legal notice</h1>
 				<time>Last modification : 2025-06-13</time>
 
@@ -87,6 +93,8 @@ export default function LegalNotice({ }: ILegalNotice) {
 				<p>
 					Subject to French law, the <Link href="/">{data.domain}</Link> website is governed by Law No. 2004-575 of 21 June 2004 on confidence in the digital economy, Article L.335-2 of the Intellectual Property Code and the Data Protection and Freedoms Act of 6 January 1978 as amended.
 				</p>
+
+				<Footer />
 			</>
 		</Page>
 	)

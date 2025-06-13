@@ -1,28 +1,12 @@
 
-- pages légales
+- pages légales -> ajouter le style
+
 - metatags
-- optimisation des images
 - traduction
+- README.md
+
 - notification popup???
-
-reprendre:
-
-
-composant testimonials
-https://dribbble.com/shots/22064357-Testimonials-Animation
-
-
-
-
-
-
-
-
-
-
-
-
-
+- optimisation des images
 
 
 
