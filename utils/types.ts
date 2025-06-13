@@ -295,3 +295,6 @@ export interface IPage {
 
 export interface ILegalNotice {
 }
+
+export interface ICredits {
+}
