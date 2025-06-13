@@ -61,6 +61,7 @@ export default function BlockResume({ id, dataAppearThreshold }: IBlockResume) {
 			text={`${data.brand} is the ultimate typing game and the funnest experience typing you've ever had! Slash and dash through hordes of cookies and evil letters. 力. 速. 志. Unleash the true power of a super star!`}
 			h1={true}
 			dataAppearThreshold={dataAppearThreshold}
+			className="bg-white"
 		>
 			<div className="grid lg:grid-cols-2 gap-10 items-center mb-10">
 				<div className="space-y-4 order-2 lg:order-1">
@@ -83,7 +84,7 @@ export default function BlockResume({ id, dataAppearThreshold }: IBlockResume) {
 					</div>
 				</div>
 
-				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl hover:shadow-yellow-500/30 hover:rotate-cta">
+				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl hover:shadow-yellow-500/30 hover:rotate-cta duration-300 transition-all">
 					<CardContent className="p-0">
 						<Image
 							src="/star-rune-volcano.webp"

@@ -1,6 +1,5 @@
 "use client"
 
-import NotificationPopup from "@/components/notification-popup"
 import BlockCommunity from "@/blocks/block-community";
 import BlockTeam from "@/blocks/block-team";
 import BlockTestimonials from "@/blocks/block-testimonials";
@@ -12,11 +11,10 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import BlockConversion from "@/blocks/block-conversion";
 import data from "@/utils/data";
-import Appear from "@/components/appear";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-background via-background to-muted">
+    <div className="flex flex-col min-h-screen bg-black">
       <Header />
 
       <BlockHero />
@@ -31,10 +29,6 @@ export default function Home() {
       <BlockConversion />
 
       <Footer />
-
-      <NotificationPopup />
-
-      <Appear />
     </div >
   )
 }

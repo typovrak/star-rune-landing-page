@@ -98,6 +98,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			}}
 			title="Special abilities"
 			text={`${data.brand} is intuitive + quick/easy to play, but the game mechanics are also very nuanced`}
+			className="bg-white"
 		>
 			<Slider
 				slides={slides}

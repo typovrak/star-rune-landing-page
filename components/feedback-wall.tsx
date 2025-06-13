@@ -10,6 +10,7 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 	const floatRef = useRef(null);
 
 	const floatXRef = useRef(0);
+	const animationFrameId = useRef<number | null>(null);
 
 	const [childrenArray, setChildrenArray] = useState<{
 		id: number,
@@ -23,8 +24,6 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 	}]);
 	const [winW, setWinW] = useState(0);
 
-	let animationFrameId: any = null;
-
 	function handleSlide() {
 		if (!floatRef.current) return;
 		const floatRefCurrent = floatRef.current as HTMLDivElement;
@@ -32,7 +31,7 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 		floatRefCurrent.style.transform = `translate3d(${floatXRef.current}px, 0,0)`;
 		floatXRef.current = floatXRef.current + speed;
 
-		animationFrameId = requestAnimationFrame(handleSlide)
+		animationFrameId.current = requestAnimationFrame(handleSlide)
 	};
 
 	const gapX = 24;
@@ -118,9 +117,10 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 					return;
 				}
 
-				if (animationFrameId) {
-					cancelAnimationFrame(animationFrameId);
-					animationFrameId = null;
+				console.log(animationFrameId.current)
+				if (animationFrameId.current) {
+					cancelAnimationFrame(animationFrameId.current);
+					animationFrameId.current = null;
 				}
 			},
 			{
@@ -130,7 +130,12 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 			}
 		).observe(wrapperRef.current);
 
+
 		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		}
 	}, []);
 
 	useEffect(() => {

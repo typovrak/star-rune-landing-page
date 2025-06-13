@@ -22,8 +22,6 @@ export default function BrandTitle({ size = "default", handleCloseMobileMenu }: 
 		history.replaceState(null, "", "/");
 	}
 
-	// TODO: demander une petite étoile pour l'icon
-
 	return (
 		<Link
 			href="/"
@@ -34,7 +32,7 @@ export default function BrandTitle({ size = "default", handleCloseMobileMenu }: 
 				<Star className={`${size === "default" ? "h-7 w-7" : "h-9 w-9"} fill-yellow-400 text-yellow-400 transition-transform duration-300 group-hover/hover:scale-[115%] group-hover/hover:rotate-[72deg]`} />
 			</div>
 
-			<strong className={`${size === "default" ? "text-lg" : "text-xl"} text-slate-900 font-primary font-semibold`}>
+			<strong className={`${size === "default" ? "text-lg" : "text-xl"} group-[.dark]:text-white text-slate-900 font-primary font-semibold transition-all duration-300`}>
 				{data.brand}
 			</strong>
 		</Link>

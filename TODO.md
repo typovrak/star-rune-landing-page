@@ -1,4 +1,10 @@
 
+- pages légales
+- metatags
+- optimisation des images
+- traduction
+- notification popup???
+
 reprendre:
 
 
@@ -15,8 +21,7 @@ https://dribbble.com/shots/22064357-Testimonials-Animation
 
 
 
-BESOIN:
-- version mobile de l'image de block-hero pour afficher le titre du jeu sans croppage
+
 
 
 

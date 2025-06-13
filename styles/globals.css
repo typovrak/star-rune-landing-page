@@ -68,6 +68,16 @@ body {
       box-shadow 300ms ease-in-out,
       background 300ms ease-in-out;
   }
+
+  .group.dark .link.group-\[\.dark\]\:text-white:hover {
+    color: var(--black);
+
+  }
+
+  .group.dark .badge.group-\[\.dark\]\:bg-black:hover {
+    background: #eab308;
+    color: var(--black);
+  }
 }
 
 @layer base {

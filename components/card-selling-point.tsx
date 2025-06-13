@@ -5,7 +5,7 @@ import IconInvert from "@/components/icon-invert";
 export default function CardSellingPoint({ icon, iconHover, iconColor, title, text, className, isSlide, style }: ICardSellingPoint) {
 	return (
 		<Card
-			className={`group/hover flex items-center bg-slate-600 ${isSlide ? "hover:bg-slate-700 border-t-2 rounded-none h-full justify-center" : "hover:rotate-cta hover:bg-slate-700 shadow-lg hover:shadow-xl border-2"}${className ? ` ${className}` : ""}`}
+			className={`group/hover flex items-center bg-slate-600 duration-300 transition-all ${isSlide ? "hover:bg-slate-700 border-t-2 rounded-none h-full justify-center" : "hover:rotate-cta hover:bg-slate-700 shadow-lg hover:shadow-xl border-2"}${className ? ` ${className}` : ""}`}
 			style={style}
 		>
 			<CardContent className={`p-4 flex items-center${isSlide ? " lg:py-6 lg:px-16 lg:gap-2" : ""}`}>
