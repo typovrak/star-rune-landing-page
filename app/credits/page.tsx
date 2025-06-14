@@ -15,7 +15,7 @@ export default function Credits({ }: ICredits) {
 				<h1 className="mt-[var(--header-height)]">Credits</h1>
 				<time>Last modification : 2025-06-13</time>
 
-				<h2>Do you want to see the code ?</h2>
+				<h2>Want to see the code source ?</h2>
 				<ul>
 					<li>
 						Made with 💜 by <ExternalLink href="https://github.com/typovrak">typovrak</ExternalLink>

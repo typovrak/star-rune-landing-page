@@ -110,7 +110,6 @@ export interface IButtonIcon {
 
 export interface IButtonIconDemo {
 	size?: TButtonIconSize;
-	ping?: IPing;
 }
 
 export interface IButtonIconKickstarter {

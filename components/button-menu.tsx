@@ -11,7 +11,7 @@ export default function ButtonMenu({ icon, title, iconHover }: IButtonMenu) {
 					</div>
 
 					{iconHover &&
-						<div className="absolute inset-[0.35rem] opacity-0 group-hover/hover:opacity-100 transition-all duration-300">
+						<div className="absolute inset-[0.35rem] opacity-0 text-slate-950 group-hover/hover:opacity-100 transition-all duration-300 group-[.dark]:text-white">
 							{iconHover}
 						</div>
 					}
