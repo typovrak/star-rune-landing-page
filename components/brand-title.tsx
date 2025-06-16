@@ -1,8 +1,8 @@
 import type { IBrandTitle } from "@/utils/types";
 import data from "@/utils/data";
 import Link from "next/link";
-import { Star } from "lucide-react";
 import { type SyntheticEvent } from "react";
+import Nova from "@/icons/nova";
 
 export default function BrandTitle({ size = "default", handleCloseMobileMenu }: IBrandTitle) {
 
@@ -29,7 +29,7 @@ export default function BrandTitle({ size = "default", handleCloseMobileMenu }: 
 			onClick={backToTop}
 		>
 			<div className="relative top-[-2px]">
-				<Star className={`${size === "default" ? "h-7 w-7" : "h-9 w-9"} fill-yellow-400 text-yellow-400 transition-transform duration-300 group-hover/hover:scale-[115%] group-hover/hover:rotate-[72deg]`} />
+				<Nova className={`${size === "default" ? "h-9 w-9" : "h-11 w-11"} group-hover/hover:rotate-text transition-transform duration-300 group-hover/hover:scale-[115%]`} />
 			</div>
 
 			<strong className={`${size === "default" ? "text-lg" : "text-xl"} group-[.dark]:text-white text-slate-900 font-primary font-semibold transition-all duration-300`}>
