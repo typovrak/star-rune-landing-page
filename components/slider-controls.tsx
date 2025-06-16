@@ -33,7 +33,7 @@ export default function SliderControls({ slides, activeId, handleFullscreen, pre
 					title="Go to next image"
 					onClick={nextImage}
 					className={`${slides[activeId].borderColor} ${slides[activeId].shadowColor} ${activeId === slides.length - 1 ? "opacity-0 pointer-events-none" : "opacity-100"}${isFullscreen ? "" : " lg:h-14 lg:w-14"}`}
-					iconClassName={`h-8 w-8 relative left-[2px] group-hover/button-circle:translate-x-1${isFullscreen ? "" : " lg:h-10 lg:w-10 lg:group-hover/button-circle:-translate-x-2"}`}
+					iconClassName={`h-8 w-8 relative left-[2px] group-hover/button-circle:translate-x-1${isFullscreen ? "" : " lg:h-10 lg:w-10 lg:group-hover/button-circle:translate-x-2"}`}
 				/>
 			</div>
 		</div>

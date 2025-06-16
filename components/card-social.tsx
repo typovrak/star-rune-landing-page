@@ -5,7 +5,7 @@ import IconInvert from "@/components/icon-invert";
 
 export default function CardSocial({ icon, iconHover, title, text, url, buttonTitle, color, className, buttonClassName }: ICardSocial) {
 	return (
-		<Card className={`flex flex-col items-center text-center p-6 border-2 transition-all duration-300 shadow-lg hover:shadow-xl group${className ? ` ${className}` : ""}`}>
+		<Card className={`group/hover flex flex-col items-center text-center p-6 border-2 transition-all duration-300 shadow-lg hover:shadow-xl group${className ? ` ${className}` : ""}`}>
 			<CardContent className="flex flex-col items-center h-full space-y-4 pt-6">
 				<div className="relative">
 					<div className={`h-12 w-12 group-hover:scale-110 transition-transform duration-300 ${color}`}>
