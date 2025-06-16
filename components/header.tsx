@@ -73,7 +73,6 @@ export default function Header({ }: IHeader) {
 		<header
 			ref={headerRef}
 			className={`group dark fixed hide-header-transition ${hideHeader} z-50 h-header w-full border-b ${borderDark} ${bgDark} backdrop-blur ${bgBackdropDark}`}
-			data-appear={true}
 		>
 			<div className="container h-full flex items-center justify-between px-4">
 				<BrandTitle />

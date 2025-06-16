@@ -10,25 +10,6 @@ import ExternalLink from "@/components/external-link";
 
 export default function Footer({ }: IFooter) {
 
-	const externalLinks = [
-		{
-			url: "https://mscholz.dev/projet/10-astrofolio",
-			title: "Legal notice",
-		},
-		{
-			url: "https://mscholz.dev/projet/09-kevin-tresor",
-			title: "Privacy policy",
-		},
-		{
-			url: "https://mscholz.dev/projet/08-kt-sport-design",
-			title: "Term of Service",
-		},
-		{
-			url: `mailto:${data.email}`,
-			title: "Contact",
-		},
-	];
-
 	return (
 		<footer className="w-full bg-white py-8 md:py-12">
 			<div className="container px-4">
@@ -69,7 +50,7 @@ export default function Footer({ }: IFooter) {
 							className="flex flex-col text-sm mx-auto max-w-[150px]"
 							linkClassName="text-slate-500 py-1.5 text-center hover:scale-[120%] hover:text-slate-900"
 							aspectColumn={true}
-							externalLinks={externalLinks}
+							resourceLinks={data.resourceLinks}
 						/>
 					</div>
 
@@ -85,7 +66,6 @@ export default function Footer({ }: IFooter) {
 				<div className="relative mt-8 pt-8 text-center text-base text-slate-500">
 					<Hr />
 
-					{/* TODO: mscholz.dev credits */}
 					<p>
 						Made with 💜 by <ExternalLink
 							href={data.developer.url}

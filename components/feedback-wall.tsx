@@ -117,7 +117,6 @@ export default function FeedbackWall({ items, speed }: IFeedbackWall) {
 					return;
 				}
 
-				console.log(animationFrameId.current)
 				if (animationFrameId.current) {
 					cancelAnimationFrame(animationFrameId.current);
 					animationFrameId.current = null;

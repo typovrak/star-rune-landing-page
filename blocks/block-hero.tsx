@@ -11,8 +11,6 @@ export default function BlockHero({ }: IBlockHero) {
   return (
     <section
       className="relative group w-full min-h-[calc(100vh-var(--header-height))] mt-[var(--header-height)] flex items-center overflow-hidden"
-      data-appear={true}
-      data-appear-once={true}
     >
       <div className="absolute inset-0" >
         <Image

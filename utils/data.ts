@@ -58,4 +58,23 @@ export default {
 			title: "Community",
 		},
 	],
+
+
+	resourceLinks: [
+		{
+			id: 0,
+			url: "/credits",
+			title: "Credits",
+		},
+		{
+			id: 1,
+			url: "/legal-notice",
+			title: "Legal notice",
+		},
+		{
+			id: 2,
+			url: `mailto:starrunecompany@gmail.com`,
+			title: "Contact",
+		},
+	]
 }

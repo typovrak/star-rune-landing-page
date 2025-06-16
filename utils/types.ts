@@ -134,7 +134,8 @@ export interface IQuickLinks {
 	aspectColumn?: boolean;
 	hiddenLinksDesktop?: number[];
 	handleCloseMobileMenu?: () => void;
-	externalLinks?: {
+	resourceLinks?: {
+		id: number;
 		url: string;
 		title: string;
 	}[];
@@ -296,4 +297,8 @@ export interface ILegalNotice {
 }
 
 export interface ICredits {
+}
+
+export interface IResourcePage {
+	children: ReactNode;
 }
