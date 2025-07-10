@@ -4,7 +4,7 @@ import Maximize from "@/icons/maximize";
 import ChevronRight from "@/icons/chevron-right";
 import { X as Close } from "lucide-react";
 
-export default function SliderControls({ slides, activeId, handleFullscreen, previousImage, nextImage, isFullscreen, className }: ISliderControls) {
+export default function SliderControls({ slides, activeId, handleFullscreen, previousImage, nextImage, isFullscreen, className, countClassName }: ISliderControls) {
 	return (
 		<div className={`flex items-center justify-between${isFullscreen ? "" : " mb-2 lg:mb-4"}${className ? ` ${className}` : ""}`}>
 			<ButtonCircle
@@ -24,7 +24,7 @@ export default function SliderControls({ slides, activeId, handleFullscreen, pre
 					iconClassName={`rotate-180 h-8 w-8 relative right-[2px] group-hover/button-circle:-translate-x-1${isFullscreen ? "" : " lg:h-10 lg:w-10 lg:group-hover/button-circle:-translate-x-2"}`}
 				/>
 
-				<p className="text-slate-600 lg:text-lg">
+				<p className={`text-slate-600 lg:text-lg${countClassName ? ` ${countClassName}` : ""}`}>
 					{activeId + 1} / {slides.length}
 				</p>
 

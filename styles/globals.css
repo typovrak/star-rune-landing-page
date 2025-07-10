@@ -177,6 +177,8 @@ body {
     --time-2500: 2500ms;
     --time-2750: 2750ms;
     --time-3000: 3000ms;
+
+    --aspect-abilities: 12/5;
   }
 }
 

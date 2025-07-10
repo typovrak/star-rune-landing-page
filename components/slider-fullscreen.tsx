@@ -17,11 +17,11 @@ export default function SliderFullscreen({ slides, activeId, handleFullscreen, p
 				/>
 			</nav>
 
-			<div className="relative h-full flex items-center justify-center max-h-[calc(100vh-var(--header-height))]">
+			<div className="relative h-full flex items-center justify-center max-h-[calc(100vh-var(--header-height))] w-full">
 				<Image
 					src={`/${slides[activeId].src}`}
 					alt={slides[activeId].alt}
-					className="flex aspect-video h-auto w-full max-h-[calc(100vh-var(--header-height))] opacity-0 pointer-events-none"
+					className="flex aspect-abilities h-auto w-full max-h-[calc(100vh-var(--header-height))] opacity-0 pointer-events-none"
 					height={1080}
 					width={1920}
 				/>
@@ -31,9 +31,9 @@ export default function SliderFullscreen({ slides, activeId, handleFullscreen, p
 						key={id}
 						src={`/${src}`}
 						alt={alt}
-						className={`absolute top-[50%] left-[50%] flex will-change-transform aspect-video h-auto w-full max-h-[calc(100vh-var(--header-height))] translate-x-[-50%] translate-y-[-50%] transition-all duration-1000 ${activeId === id ? "clip-path-open" : activeId > id ? "clip-path-left" : "clip-path-right"}`}
-						height={1080}
-						width={1920}
+						className={`absolute top-[50%] left-[50%] flex will-change-transform aspect-abilities h-auto w-full max-h-[calc(100vh-var(--header-height))] translate-x-[-50%] translate-y-[-50%] transition-all duration-1000 ${activeId === id ? "clip-path-open" : activeId > id ? "clip-path-left" : "clip-path-right"}`}
+					//height={1080}
+					//width={1920}
 					/>
 				))}
 			</div>

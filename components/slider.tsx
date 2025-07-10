@@ -22,7 +22,7 @@ export default function Slider({ slides }: ISlider) {
 	}
 
 	return (
-		<div className="max-w-6xl mx-auto">
+		<div className="relative max-w-6xl mx-auto">
 			<SliderFullscreen
 				slides={slides}
 				activeId={activeId}
@@ -38,6 +38,8 @@ export default function Slider({ slides }: ISlider) {
 				handleFullscreen={handleFullscreen}
 				previousImage={previousImage}
 				nextImage={nextImage}
+				className="lg:absolute lg:top-0 lg:z-10 lg:w-full lg:p-4"
+				countClassName={`bg-slate-600 text-white px-3 py-1 rounded-lg border-2 shadow-lg hover:shadow-xl transition-all duration-300 ${slides[activeId].borderColor} ${slides[activeId].shadowColor}`}
 			/>
 
 			<div className={`flex border-2 shadow-lg hover:shadow-xl rounded-xl overflow-hidden relative transition-all duration-300 group ${slides[activeId].shadowColor} ${slides[activeId].borderColor}`}>

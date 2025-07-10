@@ -243,6 +243,7 @@ export interface ISliderControls {
 	nextImage: () => void;
 	isFullscreen?: boolean;
 	className?: string;
+	countClassName?: string;
 }
 
 export interface ISliderFullscreen extends ISliderControls {

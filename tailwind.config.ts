@@ -15,6 +15,9 @@ const config: Config = {
             center: true,
         },
         extend: {
+            aspectRatio: {
+                'abilities': 'var(--aspect-abilities)',
+            },
             transitionDuration: {
                 '750': 'var(--time-750)',
                 '1250': 'var(--time-1250)',

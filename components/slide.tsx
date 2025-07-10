@@ -18,7 +18,7 @@ export default function Slide({ id, activeId, icon, iconHover, iconColor, title,
 				<Image
 					src={`/${src}`}
 					alt={alt}
-					className="aspect-[12/5] object-cover"
+					className="aspect-abilities object-cover"
 					height={1080}
 					width={1920}
 				/>
