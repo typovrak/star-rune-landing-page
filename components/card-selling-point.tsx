@@ -17,7 +17,7 @@ export default function CardSellingPoint({ icon, iconHover, iconColor, title, te
 				</div>
 
 				<div>
-					<h3 className={`font-bold font-secondary text-white mb-1 sm:mb-0${isSlide ? " lg:text-lg lg:mb-1" : ""}`}>{title}</h3>
+					<h3 className={`font-bold font-secondary text-white mb-1 sm:mb-0${isSlide ? " lg:text-lg lg:mb-1 tracking-wide" : ""}`}>{title}</h3>
 					<p className={`text-sm text-slate-100${isSlide ? " lg:text-base" : ""}`}>{text}</p>
 				</div>
 			</CardContent>
