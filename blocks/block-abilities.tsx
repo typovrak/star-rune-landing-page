@@ -92,7 +92,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			iconHover: <Sparkles className="fill-yellow-400" />,
 			iconColor: "text-yellow-400",
 			title: "Full Charge + Ultimate",
-			text: "When you have Full Charge, you'll gain an aura, your attacks will be a little bit stronger, and you can cast a unique Ultimate Attack from 1 of 12 Legendary swords.",
+			text: "When you have Full Charge, you'll gain an aura, your attacks will be a little bit stronger, and you can cast a unique Ultimate Attack from 1 of 12 Legendary swords. Ultimates are typically good ways to finish off annoying Glitchborn or guarantee damage when there is no good dashline to be made. But use them wisely! They require casting time and will use all of your Charge.",
 			shadowColor: "shadow-yellow-400/30 hover:shadow-yellow-400/30",
 			borderColor: "border-yellow-400",
 			src: "full-charge-plus-ultimate.gif",

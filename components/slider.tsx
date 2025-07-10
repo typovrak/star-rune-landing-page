@@ -5,7 +5,7 @@ import SliderControls from "@/components/slider-controls";
 import SliderFullscreen from "@/components/slider-fullscreen";
 
 export default function Slider({ slides }: ISlider) {
-	const placeholderId = 5;
+	const placeholderId = 6;
 
 	const [activeId, setActiveId] = useState(0);
 	const [fullscreen, setFullscreen] = useState(false);
