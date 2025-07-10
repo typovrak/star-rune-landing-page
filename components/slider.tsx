@@ -5,6 +5,7 @@ import SliderControls from "@/components/slider-controls";
 import SliderFullscreen from "@/components/slider-fullscreen";
 
 export default function Slider({ slides }: ISlider) {
+	const placeholderId = 5;
 
 	const [activeId, setActiveId] = useState(0);
 	const [fullscreen, setFullscreen] = useState(false);
@@ -39,21 +40,21 @@ export default function Slider({ slides }: ISlider) {
 				previousImage={previousImage}
 				nextImage={nextImage}
 				className="lg:absolute lg:top-0 lg:z-10 lg:w-full lg:p-4"
-				countClassName={`bg-slate-600 text-white px-3 py-1 rounded-lg border-2 shadow-lg hover:shadow-xl transition-all duration-300 ${slides[activeId].borderColor} ${slides[activeId].shadowColor}`}
+				countClassName={`lg:bg-slate-600 lg:text-white lg:px-3 lg:py-1 lg:rounded-lg lg:border-2 lg:shadow-lg lg:hover:shadow-xl lg:transition-all lg:duration-300 ${slides[activeId].borderColor} ${slides[activeId].shadowColor}`}
 			/>
 
 			<div className={`flex border-2 shadow-lg hover:shadow-xl rounded-xl overflow-hidden relative transition-all duration-300 group ${slides[activeId].shadowColor} ${slides[activeId].borderColor}`}>
 				<Slide
-					key={slides[0].title}
-					id={slides[0].id}
-					icon={slides[0].icon}
-					iconHover={slides[0].iconHover}
-					iconColor={slides[0].iconColor}
-					title={slides[0].title}
-					text={slides[0].text}
-					borderColor={slides[0].borderColor}
-					src={slides[0].src}
-					alt={slides[0].alt}
+					key={slides[placeholderId].title}
+					id={slides[placeholderId].id}
+					icon={slides[placeholderId].icon}
+					iconHover={slides[placeholderId].iconHover}
+					iconColor={slides[placeholderId].iconColor}
+					title={slides[placeholderId].title}
+					text={slides[placeholderId].text}
+					borderColor={slides[placeholderId].borderColor}
+					src={slides[placeholderId].src}
+					alt={slides[placeholderId].alt}
 					className="relative pointer-events-none opacity-0"
 				/>
 
