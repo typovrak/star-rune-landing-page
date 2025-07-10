@@ -7,7 +7,7 @@ export default {
 	launchDate: {
 		year: 2025,
 		month: 9,
-		day: 15,
+		day: 2,
 		hour: 10,
 		minute: 30
 	},

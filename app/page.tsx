@@ -19,7 +19,6 @@ export default function Home() {
       <Header />
 
       <BlockHero />
-
       <BlockResume id={data.homeLinks[0].id} dataAppearThreshold={0.20} />
       <BlockFeatures id={data.homeLinks[1].id} />
       <BlockAbilities id={data.homeLinks[2].id} />

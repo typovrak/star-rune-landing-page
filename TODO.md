@@ -1,3 +1,4 @@
+-> use next-intl
 
 - pages légales -> ajouter le style
 
