@@ -11,7 +11,7 @@ import Trophy from "@/icons/trophy";
 import TrophyFill from "@/icons/trophy-fill";
 import Keyboard from "@/icons/keyboard";
 import KeyboardFill from "@/icons/keyboard-fill";
-import Image from "@/components/image";
+//import Image from "@/components/image";
 
 export default function BlockResume({ id, dataAppearThreshold }: IBlockResume) {
 
@@ -68,14 +68,24 @@ export default function BlockResume({ id, dataAppearThreshold }: IBlockResume) {
 					<h3 className="text-2xl font-bold text-slate-700">The World of {data.brand}</h3>
 
 					<p className="text-slate-500">
-						Long ago, The Shapes lived in harmony. And The Stars ruled peacefully from above. But one day, 12 Evil
-						Wizards came and corrupted everything. Using Magic Runes, they created 12 Swords of Fable, and opened
-						up a portal to the Dark Web, and hordes of Evil Letters and Cookies poured out.
+						The Stars have always guarded Shape World from the Azki. They wielded Twelve Legendary swords, forged from Star Runes. The most powerful was called Kry XeRnOg. But in secret, someone cursed it with Dark Runes. The Curse destroyed the sword, wielder, and his home.
 					</p>
 
 					<p className="text-slate-500">
-						The Stars disappeared and were never seen again. But 5 Great Kings fought back. They won a great
-						battle, breaking the Dragon Wizard's sword, Kry XeRnOg. Now, only the Hearts remain free.
+						Five Kings gathered near Kry XeRnOg. From its broken shards, they forged new blades.
+					</p>
+
+
+					<pre className="text-slate-500 whitespace-pre">
+						{`BC NOFNe forged BAlGaInTl
+Al "SiPS" ClArK forged PAsSbBi
+GaGe AsSe forged OSSeTePo
+TeI Xecs forged SiGe
+P.b. BiPoAt forged BrIAtTs`}
+					</pre>
+
+					<p className="text-slate-500">
+						But The Curse lived on through these swords, and corruption spread across the Five Kingdoms. Hordes of Azki swarmed the world. And the Stars were never seen again.
 					</p>
 
 					<div className="pt-4 flex flex-wrap gap-4">
@@ -84,15 +94,24 @@ export default function BlockResume({ id, dataAppearThreshold }: IBlockResume) {
 					</div>
 				</div>
 
-				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl hover:shadow-yellow-500/30 hover:rotate-cta duration-300 transition-all">
-					<CardContent className="p-0">
-						<Image
+				<Card className="order-1 lg:order-2 overflow-hidden border-2 border-yellow-500/30 shadow-lg shadow-yellow-500/30 rounded-lg hover:shadow-xl hover:shadow-yellow-500/30 hover:rotate-cta duration-300 transition-all flex">
+					<CardContent className="flex p-0 aspect-video w-full">
+						{/*<Image
 							src="/star-rune-volcano.webp"
 							alt={`${data.brand} volcano level`}
 							className="aspect-video object-cover w-full"
 							height={310}
 							width={550}
-						/>
+						/>*/}
+
+						<iframe
+							src="https://www.youtube.com/embed/FScIxA4vA94?si=FEtLMm4rREOzIHtb"
+							title="YouTube video player"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerPolicy="strict-origin-when-cross-origin"
+							allowFullScreen
+							className="w-full h-full"
+						></iframe>
 					</CardContent>
 				</Card>
 			</div>

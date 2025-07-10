@@ -14,6 +14,11 @@ body {
     font-family: var(--font-primary);
   }
 
+  /* tailwind forgot to handle pre HTML tag... */
+  pre {
+    font-family: var(--font-secondary);
+  }
+
   svg {
     height: 100%;
     width: 100%;
