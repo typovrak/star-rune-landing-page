@@ -1,4 +1,4 @@
-import type { ICardClient } from "@/utils/types";
+import type { ICardClient, TItemClientSource } from "@/utils/types";
 import Message from "@/icons/message";
 import MessageFill from "@/icons/message-fill";
 import IconInvert from "@/components/icon-invert";
@@ -66,9 +66,32 @@ export default function CardClient({ src, names, about, text, source, className 
 			</article>
 		);
 
+	function handleDefaultTitle(source: TItemClientSource) {
+		if (source.title) {
+			return source.title
+		}
+
+		switch (source.type) {
+			case "irl":
+				return "Local event";
+
+			case "discord":
+				return "Discord serveur";
+
+			case "youtube":
+				return "YouTube comment";
+
+			case "kickstarter":
+				return "Kickstarter donater";
+
+			case "x":
+				return "X tweet";
+		}
+	}
+
 	return (
 		<Wrapper
-			className={`border-2 bg-white hover:rotate-cta rounded-lg p-6 transition-all duration-300 hover:shadow-sm flex flex-col w-card-client-mobile md:w-card-client gap-6 group group/hover ${types[source.type].border} ${types[source.type].shadow}${className ? ` ${className}` : ""}`}
+			className={`border-2 bg-white hover:rotate-cta rounded-lg p-6 transition-all duration-300 hover:shadow-sm flex flex-col w-card-client-mobile md:w-card-client gap-6 group group/hover justify-between ${types[source.type].border} ${types[source.type].shadow}${className ? ` ${className}` : ""}`}
 		>
 			<div className="flex flex-col gap-4">
 				<div className="flex gap-4 items-center">
@@ -79,7 +102,7 @@ export default function CardClient({ src, names, about, text, source, className 
 						/>
 					</div>
 
-					<p className={`${types[source.type].text} font-semibold group-hover:translate-x-2 transition-all duration-300`}>{source.title}</p>
+					<p className={`${types[source.type].text} font-semibold group-hover:translate-x-2 transition-all duration-300`}>{handleDefaultTitle(source)}</p>
 				</div>
 
 				<p className="text-slate-900 text-balance">{text}</p>

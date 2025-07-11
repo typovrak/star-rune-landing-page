@@ -76,5 +76,5 @@ export default {
 			url: `mailto:starrunecompany@gmail.com`,
 			title: "Contact",
 		},
-	]
+	],
 }

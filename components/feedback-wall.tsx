@@ -2,7 +2,7 @@ import type { IFeedbackWall } from "@/utils/types";
 import CardClient from "@/components/card-client";
 import { useRef, useEffect, useState } from "react";
 
-export default function FeedbackWall({ items, speed }: IFeedbackWall) {
+export default function FeedbackWall({ items, speed, biggerItemId }: IFeedbackWall) {
 
 	const direction = speed > 0 ? 1 : -1;
 

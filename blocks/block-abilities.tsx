@@ -114,6 +114,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 		>
 			<Slider
 				slides={slides}
+				biggerSlideId={6}
 			/>
 		</SectionWrapper>
 	)

@@ -210,6 +210,7 @@ export interface ICardSocial {
 
 export interface ISlider {
 	slides: ISlide[];
+	biggerSlideId: number;
 }
 
 export interface ISlide {
@@ -250,7 +251,14 @@ export interface ISliderFullscreen extends ISliderControls {
 	fullscreen: boolean;
 }
 
+export type TItemClientSource = {
+	type: TItemClientSourceType;
+	title: string;
+	url?: string;
+}
+
 export type TItemClientSourceType = "irl" | "discord" | "youtube" | "kickstarter" | "x";
+
 
 export type TItemClient = {
 	id: number;
@@ -258,11 +266,7 @@ export type TItemClient = {
 	names: string;
 	about: string;
 	text: string;
-	source: {
-		type: TItemClientSourceType;
-		title: string;
-		url?: string;
-	}
+	source: TItemClientSource
 }
 
 export interface ICardClient extends TItemClient {
@@ -272,6 +276,7 @@ export interface ICardClient extends TItemClient {
 export interface IFeedbackWall {
 	items: TItemClient[];
 	speed: number;
+	biggerItemId: number;
 }
 
 export interface IBrand extends ISVG {

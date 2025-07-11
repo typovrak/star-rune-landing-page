@@ -4,8 +4,7 @@ import Slide from "@/components/slide";
 import SliderControls from "@/components/slider-controls";
 import SliderFullscreen from "@/components/slider-fullscreen";
 
-export default function Slider({ slides }: ISlider) {
-	const placeholderId = 6;
+export default function Slider({ slides, biggerSlideId }: ISlider) {
 
 	const [activeId, setActiveId] = useState(0);
 	const [fullscreen, setFullscreen] = useState(false);
@@ -45,16 +44,16 @@ export default function Slider({ slides }: ISlider) {
 
 			<div className={`flex border-2 shadow-lg hover:shadow-xl rounded-xl overflow-hidden relative transition-all duration-300 group ${slides[activeId].shadowColor} ${slides[activeId].borderColor}`}>
 				<Slide
-					key={slides[placeholderId].title}
-					id={slides[placeholderId].id}
-					icon={slides[placeholderId].icon}
-					iconHover={slides[placeholderId].iconHover}
-					iconColor={slides[placeholderId].iconColor}
-					title={slides[placeholderId].title}
-					text={slides[placeholderId].text}
-					borderColor={slides[placeholderId].borderColor}
-					src={slides[placeholderId].src}
-					alt={slides[placeholderId].alt}
+					key={slides[biggerSlideId].title}
+					id={slides[biggerSlideId].id}
+					icon={slides[biggerSlideId].icon}
+					iconHover={slides[biggerSlideId].iconHover}
+					iconColor={slides[biggerSlideId].iconColor}
+					title={slides[biggerSlideId].title}
+					text={slides[biggerSlideId].text}
+					borderColor={slides[biggerSlideId].borderColor}
+					src={slides[biggerSlideId].src}
+					alt={slides[biggerSlideId].alt}
 					className="relative pointer-events-none opacity-0"
 				/>
 
