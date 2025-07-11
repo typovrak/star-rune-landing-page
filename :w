@@ -82,10 +82,10 @@ export default function CardClient({ src, names, about, text, source, className 
 				return "YouTube comment";
 
 			case "kickstarter":
-				return "Kickstarter contributor";
+				return "Kickstarter donater";
 
 			case "x":
-				return "Tweet";
+				return "X tweet";
 		}
 	}
 

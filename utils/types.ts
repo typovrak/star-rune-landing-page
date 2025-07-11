@@ -253,7 +253,7 @@ export interface ISliderFullscreen extends ISliderControls {
 
 export type TItemClientSource = {
 	type: TItemClientSourceType;
-	title: string;
+	title?: string;
 	url?: string;
 }
 

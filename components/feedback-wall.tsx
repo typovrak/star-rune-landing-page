@@ -193,12 +193,12 @@ export default function FeedbackWall({ items, speed, biggerItemId }: IFeedbackWa
 			<div className="absolute top-0 right-0 h-full w-[64px] s:w-[128px] 2xl:w-[256px] bg-gradient-to-r from-yellow-50 to-transparent z-10 rotate-180 transition-all duration-300"></div>
 
 			<CardClient
-				id={items[0].id}
-				src={items[0].src}
-				names={items[0].names}
-				about={items[0].about}
-				text={items[0].text}
-				source={items[0].source}
+				id={items[biggerItemId].id}
+				src={items[biggerItemId].src}
+				names={items[biggerItemId].names}
+				about={items[biggerItemId].about}
+				text={items[biggerItemId].text}
+				source={items[biggerItemId].source}
 				className="opacity-0 pointer-events-none"
 			/>
 

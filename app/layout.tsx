@@ -19,8 +19,8 @@ const fontSecondary = Tomorrow({
 })
 
 export const metadata: Metadata = {
-  title: `${data.brand} landing page`,
-  description: `${data.brand} landing page`,
+  title: `${data.brand} : typing game`,
+  description: `You're the Last Star in Cyberspace... Type and slash through hordes of EVIL LETTERS to save the world! Learn to type as you embark on an epic adventure. Unlock new levels in game AND in life!`,
 }
 
 export default function RootLayout({
