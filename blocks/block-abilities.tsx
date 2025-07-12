@@ -24,7 +24,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			shadowColor: "shadow-blue-400/30 hover:shadow-blue-400/30",
 			borderColor: "border-blue-400",
 			src: "auto-deflect.gif",
-			alt: "",
+			alt: "Auto Deflect gameplay",
 		},
 		{
 			id: 1,
@@ -36,7 +36,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			shadowColor: "shadow-green-400/30 hover:shadow-green-400/30",
 			borderColor: "border-green-400",
 			src: "dash.gif",
-			alt: "",
+			alt: "Dash gameplay",
 		},
 		{
 			id: 2,
@@ -48,7 +48,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			shadowColor: "shadow-orange-400/30 hover:shadow-orange-400/30",
 			borderColor: "border-orange-400",
 			src: "chain-dash.gif",
-			alt: "",
+			alt: "Chain Dash gameplay",
 		},
 		{
 			id: 3,
@@ -60,7 +60,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			shadowColor: "shadow-red-400/30 hover:shadow-red-400/30",
 			borderColor: "border-red-400",
 			src: "triple-jump-spin-slash.gif",
-			alt: "",
+			alt: "Triple Jump + Spin Slash gameplay",
 		},
 		{
 			id: 4,
@@ -72,7 +72,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			shadowColor: "shadow-purple-400/30 hover:shadow-purple-400/30",
 			borderColor: "border-purple-400",
 			src: "slow-fall.gif",
-			alt: "",
+			alt: "Slow Fall gameplay",
 		},
 		{
 			id: 5,
@@ -84,7 +84,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			shadowColor: "shadow-cyan-400/30 hover:shadow-cyan-400/30",
 			borderColor: "border-cyan-400",
 			src: "fast-fall-meteor-slash.gif",
-			alt: "",
+			alt: "Fast Fall + Meteor Slash gameplay",
 		},
 		{
 			id: 6,
@@ -96,7 +96,7 @@ export default function BlockAbilities({ id }: IBlockAbilities) {
 			shadowColor: "shadow-yellow-400/30 hover:shadow-yellow-400/30",
 			borderColor: "border-yellow-400",
 			src: "full-charge-plus-ultimate.gif",
-			alt: "",
+			alt: "Full Charge + Ultimate gameplay",
 		},
 	];
 
