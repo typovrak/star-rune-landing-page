@@ -14,7 +14,7 @@ export default function BlockHero({ }: IBlockHero) {
     >
       <div className="absolute inset-0" >
         <Image
-          src="/star-rune-hero.jpg"
+          src="/star-rune-hero.webp"
           alt={`${data.brand} game background`}
           className="w-full h-full object-cover object-top"
         />

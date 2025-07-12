@@ -65,7 +65,7 @@ export default function BlockResume({ id, dataAppearThreshold }: IBlockResume) {
 		>
 			<div className="grid lg:grid-cols-2 gap-10 items-center mb-10">
 				<div className="space-y-4 order-2 lg:order-1">
-					<h3 className="text-2xl font-bold text-slate-700">The World of {data.brand}</h3>
+					<h2 className="text-2xl font-bold text-slate-700">The World of {data.brand}</h2>
 
 					<p className="text-slate-500">
 						The Stars have always guarded Shape World from the Azki. They wielded Twelve Legendary swords, forged from Star Runes. The most powerful was called Kry XeRnOg. But in secret, someone cursed it with Dark Runes. The Curse destroyed the sword, wielder, and his home.

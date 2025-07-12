@@ -76,7 +76,7 @@ export default function CardClient({ src, names, about, text, source, className 
 				return "Local event";
 
 			case "discord":
-				return "Discord serveur";
+				return "Discord server";
 
 			case "youtube":
 				return "YouTube comment";
