@@ -2,7 +2,6 @@ import type { IQuickLinks } from "@/utils/types";
 import { useRef } from "react";
 import Link from "next/link";
 import data from "@/utils/data";
-import ExternalLink from "@/components/external-link";
 
 export default function QuickLinks({ className, floatClassName, linkClassName, aspectColumn, hiddenLinksDesktop, handleCloseMobileMenu, resourceLinks }: IQuickLinks) {
 
@@ -44,7 +43,7 @@ export default function QuickLinks({ className, floatClassName, linkClassName, a
 			).map((link, index) => (
 				<Link
 					key={link.id}
-					href={"url" in link ? link.url : `#${link.id}`}
+					href={"url" in link ? link.url : `/#${link.id}`}
 					prefetch={false}
 					className={`relative duration-300 transition-all hover:rotate-cta ${hiddenLinksDesktop?.includes(index) ? " hidden 2xl:inline" : ""}${linkClassName ? ` ${linkClassName}` : ""}`}
 					// @ts-ignore

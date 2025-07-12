@@ -32,7 +32,7 @@ export default function SectionHeader({ id, badge, title, text, h1 }: ISectionHe
 				{h1 ?
 					<h1 className="leading-[1.1] sm:leading-[1.1] md:leading-[1.1] lg:leading-[1.1] text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
 						<Link
-							href={`#${id}`}
+							href={`/#${id}`}
 							onMouseEnter={titleHover}
 							onMouseLeave={(e) => titleHover(e, false)}
 							onTouchStart={titleHover}
@@ -44,7 +44,7 @@ export default function SectionHeader({ id, badge, title, text, h1 }: ISectionHe
 					:
 					<h2 className="leading-[1.1] sm:leading-[1.1] md:leading-[1.1] lg:leading-[1.1] text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-600">
 						<Link
-							href={`#${id}`}
+							href={`/#${id}`}
 							onMouseEnter={titleHover}
 							onMouseLeave={(e) => titleHover(e, false)}
 							onTouchStart={titleHover}

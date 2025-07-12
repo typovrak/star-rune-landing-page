@@ -7,6 +7,10 @@ import Nova from "@/icons/nova";
 export default function BrandTitle({ size = "default", handleCloseMobileMenu }: IBrandTitle) {
 
 	function backToTop(e: SyntheticEvent) {
+		if (window.location.pathname != "/") {
+			return;
+		}
+
 		e.preventDefault();
 
 		if (typeof handleCloseMobileMenu !== "undefined") {
