@@ -6,6 +6,7 @@ export default function SectionWrapper({ id, children, className, badge, title, 
 	return (
 		<section
 			id={id}
+			// INFO: if you want to remove some padding on desktop, modify py-16 below to py-14 or less
 			className={`group w-full py-16 relative overflow-hidden${className ? ` ${className}` : ''}`}
 		>
 			<div className="container px-4 relative">
