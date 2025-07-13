@@ -51,6 +51,7 @@ const config: Config = {
             screens: {
                 xs: '375px',
                 s: '480px',
+                '3xl': '1900px',
             },
             fontFamily: {
                 primary: ['var(--font-primary)'],

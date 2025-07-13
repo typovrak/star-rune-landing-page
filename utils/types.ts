@@ -17,7 +17,6 @@ export interface ISectionWrapper extends ISectionHeader {
 	children: ReactNode;
 	className?: string;
 	removeWrapper?: boolean;
-	dataAppearThreshold?: number;
 }
 
 export interface IBlockCommunity {
