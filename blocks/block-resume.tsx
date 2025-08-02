@@ -105,7 +105,7 @@ P.b. BiPoAt forged BrIAtTs`}
 						/>*/}
 
 						<iframe
-							src="https://youtu.be/Ws1KOQASvlI?si=9Qibg2hEkNUj9zE5"
+							src="https://www.youtube.com/watch?v=Ws1KOQASvlI&ab_channel=STARRUNE"
 							title="YouTube video player"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							referrerPolicy="strict-origin-when-cross-origin"
