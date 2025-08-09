@@ -200,7 +200,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			about: "Children's Librarian and Web Services",
 			text: "Children from all learning levels and abilities were able to complete levels and improve. It was amazing to watch the kids get into the process. The game had them hooked. Even adults found it fun, challenging and that it enhanced their proficiency.",
 			source: {
-				type: "Reddit",
+				type: "irl",
 			},
 		},
 		{
@@ -220,7 +220,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			about: "Children's Librarian and Web Services",
 			text: "Starrune was an amazing part of our summer reading program this year. Children as young as two were able to do the first level. After the first few levels, even some of the older kids were showing the younger ones how to hold their hands over the key board to get faster. Players showed marked improvement over the course of an hour and were excited to play the next time.",
 			source: {
-				type: "Reddit",
+				type: "irl",
 			},
 		},
 		{
@@ -280,7 +280,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			about: "Parent",
 			text: "This is amazing. My son is 7 and this is the first (typing) game he looks forward to playing. Excellent work!",
 			source: {
-				type: "Reddit",
+				type: "irl",
 			},
 		},
 		{
@@ -300,7 +300,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			about: "Children's Librarian and Web Services",
 			text: "Starrune is not just a typing program, it was a whole learning process wrapped up in an action-packed game. The idea that you are not only learning to type properly but you are learning about the Periodic Table was genius.",
 			source: {
-				type: "Reddit",
+				type: "irl",
 			},
 		},
 		{
