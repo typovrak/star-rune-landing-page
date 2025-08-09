@@ -156,9 +156,9 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		{
 			id: 2,
 			src: profilePicture,
-			names: "Hannah Ward, M.Ed.",
-			about: "Actual Reading",
-			text: "I asked my son if he wants to try any other prototype updates you have and he jumped up and down with excitement",
+			names: "Vince Boley",
+			about: "Father and Teacher",
+			text: "YOO this was so cool! Star Rune is an out of this world typing experience. Filled with \"type and slash\" gameplay, every keystroke combines education with excitement as you traverse a side-scrolling intergalactic world conquering evil letters and gaining practical real world skills. I can't wait to use this in my classroom next year and with my own kids at home.",
 			source: {
 				type: "x",
 			},
@@ -186,9 +186,9 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		{
 			id: 5,
 			src: profilePicture,
-			names: "Vince Boley",
-			about: "Father and Teacher",
-			text: "YOO this was so cool! Star Rune is an out of this world typing experience. Filled with \"type and slash\" gameplay, every keystroke combines education with excitement as you traverse a side-scrolling intergalactic world conquering evil letters and gaining practical real world skills. I can't wait to use this in my classroom next year and with my own kids at home.",
+			names: "Hannah Ward, M.Ed.",
+			about: "Actual Reading",
+			text: "I asked my son if he wants to try any other prototype updates you have and he jumped up and down with excitement",
 			source: {
 				type: "x",
 			},
@@ -196,11 +196,11 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		{
 			id: 6,
 			src: profilePicture,
-			names: "p1an0guy",
-			about: "Colemak speed typist",
-			text: "Star Rune is a great game for kids wanting to learn how to touch type, as well as adults who want to improve their technique. It's unlike any other typing platform I've seen before, and it really feels like I'm playing a video game instead of mashing \"f\" and \"j\" over and over again. The graphics and audio are amazing, and platform gamers will feel right at home.",
+			names: "Dorreen Jones",
+			about: "Children's Librarian and Web Services",
+			text: "Children from all learning levels and abilities were able to complete levels and improve. It was amazing to watch the kids get into the process. The game had them hooked. Even adults found it fun, challenging and that it enhanced their proficiency.",
 			source: {
-				type: "discord",
+				type: "Reddit",
 			},
 		},
 		{
@@ -216,11 +216,11 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		{
 			id: 8,
 			src: profilePicture,
-			names: "Evie S",
-			about: "7 years old",
-			text: "I love Star Rune!! Typing used to be hard and boring but now it’s actually fun. I think even like babies could get good at it lol. I hope one day starrune will inspire you! BEST. GAME. EVER!!!!",
+			names: "Dorreen Jones",
+			about: "Children's Librarian and Web Services",
+			text: "Starrune was an amazing part of our summer reading program this year. Children as young as two were able to do the first level. After the first few levels, even some of the older kids were showing the younger ones how to hold their hands over the key board to get faster. Players showed marked improvement over the course of an hour and were excited to play the next time.",
 			source: {
-				type: "irl",
+				type: "Reddit",
 			},
 		},
 		{
@@ -231,6 +231,86 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			text: "Star Rune uses fast-paced and addictive gameplay to teach students the foundations of typing, an essential skill in our 21st-century world. Better yet, Star Rune places fun at the forefront of the experience, making learning to type approachable and exciting rather than a chore.",
 			source: {
 				type: "irl",
+			},
+		},
+		{
+			id: 10,
+			src: profilePicture,
+			names: "Rushed",
+			about: "Spell Wizard Founder",
+			text: "Your game looks really good, very polished and fast paced, cant wait to see it finished!",
+			source: {
+				type: "irl",
+			},
+		},
+		{
+			id: 11,
+			src: profilePicture,
+			names: "Rushed, Spell Wizard Founder",
+			about: "Nerdcore Artists & University Teaching Program 5th Year",
+			text: "Star Rune uses fast-paced and addictive gameplay to teach students the foundations of typing, an essential skill in our 21st-century world. Better yet, Star Rune places fun at the forefront of the experience, making learning to type approachable and exciting rather than a chore.",
+			source: {
+				type: "irl",
+			},
+		},
+		{
+			id: 12,
+			src: profilePicture,
+			names: "Nimi",
+			about: "Typecelerate Creator",
+			text: "I wish I had this game when I was young. It's an effective and fun way to learn to type.",
+			source: {
+				type: "irl",
+			},
+		},
+		{
+			id: 13,
+			src: profilePicture,
+			names: "bibliovortex",
+			about: "homeschool parent",
+			text: "The Mash Meter sent me. XD (it was a keyboard smash) But seriously, it's an excellent mechanic and I think more typing games should implement it - it encourages accuracy with positive reinforcement (progression and scoring) without overtly penalizing every single mistake. I think both of my kids would find this way more motivating than strict speed/accuracy metrics.",
+			source: {
+				type: "irl",
+			},
+		},
+		{
+			id: 14,
+			src: profilePicture,
+			names: "aquarius3737",
+			about: "Parent",
+			text: "This is amazing. My son is 7 and this is the first (typing) game he looks forward to playing. Excellent work!",
+			source: {
+				type: "Reddit",
+			},
+		},
+		{
+			id: 15,
+			src: profilePicture,
+			names: "Evie S",
+			about: "7 years old",
+			text: "I love Star Rune!! Typing used to be hard and boring but now it’s actually fun. I think even like babies could get good at it lol. I hope one day starrune will inspire you! BEST. GAME. EVER!!!!",
+			source: {
+				type: "irl",
+			},
+		},
+		{
+			id: 17,
+			src: profilePicture,
+			names: "Dorreen Jones",
+			about: "Children's Librarian and Web Services",
+			text: "Starrune is not just a typing program, it was a whole learning process wrapped up in an action-packed game. The idea that you are not only learning to type properly but you are learning about the Periodic Table was genius.",
+			source: {
+				type: "Reddit",
+			},
+		},
+		{
+			id: 16,
+			src: profilePicture,
+			names: "p1an0guy",
+			about: "Colemak speed typist",
+			text: "Star Rune is a great game for kids wanting to learn how to touch type, as well as adults who want to improve their technique. It's unlike any other typing platform I've seen before, and it really feels like I'm playing a video game instead of mashing \"f\" and \"j\" over and over again. The graphics and audio are amazing, and platform gamers will feel right at home.",
+			source: {
+				type: "discord",
 			},
 		},
 	]
