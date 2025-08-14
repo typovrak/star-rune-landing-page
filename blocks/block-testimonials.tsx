@@ -304,36 +304,37 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		},
 	]
 
-	function shuffle<T>(array: T[]): T[] {
-		return array.sort(() => Math.random() - 0.5)
-	}
+	// INFO: features not working because can only run on client-side
+	//function shuffle<T>(array: T[]): T[] {
+	//	return array.sort(() => Math.random() - 0.5)
+	//}
 
-	function getBiggerItemId(array: TItemClient[]): number {
-		let biggerItemId = 0
-		let maxTextLength = array[0].text.length
-
-		for (let i = 1; i < array.length; i++) {
-			let currentTextLength = array[i].text.length
-
-			if (currentTextLength > maxTextLength) {
-				biggerItemId = i
-				maxTextLength = currentTextLength
-			}
-		}
-
-		return biggerItemId
-	}
+	//function getBiggerItemId(array: TItemClient[]): number {
+	//	let biggerItemId = 0
+	//	let maxTextLength = array[0].text.length
+	//
+	//	for (let i = 1; i < array.length; i++) {
+	//		let currentTextLength = array[i].text.length
+	//
+	//		if (currentTextLength > maxTextLength) {
+	//			biggerItemId = i
+	//			maxTextLength = currentTextLength
+	//		}
+	//	}
+	//
+	//	return biggerItemId
+	//}
 
 	const testimonials1: TTestimonials = {
-		items: shuffle(items),
+		items: items,
 		speed: speed * -1,
-		biggerItemId: getBiggerItemId(items)
+		biggerItemId: 9
 	}
 
 	const testimonials2: TTestimonials = {
-		items: shuffle(items2),
+		items: items2,
 		speed: speed * 0.5,
-		biggerItemId: getBiggerItemId(items2)
+		biggerItemId: 9
 	}
 
 	return (
