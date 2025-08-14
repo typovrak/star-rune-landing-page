@@ -105,7 +105,7 @@ P.b. BiPoAt forged BrIAtTs`}
 						/>*/}
 
 						<iframe
-							src="https://www.youtube.com/embed/FScIxA4vA94?si=FEtLMm4rREOzIHtb"
+							src="https://www.youtube.com/embed/Ws1KOQASvlI?si=GZn8g1V1ZlrhR7Qe"
 							title="YouTube video player"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							referrerPolicy="strict-origin-when-cross-origin"

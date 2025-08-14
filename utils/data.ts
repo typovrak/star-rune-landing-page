@@ -13,8 +13,8 @@ export default {
 	},
 
 	url: {
-		demo: "https://gx.games/games/orttkw/star-rune-prototype-250422/tracks/3f9b0213-a08f-4d99-b611-cff1bd7bb947/",
-		kickstarter: "https://www.kickstarter.com/projects/starrune/440562133?ref=6mtws4&token=f8edb547",
+		demo: "https://gx.games/games/wex1js/star-rune-prototype/",
+		kickstarter: "https://www.kickstarter.com/projects/starrune/star-rune",
 
 		discord: "https://discord.gg/B6pFEwsejE",
 		youtube: "https://www.youtube.com/@starrune",
