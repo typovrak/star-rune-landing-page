@@ -256,7 +256,7 @@ export type TItemClientSource = {
 	url?: string;
 }
 
-export type TItemClientSourceType = "irl" | "discord" | "youtube" | "kickstarter" | "x";
+export type TItemClientSourceType = "irl" | "discord" | "youtube" | "kickstarter" | "x" | "reddit";
 
 
 export type TItemClient = {
@@ -307,3 +307,10 @@ export interface ICredits {
 export interface IResourcePage {
 	children: ReactNode;
 }
+
+export type TTestimonials = {
+	items: TItemClient[],
+	speed: number,
+	biggerItemId: number
+}
+

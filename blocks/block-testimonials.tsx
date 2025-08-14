@@ -1,4 +1,4 @@
-import type { IBlockTestimonials, TItemClient } from "@/utils/types";
+import type { IBlockTestimonials, TItemClient, TTestimonials } from "@/utils/types";
 import SectionWrapper from "@/layouts/section-wrapper";
 import { Quote } from "lucide-react";
 import FeedbackWall from "@/components/feedback-wall";
@@ -7,7 +7,6 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 
 	const speed = 1;
 	const profilePicture = "nova-profile-picture.webp";
-
 
 	const items: TItemClient[] = [
 		{
@@ -130,6 +129,36 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 				type: "x",
 			},
 		},
+		{
+			id: 12,
+			src: profilePicture,
+			names: "aquarius3737",
+			about: "Parent",
+			text: "This is amazing. My son is 7 and this is the first (typing) game he looks forward to playing. Excellent work!",
+			source: {
+				type: "reddit",
+			},
+		},
+		{
+			id: 13,
+			src: profilePicture,
+			names: "Nimi",
+			about: "Typecelerate Creator",
+			text: "I wish I had this game when I was young. It's an effective and fun way to learn to type.",
+			source: {
+				type: "discord",
+			},
+		},
+		{
+			id: 14,
+			src: profilePicture,
+			names: "Lindsey R.",
+			about: "Parent",
+			text: "He kept asking if he could play just one more level. That’s never happened with a learning game in our house.",
+			source: {
+				type: "irl",
+			},
+		},
 	]
 
 	const items2: TItemClient[] = [
@@ -166,16 +195,6 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		{
 			id: 3,
 			src: profilePicture,
-			names: "Lindsey R.",
-			about: "Parent",
-			text: "He kept asking if he could play just one more level. That’s never happened with a learning game in our house.",
-			source: {
-				type: "irl",
-			},
-		},
-		{
-			id: 4,
-			src: profilePicture,
 			names: "Frankie Hobbins",
 			about: "Creator of Squash and Spell",
 			text: "Star Rune is really fun! The game feel is so exquisite that while you're taking down enemies, it doesn't feel like you're learning, but then suddenly, your typing has improved! Add in the super cool music and epic boss battles, and this game is going places. Well worth giving it a try.",
@@ -184,7 +203,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 5,
+			id: 4,
 			src: profilePicture,
 			names: "Hannah Ward, M.Ed.",
 			about: "Actual Reading",
@@ -194,7 +213,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 6,
+			id: 5,
 			src: profilePicture,
 			names: "Dorreen Jones",
 			about: "Children's Librarian and Web Services",
@@ -204,7 +223,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 7,
+			id: 6,
 			src: profilePicture,
 			names: "Xander H",
 			about: "11 years old",
@@ -214,7 +233,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 8,
+			id: 7,
 			src: profilePicture,
 			names: "Dorreen Jones",
 			about: "Children's Librarian and Web Services",
@@ -224,7 +243,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 9,
+			id: 8,
 			src: profilePicture,
 			names: "Switchum (Christian)",
 			about: "Nerdcore Artists & University Teaching Program 5th Year",
@@ -234,57 +253,27 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 10,
-			src: profilePicture,
-			names: "Rushed",
-			about: "Spell Wizard Founder",
-			text: "Your game looks really good, very polished and fast paced, cant wait to see it finished!",
-			source: {
-				type: "irl",
-			},
-		},
-		{
-			id: 11,
+			id: 9,
 			src: profilePicture,
 			names: "Rushed, Spell Wizard Founder",
 			about: "Nerdcore Artists & University Teaching Program 5th Year",
 			text: "Star Rune uses fast-paced and addictive gameplay to teach students the foundations of typing, an essential skill in our 21st-century world. Better yet, Star Rune places fun at the forefront of the experience, making learning to type approachable and exciting rather than a chore.",
 			source: {
-				type: "irl",
+				type: "reddit",
 			},
 		},
 		{
-			id: 12,
-			src: profilePicture,
-			names: "Nimi",
-			about: "Typecelerate Creator",
-			text: "I wish I had this game when I was young. It's an effective and fun way to learn to type.",
-			source: {
-				type: "irl",
-			},
-		},
-		{
-			id: 13,
+			id: 10,
 			src: profilePicture,
 			names: "bibliovortex",
 			about: "homeschool parent",
 			text: "The Mash Meter sent me. XD (it was a keyboard smash) But seriously, it's an excellent mechanic and I think more typing games should implement it - it encourages accuracy with positive reinforcement (progression and scoring) without overtly penalizing every single mistake. I think both of my kids would find this way more motivating than strict speed/accuracy metrics.",
 			source: {
-				type: "irl",
+				type: "reddit",
 			},
 		},
 		{
-			id: 14,
-			src: profilePicture,
-			names: "aquarius3737",
-			about: "Parent",
-			text: "This is amazing. My son is 7 and this is the first (typing) game he looks forward to playing. Excellent work!",
-			source: {
-				type: "irl",
-			},
-		},
-		{
-			id: 15,
+			id: 11,
 			src: profilePicture,
 			names: "Evie S",
 			about: "7 years old",
@@ -294,7 +283,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 17,
+			id: 12,
 			src: profilePicture,
 			names: "Dorreen Jones",
 			about: "Children's Librarian and Web Services",
@@ -304,7 +293,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 		{
-			id: 16,
+			id: 13,
 			src: profilePicture,
 			names: "p1an0guy",
 			about: "Colemak speed typist",
@@ -314,6 +303,38 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 			},
 		},
 	]
+
+	function shuffle<T>(array: T[]): T[] {
+		return array.sort(() => Math.random() - 0.5)
+	}
+
+	function getBiggerItemId(array: TItemClient[]): number {
+		let biggerItemId = 0
+		let maxTextLength = array[0].text.length
+
+		for (let i = 1; i < array.length; i++) {
+			let currentTextLength = array[i].text.length
+
+			if (currentTextLength > maxTextLength) {
+				biggerItemId = i
+				maxTextLength = currentTextLength
+			}
+		}
+
+		return biggerItemId
+	}
+
+	const testimonials1: TTestimonials = {
+		items: shuffle(items),
+		speed: speed * -1,
+		biggerItemId: getBiggerItemId(items)
+	}
+
+	const testimonials2: TTestimonials = {
+		items: shuffle(items2),
+		speed: speed * 0.5,
+		biggerItemId: getBiggerItemId(items2)
+	}
 
 	return (
 		<SectionWrapper
@@ -329,15 +350,15 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 		>
 			<div className="flex flex-col gap-6">
 				<FeedbackWall
-					items={items}
-					speed={speed * -1}
-					biggerItemId={0}
+					items={testimonials1.items}
+					speed={testimonials1.speed}
+					biggerItemId={testimonials1.biggerItemId}
 				/>
 
 				<FeedbackWall
-					items={items2}
-					speed={speed / 2}
-					biggerItemId={1}
+					items={testimonials2.items}
+					speed={testimonials2.speed}
+					biggerItemId={testimonials2.biggerItemId}
 				/>
 			</div>
 		</SectionWrapper>

@@ -8,6 +8,7 @@ import Kickstarter from "@/icons/kickstarter";
 import YouTube from "@/icons/you-tube";
 import YouTubeFill from "@/icons/you-tube-fill";
 import X from "@/icons/x";
+import Reddit from "@/icons/reddit";
 import ExternalLink from "@/components/external-link";
 import Image from "@/components/image";
 
@@ -17,9 +18,9 @@ export default function CardClient({ src, names, about, text, source, className 
 		"irl": {
 			icon: <Message />,
 			iconHover: <MessageFill />,
-			border: "border-orange-500/50 hover:border-orange-500",
-			shadow: "hover:shadow-orange-500",
-			text: "text-orange-500",
+			border: "border-pink-500/50 hover:border-pink-500",
+			shadow: "hover:shadow-pink-500",
+			text: "text-pink-500",
 		},
 		"discord": {
 			icon: <Discord />,
@@ -49,6 +50,13 @@ export default function CardClient({ src, names, about, text, source, className 
 			shadow: "hover:shadow-x-500",
 			text: "text-x-500",
 		},
+		"reddit": {
+			icon: <Reddit />,
+			iconHover: <Reddit />,
+			border: "border-reddit-500/50 hover:border-reddit-500",
+			shadow: "hover:shadow-reddit-500",
+			text: "text-reddit-500",
+		}
 	};
 
 	const Wrapper = source.url
@@ -86,6 +94,9 @@ export default function CardClient({ src, names, about, text, source, className 
 
 			case "x":
 				return "Tweet";
+
+			case "reddit":
+				return "Reddit";
 		}
 	}
 

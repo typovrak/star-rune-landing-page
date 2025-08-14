@@ -114,6 +114,7 @@ const config: Config = {
                 'discord-600': 'hsl(var(--discord-600))',
                 'x-500': 'hsl(var(--x-500))',
                 'youtube-500': 'hsl(var(--youtube-500))',
+                'reddit-500': 'hsl(var(--reddit-500))',
             },
             borderRadius: {
                 lg: 'var(--radius)',
