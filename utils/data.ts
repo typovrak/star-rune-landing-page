@@ -5,11 +5,11 @@ export default {
 	owner: "Quinlan Stuwe",
 
 	launchDate: {
-		year: 2025,
-		month: 9,
-		day: 2,
-		hour: 10,
-		minute: 30
+		year: 2026,
+		month: 2,
+		day: 5,
+		hour: 9,
+		minute: 0
 	},
 
 	url: {
