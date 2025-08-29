@@ -3,6 +3,7 @@ export default {
 	email: "starrunecompany@gmail.com",
 	domain: "starrune.net",
 	owner: "Quinlan Stuwe",
+	googleId: "G-HTP9DTMYG9",
 
 	launchDate: {
 		year: 2026,

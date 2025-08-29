@@ -334,7 +334,7 @@ export default function BlockTestimonials({ id }: IBlockTestimonials) {
 	const testimonials2: TTestimonials = {
 		items: items2,
 		speed: speed * 0.5,
-		biggerItemId: 9
+		biggerItemId: 1
 	}
 
 	return (

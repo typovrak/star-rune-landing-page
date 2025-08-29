@@ -4,7 +4,7 @@ import { Geist, Tomorrow } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import data from "@/utils/data";
 import { ToastContainer } from "react-toastify";
-import Script from "next/script";   // <-- NEW
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const fontPrimary = Geist({
   subsets: ["latin"],
@@ -29,50 +29,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="scroll-smooth overscroll-none">
-      <head>
-        {/* --- GA SCRIPTS --- */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-HTP9DTMYG9"
-          strategy="afterInteractive"
-        />
-        <Script id="ga-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-HTP9DTMYG9', { page_path: window.location.pathname });
-          `}
-        </Script>
-      </head>
       <body
         className={`${fontPrimary.variable} ${fontSecondary.variable} font-secondary antialiased selection:bg-yellow-500 selection:text-background`}
       >
         <ReactLenis root />
-        <GAClient /> {/* --- NEW: tracks route changes --- */}
         {children}
         <ToastContainer />
       </body>
+      <GoogleAnalytics gaId={data.googleId} />
     </html>
   );
 }
 
-/* --- CLIENT COMPONENT (can live at bottom of same file) --- */
-"use client";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
-
-function GAClient() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    // @ts-ignore
-    window.gtag?.("config", "G-HTP9DTMYG9", {
-      page_path:
-        pathname +
-        (searchParams.size ? `?${searchParams.toString()}` : ""),
-    });
-  }, [pathname, searchParams]);
-
-  return null;
-}
