@@ -106,14 +106,14 @@ export default function CardClient({ src, names, about, text, source, className 
 		>
 			<div className="flex flex-col gap-4">
 				<div className="flex gap-4 items-center">
-					<div className={`relative h-10 w-10 transition-all duration-300 group-hover:scale-125 ${types[source.type].text}`}>
+					<div className={`relative h-10 w-10 transition-all duration-300 group-hover/hover:scale-125 ${types[source.type].text}`}>
 						<IconInvert
 							icon={types[source.type].icon}
 							iconHover={types[source.type].iconHover}
 						/>
 					</div>
 
-					<p className={`${types[source.type].text} font-semibold group-hover:translate-x-2 transition-all duration-300`}>{handleDefaultTitle(source)}</p>
+					<p className={`${types[source.type].text} font-semibold group-hover/hover:translate-x-2 transition-all duration-300`}>{handleDefaultTitle(source)}</p>
 				</div>
 
 				<p className="text-slate-900 text-balance">{text}</p>
@@ -131,7 +131,7 @@ export default function CardClient({ src, names, about, text, source, className 
 				<div>
 					<p className={`font-bold font-primary text-lg ${types[source.type].text}`}>{names}</p>
 
-					<p className="text-slate-500 group-hover:text-slate-600 transition-all duration-300">{about}</p>
+					<p className="text-slate-500 group-hover/hover:text-slate-600 transition-all duration-300">{about}</p>
 				</div>
 			</div>
 		</Wrapper>
