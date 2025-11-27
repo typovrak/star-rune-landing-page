@@ -60,7 +60,7 @@ export default {
       title: "Community",
     },
     {
-      id: "more-typing-games",
+      id: "more-games",
       title: "More games",
     },
   ],

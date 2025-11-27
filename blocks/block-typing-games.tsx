@@ -18,7 +18,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "A typing game where you play as a <strong>cat</strong>, crushed by a computer and transported to a <strong>fantasy world</strong> of swords, magic, catgirls and furries! As the hero summoned from another world, venture forth with your trusty keyboard, defeat foes and <strong>save the cat kingdom</strong>!",
       button: {
         type: "steam",
-        title: "Test it for free",
+        title: "Try the free demo",
         colors: "bg-pink-400 shadow-pink-500/30 hover:shadow-pink-500/30",
       },
       cardColors:
@@ -38,7 +38,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "<strong>Weaponize your WPM</strong>. Glyphica: Typing Survival is a single-player <strong>roguelite</strong> horde survival typing game that lets you mow down <strong>hordes of enemies</strong> in a minimalistic arena using your finger dexterity, your choice of weapons loadout, and sheer determination.",
       button: {
         type: "steam",
-        title: "Test it for free",
+        title: "Play the demo now",
         colors: "bg-slate-400 shadow-slate-500/30 hover:shadow-slate-500/30",
       },
       cardColors:
@@ -58,7 +58,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "Keys of Fury is a retro-style <strong>Beat `em up</strong> typing game. Focus on <strong>typing perfection</strong> as you battle your way to becoming a master of <strong>key fu</strong>.",
       button: {
         type: "steam",
-        title: "Buy it now",
+        title: "Get the game on Steam",
         colors: "bg-orange-400 shadow-orange-500/30 hover:shadow-orange-500/30",
       },
       cardColors:
@@ -78,7 +78,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "<strong>Free</strong> browser typing <strong>rhythm</strong> game!",
       button: {
         type: "web",
-        title: "Play in your browser now",
+        title: "Play instantly online",
         colors: "bg-purple-400 shadow-purple-500/30 hover:shadow-purple-500/30",
       },
       cardColors:
@@ -98,7 +98,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "A fun & friendly way for <strong>children</strong> to <strong>learn</strong> about letters, words, <strong>keyboards</strong> and writing!",
       button: {
         type: "steam",
-        title: "Buy it now",
+        title: "Discover the game",
         colors: "bg-green-400 shadow-green-500/30 hover:shadow-green-500/30",
       },
       cardColors:
@@ -118,7 +118,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "ABRA KABRA DABRA! Type your way into the top, harness powerful <strong>spells</strong>, uncover <strong>treasures</strong>, and lift that stupid <strong>curse</strong> of yours!",
       button: {
         type: "steam",
-        title: "Test it for free",
+        title: "Test the magic for free",
         colors: "bg-zinc-400 shadow-zinc-500/30 hover:shadow-zinc-500/30",
       },
       cardColors:
@@ -138,7 +138,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "Zombie Typing is a tense survival game where <strong>every action</strong>: moving, looting, reloading, and fighting off the <strong>undead</strong>, relies on your typing skills. Type fast and stay sharp, because one wrong key could mean the difference between <strong>survival<strong> and being devoured!",
       button: {
         type: "steam",
-        title: "Test it for free",
+        title: "Play the survival demo",
         colors: "bg-red-400 shadow-red-500/30 hover:shadow-red-500/30",
       },
       cardColors: "border-red-500/50 hover:border-red-500 hover:shadow-red-500",
@@ -157,7 +157,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "Star Rune is the <strong>ultimate typing game</strong> and the funnest experience typing you've ever had! <strong>Slash and dash</strong> through hordes of cookies and evil letters. 力. 速. 志. Unleash the true power of a <strong>super star</strong>!",
       button: {
         type: "demo",
-        title: "Play it in your browser now",
+        title: "Play instantly in your browser",
         colors: "bg-yellow-400 shadow-yellow-500/30 hover:shadow-yellow-500/30",
       },
       cardColors:
@@ -175,10 +175,11 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         title: "Top notch typing games",
       }}
       title="Need more typing games ?"
-      text={`There is others interesting typing games, free, with a demo and more available across Steam and the web. Here is a list of games that ${data.brand} support`}
+      text={`Discover a curated selection of unique typing games across Steam and the web.
+      Whether you want action, adventure, learning or pure chaos, here are the games that ${data.brand} proudly supports.`}
       className="bg-white"
     >
-      <div className="grid grid-cols-2 gap-6 max-w-[1000px] mx-auto">
+      <div className="grid md:grid-cols-2 gap-6 max-w-[1000px] mx-auto">
         {games.map(
           ({
             id,
