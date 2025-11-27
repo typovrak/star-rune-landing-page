@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from "react";
+import type { CSSProperties, ReactElement, ReactNode } from "react";
 
 export interface ISectionHeader {
   id: string;
@@ -327,4 +327,9 @@ export interface ITypingGame {
   buttonColors: string;
   cardColors: string;
   titleColors: string;
+  strongColor: string;
 }
+
+export type TCSSVars = CSSProperties & {
+  [key: `--${string}`]: string | number;
+};

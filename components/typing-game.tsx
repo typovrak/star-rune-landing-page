@@ -1,4 +1,4 @@
-import { ITypingGame } from "@/utils/types";
+import { ITypingGame, TCSSVars } from "@/utils/types";
 import Image from "@/components/image";
 import ButtonIcon from "@/components/button-icon";
 import Steam from "@/icons/steam";
@@ -16,10 +16,11 @@ export default function TypingGame({
   buttonColors,
   cardColors,
   titleColors,
+  strongColor,
 }: ITypingGame) {
   return (
     <article
-      className={`border-2 bg-white rounded-lg transition-all duration-300 group/typing-game overflow-hidden hover:shadow-sm flex flex-col ${cardColors}`}
+      className={`typing-game border-2 bg-white rounded-lg transition-all duration-300 group/typing-game overflow-hidden hover:shadow-sm flex flex-col ${cardColors}`}
     >
       <Image
         src={`/typing-games/${posterSrc}`}
@@ -36,7 +37,15 @@ export default function TypingGame({
           >
             {title}
           </h3>
-          <p className="">{description}</p>
+          <p
+            className="typing-game-description"
+            dangerouslySetInnerHTML={{ __html: description }}
+            style={
+              {
+                "--strong-color": `${strongColor}`,
+              } as TCSSVars
+            }
+          />
         </div>
 
         <ButtonIcon

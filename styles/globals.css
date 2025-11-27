@@ -28,6 +28,13 @@ body {
     *:focus-visible {
         @apply transition-none outline-4 outline-slate-500;
     }
+
+    .typing-game .typing-game-description strong {
+        transition: 0.3s all ease-in-out;
+    }
+    .typing-game:hover .typing-game-description strong {
+        color: var(--strong-color);
+    }
 }
 
 @layer utilities {
