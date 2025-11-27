@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Page from "@/layouts/page";
 import BlockCommunity from "@/blocks/block-community";
@@ -11,6 +11,7 @@ import BlockHero from "@/blocks/block-hero";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import BlockConversion from "@/blocks/block-conversion";
+import BlockTypingGames from "@/blocks/block-typing-games";
 import data from "@/utils/data";
 
 export default function Home() {
@@ -19,16 +20,17 @@ export default function Home() {
       <Header />
 
       <BlockHero />
-      <BlockResume id={data.homeLinks[0].id} dataAppearThreshold={0.20} />
+      <BlockResume id={data.homeLinks[0].id} dataAppearThreshold={0.2} />
       <BlockFeatures id={data.homeLinks[1].id} />
       <BlockAbilities id={data.homeLinks[2].id} />
       <BlockTestimonials id={data.homeLinks[3].id} />
       <BlockTeam id={data.homeLinks[4].id} />
       <BlockCommunity id={data.homeLinks[5].id} />
 
-      <BlockConversion />
+      <BlockTypingGames id={data.homeLinks[6].id} />
 
+      <BlockConversion />
       <Footer />
     </Page>
-  )
+  );
 }

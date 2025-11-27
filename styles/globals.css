@@ -3,193 +3,196 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-primary);
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-primary);
+    }
 
-  /* tailwind forgot to handle pre HTML tag... */
-  pre {
-    font-family: var(--font-secondary);
-  }
+    /* tailwind forgot to handle pre HTML tag... */
+    pre {
+        font-family: var(--font-secondary);
+    }
 
-  svg {
-    height: 100%;
-    width: 100%;
-  }
+    svg {
+        height: 100%;
+        width: 100%;
+    }
 
-  *:focus,
-  *:focus-visible {
-    @apply transition-none outline-4 outline-slate-500;
-  }
+    *:focus,
+    *:focus-visible {
+        @apply transition-none outline-4 outline-slate-500;
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 
-  .clip-path-top,
-  .group.appear .group-\[\.appear\]\:clip-path-top {
-    clip-path: var(--clip-path-top);
-  }
+    .clip-path-top,
+    .group.appear .group-\[\.appear\]\:clip-path-top {
+        clip-path: var(--clip-path-top);
+    }
 
-  .clip-path-right,
-  .group.appear .group-\[\.appear\]\:clip-path-right {
-    clip-path: var(--clip-path-right);
-  }
+    .clip-path-right,
+    .group.appear .group-\[\.appear\]\:clip-path-right {
+        clip-path: var(--clip-path-right);
+    }
 
-  .clip-path-bottom,
-  .group.appear .group-\[\.appear\]\:clip-path-bottom {
-    clip-path: var(--clip-path-bottom);
-  }
+    .clip-path-bottom,
+    .group.appear .group-\[\.appear\]\:clip-path-bottom {
+        clip-path: var(--clip-path-bottom);
+    }
 
-  .clip-path-left,
-  .group.appear .group-\[\.appear\]\:clip-path-left {
-    clip-path: var(--clip-path-left);
-  }
+    .clip-path-left,
+    .group.appear .group-\[\.appear\]\:clip-path-left {
+        clip-path: var(--clip-path-left);
+    }
 
-  .clip-path-open,
-  .group.appear .group-\[\.appear\]\:clip-path-open {
-    clip-path: var(--clip-path-open);
-  }
+    .clip-path-open,
+    .group.appear .group-\[\.appear\]\:clip-path-open {
+        clip-path: var(--clip-path-open);
+    }
 
-  .block-resume-img-transition {
-    transition: opacity 1500ms 1000ms ease-in-out,
-      transform 300ms ease-in-out,
-      box-shadow 300ms ease-in-out;
+    .block-resume-img-transition {
+        transition:
+            opacity 1500ms 1000ms ease-in-out,
+            transform 300ms ease-in-out,
+            box-shadow 300ms ease-in-out;
+    }
 
-  }
+    .block-resume-card-transition {
+        transition:
+            opacity 1500ms var(--delay) ease-in-out,
+            transform 300ms ease-in-out,
+            box-shadow 300ms ease-in-out,
+            background 300ms ease-in-out;
+    }
 
-  .block-resume-card-transition {
-    transition: opacity 1500ms var(--delay) ease-in-out,
-      transform 300ms ease-in-out,
-      box-shadow 300ms ease-in-out,
-      background 300ms ease-in-out;
-  }
+    .group.dark .link.group-\[\.dark\]\:text-white:hover {
+        color: var(--black);
+    }
 
-  .group.dark .link.group-\[\.dark\]\:text-white:hover {
-    color: var(--black);
+    .group.dark .badge.group-\[\.dark\]\:bg-black:hover {
+        background: #eab308;
+        color: var(--black);
+    }
 
-  }
+    .translate-3d-hide-header {
+        transform: translate3d(0, calc(-1 * var(--header-height)), 0);
+    }
 
-  .group.dark .badge.group-\[\.dark\]\:bg-black:hover {
-    background: #eab308;
-    color: var(--black);
-  }
-
-  .translate-3d-hide-header {
-    transform: translate3d(0, calc(-1 * var(--header-height)), 0);
-  }
-
-  .hide-header-transition {
-    transition: transform 1000ms ease-in-out,
-      background 300ms ease-in-out,
-      border 300ms ease-in-out;
-    will-change: transform;
-  }
+    .hide-header-transition {
+        transition:
+            transform 1000ms ease-in-out,
+            background 300ms ease-in-out,
+            border 300ms ease-in-out;
+        will-change: transform;
+    }
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
 
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
 
-    --radius: 0.5rem;
+        --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --kickstarter-500: 154 95% 41%;
-    --kickstarter-600: 154 100% 37%;
+        --kickstarter-500: 154 95% 41%;
+        --kickstarter-600: 154 100% 37%;
 
-    --discord-500: 235 86% 65%;
-    --discord-600: 240 77% 59%;
+        --discord-500: 235 86% 65%;
+        --discord-600: 240 77% 59%;
 
-    --x-500: 197 100% 47%;
+        --x-500: 197 100% 47%;
 
-    --youtube-500: 0 100% 50%;
+        --youtube-500: 0 100% 50%;
 
-    --reddit-500: 16 100% 50%;
+        --reddit-500: 16 100% 50%;
 
-    --rotate-text: 3deg;
-    --rotate-icon: 6deg;
-    --rotate-cta: 1deg;
+        --steam-500: 205, 100%, 55%;
 
-    --header-height: 64px;
+        --rotate-text: 3deg;
+        --rotate-icon: 6deg;
+        --rotate-cta: 1deg;
 
-    --clip-path-top: polygon(0 0, 100% 0, 100% 0, 0 0);
-    --clip-path-right: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    --clip-path-bottom: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    --clip-path-left: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    --clip-path-open: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        --header-height: 64px;
 
-    --width-card-client-mobile: 300px;
-    --width-card-client: 450px;
+        --clip-path-top: polygon(0 0, 100% 0, 100% 0, 0 0);
+        --clip-path-right: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+        --clip-path-bottom: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+        --clip-path-left: polygon(0 0, 0 0, 0 100%, 0% 100%);
+        --clip-path-open: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
-    --time-750: 750ms;
-    --time-1250: 1250ms;
-    --time-1500: 1500ms;
-    --time-1750: 1750ms;
-    --time-2000: 2000ms;
-    --time-2250: 2250ms;
-    --time-2500: 2500ms;
-    --time-2750: 2750ms;
-    --time-3000: 3000ms;
+        --width-card-client-mobile: 300px;
+        --width-card-client: 450px;
 
-    --aspect-abilities: 12/5;
-  }
+        --time-750: 750ms;
+        --time-1250: 1250ms;
+        --time-1500: 1500ms;
+        --time-1750: 1750ms;
+        --time-2000: 2000ms;
+        --time-2250: 2250ms;
+        --time-2500: 2500ms;
+        --time-2750: 2750ms;
+        --time-3000: 3000ms;
+
+        --aspect-abilities: 12/5;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+    * {
+        @apply border-border;
+    }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
