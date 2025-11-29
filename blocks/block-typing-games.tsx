@@ -29,26 +29,6 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
     {
       id: 1,
       poster: {
-        src: "glyphica-typing-survival-poster.webp",
-        alt: "Glyphica: Typing Survival game preview",
-      },
-      url: "https://store.steampowered.com/app/2400160/Glyphica_Typing_Survival/",
-      title: "Glyphica: Typing Survival",
-      description:
-        "<strong>Weaponize your WPM</strong>. Glyphica: Typing Survival is a single-player <strong>roguelite</strong> horde survival typing game that lets you mow down <strong>hordes of enemies</strong> in a minimalistic arena using your finger dexterity, your choice of weapons loadout, and sheer determination.",
-      button: {
-        type: "steam",
-        title: "Play the demo now",
-        colors: "bg-slate-400 shadow-slate-500/30 hover:shadow-slate-500/30",
-      },
-      cardColors:
-        "border-slate-500/50 hover:border-slate-500 hover:shadow-slate-500",
-      titleColors: "group-hover/typing-game:text-slate-500",
-      strongColor: "oklch(55.4% 0.046 257.417)",
-    },
-    {
-      id: 2,
-      poster: {
         src: "keys-of-fury-poster.webp",
         alt: "Keys of Fury typing game preview",
       },
@@ -67,27 +47,7 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
       strongColor: "oklch(70.5% 0.213 47.604)",
     },
     {
-      id: 3,
-      poster: {
-        src: "rhythm-typer-poster.webp",
-        alt: "Rythm Typer typing game preview",
-      },
-      url: "https://rhythm-typer.web.app/",
-      title: "Rhythm Typer",
-      description:
-        "<strong>Free</strong> browser typing <strong>rhythm</strong> game!",
-      button: {
-        type: "web",
-        title: "Play instantly online",
-        colors: "bg-purple-400 shadow-purple-500/30 hover:shadow-purple-500/30",
-      },
-      cardColors:
-        "border-purple-500/50 hover:border-purple-500 hover:shadow-purple-500",
-      titleColors: "group-hover/typing-game:text-purple-500",
-      strongColor: "oklch(62.7% 0.265 303.9)",
-    },
-    {
-      id: 4,
+      id: 2,
       poster: {
         src: "squash-and-spell-poster.webp",
         alt: "Squash and Spell game preview",
@@ -107,7 +67,66 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
       strongColor: "oklch(72.3% 0.219 149.579)",
     },
     {
+      id: 3,
+      poster: {
+        src: "glyphica-typing-survival-poster.webp",
+        alt: "Glyphica: Typing Survival game preview",
+      },
+      url: "https://store.steampowered.com/app/2400160/Glyphica_Typing_Survival/",
+      title: "Glyphica: Typing Survival",
+      description:
+        "<strong>Weaponize your WPM</strong>. Glyphica: Typing Survival is a single-player <strong>roguelite</strong> horde survival typing game that lets you mow down <strong>hordes of enemies</strong> in a minimalistic arena using your finger dexterity, your choice of weapons loadout, and sheer determination.",
+      button: {
+        type: "steam",
+        title: "Play the demo now",
+        colors: "bg-slate-400 shadow-slate-500/30 hover:shadow-slate-500/30",
+      },
+      cardColors:
+        "border-slate-500/50 hover:border-slate-500 hover:shadow-slate-500",
+      titleColors: "group-hover/typing-game:text-slate-500",
+      strongColor: "oklch(55.4% 0.046 257.417)",
+    },
+    {
+      id: 4,
+      poster: {
+        src: "zombie-typing-poster.webp",
+        alt: "Zombie Typing game preview",
+      },
+      url: "https://store.steampowered.com/app/3949700/Zombie_Typing/",
+      title: "Zombie Typing",
+      description:
+        "Zombie Typing is a tense survival game where <strong>every action</strong>: moving, looting, reloading, and fighting off the <strong>undead</strong>, relies on your typing skills. Type fast and stay sharp, because one wrong key could mean the difference between <strong>survival<strong> and being devoured!",
+      button: {
+        type: "steam",
+        title: "Play the survival demo",
+        colors: "bg-red-400 shadow-red-500/30 hover:shadow-red-500/30",
+      },
+      cardColors: "border-red-500/50 hover:border-red-500 hover:shadow-red-500",
+      titleColors: "group-hover/typing-game:text-red-500",
+      strongColor: "oklch(63.7% 0.237 25.331)",
+    },
+    {
       id: 5,
+      poster: {
+        src: "rhythm-typer-poster.webp",
+        alt: "Rythm Typer typing game preview",
+      },
+      url: "https://rhythm-typer.web.app/",
+      title: "Rhythm Typer",
+      description:
+        "<strong>Free</strong> browser typing <strong>rhythm</strong> game!",
+      button: {
+        type: "web",
+        title: "Play instantly online",
+        colors: "bg-purple-400 shadow-purple-500/30 hover:shadow-purple-500/30",
+      },
+      cardColors:
+        "border-purple-500/50 hover:border-purple-500 hover:shadow-purple-500",
+      titleColors: "group-hover/typing-game:text-purple-500",
+      strongColor: "oklch(62.7% 0.265 303.9)",
+    },
+    {
+      id: 6,
       poster: {
         src: "type-caster-poster.webp",
         alt: "Type Caster typing game preview",
@@ -125,25 +144,6 @@ export default function BlockTypingGames({ id }: IBlockTypingGames) {
         "border-zinc-500/50 hover:border-zinc-500 hover:shadow-zinc-500",
       titleColors: "group-hover/typing-game:text-zinc-500",
       strongColor: "oklch(55.2% 0.016 285.938)",
-    },
-    {
-      id: 6,
-      poster: {
-        src: "zombie-typing-poster.webp",
-        alt: "Zombie Typing game preview",
-      },
-      url: "https://store.steampowered.com/app/3949700/Zombie_Typing/",
-      title: "Zombie Typing",
-      description:
-        "Zombie Typing is a tense survival game where <strong>every action</strong>: moving, looting, reloading, and fighting off the <strong>undead</strong>, relies on your typing skills. Type fast and stay sharp, because one wrong key could mean the difference between <strong>survival<strong> and being devoured!",
-      button: {
-        type: "steam",
-        title: "Play the survival demo",
-        colors: "bg-red-400 shadow-red-500/30 hover:shadow-red-500/30",
-      },
-      cardColors: "border-red-500/50 hover:border-red-500 hover:shadow-red-500",
-      titleColors: "group-hover/typing-game:text-red-500",
-      strongColor: "oklch(63.7% 0.237 25.331)",
     },
     {
       id: 7,
